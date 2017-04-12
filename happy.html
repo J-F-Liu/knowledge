@@ -47,7 +47,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li><a href="./life.html"><strong>1.</strong> 人生</a></li><li><a href="./happy.html" class="active"><strong>2.</strong> 幸福</a></li></ul>
+            <ul class="chapter"><li><a href="./life.html"><strong>1.</strong> 人生</a></li><li><a href="./happy.html" class="active"><strong>2.</strong> 幸福</a></li><li><a href="./meaning.html"><strong>3.</strong> 意义</a></li><li><a href="./belief.html"><strong>4.</strong> 信念</a></li><li><a href="./success.html"><strong>5.</strong> 成功</a></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -109,6 +109,10 @@ But as the happiest people in the world know: it’s worth it.</p>
                 
 
                 
+                    <a href="./meaning.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
 
             </div>
 
@@ -118,6 +122,10 @@ But as the happiest people in the world know: it’s worth it.</p>
                 </a>
             
 
+            
+                <a href="./meaning.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
             
 
         </div>
@@ -132,6 +140,20 @@ But as the happiest people in the world know: it’s worth it.</p>
 
         <!-- Livereload script (if served using the cli tool) -->
         
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+    
 
         <script src="highlight.js"></script>
         <script src="book.js"></script>

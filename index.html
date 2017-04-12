@@ -46,7 +46,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li><a href="./life.html" class="active"><strong>1.</strong> 人生</a></li><li><a href="./happy.html"><strong>2.</strong> 幸福</a></li></ul>
+            <ul class="chapter"><li><a href="./life.html" class="active"><strong>1.</strong> 人生</a></li><li><a href="./happy.html"><strong>2.</strong> 幸福</a></li><li><a href="./meaning.html"><strong>3.</strong> 意义</a></li><li><a href="./belief.html"><strong>4.</strong> 信念</a></li><li><a href="./success.html"><strong>5.</strong> 成功</a></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -141,6 +141,20 @@ This meaning we constantly search for is literally our only psychological defens
 
         <!-- Livereload script (if served using the cli tool) -->
         
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+    
 
         <script src="highlight.js"></script>
         <script src="book.js"></script>
