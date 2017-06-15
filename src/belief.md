@@ -29,7 +29,13 @@ You desperate for knowledge or information that can be used to improve or create
 While others waste time, you rather learn how to create, build or design something.
 You are hungry to make a difference or do something significant.
 
-## Don’t invest in a career. Build a life. 要改变世界
+## Don’t invest in a career. Build a life. 创造属于自己的人生
+The way we work keeps changing. Robots are eating jobs. People are scared of losing their jobs. Nobody is safe. 
+It’s easier to transform your passion into your job than finding a job that matches your what you love to do. 
+Do something interesting, meaningful, different, amazing and truly remarkable. Show your most amazing work to the world.
+
+## Take your dreams seriously. 认真对待你的梦想
+If you pursue your dreams long enough, compounding takes effect. Momentum will surge. Don’t give up just yet.
 For centuries we’ve been trained by the system to stop thinking and do as we are told.
 But dreamers and thinkers are changing the world as we know it.
 
