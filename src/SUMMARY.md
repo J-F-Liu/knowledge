@@ -6,3 +6,4 @@
 - [信念](./belief.md)
 - [成功](./success.md)
 - [思维](./mind.md)
+- [学习](./learn.md)
