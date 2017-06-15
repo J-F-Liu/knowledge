@@ -10,7 +10,8 @@
         <base href="">
 
         <link rel="stylesheet" href="book.css">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
 
         <link rel="shortcut icon" href="favicon.png">
 
@@ -21,7 +22,7 @@
         <link rel="stylesheet" href="tomorrow-night.css">
 
         <!-- MathJax -->
-        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
         <!-- Fetch JQuery from CDN but have a local fallback -->
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -47,7 +48,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li><a href="./life.html"><strong>1.</strong> 人生</a></li><li><a href="./happy.html"><strong>2.</strong> 幸福</a></li><li><a href="./meaning.html" class="active"><strong>3.</strong> 意义</a></li><li><a href="./belief.html"><strong>4.</strong> 信念</a></li><li><a href="./success.html"><strong>5.</strong> 成功</a></li></ul>
+            <ul class="chapter"><li><a href="./life.html"><strong>1.</strong> 人生</a></li><li><a href="./happy.html"><strong>2.</strong> 幸福</a></li><li><a href="./meaning.html" class="active"><strong>3.</strong> 意义</a></li><li><a href="./belief.html"><strong>4.</strong> 信念</a></li><li><a href="./success.html"><strong>5.</strong> 成功</a></li><li><a href="./mind.html"><strong>6.</strong> 思维</a></li><li><a href="./learn.html"><strong>7.</strong> 学习</a></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -67,15 +68,15 @@
                 </div>
 
                 <div id="content" class="content">
-                    <a class="header" href="./meaning.html#the-meaning-of-life-人生的意义" name="the-meaning-of-life-人生的意义"><h1>The Meaning Of Life 人生的意义</h1></a>
-<a class="header" href="./meaning.html#为什么要过有意义的人生" name="为什么要过有意义的人生"><h2>为什么要过有意义的人生？</h2></a>
+                    <a class="header" href="./meaning.html#the-meaning-of-life-人生的意义" id="the-meaning-of-life-人生的意义"><h1>The Meaning Of Life 人生的意义</h1></a>
+<a class="header" href="./meaning.html#为什么要过有意义的人生" id="为什么要过有意义的人生"><h2>为什么要过有意义的人生？</h2></a>
 <p>You don’t become happy by pursuing happiness. You become happy by living a life that means something. </p>
 <p>People commit suicide not because they’re unhappy but because they lack meaning.
 Kids are really expensive and don’t make parents happier, but children bring enormous meaning to people’s lives.</p>
 <p>The happy feelings faded fast. Over the long term, pursuing meaning actually boosted psychological health.</p>
 <p>Today, right now, is the best time ever to choose to do something that truly matters. Something meaningful to you. That ONE thing that makes you create value that means a lot to you. Something you alone can share with the rest of us.</p>
 <p>Pursuing meaning makes you feel good about yourself, because you are pursuing something bigger than yourself.</p>
-<a class="header" href="./meaning.html#怎样让人生变得有意义" name="怎样让人生变得有意义"><h2>怎样让人生变得有意义？</h2></a>
+<a class="header" href="./meaning.html#怎样让人生变得有意义" id="怎样让人生变得有意义"><h2>怎样让人生变得有意义？</h2></a>
 <p>You won’t discover your life’s work by wondering or worrying about it. And it doesn’t come fully formed. You’ll discover it by taking action, everyday.
 By looking at what is working and what isn’t, you can align yourself with your why and what or the passion and purpose for your life.</p>
 <ol>
@@ -160,20 +161,9 @@ Looking at the night sky, bright stars who don't admire infinite universe? howev
 
         <!-- Livereload script (if served using the cli tool) -->
         
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
 
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
-    
+        
+
 
         <script src="highlight.js"></script>
         <script src="book.js"></script>
