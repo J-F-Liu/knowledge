@@ -83,3 +83,35 @@ One, they have specific backgrounds or opportunities, as mentioned above. Two, t
 The best type of practice does two things:
 1)It helps us to acquire the skills that speed up/automate processes and feedback.
 2)It pushes us to the edge of our competence and forces us to focus. This is where the learning happens.
+
+## It takes longer than you think to succeed.
+The overnight success is a myth.
+Nothing worthwhile is going to be fast. Nor is building a business.
+It takes longer than you think to adjust your product or service to the market’s needs and spread the word about your solution.
+
+## Great ideas require great teams.
+No one has ever built great things alone.
+
+Your brilliant idea is not worth a dime. In today’s competitive environment, no one cares about the ideas. Everyone has tons of them.
+
+The only thing people care about is execution. They no longer want to listen to fancy presentations and pitches of your concept. They want to see its implementation instead.
+
+However, when it comes to implementation, you are likely to face the natural constraints of own knowledge, ideas, skills, and time. Your idea requires a team to help you bring it to life.
+
+Every huge thing is a product of efficient collaboration. Don’t try to prove it wrong. Nothing worthwhile has ever been built alone.
+
+## Don’t avoid the truth. Embrace it.
+
+想要知道什么样的人的比较容易成功，我们绝对不能只看成功者，还要看那些不成功的人。
+现在公认的几个能够区别成功人士和失败者的特质有如下几个，它们都是通过同时采样成功人士和不成功人士对比找到的：
+
+- 良好的家庭教育 (从统计意义上说，成功者的家教普遍良好而很多不成功者的家庭教育普遍缺失)
+
+- 良好的判断力 (从统计意义上说，成功者在诸多关键点上判断正确而很多不成功者在关键地方选择错误)
+
+- 良好的自控力 (从统计意义上说，成功者普遍具有较好的自控力而很多失败者自控力较差)
+
+- 良好的人际关系 (从统计意义上说，成功者的人际关系要好于未成功者)，以及很重要的，
+
+- 好运气 (成功者赶上了好时代，以及出乎意料的好运气，而很多失败者之所以失败，是运气不好而已)
+
