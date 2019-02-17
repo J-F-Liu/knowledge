@@ -7,3 +7,7 @@
 - [成功](./success.md)
 - [思维](./mind.md)
 - [学习](./learn.md)
+- [健身](./health.md)
+- [理财](./finance.md)
+- [科学](./science.md)
+- [智能](./intelligence.md)
