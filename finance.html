@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>理财 - </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+
+        <!-- MathJax -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = localStorage.getItem('theme');
+            if (theme == null) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = localStorage.getItem('sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li><a href="./life.html"><strong>1.</strong> 人生</a></li><li><a href="./happy.html"><strong>2.</strong> 幸福</a></li><li><a href="./meaning.html"><strong>3.</strong> 意义</a></li><li><a href="./belief.html"><strong>4.</strong> 信念</a></li><li><a href="./success.html"><strong>5.</strong> 成功</a></li><li><a href="./mind.html"><strong>6.</strong> 思维</a></li><li><a href="./learn.html"><strong>7.</strong> 学习</a></li><li><a href="./health.html"><strong>8.</strong> 健身</a></li><li><a href="./finance.html" class="active"><strong>9.</strong> 理财</a></li><li><a href="./science.html"><strong>10.</strong> 科学</a></li><li><a href="./intelligence.html"><strong>11.</strong> 智能</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="./finance.html#财务" id="财务"><h1>财务</h1></a>
+<p>任何一家商业公司，都可以抽象成一个用钱生钱的过程：融资拿到钱，投资花掉钱，经营赚回钱。</p>
+<p>想要了解一家公司，必不可少的是三张报表：资产负债表、利润表、现金流量表。</p>
+<p>资产负债表反映的是企业的融资和投资过程。所有者权益 + 负债 = 资产。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ibm2sb53lRhwXzXjbHOrTRC6BnPAHLNYwEhaH4eGu2YNeOK3ruGSMRl1V1kPnxGg2Mt3NJDk0R0DiccLibST6el9Q/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="" /></p>
+<p>利润表反映的是企业的经营，即如何利用资产为企业创造收入。收入 - 成本 = 利润。</p>
+<pre><code>毛利润 = 总收入 - 变动成本
+营业利润 = 毛利润 - 固定成本
+净利润 = 营业利润 - 缴税
+</code></pre>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ibm2sb53lRhwXzXjbHOrTRC6BnPAHLNYwqzOwdGFSibTr0UFZ19wfcZ7sAcVOlxp2lP6xQQAtZTlzWIicaiab5CVRA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="" /></p>
+<p>利润表实施的是权责发生制，企业统计资产、确认收入，都是以权利和责任确认的时间点为基础的。而现金流量表是收付实现制，也就是说，它是以真的有钱进账，或钱款汇出的时间点进行统计的。</p>
+<p>三张表是同一件事情的三个维度，一个表上某个科目的变动，一定会在其他表上显露出来。</p>
+<p>评估一个企业，现金流比利润更靠谱。现金流量表能够辅助判断企业经营成果的真实性，审视企业的财务风险和短期偿债能力。</p>
+<p>现金流有三种形式：筹资性现金流、经营性现金流、投资性现金流。</p>
+<p>一个运转良好、主营业务清晰的企业，一定是经营性现金流非常稳健的。经营能力强是核心竞争力，是自我造血。</p>
+<p>对于初创企业，不仅要看它的筹资能力，还要看未来创造经营性现金流的能力。</p>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a href="./health.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="./science.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+
+            </div>
+
+            
+                <a href="./health.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+                <a href="./science.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>
