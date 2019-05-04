@@ -27,16 +27,16 @@
 
 人脑可能有 1000 多亿个神经元，每个神经元都可能在几个方向上互相连接着，这么大量的神经元及连接就形成了一个超级大型的网络。我们就是因为这些网络而存在各种各样的思想和意识。
 
-大脑神经元即是脑神经细胞，主要包括细胞体、树突、轴突、突触等。
+大脑神经元(neuron)即是脑神经细胞，主要包括细胞体(cell body)、树突(dendrite)、轴突(axon)、突触(synapse)等。
 
 细胞体，由细胞核、细胞质和细胞膜组成。它是神经元新陈代谢的中心，是接收信息并处理的部件。
 树突，是细胞体向外延伸树枝状的纤维体，它是神经元的输入通道，接收来自其他神经元的信息。
 轴突，是细胞体向处延伸的最长最粗的一条树枝纤维体，即神经纤维，它是神经元的输出通道。轴突有髓鞘纤维和无髓鞘纤维两种结构形式，两者传递信息的速度不同。轴突末端有许多向外延伸的树枝状纤维体，称为神经末梢，它是神经元信息的输出端。
-突触，神经元的神经末梢与另一神经元树突或细胞体的接触处即为突触。每一个神经元都通过突触与其他神经元联系，细胞之间通过突触建立起连接，从而实现信息传递，每个神经元约有 103～104 个突触。
-![](https://mmbiz.qpic.cn/mmbiz_jpg/caNYYfYLhoHQXicQjje2RZBduIhfn3YBoHvzU4iaqxRRqInQ59HEdBhYSXYqTicBUTqdvSDA9kn468icQJLSae3Spw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+突触，是神经元的神经末梢与另一神经元树突或细胞体的接触处。每一个神经元都通过突触与其他神经元联系，细胞之间通过突触建立起连接，从而实现信息传递，每个神经元约有 103～104 个突触。
+![](./images/neuron.webp)
 
-大脑的神经元的数学模型，尚不能确定这个模型是否正确。
-![](https://mmbiz.qpic.cn/mmbiz_jpg/caNYYfYLhoHQXicQjje2RZBduIhfn3YBo1RoEm91vxPN4d2zQfLBVHOdDOBTFvV7akE4OChPaoxqNlBsVCm794A/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+大脑的神经元的数学模型如下，尚不能确定这个模型是否正确。
+![](./images/neuron-model.webp)
 
 
 
@@ -85,3 +85,63 @@
 
 感知的图像往往只占5%，提供一些蛛丝马迹；而后面的95%，包括功能、物理、因果、动机等等是要靠人的想象和推理过程来完成的。
 大量的运算属于“top-down”自顶向下的计算过程。也就是用你脑皮层里面学习到的大量的知识来解释你看到的“蛛丝马迹”，形成一个合理的解。
+
+# 算法
+
+算法表达的是人类的逻辑， 通常可以被数学公式，或者是某种符号语言表达。然后我们通过晶体管精密的运作方式表达这种逻辑， 然后帮助人类来工作。
+
+复杂是简单中产生的，一个简单的规则，通过很多步骤，就得到复杂。一个非常有趣的例子是元胞自动机，它可以极好的阐述一个简单的规则如何产生极为复杂的图案。
+
+算法其实也并不一定是程序。 通过一个给定的规则和自动化的过程得到一个结果，只要是这件事，有没有计算机都可以看成算法。比如生物进化可以看作一个巨大的遗传进化算法，一开始有一堆原始的细胞， 然后你规定一个过程，细胞可以通过遗传产生一样的新细胞， 这个过程会有错误出现变异， 然后自然环境可以选择有利的变异， 只要迭代论述足够多， 这个算法得到的结果是所有复杂的生命类型。一些社会现象， 如自由市场对经济的调控， 也可以看作算法。
+
+## 知识库
+
+6，70 年代的知识工程师试图把人类所有领域的专业知识一条一条的输入给计算机，从而解决这个世界所有只有人类才可以解决的问题。在有限的情况下， 可以说它们的表现真的非常接近人类。知识机器参与到医学诊疗这样的复杂过程，并在某些特定领域表现超过人类。 可惜这个流派在长期的努力里，能够作用的事情非常有限。这样的企图最终失败了。
+
+然而真实世界的情况太复杂了！而且能够被知识和规则所表现的，只是冰山浮出水面的一角。再复杂的专家经验，也无法穷举无限的可能性，再细致的规则， 也无法表达那些连人都难以表达的规律，一旦真实情况超出了专家系统已经写入的可能，机器就抓瞎了。不要说应对变化的规则。
+
+## 机器学习
+
+机器学习的定义：如果一个计算机程序在某些任务T上以P度量的性能随着经验E的增加而提高，那么我们称这个计算机程序是在从经验E中学习。
+
+![](./images/machine-learning.png)
+
+我们要让机器学习到人类应对这种情况的本质 - 学习！  像人的头脑一样学习，能够从大量的经验里学习总结，从经验出发解决未出现的问题！
+
+学习的本质是什么？知识的增加和优化。
+
+归纳法， 从特殊到一般，就创造了知识。演绎法，用规则去推断具体的情况并指导行动，是知识的应用。
+
+一个好的学器需要从比较少的样例里， 得到能够判断比这些样例多的多的结果，这个通常称为泛化能力， 就好像一种推而广之的能力。
+
+贝叶斯派试图把特征条件，到他们引发的结果， 用概率的箭头连接。 然后我们就得到了一个无比巨大的条件之间互相连接的关系网络，又称贝叶斯网络。通过不停的收集数据来修正每个小红箭头对应的概率，直到这个网络变得稳定和完美，它就可以源源不断的告诉我们各种结果的可能性。
+
+连接主义认为， 信息和概念存储在大脑的突触连接之间， 特定的连接形式对应特定的知识。 如果我们要让机器能够学习， 就是要让它能够通过学习大脑的连接，来掌握特定的知识。 问题的本质在于神经元的数量，只要我们能够有足够多的神经元，它就可以干很复杂的事情。
+
+信息存储在无数神经元构成的网络连接里， 如何让它学进去， 也就是最难的问题。 一种叫反向传播的方法是把学习理解成一个巨大的根据数据来优化的过程， 数据犹如一颗颗子弹打进来， 如果神经网络的预测错误 ，它就会在网络的连接之间一点点的引导网络权重的改变，虽然每次只改一点点， 最终当数据的量特别巨大，却发生一场质变。计算机硬件的进步，使得大规模的使用反向传播算法进行优化成为可能。随着互联网的爆发，积累了大量的数据。算法、硬件、数据一起催生了深度学习革命。
+
+机器能够在图像中识别出猫狗， 你和我， 甚至也可以看出一个人的情绪。 能够掌握直觉， 正式深度学习最反直觉的地方。 构成我们决策的大量因子， 其实是我们自身都无法描述的隐形知识， 抑或直觉， 这些能够被神经网络学习。
+
+从图像识别开始，深度学习一步步潜入那些人们起初没有想到的领域，比如语音识别， 甚至下围棋。为了让机器听懂人类的语言， 一种叫 LSTM 的神经网络， 模拟了人类最奇妙的记忆能力， 而开始逐步的替代人类承担起类似翻译的作用。
+
+目前的 AI 算法缺少一种元学习的能力。何为元学习， 就是提取一大类问题里类似的本质， 我们人类非常容易干的一个事情。 到底什么造成了人工神经网络和人的神经网路的差距，还是未知的， 而这个问题也构成一个非常主流的研究方向。
+
+在解决的 AI 问题犹如一个个分离的孤岛， 比如说视觉是视觉， 自然语言是自然语言，这些孤岛并没有被打通。 相反， 人类的智慧里， 从来就没有分离的视觉、运动或自然语言。
+
+另外， 人类的智慧是建立在沟通之上的， 人与人相互沟通结成社会， 社会基础上才有文明， 目前的人工智能体还没有沟通， 但不代表以后是不能的。
+
+### Neural Computer
+
+Neural computer is a form of memory-augmented neural network.
+
+Neural network is called a controller, analogous to the processor in a computer, it is responsible for taking input in, reading from and writing to memory, and producing output that can be interpreted as an answer. The memory is a set of locations that can each store a vector of information.
+
+At every tick of a clock, it chooses whether to write to memory or not. If it chooses to write, it can choose to store information at a new, unused location or at a location that already contains information the controller is searching for. This allows the controller to update what is stored at a location. If all the locations in memory are used up, the controller can decide to free locations, much like how a computer can reallocate memory that is no longer needed. When the controller does write, it sends a vector of information to the chosen location in memory. Every time information is written, the locations are connected by links of association, which represent the order in which information was stored.
+
+The controller can read from multiple locations in memory. Memory can be searched based on the content of each location, or the associative temporal links can be followed forward and backward to recall information written in sequence or in reverse. The read out information can be used to produce answers to questions or actions to take in an environment.
+
+![architecture](https://storage.googleapis.com/deepmind-live-cms/images/dnc_figure1.width-1500_TDAIeyS.png)
+
+Neural computers learn how to use memory and how to produce answers completely from scratch. They learn to do so using the magic of optimisation: when a neural computer produces an answer, we compare the answer to a desired correct answer. Over time, the controller learns to produce answers that are closer and closer to the correct answer. In the process, it figures out how to use its memory.
+
+Neural computer is a learning machine that, without prior programming, can organise information into connected facts and use those facts to solve problems.

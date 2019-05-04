@@ -68,3 +68,10 @@ Get out in nature and nature makes your big problems seem tiny.
 Looking at the night sky, bright stars who don't admire infinite universe? however, only the wise man fearing the true God who created the universe.
 
 Life can be hard. But remember, while the difficult moments may decrease happiness, they’re essential for building meaning. And that’s what matters in the long run.
+
+## 怎样找到人生的意义？
+
+问自己这样几个问题：
+- 你想要的生活什么样子的？
+- 这辈子最引以为傲的是什么？
+- 想在你的墓志铭上写些什么？

@@ -6,7 +6,7 @@
 
 资产负债表反映的是企业的融资和投资过程。所有者权益 + 负债 = 资产。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibm2sb53lRhwXzXjbHOrTRC6BnPAHLNYwEhaH4eGu2YNeOK3ruGSMRl1V1kPnxGg2Mt3NJDk0R0DiccLibST6el9Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](./images/asset.webp)
 
 利润表反映的是企业的经营，即如何利用资产为企业创造收入。收入 - 成本 = 利润。
 ```
@@ -15,9 +15,16 @@
 净利润 = 营业利润 - 缴税
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/ibm2sb53lRhwXzXjbHOrTRC6BnPAHLNYwqzOwdGFSibTr0UFZ19wfcZ7sAcVOlxp2lP6xQQAtZTlzWIicaiab5CVRA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](./images/profit.webp)
 
-企业统计资产、确认收入，都是以权利和责任确认的时间点为基础的。而现金流量表则不同，它是基于收付实现制的，也就是说，它是以真的有钱进账，或钱款汇出的时间点进行统计的。
+利润表实施的是权责发生制，企业统计资产、确认收入，都是以权利和责任确认的时间点为基础的。而现金流量表是收付实现制，也就是说，它是以真的有钱进账，或钱款汇出的时间点进行统计的。
 
-现金流量表能够辅助判断企业经营成果的真实性，审视企业的财务风险和短期偿债能力。
+三张表是同一件事情的三个维度，一个表上某个科目的变动，一定会在其他表上显露出来。
 
+评估一个企业，现金流比利润更靠谱。现金流量表能够辅助判断企业经营成果的真实性，审视企业的财务风险和短期偿债能力。
+
+现金流有三种形式：筹资性现金流、经营性现金流、投资性现金流。
+
+一个运转良好、主营业务清晰的企业，一定是经营性现金流非常稳健的。经营能力强是核心竞争力，是自我造血。
+
+对于初创企业，不仅要看它的筹资能力，还要看未来创造经营性现金流的能力。

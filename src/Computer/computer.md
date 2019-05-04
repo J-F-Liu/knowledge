@@ -14,3 +14,8 @@
 受到开源软件的启发，想要创造处理器领域的 Linux 系统，整个行业需要开放式的指令集架构，如果有很多人开始使用相同的开源指令集架构开发处理器，那么这种竞争就会进一步推动创新。最有名的开源例子是 RISC-V，由加州大学伯克利分校开发。它是一个支持 32 位和 64 位的模块化指令集，开发者可以根据需求选择扩展包，增加或删减增强功能。在 RISC-V 基金会的维护下，整个社区正在不断改进架构。
 
 软件创新可以启发架构发展；提升软硬件接口会带来创新机会；市场最终会解决架构之争。
+
+可编程的核心就是布尔运算及其相应的流程控制（Control Flow）。
+
+In a computer, the processor can read and write information from and to random access memory (RAM). RAM gives the processor much more space to organise the intermediate results of computations. Temporary placeholders for information are called variables and are stored in memory. In a computer, it is a trivial operation to form a variable that holds a numerical value. And it is also simple to make data structures – variables in memory that contain links that can be followed to get to other variables. One of the simplest data structures is a list – a sequence of variables that can be read item by item. For example, one could store a list of players’ names on a sports team and then read each name one by one. A more complicated data structure is a tree. In a family tree for instance, links from children to parents can be followed to read out a line of ancestry. One of the most complex and general data structures is a graph, like the London Underground network.
+
