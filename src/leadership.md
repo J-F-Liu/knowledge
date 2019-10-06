@@ -1,6 +1,12 @@
 # 领导力
 
-> A boss uses people but leader develops people. A boss issues ultimatums but leader generates enthusiasm. A boss says “I” but leader says “we”. A boss takes credit but leader gives credit. A boss says “go” but leader says “Let’s go”. A boss make followers but leader makes leaders.
+> A boss uses people but leader develops people. A boss issues ultimatums but leader generates enthusiasm.
+> A boss says “I” but leader says “we”. A boss takes credit but leader gives credit.
+> A boss says “go” but leader says “Let’s go”. A boss make followers but leader makes leaders.
+
+> “A small team of A+ employees can easily out perform larger teams of B and C employees.”
+> 一个由 A+ 员工组成的小型团队可以轻松击败由 B 和 C 员工组成的大型团队。
+> --- 史蒂夫 · 乔布斯
 
 领导力的秘密很简单：做相信的事，画出一幅未来的图像。去那里，人们自会跟随。
 
@@ -13,6 +19,14 @@
 软件开发如今成了一项团队运动。为了取得成功，你需要能够让周围的人支持你或你的团队。如果你能证明你能激励一个团队，让他们行动起来，你就会变得无价。
 
 一个简单的事实：好的领导是支持与说服的大师。当你想让你的想法获得通过时，你需要能够理解他人，理解他们的动机和他们的需求，以便得到你想要的行动与改变。
+
+## 领导者的三种模式
+
+模式一："这就是我想要的，你按照我说的做。"
+
+模式二："这就是我想要的，你自己想如何去做。"
+
+模式三："让我们一起弄清楚我们能做些什么。"
 
 ## 领导者的微妙习惯
 
@@ -132,3 +146,4 @@
 
 承诺是很具备影响力的，有时候一句简单的 “我能做到” 会带来非常强大的力量，领导者的承诺是对下属的激励，必要的时候，一定要给出自己的承诺，让下属对你有信心；沟通后下属做出了承诺能够让他在后续的工作中保持行动一致，当然最好是纸面承诺，有些人在做完一对一沟通后，需要小伙伴回去记录下沟通结果的要素，其中有一些关键的 todo 项，如果是这种方式的话，要记得进行有效的跟踪，否则会慢慢形成比较形式的东西。
 
+管理是一门艺术，你很难掌握其中的精髓，一旦掌握了却又非常美妙。

@@ -10,7 +10,6 @@
 
 几十年来，新的 CISC 指令集都没有出现，而 RISC 已经成为了通用处理器的最佳指令集架构。
 
-
 受到开源软件的启发，想要创造处理器领域的 Linux 系统，整个行业需要开放式的指令集架构，如果有很多人开始使用相同的开源指令集架构开发处理器，那么这种竞争就会进一步推动创新。最有名的开源例子是 RISC-V，由加州大学伯克利分校开发。它是一个支持 32 位和 64 位的模块化指令集，开发者可以根据需求选择扩展包，增加或删减增强功能。在 RISC-V 基金会的维护下，整个社区正在不断改进架构。
 
 软件创新可以启发架构发展；提升软硬件接口会带来创新机会；市场最终会解决架构之争。
@@ -19,3 +18,79 @@
 
 In a computer, the processor can read and write information from and to random access memory (RAM). RAM gives the processor much more space to organise the intermediate results of computations. Temporary placeholders for information are called variables and are stored in memory. In a computer, it is a trivial operation to form a variable that holds a numerical value. And it is also simple to make data structures – variables in memory that contain links that can be followed to get to other variables. One of the simplest data structures is a list – a sequence of variables that can be read item by item. For example, one could store a list of players’ names on a sports team and then read each name one by one. A more complicated data structure is a tree. In a family tree for instance, links from children to parents can be followed to read out a line of ancestry. One of the most complex and general data structures is a graph, like the London Underground network.
 
+## 文件系统
+
+A file system is a clearly-defined method that the computer's operating system uses to store, catalog, and retrieve files. Files are central to everything we use a computer for: all applications, images, movies, and documents are files, and they all need to be stored somewhere.
+
+File systems need to keep track of not only the bits that make up the file itself and where they are logically placed on the hard drive, but also store information about the file. The most important thing it has to store is the file's name. Also, the file system has to know how to organize files in a hierarchy. This hierarchy is usually called a directory. The last thing the file system has to worry about is metadata. Examples of metadata are file's modification date, attributes, such as hidden or read-only, file permissions.
+
+One of the biggest advances in file systems has been the addition of journaling, which keeps a log of changes that the computer is about to make to each file. This means that if the computer crashes or the power goes out halfway through the file operation, it will be able to check the log and either finish or abandon the operation quickly without corrupting the file. This makes restarting the computer much faster, as the operating system doesn't have to scan the entire file system to find out if anything is out of sync.
+
+Gary Kildall invented CP/M file system in 1973. It stored files in a completely flat hierarchy with no directories. File names were limited to eight characters plus a three-character "extension" that determined the file's type.
+
+In MS-DOS 2.0, FAT-12 has nested directories, labeled with the backslash \ as the separator.
+
+FAT-16 2GB maximum disk size
+FAT-32 8TB (terabyte) limit, file name up to 255 characters
+
+Year 1984, Macintosh File System, or MFS, and had a limit of 20MB and 4,096 files. File names could be 63 characters long.
+
+MFS was replaced in 1985 by a system with proper hierarchical directories, called the Hierarchal File System, or HFS. File names were now limited to 31 characters, which was just short enough to be annoying.
+
+The Unix File System (UFS), also known as the Berkeley Fast File System, file name is case-sensitive. Supports block suballocation where partially-filled blocks from several files could be stored in a single block.
+
+ext2 was "inspired" by the UFS design, and used in Linux operating system.
+
+ReiserFS added not only journaling, but attempted to improve on many other aspects of ext2. B-Tree indexing and advanced block suballocation routines sped up the file system significantly, particularly when dealing with small files on the order of 1KB.
+
+XFS has been optimized for speed and reliability, winning many speed comparison tests. It uses extents and has many advanced features such as being optimized for multithreading—multiple threads can operate on the same file system simultaneously. In 2000 SGI released the XFS source code under the GNU Public license.
+
+NTFS was an all-out, balls-to-the-wall implementation of all the best ideas in file systems that Cutler's team could think of. NTFS stores all of its metadata information in separate files, hidden from the regular operations of the OS by having filenames that start with the \$ character. The only thing anyone could really find to complain about NTFS was that its design was a proprietary secret owned by Microsoft.
+
+Macintosh OS X 10.0, released in 2001. For the first release of OS X, the user was asked to choose between UFS and HFS+ when installing the OS on a new hard drive partition. For compatibility reasons, however, HFS+ was chosen as the default. UFS support was finally dropped in Leopard, the latest version of OS X.
+
+Sun's ZFS - Zettabyte File System, announced in 2004, ZFS builds on top of virtual storage pools called zpools, so all connected drives appear to be part of a single gigantic partition. ZFS automatically take snapshots of every single change made to a file, saving only the differences, so no data can ever be lost.
+
+TFS was created out of the need for a modern file system for Redox OS, as a replacement for ZFS, which proved to be slow to implement because of its monolithic design. TFS is inspired by the ideas behind ZFS, but at the same time it aims to be modular and easier to implement.
+
+FAT still haunts us to this day, as most flash drives are formatted with FAT32. Because as one of the oldest file systems available, it is also the most understood and easiest to implement.
+
+## 鼠标
+
+1999 年 4 月，微软发布第一代光学鼠标，通过光学影像的位移来定位，促成了鼠标的升级换代。此前人们使用的都是机械鼠标，里面是一个橡胶球，通过滚动带动三个滚轮来定位，它的最大缺点就是定位不精确，而且需要经常清洗，防止污垢影响精确度。早期的光学鼠标不能在玻璃和光滑表面使用。
+
+2009 年 8 月，罗技公司推出了会发射出两束激光的鼠标，这能使得它可以在玻璃上使用。
+
+## 固态硬盘，solid state drives，缩写 SSD
+
+速度快，轻巧，没有运动的部件，耐磁场和震动，容量价格比随时间在攀升。
+
+SSD 基于 NAND 闪存构建，NAND 是非与门，闪存在断电后仍能保持数据。NAND 闪存在写入数据单元时需要先擦除原有的内容，擦除和写入都通过施加电压来实现，这会造成 NAND 中绝缘的部分产生磨损。因此 SSD 是有写入次数限制的。
+
+SSD 使用的 NAND 单元有 4 种类型：
+
+1. SLC (Single Level Cell) — 1 比特每单元
+2. MLC (Multi-Level Cell) — 2 比特每单元
+3. TLC (Triple Level Cell) — 3 比特每单元
+4. QLC (Quad Level Cell) — 4 比特每单元
+
+每个单元存储的比特数越大，受擦写引起的磨损的影响也越大，可写入次数就越小。所以 QLC 用于写入次数少，而读取频繁的场景。制造商也会相应地把 SSD 标记为写入型、读取型和混合型。
+
+SSD 接近用坏时的可能的信号有：
+
+- 出现硬盘坏块，读写文件用时很长且没有成功
+- 无法读写文件，系统发现坏区后拒绝读取或写入
+- 系统提示文件系统需要修理，且不是非正常关机造成的
+- 开机启动过程中死机或崩溃，尽快把数据备份出来
+- 硬盘变成只读状态，不能写入数据，好在数据没丢
+
+## 显示器分辨率
+
+720p: 1280 x 720, 称为 HD（中文译为"高清"）
+1080p: 1920 x 1080, 称为 FULL HD（中文称为全高清）
+1440p: 2560 x 1440, 称为 QHD 或 Quad HD，即4倍的HD
+2160p: 3840 x 2160, 称为 4K
+4320p: 7680 x 4320, 称为 8K
+
+
+CNC machine - 数控机床 Computer Numerical Control

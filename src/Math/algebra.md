@@ -1,3 +1,15 @@
+“In mathematics you don’t understand things, you just get used to them.”
+
+“在数学中，你不是去理解它们，而只是去习惯它们而已”
+
+-- 冯诺依曼
+
+所有的数学结构都可以用几何图形表示。这种一一对应关系是通过某种数学规则来构建起来的。这是一种拓扑学的关系，叫做“同构”或“同胚”。
+
+数轴是“数”与“几何”相结合的一个典型，一条直线与整个实数域，是存在一一对应关系的，即“实数集与直线是同构的”。
+
+两个数字的组合是二维平面空间中的一点，3 个数字的组合是 3 维立体空间中的一点，而 n 个数字的组合，则是 n 维空间中的一点。而这一组数字的变化，就是 n 维空间中一个点的移动。这个点移动所扫过的轨迹，就是 n 为空间中的一条曲线，代表了这个点的运动历史。
+
 # 代数 Algebra
 
 Algebra is all about making unknowns known.
@@ -127,7 +139,6 @@ a (b \cdot c) = (a \cdot b) c \\
 a (b + c) = ab + ac
 $$
 
-
 分子 numerator
 分母 denominator
 指数 exponent
@@ -136,7 +147,7 @@ $$
 
 Exponents are shorthand for repetitive multiplication. The base is the number that gets multiplied. The exponent is how many times the base is multiplied.
 
-$$\begin{array}{c}
+$$
 x^ax^b = x^{a+b} \\
 \cfrac{x^a}{x^b} = x^{a-b} \\
 (x^a)^b = x^{ab} \\
@@ -171,6 +182,7 @@ slope-intercept form: $ y = mx + b $
 standard form: $ ax + by = c $
 
 ## 不等式 Inequalities
+
 Statements using comparison symbols are called inequalities since it’s about two things not being equal.
 
 Comparison symbols express different relationships:
@@ -228,7 +240,6 @@ Square pattern:
 $(x+a)(x- a) =x^2-a^2$
 $(x+a)^2 =x^2+2ax+a^2$
 
-
 ## 多项式 polynomial
 
 Polynomial is any expression with multiple terms. Binomial is a special case of a polynomial.
@@ -246,6 +257,7 @@ If $a \cdot b = 0$, then $a = 0$ and/or $b = 0$.
 Factoring to get an equation in the form of two terms multiplied together to equal zero means that you can use the ZPR to solve.
 
 ### 二次方程 Quadratic equation
+
 A quadratic equation is any polynomial equation that has a degree of two; that just means that the largest exponent for any variable is two.
 Quadratic equations can be used to address a whole new set of real world scenarios.
 Quadratic equations have up to two solutions.
@@ -264,6 +276,7 @@ IF Δ = 0, then there is only one unique solution.
 IF Δ < 0, then there are no real solutions.
 
 ### 抛物线 parabola
+
 A parabola is the shape of a quadratic equation.
 A graph lets us see values. If we had a graph, we could just read off points without having to run a bunch of calculations.
 
@@ -323,7 +336,7 @@ Piecewise functions allow you to express that different things are happening at 
 贬值 depreciate
 
 利息 = 本金ㄨ年利率ㄨ年数
-月付 = （本金＋利息➗月数
+月付 = （本金＋利息 ➗ 月数
 
 Write all your steps out, that’s a good way to keep from making mistakes.
 
@@ -331,7 +344,7 @@ Write all your steps out, that’s a good way to keep from making mistakes.
 
 交换群：除了满足一般的群公理，运算还满足交换律的群。
 
-整数在加法运算下成群，有理数(去除0后)在乘法运算下成群。
+整数在加法运算下成群，有理数(去除 0 后)在乘法运算下成群。
 
 环：群+二元运算，满足：封闭性、结合律。
 
@@ -339,8 +352,7 @@ Write all your steps out, that’s a good way to keep from making mistakes.
 
 有理数、实数、复数在加法和乘法运算下都构成域。
 
-
-群同构：存在两个群 A、B 之间的一个双射（即一一对应的映射）ϕ:A→B，满足ϕ(a*b)=ϕ(a)×ϕ(b)，其中 a、b∈A，ϕ(a)、ϕ(b) 和ϕ(a*b)∈B，* 和 × 分别是群 A 和 B 的运算。
+群同构：存在两个群 A、B 之间的一个双射（即一一对应的映射）ϕ:A→B，满足 ϕ(a*b)=ϕ(a)×ϕ(b)，其中 a、b∈A，ϕ(a)、ϕ(b) 和 ϕ(a*b)∈B，\* 和 × 分别是群 A 和 B 的运算。
 
 域同构：两个域上的 “加法” 群同构，并且去除 “加法” 单位元之后的两个域上的 “乘法” 群也要同构。
 

@@ -24,14 +24,9 @@ No matter where you are right now, you can have any future you want.
 Create the highest, grandest vision possible for your life, because you become what you believe.
 Mental creation always precedes physical creation. The blueprint you design in your head becomes the life you build.
 
-## Assume nothing but question everything. 怀疑一切
-You desperate for knowledge or information that can be used to improve or create something.
-While others waste time, you rather learn how to create, build or design something.
-You are hungry to make a difference or do something significant.
-
 ## Don’t invest in a career. Build a life. 创造属于自己的人生
-The way we work keeps changing. Robots are eating jobs. People are scared of losing their jobs. Nobody is safe. 
-It’s easier to transform your passion into your job than finding a job that matches your what you love to do. 
+The way we work keeps changing. Robots are eating jobs. People are scared of losing their jobs. Nobody is safe.
+It’s easier to transform your passion into your job than finding a job that matches your what you love to do.
 Do something interesting, meaningful, different, amazing and truly remarkable. Show your most amazing work to the world.
 
 ## Take your dreams seriously. 认真对待你的梦想
@@ -39,7 +34,17 @@ If you pursue your dreams long enough, compounding takes effect. Momentum will s
 For centuries we’ve been trained by the system to stop thinking and do as we are told.
 But dreamers and thinkers are changing the world as we know it.
 
+## Assume nothing but question everything. 怀疑一切
+You desperate for knowledge or information that can be used to improve or create something.
+While others waste time, you rather learn how to create, build or design something.
+You are hungry to make a difference or do something significant.
+
 ## Nothing is impossible. 一切皆有可能
 You need to aim beyond what you are capable of.
 You need to develop a complete disregard for where your abilities end.
 Make your vision of where you want to be a reality.
+
+
+每一份工作，要做到最好，也许都要有超越工作本身之外的信念。
+
+人必有痴，而后有成。（林语堂）
