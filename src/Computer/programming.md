@@ -1,4 +1,51 @@
-像奴隶一样工作，像国王一样命令，像神一样创造。（康斯坦丁·布朗库西，1876年－1957年，现代主义雕塑先驱）
+### Composition is the Essence of Programming
+
+What is programming?
+At the most basic level, programming is about telling the computer what to do.
+We are solving a non-trivial problem，if it were trivial, we wouldn’t need the help of the computer.
+
+And how do we solve problems?
+We decompose bigger problems into smaller problems, we write code that solves all the small problems.
+And then comes the essence of programming: we compose those pieces of code to create solutions to larger problems.
+**Decomposition wouldn’t make sense if we weren’t able to put the pieces back together.**
+
+Our brains can only deal with a small number of concepts at a time.
+We are unable to deal with the soup of objects or the spaghetti of code.
+We need structure not because well structured programs are pleasant to look at,
+but because otherwise our brains can’t process them efficiently.
+
+Once a chunk is implemented, we can forget about the details of its implementation
+and concentrate on how it interacts with other chunks.
+
+An object in category theory is an abstract nebulous entity.
+All you can ever know about it is how it relates to other objects.
+
+The moment you have to dig into the implementation of the object in order to understand
+how to compose it with other objects, you’ve lost the advantages of your programming paradigm.
+
+### Types Are About Composability
+
+In programming we pass the results of one function to another.
+The data types of the two ends must fit for the composition to work.
+
+The simplest intuition for types is that they are sets of values. Sets can be finite or infinite.
+
+### Describing the semantics of a language
+
+Operational semantics describes the mechanics of program execution by defining a formalized idealized interpreter.
+It’s very hard to prove things about programs using operational semantics.
+
+In denotational semantics every programming construct is given its mathematical interpretation.
+With that, if you want to prove a property of a program, you just prove a mathematical theorem.
+Thus it’s possible to perform formal proofs of correctness of software.
+
+### Pure and Dirty Functions
+
+Functions that always produce the same result given the same input and have no side effects are called pure functions.
+
+Computational effect can be mapped to monads. Monads let us model all kinds of effects using only pure functions.
+
+像奴隶一样工作，像国王一样命令，像神一样创造。（康斯坦丁·布朗库西，1876 年－1957 年，现代主义雕塑先驱）
 
 As a developer, we always like to choose the best thing among several choices available.
 
@@ -10,4 +57,32 @@ Syntax highlighting means that the editor displays the text, more specifically, 
 
 Debugging is the process of finding and removing bugs from a program.
 
+计算机科学中的一切都循序渐进的. 知识点是循序渐进的，略过前面的知识点无异于搭建空中楼阁.
 
+如果当前你正在学习的知识点对你而言很无厘头, 请停留在当前位置, 暂不要进行下一个知识点。
+如果您使用的辅导资料(或书籍)没有充分诠释该知识点, 那么务必去寻找其他适合您的资源。
+请避免过多负面的自省，不要被各种问题打击到怀疑人生, 坚持下去。
+
+REPL: read-eval-print loop
+
+[程序员的誓言](https://blog.cleancoder.com/uncle-bob/2015/11/18/TheProgrammersOath.html)
+
+为了捍卫和维护计算机程序员的职业荣誉，我承诺，尽我所能和判断力：
+
+1、我不会产生有害的代码。
+
+2、我制作的代码永远是我最好的作品。我不会故意允许在行为或结构上有缺陷的代码。
+
+3、每次发布时，我都会生成一个快速、可靠、可重复的证据，证明代码的每个元素都应该正常工作。
+
+4、我将经常发布小版本，这样我就不会妨碍其他人的进展。
+
+5、我会抓住每一个机会，无畏地，不懈地改进我的代码。我永远不会损害它们。
+
+6、我将尽我所能保持自己和他人的生产力。我不会做任何降低生产力的事情。
+
+7、我将继续确保支持其他人的工作，并且他们也可以支持我的工作。
+
+8、我将对幅度和精度做出诚实的估计。我不会作出做不到的诺言。
+
+9、我将永远不会停止学习和改进我的手艺。

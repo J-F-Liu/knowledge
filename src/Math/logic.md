@@ -65,6 +65,10 @@
 推论 - 根据定理额外推导出的真命题。
 定义 - 概念的陈述。
 
+## 命题推理
+
+只依赖于正确使用“若……则……”、“并且”、“或”和“非”这四个词的推理，叫作命题推理。
+
 已知的或者假定为真的真命题是前提，要证明的命题是目标。
 
 Implication (‘if...then. . . ’, ⇒)
@@ -142,10 +146,10 @@ To prove that a proposition of the form ∀x ∈ X, p(x) is false, it sufﬁces 
     (a) ¬(p∧q) ≡ (¬p)∨(¬q); and
     (b) ¬(p∨q) ≡ (¬p)∧(¬q).
 
-Universal quantiﬁcation (‘for all’, ∀)
+全称断言 Universal quantiﬁcation (‘for all’, ∀)
 ‘∀x ∈ X, ...’ denotes ‘for all x ∈ X, ...’
 
-Existential quantiﬁcation (‘there exists’, ∃)
+存在断言 Existential quantiﬁcation (‘there exists’, ∃)
 ‘∃x ∈ X, ...’ denotes ‘there exists x ∈ X such that . . . ’
 
 unique existential quantiﬁer

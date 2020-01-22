@@ -9,6 +9,7 @@ I know so many people who chase whatever worked for other people.
 Those who are going to succeed will decide what they want to do regardless of what everyone else says or thinks about it.
 
 ## Believe in life-long learning. 终身学习
+
 One of the best ways to gain knowledge and be better is self-education.
 As long as you are genuinely interested in the topic, don’t stop.
 Lifelong learning will get most of your questions answered.
@@ -22,6 +23,7 @@ Research has proven that more than ever before, a challenged, stimulated brain m
 Studies have found that learning throughout our lives can improve self-esteem and increase life-satisfaction, optimism and belief in our own abilities.
 
 ## Leverage Your Position. 立足现状
+
 There are people you already know who have information you need.
 There are people you already know who have capital you can use.
 There are people you already know who can connect you with people you should know.
@@ -32,6 +34,7 @@ It’s based on believing what others might call a fantasy.
 It’s based on leveraging your position and maintaining the momentum of every step you take.
 
 ## Begin with the end clearly in mind. 以终为始
+
 People may spend their whole lives climbing the ladder of success only to find, once they reach the top, that the ladder is leaning against the wrong wall.
 
 Too many people are playing the wrong game. It’s how you ruin your life without even knowing it.
@@ -40,31 +43,37 @@ More important than playing “the game” is how the game is set up. How you se
 Start from the end and work backwards. Rather than thinking about what’s plausible, or what’s expected, or what makes sense — start with what you want.
 
 ## Don’t Wait To Start. 立即行动
+
 You qualify yourself by showing up and working. You get permission by deciding.
 
 Life is short. Don’t wait for tomorrow for something you could do today.
 
 ## Take one step at a time. 走一步看一步
+
 When you’re trying to accomplish something big, you have the why but rarely the how. The path to achieving your goals is far from obvious.
 The emotional need for clarity and fear of the unknown leads people to abandon their dreams for more straightforward pursuits.
 However you don't need to have “it all” figured it. You need clarity on the next step or two.
 When you get to the next step, you’ll be able to ask better questions.
 
 ## Create As You See Fit. 以自己的方式做事
+
 There is no right or wrong way. Rather, it’s about doing things your way.
 You’ll emerge with your own voice and original work. You’ll be less troubled about how your work is received and more focused on creating something you believe in.
 
 ## Don’t Fear To Break Convention. 敢于打破常规
+
 Convention is where we’re at. Breaking convention is how we’ll evolve, which requires a gargantuan quantity of failure.
 
 Failure is feedback. Failure is moving forward. It’s conscious and exerted effort toward something you’ve never done before. It’s incredible.
 
 ## Never Forget Where You Came From. 不忘根本
+
 It’s easy to forget where you came from.
 It’s easy to forget all the sacrifices other people have made to get you where you are.
 Humility, gratitude, and recognition of your blessings keeps your success in proper perspective.
 
 ## No One Succeeds Alone. 没有人能独自成功
+
 "Find Your Tribe" — No matter how talented, how successful, how brilliant you are, just remember: Nobody wins alone.
 
 You cannot be successful in a big way alone. You need help. You need an audience. It does not matter what your dream is.
@@ -77,6 +86,7 @@ Are you surrounding yourself with the right people? Are you putting yourself in 
 You can be the reason others receive inspiration. Show your best work every day!
 
 ## Becoming an Expert: The Elements of Success. 成为专家
+
 If you study the life and work trajectory of experts, two patterns seem to emerge.
 One, they have specific backgrounds or opportunities, as mentioned above. Two, they put an incredible amount of time and effort into deliberate, effortful practice.
 
@@ -85,11 +95,13 @@ The best type of practice does two things:
 2)It pushes us to the edge of our competence and forces us to focus. This is where the learning happens.
 
 ## It takes longer than you think to succeed.
+
 The overnight success is a myth.
 Nothing worthwhile is going to be fast. Nor is building a business.
 It takes longer than you think to adjust your product or service to the market’s needs and spread the word about your solution.
 
 ## Great ideas require great teams.
+
 No one has ever built great things alone.
 
 Your brilliant idea is not worth a dime. In today’s competitive environment, no one cares about the ideas. Everyone has tons of them.
@@ -115,8 +127,7 @@ Every huge thing is a product of efficient collaboration. Don’t try to prove i
 
 - 好运气 (成功者赶上了好时代，以及出乎意料的好运气，而很多失败者之所以失败，是运气不好而已)
 
-
-## 微软全球执行副总裁沈向洋在LinkedIn上的分享
+## 微软全球执行副总裁沈向洋在 LinkedIn 上的分享
 
 - 你不能什么都做。时间和精力并不是无穷无尽的。你不能同时做所有的事情。
 - 要想走得宽广，先要走得深入。成为某方面的专家，真正做出自己的成绩，然后拓展业务。
@@ -156,7 +167,7 @@ Every huge thing is a product of efficient collaboration. Don’t try to prove i
 不要误以为只要不关心身边人和窗外事就是专注于自己，这种冷淡地只关注自己也会损害未来的成长。
 
 首先，要把注意力放在自己的成长上。放在一切可以有积累效应的技能上，然后给予充分的学习、思考和磨炼。
-复利效应的公式是(1+r)^n，其中1是你的起点，r代表每天的进步。它可以很小，但是你要保证，它一定得是正的。
+复利效应的公式是(1+r)^n，其中 1 是你的起点，r 代表每天的进步。它可以很小，但是你要保证，它一定得是正的。
 
 其次，要放在自己的真爱上。把注意力不求回报地放到真爱身上，这是真正幸福的关键。放到他们身上之后，一样的，关注他们的成长。
 
@@ -211,7 +222,6 @@ Focus Better By Harnessing “Flow”.
 
 不要与缺乏安全感的人合作……因为他们的世界里，实际上不可能有真正的合作关系。
 
-
 「元认知」 —— 对认知的审视和控制。
 
 抽离：从所处的情境中跳出来，从第三方旁观者的角度观察自己。
@@ -245,3 +255,5 @@ Focus Better By Harnessing “Flow”.
 这也是一种冗余和「不舒服」，但却可以使我始终保持对业界的洞察，和对自己的「手感」。
 
 为了保持敏锐，试试去做一些「不舒服」的事情。它可以帮助你保持精进。
+
+我们都知道，如果可以回到过去，改变任何一件小事情，都将极大地改变未来。然而，几乎没有人想到，今天只要小小改变，就会改变自己的未来。

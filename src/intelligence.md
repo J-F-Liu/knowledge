@@ -166,3 +166,15 @@ The controller can read from multiple locations in memory. Memory can be searche
 Neural computers learn how to use memory and how to produce answers completely from scratch. They learn to do so using the magic of optimisation: when a neural computer produces an answer, we compare the answer to a desired correct answer. Over time, the controller learns to produce answers that are closer and closer to the correct answer. In the process, it figures out how to use its memory.
 
 Neural computer is a learning machine that, without prior programming, can organise information into connected facts and use those facts to solve problems.
+
+## 自然语言处理
+
+BERT - Bidirectional Encoder Representations from Transformers 来自Transformer的双向编码器表征
+
+谷歌发布了迁移学习之最强模型-BERT，BERT模型基于所有层中的左、右语境进行联合调整，来预训练深层双向表征。
+Transformer舍弃了RNN的循环式网络结构，完全基于注意力机制来对一段文本进行建模。注意力机制的核心思想是去计算一句话中的每个词对于这句话中所有词的相互关系，然后认为这些词与词之间的相互关系在一定程度上反应了这句话中不同词之间的关联性以及重要程度。因此再利用这些相互关系来调整每个词的重要性(权重)就可以获得每个词新的表达。这个新的表征不但蕴含了该词本身，还蕴含了其他词与这个词的关系，因此和单纯的词向量相比是一个更加全局的表达。
+
+## 机器学习的本质
+
+整个机器学习本质上就是在寻找数据中的统计规律，这个规律需要被表示，要么是通过线性方法，要么是通过非线性的方法，更一般的意义上，可以通过概率分布的方法。
+概率分布的密度函数，本身就是一个函数，既然是函数，就可以被数学上表示和拟合，而拟合方法，就可以通过深度神经网络的无数个神经元组成的组合表达出来。

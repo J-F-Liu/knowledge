@@ -94,3 +94,8 @@ SSD 接近用坏时的可能的信号有：
 
 
 CNC machine - 数控机床 Computer Numerical Control
+UART - 通用异步收发器 Universal Asynchronous Reciever / Transmitter
+一种通用串行数据总线，用于异步通信。该总线双向通信，可以实现全双工传输和接收。在嵌入式设计中，UART用来与PC的USB 2.0接口进行通信，包括与监控调试器和其它器件，数据传输速率可达12 Mbps。
+
+MMIO - Memory-mapped Input and Output
+FIFO - First-In, First-Out
