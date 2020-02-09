@@ -88,14 +88,23 @@ SSD 接近用坏时的可能的信号有：
 
 720p: 1280 x 720, 称为 HD（中文译为"高清"）
 1080p: 1920 x 1080, 称为 FULL HD（中文称为全高清）
-1440p: 2560 x 1440, 称为 QHD 或 Quad HD，即4倍的HD
+1440p: 2560 x 1440, 称为 QHD 或 Quad HD，即 4 倍的 HD
 2160p: 3840 x 2160, 称为 4K
 4320p: 7680 x 4320, 称为 8K
 
+## USB - Universal Serial Bus
+
+1995 USB 1.0 was released, transfer rate is 1.5Mbps
+2000 USB 2.0 480 mbps
+2010 USB 3.0 5.0 Gbps (500 MB/s), two-way data transfer mode
+2013 USB 3.1 10 Gbps
+2014 USB Type-C connector
+2017 USB 3.2 20 Gbps
+2020 USB 4.0 40Gbs, Power supply will reach 100W, only operate over the Type-C connector, support PCIE devices — such as external graphics cards, external displays
 
 CNC machine - 数控机床 Computer Numerical Control
 UART - 通用异步收发器 Universal Asynchronous Reciever / Transmitter
-一种通用串行数据总线，用于异步通信。该总线双向通信，可以实现全双工传输和接收。在嵌入式设计中，UART用来与PC的USB 2.0接口进行通信，包括与监控调试器和其它器件，数据传输速率可达12 Mbps。
+一种通用串行数据总线，用于异步通信。该总线双向通信，可以实现全双工传输和接收。在嵌入式设计中，UART 用来与 PC 的 USB 2.0 接口进行通信，包括与监控调试器和其它器件，数据传输速率可达 12 Mbps。
 
 MMIO - Memory-mapped Input and Output
 FIFO - First-In, First-Out

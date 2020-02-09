@@ -19,6 +19,7 @@
 希尔伯特 Hilbert
 庞加莱 Poincar´e
 伯克霍夫 Birkhoff
+格罗滕迪克 Grothendieck，（1928-2014）《代数几何基础》
 
 Use what you know to find what you don’t know. And if you don’t have what you need, add it!
 There’s sometimes more than one way to solve a problem, pick the way that seems like the least amount of work!
@@ -646,3 +647,33 @@ $$ Q = (I + A)(I − A)^{−1} = (I − A)^{−1}(I + A) $$
 is orthogonal. Conversely, if Q is orthogonal and det(Q + I) $\ne$ 0, then Q can be written as
 $$ A = (Q − I)(Q + I)^{−1} = (Q + I)^{−1}(Q − I) ,$$
 where A is skew-symmetric.
+
+## 投影几何 Projective geometry
+
+Since the projection lines all meet at the projection centre, this type of projection is also called a central projection.
+
+Since the invention of photography, modern cameras operate on the same principle, the difference is just that the screen now lies behind the “eye”.
+
+Given a point $\tilde{x}$ (representing the eye of an artist or the focal point of a camera), a vector $a$ (representing the projection line and the distance from ex to the projection plane), and a spatial object $x$, we wish to determine the coordinates $u_1, u_2$ of the central projection of $x$ onto the plane.
+
+$$
+\begin{gathered}
+w = λ(x − \tilde{x}) \\
+⟨w − a|a⟩ = 0 \implies λ = \frac{⟨a|a⟩}{⟨x − a|a⟩}
+\end{gathered}
+$$
+
+###### The principle of duality.
+
+To each theorem in projective geometry, there corresponds a “dual theorem” in which each expression in one column:
+
+- line ↔ point
+- pass through ↔ lie on
+- intersection point of two lines ↔ line connecting two points
+- concurrent ↔ collinear
+- polar ↔ pole
+
+is replaced by the corresponding expression in the other column.
+
+$$
+$$

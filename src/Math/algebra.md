@@ -358,11 +358,23 @@ Write all your steps out, that’s a good way to keep from making mistakes.
 
 扩域：把某个域 F 中添加进一个或几个不属于这个域的元素，在不改变原来域的 “加法” 和 “乘法” 的条件下，按照域的定义形成的新域 E 被称为原来域的扩域，记为 E/F。
 
+If associative multiplication is defined in a vector space, and if the space is closed under that multiplication, i.e., the product of arbitrary elements also belongs to that space, the vector space is said to be an **algebra**.
+
+An algebra is called a **field** if every nonzero element of it has its inverse and if it is closed under division by nonzero elements.
+
 ## 空间
 
 “空间”是容纳运动的一个对象集合，而变换则规定了对应空间的运动。不管是什么空间，都必须容纳和支持在其中发生的符合规则的变换，比如拓扑空间中有拓扑变换，线性空间中有线性变换，仿射空间中有仿射变换。
 
+**仿射变换**：$x\mapsto Mx+b$，其中 M 是线性变换，b 是平移；可通过使用齐次坐标，升维后变成线性变换；
+**相似变换**：$x\mapsto rAx+t$，其中 A 是正交变换，r 是缩放，t 是平移；
+**位似变换**：$ M\mapsto S+\lambda {\overrightarrow {SM}}$,其中 S 是中心点，λ 是缩放；
+**正交变换**：满足$Q^TQ = I$，可逆且$detQ=\pm1$，包括恒等、绕过原点的轴旋转、过原点的平面的镜像、关于原点的点反演、置换坐标轴。
+**线性变换**：满足可加性和齐次性，即线性变换在加法和数乘运算之前或之后结果相同。可由矩阵表示，包括正交变换、缩放、拉伸、挤压、剪切、投影到过原点的线或面、等等。
+
 如果在线形空间里面定义了范数，就成了赋范线性空间。赋范线性空间满足完备性，就成了巴那赫空间；赋范线性空间中定义角度，就有了内积空间，内积空间再满足完备性，就得到希尔伯特空间。
+
+（线性空间＋给定的基）和线性空间是完全不⼀样的数学结构！⼀个有限维线性空间和它的对偶空间有⽆数线性同构，但是没有⼀个是⾃然的！但是⼀个有限维线性空间到它的对偶空间的对偶空间有⼀个⾃然的同构。
 
 ## 线性空间
 

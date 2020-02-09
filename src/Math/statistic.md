@@ -1,3 +1,10 @@
+方差 MSE(Mean Square Error) 各随机变量与平均值差值的平方和的平均数（先求差，再平方，再平均）.
+标准差(Standard Deviation) 也称 均方差 RMSE(root mean square error) 是方差的算术平方根。
+均方根 RMS(root mean square) 将所有值平方求和，求其均值，再开平方，就得到均方根值。
+
+协方差（Covariance）衡量两个变量的总体误差。
+$$cov(X,Y)=\frac{\sum_{i=1}^n{(X_i-\bar X)(Y_i-\bar Y)}}{n-1}$$
+
 Statistics begins by assuming there is no effect.
 Prior to collecting data, rules are chosen to decide whether whether the data are consistent with the assumption of no effect.
 If the data are found to be inconsistent with the assumption, the assumption must be false and there is, in fact, an effect!

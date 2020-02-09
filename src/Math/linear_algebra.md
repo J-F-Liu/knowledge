@@ -800,6 +800,12 @@ Let A be an n×n matrix. The following are equivalent:
 
 _Diagonalizable_ matrices are similar if and only if they have the same characteristic polynomial, or equivalently, the same eigenvalues with the same algebraic multiplicities.
 
+### Orthogonal Matrix
+
+A matrix $A$ is orthogonal if and only if $A^⊤A = I$, which states that the columns (and rows as well) of A are mutually orthogonal unit vectors.
+
+Every orthogonal matrix is either a rotation matrix or the product of a rotation matrix and a reflection matrix.
+
 ### Permutation Matrix
 
 A permutation matrix is a square matrix obtained from the same size identity matrix by a permutation of rows. Such a matrix is always row equivalent to an identity.
@@ -879,3 +885,14 @@ Let A be a matrix. Then the row rank of A is equal to the column rank of A.
 Let $A$ be an m×n matrix and let $b$ be a vector in $R^m$. The least-squares solutions of $Ax=b$ are the solutions of the matrix equation $A^TAx=A^Tb$.
 
 If $A^TA$ is invertible, the least-squares solution is $\hat{x}=(A^TA)^{−1}A^Tb$.
+
+### Singular Value Decomposition (SVD)
+
+Any real mxn matrix A can be decomposed uniquely as $A=UDV^T$.
+
+U is mxn and column orthogonal (its columns are eigenvectors of $AA^T$).
+V is nxn and orthogonal (its columns are eigenvectors of $A^TA$).
+D is nxn diagonal (non-negative real values called singular values).
+The rank of a matrix is equal to the number of non-zero singular values.
+
+If A is a nxn nonsingular matrix, then its inverse is given by $A=UDV^T \implies A^{−1}=VD^{−1}U^T$.
