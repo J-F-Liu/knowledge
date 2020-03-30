@@ -102,6 +102,17 @@ SSD 接近用坏时的可能的信号有：
 2017 USB 3.2 20 Gbps
 2020 USB 4.0 40Gbs, Power supply will reach 100W, only operate over the Type-C connector, support PCIE devices — such as external graphics cards, external displays
 
+## 摄像头接口协议
+
+UVC 全称为 USB Video Class，即：USB 视频类，是一种为 USB 视频捕获设备定义的协议标准。
+符合 UVC 规格的硬件设备在不需要安装任何的驱动程序下即可在主机中正常使用。使用 UVC 技术的包括摄像头、数码相机、类比影像转换器、电视棒及静态影像相机等设备。
+
+实现 UVC 协议需要两种接口：一种为 VC Interface(视频控制接口)，VS Interface(视频流接口)。
+其中 VC 接口用于对 UVC 设备进行配置操控，而 VS 接口则用于负责传输视频数据流，两者相互配合完成 UVC 设备功能。
+
+V4L2 是 Video for linux2 的简称,为 linux 中关于视频设备的内核驱动。
+在 Linux 中，视频设备是设备文件，可以像访问普通文件一样对其进行读写，摄像头在/dev/video0 下。
+
 CNC machine - 数控机床 Computer Numerical Control
 UART - 通用异步收发器 Universal Asynchronous Reciever / Transmitter
 一种通用串行数据总线，用于异步通信。该总线双向通信，可以实现全双工传输和接收。在嵌入式设计中，UART 用来与 PC 的 USB 2.0 接口进行通信，包括与监控调试器和其它器件，数据传输速率可达 12 Mbps。

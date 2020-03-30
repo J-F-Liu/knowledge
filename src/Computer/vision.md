@@ -1,14 +1,22 @@
 # Computer Vision
 
+Computer vision is a key branch of artificial intelligence, aiming at understanding the surrounding environment from the visual information captured by cameras.
+
 Vision is a process of seeing what is where.
 
 Vision can be studied at three different levels: computational theory level, algorithm level and implementation level.
 
 Each computation task is independent of specific algorithms, algorithms can be independent of the software or hardware platform on which they are implemented.
 
+Estimate the values of unknown parameters (robot posture, camera orientation, etc.), given a number of measurements (sensory data, images, feature points, etc.). These kinds of problems are called inverse problem because they involve in estimating unknown model parameters instead of simulating the forward formation equations.
+
+A multiple view problem is inherently a vision problem involving more than one view of the same scene.
+
 Many of the visual problems are generally ill-posed, that is, solutions are not unique.
 
 ## Camera Model
+
+Vision system starts its work by acquiring an image or a set of images from cameras or data storage devices.
 
 The pinhole perspective (also called central perspective) projection model, first proposed by Brunelleschi at the beginning of the fifteenth century, is mathematically convenient and, despite its simplicity, it often provides an acceptable approximation of the imaging process.
 
@@ -39,7 +47,27 @@ The thick lens produces the same perspective projection as the ideal thin lens, 
 
 ## Camera Calibration
 
+Accurate calibration is of key importance for performance most machine and computer vision tasks.
+
+Camera calibration is a necessary step in 3D computer vision in order to extract metric information from 2D images.
+
 Camera calibration is the process of estimating the intrinsic and extrinsic parameters of a camera.
+
+In applications based on triangulation, such as stereo vision or structure light vision, the over all performance of the machine vision system strongly depends on the accuracy of the camera calibration.
+
+Main factors that influence the calibration accuracy:
+
+- the extraction of feature points in the image plane
+- the geometric accuracy of the calibration target
+- the lens distortion model conformity with the actual lens
+- the optimization algorithms used to converge on the camera parameters
+- the operational conditions of the experiments
+
+Generally, camera calibration methods can be classified into two categories: self-calibration and object-based calibration.
+
+Self-calibration estimates the camera’s parameters by using multi-view images without calibration targets. As such, it is the appropriate solution for on-line implementation in which accuracy is not highly demanded.
+
+The object-based camera calibration is performed by employing an object, such as 3D object, 2D pattern or 1D pattern with known coordinates, which is commonly used in off-line calibration for highperformance applications.
 
 We assume the plane of a calibration board is on $Z = 0$ of the world coordinate system. We have
 
@@ -138,9 +166,38 @@ $$
 
 Because of noise in data, the so-computed matrix $R = [r_1\ r_2\ r_3]$ does not in general satisfy the properties of a rotation matrix. We need to estimate the best rotation matrix from a general 3×3 matrix.
 
-## Epipolar Geometry
+## Lens distortion model
 
-A multiple view problem is inherently a vision problem involving more than one view of the same scene.
+The centre-of-distortion may be displaced from the centre of the image or the principal point of the camera.
+
+## Calibration Target
+
+In principle, any appropriately characterized object could be used as a calibration object.
+
+Circle targets can provide improved calibration quality due to a higher feature density. In contrast to the saddle points in checkerboards, circles are imaged as ellipses under camera perspective.
+
+However, symmetric circle grids are not rotationally invariant, and hence not suitable for stereo calibration. In these cases, checkerboard or asymmetric circle grids can be used.
+In order for the checkerboard targets to be rotation-invariant, the number of rows needs to be even and the number of columns odd, or the other way around.
+
+Generally, the target should fill most of your camera's FOV (Field Of View) at the desired working distance. This is because cameras need to be focused on that specific distance and calibrated.
+Changing the focus distance slightly affects focal length, which would throw any previous calibration off. Even aperture changes usually have a negative effect on calibration validity, which is why they should be avoided.
+
+For accurate calibration, the camera model is best constrained if the camera sees the calibration target filling most of the image. Popularity speaking, if a small calibration plate is used, many combinations of camera parameters could explain the observed images.
+As a rule of thumb, the calibration plate should have an area of at least half the available pixel area when observed frontally.
+Capturing calibration information from the periphery of images is especially important for the determination of lens distortion parameters.
+
+#### Calibration Best Practices
+
+- Proper mounting of calibration target and camera.
+- Perform calibration at the approximate working distance (WD) of your final application.
+- Choose the right size calibration target.
+- The target should have a high feature count. Using fine patterns is preferable.
+- Collect images from different areas and tilts.
+- Use good lighting. This is often overlooked, but hugely important.
+- Have enough observations. Remove bad observations.
+- Calibration is only as accurate as the calibration target used.
+
+## Stereo Vision
 
 Binocular stereo is a problem to determine the 3D shape of visible surfaces in a static scene from images taken of the same scene by two cameras.
 
@@ -148,11 +205,17 @@ The first step is to match the points in the two images, so that one can then de
 
 For any two views, they share the common epipolar constraint, which is the only geometrical constraint available.
 
+A 3-D point P is projected onto both image planes, to points $p_l$ and $p_r$, which constitute a conjugate pair. Given a point $p_l$ in the left image plane, its conjugate point $p_r$ in the right image is constrained to lie on a line called the epipolar line. This is called the epipolar constraint.
+
+The line connecting the lens centers of the two cameras, called baseline.
+
+All the epipolar lines in one image plane pass through a common point ($e_l$ and $e_r$ respectively) called the epipole, which is the projection of the optical center of the other camera.
+
 The epipolar plane is defined by the observed point P and the two centers of projection, $O_l$ and $O_r$; the epipoles are located at the point of intersection of the line joining the centers of projection and the two projective planes.
 
 ![](./images/epipolar_plane.png)
 
-Given a point m in the first image, its corresponding point in the second image is constrained to lie on a line called the epipolar line of m. This is called the epipolar constraint.
+A very special case is when both epipoles are at infinityy, that happens when both image planes are parallel to the baseline. Epipolar lines, then, form a bundle of parallel lines in both images.
 
 If you have a stereo camera where the relative position and orientation of two cameras is fixed, and if you computed poses of an object relative to the first camera and to the second camera, ($R_1$, $T_1$) and ($R_2$, $T_2$), respectively.
 
@@ -184,6 +247,8 @@ M_2^T E M_1 = 0
 \end{gathered}
 $$
 
+本质矩阵
+
 The essential matrix E is determined by the rotation $R$ and translation $T=[t_1,t_2,t_3]^T$ between the two cameras.
 
 $$
@@ -210,6 +275,8 @@ E = A_2^TFA_1
 \end{gathered}
 $$
 
+基本矩阵
+
 The fundamental matrix F is a matrix determined from point correspondences between two images, it has determinant 0 with rank 2. We can compute F in a manner analogous to computing the image homography in the previous section, by providing a number of known correspondences.
 
 To recover the epipolar geometry between two images from point matches, least-squares techniques are exploited to obtain more robust estimate.
@@ -218,7 +285,11 @@ $\tilde m_2^TF\tilde m_1=0$ for fixed $\tilde m_1$ defines a line in the other i
 
 The fundamental matrix cannot be uniquely determined if the corresponding points are exactly coplanar in the scene or exactly have a special symmetry, for example, at the vertices of a cube, This does not occur for real data with noise.
 
+The essential matrix is the specialization of the fundamental matrix to the case of normalized image coordinates. Reversely, the fundamental matrix may be thought of as the generalization of the essential matrix in which the assumption of calibrated cameras is removed.
+
 ## Stereo Calibration
+
+Stereo calibration determines the relative geometry (rotation and translation) between cameras. The intrinsic parameters of each camera can be determined separately as in camera calibration or jointly with the relative geometry.
 
 Stereo calibration involves finding the rotation matrix R and translation vector T between the two cameras.
 
@@ -233,10 +304,41 @@ $$
 
 A robust Levenberg-Marquardt iterative algorithm to find the (local) minimum of the reprojection error of the calibration points for both camera views, and the final solution for R and T is returned.
 
-## Stereo Vision / Scene Reconstruction
+It was observed that correcting lens distortion while estimating internal camera parameters can lead to detrimental numerical compensations, where the apparence of an observed pattern can be explained by distortion or by change of point of view.
+
+By using acalibration harp, photographs of this harp allow measuring the residual distortion after correction.
+
+## Scene Reconstruction
 
 Given two images of the same scene, we can compute the 3D position of the point determined by a corresponding pair of points if the positions, orientations, and internal parameters of the two cameras that took the images are known.
 
-We determine from a corresponding point pair the triangle made by two lines of sight and the line connecting the lens centers of the two cameras, called the baseline. For the first camera, the ray is the line passing through the viewpoint and the point (x, y) on the image, determined by solving the first two equations. Similarly, the ray for the second camera is obtained by solving the last two equations up to one free parameter.
+We determine from a corresponding point pair the triangle made by two lines of sight and the baseline. For the first camera, the ray is the line passing through the viewpoint and the point (x, y) on the image, determined by solving the first two equations. Similarly, the ray for the second camera is obtained by solving the last two equations up to one free parameter.
 
 The epipolar equation is the necessary and sufficient condition that the two rays intersect, and the fundamental matrix F is determined by the projection matrices P and P'.
+
+Ambiguous correspondence between points in the two images may lead to several different consistent interpretations of the scene.
+
+![](images/ambiguous_correspondence.jpeg)
+
+#### rectification of stereo pairs
+
+Any pair of stereo images, can be transformed so that epipolar lines are parallel and horizontal in each image. This procedure is called rectification.
+
+The rectified images can be thought of as acquired by a new stereo rig, obtained by rotating the original cameras. The important advantage of rectification is that computing stereo correspondences (Dhond and Aggarwal, 1989) is made simpler, because search is done along the horizontal lines of the rectified images.
+
+Dense stereo matching is greatly simplified if images are rectified.
+
+### Three‐dimensional Reconstruction from Image Sequences with the Kalman Filter
+
+![](images/stereo_vision_uncertainty.png)
+
+A model of uncertainty sources needs to be introduced in order to have a reasonable algorithm. Such inference problems from noisy data are called probabilistic inference.
+
+Maximum Likelihood Estimator (MLE)
+standard Kalman filter (SKF)
+extended Kalman filter (EKF)
+unscented Kalman filter (UKF) 无迹卡尔曼滤波器
+
+## Visual Odometry
+
+In most of the industrial cases, one needs to obtain measurements from a vision system that are expressed in real-world coordinates. This requires transforming pixel measures into metric values.

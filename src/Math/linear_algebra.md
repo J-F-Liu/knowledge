@@ -16,6 +16,10 @@ Extend our intuition for $R^2$ and $R^3$ to $R^n$, they are still “geometric�
 
 ### 方程组 system of equations
 
+Tons of physical problems boil down to solving systems of linear equations.
+
+non-linear systems of equations can be linearlized proximitly.
+
 We can perform three valid operations on system of equations:
 
 - Scaling: we can multiply both sides of an equation by a nonzero number.
@@ -91,6 +95,17 @@ Solution sets are a challenge to describe only when they contain many elements.
 
 The geometric meaning of Gaussian elimination is turn parallelepiped into a rectangular cuboid for n = 3, whose sides are the three pivots, and the volume does not change.
 This volume is called the determinant of the matrix.
+
+To minimize the numeric precision losses, choosing a pivot for accuracy generally boils down to choosing one of the largest (absolute) value elements available.
+
+##### 行列式的性质
+
+① 某行(列)加上或减去另一行(列)的几倍，行列式不变。
+② 某行(列)乘 k，等于 k 乘此行列式。
+③ 互换两行(列)，行列式变号。
+④ 两行(列)相同或成比例时，行列式为 0。
+⑤ 某行(列)为两项相加减时，行列式可拆成两个行列式相加减。
+行列式等于其转置行列式。
 
 ### 向量 Vector
 
@@ -727,9 +742,15 @@ $$
 f(λ)=(−1)^nλ^n+(−1)^{n−1}Tr(A)λ^{n−1}+···+det(A).
 $$
 
-Since a polynomial of degree n has at most n roots, this gives another proof of the fact that an n×n matrix has at most n eigenvalues.
+Since a polynomial of degree n has at most n roots, this gives another proof of the fact that an n×n matrix has at least one and at most n distinct eigenvalues.
 
 It is known that there is [no algebraic formula](https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem) for the roots of a general polynomial of degree at least 5. In practice, the roots of the characteristic polynomial are found [numerically by computer](https://en.wikipedia.org/wiki/Newton%27s_method).
+
+##### Theorem
+
+The sum of the eigenvalues of a matrix equals its trace.
+The product of the eigenvalues equals its determinant.
+For repeated eigenvalues, one must add or multiply them according to their multiplicity.
 
 ### 相似矩阵 Similar Matrices
 
@@ -761,13 +782,17 @@ An n×n matrix A is _diagonalizable_ if it is similar to a diagonal matrix.
 
 ##### Diagonalization Theorem
 
-An n×n matrix A is diagonalizable if and only if A has n linearly independent eigenvectors.
+An n×n matrix A is diagonalizable if and only if A has n linearly independent eigenvectors $v_i$.
 
-In this case, $A=CDC^{−1}$,
+In this case, $A=CDC^{−1}$, $Ce_i=v_i$,
 
 $De_i=C^{−1}ACe_i=C^{−1}Av_i=C^{−1}λ_iv_i=λ_iC^{−1}v_i=λ_ie_i$.
 
 There are generally many different ways to diagonalize a matrix, corresponding to different orderings of the eigenvalues of that matrix.
+
+If matrix A has k distinct eigenvalues, then the corresponding eigenvectors $v_1,...,v_k$ are linearly independent.
+
+The eigenvalues of a symmetric matrix are real, the eigenvectors always form an orthogonal basis of the underlying Euclidean space.
 
 ##### Recipe: Diagonalization
 
@@ -779,6 +804,8 @@ Let A be an n×n matrix. To diagonalize A:
 4. Otherwise, the n vectors $v_1,v_2,...,v_n$ in the eigenspace bases are linearly independent, and $A=CDC^{−1}$.
 
 ##### Diagonalizability has nothing to do with invertibility.
+
+A matrix is real diagonalizable if and only if its eigenspace has the same dimension as its multiplicity. and has all real eigenvalues.
 
 ##### Definition
 
@@ -886,6 +913,25 @@ Let $A$ be an m×n matrix and let $b$ be a vector in $R^m$. The least-squares so
 
 If $A^TA$ is invertible, the least-squares solution is $\hat{x}=(A^TA)^{−1}A^Tb$.
 
+### LU Decomposition
+
+To solve Ax=b, find two matrices, L and U, where L is lower-triangular and U is upper-triangular, and A=LU. Then x is calculated in two steps: Ly=b and Ux=y.
+
+### QR Decomposition
+
+Decomposition of a matrix A into a product A = QR of an orthogonal matrix Q and an upper triangular matrix R.
+
+$QRx=b \implies x=R^{-1}Q^Tb$
+
+pseudo-inverse of a matrix A is:
+
+$$
+\begin{gathered}
+A^{†} = (A^T A)^{−1}A^T = ((QR))^T (QR))^{−1}(QR)^T= (R^TR)^{−1}(QR)^T=R^{-1}Q^T\\
+A^{†}A = I
+\end{gathered}
+$$
+
 ### Singular Value Decomposition (SVD)
 
 Any real mxn matrix A can be decomposed uniquely as $A=UDV^T$.
@@ -896,3 +942,46 @@ D is nxn diagonal (non-negative real values called singular values).
 The rank of a matrix is equal to the number of non-zero singular values.
 
 If A is a nxn nonsingular matrix, then its inverse is given by $A=UDV^T \implies A^{−1}=VD^{−1}U^T$.
+
+### Eigenvalue Decomposition (EVD)
+
+Let A be a square n × n matrix with n linearly independent eigenvectors $q_i$ (where i = 1, ..., n). Then A can be factorized as
+
+$$
+\mathbf{A}=\mathbf{Q}\mathbf{\Lambda}\mathbf{Q}^{-1}
+$$
+
+where Q is the square n × n matrix whose ith column is the eigenvector $q_i$ of A, and Λ is the diagonal matrix whose diagonal elements are the corresponding eigenvalues, $Λ_{ii} = λ_i$. Note that only diagonalizable matrices can be factorized in this way.
+
+Diagonalizing a matrix is the same process as finding its eigenvalues and eigenvectors.
+
+### Difference between SVD and eigendecomposition
+
+Consider the eigendecomposition $𝐴=𝑃𝐷𝑃^{−1}$ and SVD $𝐴=𝑈Σ𝑉^∗$. Some key differences are as follows,
+
+- The vectors in the eigendecomposition matrix 𝑃 are not necessarily orthogonal, so the change of basis isn't a simple rotation. On the other hand, the vectors in the matrices 𝑈 and 𝑉 in the SVD are orthonormal, so they do represent rotations (and possibly flips).
+- In the SVD, the nondiagonal matrices 𝑈 and 𝑉 are not necessairily the inverse of one another. They are usually not related to each other at all. In the eigendecomposition the nondiagonal matrices $𝑃$ and $𝑃^{−1}$ are inverses of each other.
+- In the SVD the entries in the diagonal matrix Σ are all real and nonnegative. In the eigendecomposition, the entries of 𝐷 can be any complex number — negative, positive, imaginary, whatever.
+- The SVD always exists for any sort of rectangular or square matrix, whereas the eigendecomposition can only exists for square matrices, and even among square matrices sometimes it doesn't exist.
+
+### Generalized eigenvectors
+
+A nonzero vector w satisfies $(A-λI)^kw=0$ for some $k>0$ and $λ\in\Complex$ is called a generailized eigenvector of the matrix A.
+
+## Adequacy of Solutions
+
+A system of equations is considered to be well-conditioned if a small change in the coefficient matrix or a small change in the right hand side results in a small change in the solution vector.
+
+A system of equations is considered to be ill-conditioned if a small change in the coefficient matrix or a small change in the right hand side results in a large change in the solution vector.
+
+If a system of equations is ill-conditioned, we cannot trust the solution as much.
+
+For a m×n matrix, the row sum norm of A is defined as the maximum of the sum of the absolute value of the elements of each row.
+
+$$
+\|A\|_{\infty}=\max_{1\le i \le m}\sum_{j=1}^{n}|a_{ij}|
+$$
+
+For equation $AX=C$, $ \dfrac{\|ΔX\|}{\|X+ΔX\|} \le \|A\|\|A^{-1}\| \dfrac{\|ΔA\|}{\|A\|} $.
+
+Define $Cond(A)=\|A\|\|A^{-1}\|$, the relative error in a solution vector norm is ≤ Cond (A) × relative error in right hand side vector norm.

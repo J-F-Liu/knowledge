@@ -362,6 +362,11 @@ If associative multiplication is defined in a vector space, and if the space is 
 
 An algebra is called a **field** if every nonzero element of it has its inverse and if it is closed under division by nonzero elements.
 
+If each element of a group corresponds to a matrix and if multiplication of group elements is homomorphic to multiplication of the corresponding matrices, we say that this correspondence is a representation of the group.
+
+unitary group: $U^†U = I, |U| = \pm 1$
+special unitary group: $|U| = 1$
+
 ## 空间
 
 “空间”是容纳运动的一个对象集合，而变换则规定了对应空间的运动。不管是什么空间，都必须容纳和支持在其中发生的符合规则的变换，比如拓扑空间中有拓扑变换，线性空间中有线性变换，仿射空间中有仿射变换。

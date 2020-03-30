@@ -242,6 +242,7 @@ When you needed to find the total area of a shape you were unfamiliar with, you 
 圆弧 arc
 外接圆 circumcircle
 内切圆 incircle
+同心圆 concentric circles
 
 If AB is a diameter and C a point (other than A or B) on the circle, then ACB is a right angle.
 
@@ -354,7 +355,7 @@ In Hilbert’s own words, such basic objects may be replaced by tables, chairs a
 
 ## Conic Sections
 
-焦点 focus
+焦点 focus,foci
 准线 directrix
 渐近线 asymptote
 
@@ -508,6 +509,13 @@ $$\frac{y-y_0}{y_1−y_0} = \frac{x − x_0}{x_1−x_0}$$ (two given points P0, 
 ##### The distance of a point $(x_0,y_0)$ from a line $y = px +q$.
 
 $$ d = \frac{|px_0 + q − y_0|}{\sqrt{1 + p^2}} $$
+
+For $ ax+by+c=0 $, the distance is
+$$ d = \frac{|ax_0 + by_0 + c|}{\sqrt{a^2 + b^2}} $$
+
+##### The distance between two parallel lines $ ax+by+c_1=0 $ and $ ax+by+c_2=0 $,
+
+$$d = \frac{|c_1 - c_2|}{\sqrt{a^2 + b^2}} $$
 
 ### Constructions with ruler and compass
 
