@@ -26,13 +26,15 @@ A 2D point is denoted by $m = [x,y]^T$ in pixel image coordinates. A 3D point is
 
 ![](images/pinhole_camera_model.png)
 
+### Camera matrix 相机内参矩阵，相机外参矩阵
+
 The relationship between a 3D point M and its image projection m is given by
-$$ s\tilde m = A [R\ t] \tilde M $$
+$$ s\tilde m = K [R\ t] \tilde M $$
 
 where $s$ is an arbitrary scale factor, $(R, t)$, called the extrinsic parameters, is the rotation and translation which relates the world coordinate system to the camera coordinate system, and A is the camera intrinsic matrix, is given by
 
 $$
-A=\begin{bmatrix}
+K=\begin{bmatrix}
    f_x & 0 & c_x  \\
    0 & f_y & c_y  \\
    0 & 0 & 1
@@ -44,6 +46,9 @@ with $(c_x,c_y)$ the coordinates of the principal point that is usually at the i
 It is difficult to manufacture a perfect lens. In practice, several simple lenses are carefully assembled to make a compound lens with better properties. The two planes of front and back lens, called the principal planes, are perpendicular to the optical axis, and are separated by a distance t, called the thickness of the lens. The principal planes intersect the optical axis at two points, called the nodal points.
 
 The thick lens produces the same perspective projection as the ideal thin lens, except for an additional offset equal to the lens thickness t along the optical axis.
+
+影像坐标系是以二维影像为基本建立的坐标系，描述像素点在影像上的位置，分为以像素为单位的 uv 坐标系以及以物理尺寸为单位的 xy 坐标系。uv 坐标系以图像左上角为原点，u 轴和 v 轴分别平行于图像平面的两条垂直边（u 轴朝右，v 轴朝下）；xy 坐标系以相机主光轴与像平面的交点（主点）为原点，x 轴和 y 轴分别与 u 轴和 v 轴平行且方向一致。
+相机坐标系从相机的视角来描述物体在三维空间中的坐标。以相机中心为原点，X 轴与 Y 轴分别与影像坐标系的 x 轴与 y 轴平行，且方向一致，根据右手坐标系规则得到 Z 方向。相机坐标系是物理尺寸单位。
 
 ## Camera Calibration
 
@@ -68,6 +73,8 @@ Generally, camera calibration methods can be classified into two categories: sel
 Self-calibration estimates the camera’s parameters by using multi-view images without calibration targets. As such, it is the appropriate solution for on-line implementation in which accuracy is not highly demanded.
 
 The object-based camera calibration is performed by employing an object, such as 3D object, 2D pattern or 1D pattern with known coordinates, which is commonly used in off-line calibration for highperformance applications.
+
+### Homography matrix 单应矩阵
 
 We assume the plane of a calibration board is on $Z = 0$ of the world coordinate system. We have
 
@@ -247,7 +254,7 @@ M_2^T E M_1 = 0
 \end{gathered}
 $$
 
-本质矩阵
+### Essential matrix 本质矩阵
 
 The essential matrix E is determined by the rotation $R$ and translation $T=[t_1,t_2,t_3]^T$ between the two cameras.
 
@@ -275,7 +282,7 @@ E = A_2^TFA_1
 \end{gathered}
 $$
 
-基本矩阵
+### Fundamental matrix 基础矩阵
 
 The fundamental matrix F is a matrix determined from point correspondences between two images, it has determinant 0 with rank 2. We can compute F in a manner analogous to computing the image homography in the previous section, by providing a number of known correspondences.
 

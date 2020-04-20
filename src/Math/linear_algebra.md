@@ -98,7 +98,7 @@ This volume is called the determinant of the matrix.
 
 To minimize the numeric precision losses, choosing a pivot for accuracy generally boils down to choosing one of the largest (absolute) value elements available.
 
-##### 行列式的性质
+##### 行列式的性质 Determinant
 
 ① 某行(列)加上或减去另一行(列)的几倍，行列式不变。
 ② 某行(列)乘 k，等于 k 乘此行列式。
@@ -774,6 +774,8 @@ $v$ is an eigen vector of A ⇒ $C^{−1}v$ is an eigen vector of B;
 
 $v$ is an eigen vector of B ⇒ $Cv$ is an eigen vector of A.
 
+本征值不变，本征向量做线性映射。
+
 Diagonal matrices are the easiest kind of matrices to understand: they just scale the coordinate directions by their diagonal entries. Therefore, if a matrix is similar to a diagonal matrix, it is also relatively easy to understand.
 
 ##### Definition
@@ -964,9 +966,29 @@ Consider the eigendecomposition $𝐴=𝑃𝐷𝑃^{−1}$ and SVD $𝐴=𝑈Σ�
 - In the SVD the entries in the diagonal matrix Σ are all real and nonnegative. In the eigendecomposition, the entries of 𝐷 can be any complex number — negative, positive, imaginary, whatever.
 - The SVD always exists for any sort of rectangular or square matrix, whereas the eigendecomposition can only exists for square matrices, and even among square matrices sometimes it doesn't exist.
 
-### Generalized eigenvectors
+### 广义本征向量 Generalized eigenvectors
 
-A nonzero vector w satisfies $(A-λI)^kw=0$ for some $k>0$ and $λ\in\Complex$ is called a generailized eigenvector of the matrix A.
+A nonzero vector w satisfies $(A-λI)^kw=0$ for some $k>0$ and $λ\in\Complex$ is called a generailized eigenvector of the matrix A. $k=1$ is the standard eigenvector problem.
+
+### 多项式本征值问题 Polynomial eigenvalue problem
+
+- Linear eigenproblem, also called Generalized Eigenvalue Problem in some literature. $B=I$ is the standard eigenvector problem.
+
+$$
+Av=λBv \implies (A-λB)v=0
+$$
+
+- Quadratic eigenvalue problem
+
+$$
+(λ^2A_2+λA_1+A_0)v=0
+$$
+
+- Polynomial eigenvalue problem
+
+$$
+(\sum_{i}{λ^iA_i})v=0
+$$
 
 ## Adequacy of Solutions
 
@@ -985,3 +1007,15 @@ $$
 For equation $AX=C$, $ \dfrac{\|ΔX\|}{\|X+ΔX\|} \le \|A\|\|A^{-1}\| \dfrac{\|ΔA\|}{\|A\|} $.
 
 Define $Cond(A)=\|A\|\|A^{-1}\|$, the relative error in a solution vector norm is ≤ Cond (A) × relative error in right hand side vector norm.
+
+## 实对称矩阵
+
+实对称矩阵 A 的特征值都是实数，特征向量都是实向量。实对称矩阵 A 的不同特征值对应的特征向量是正交的。
+
+### 正定矩阵 (positive definite matrix)
+
+一个 n 阶的实对称矩阵 A 是正定的，当且仅当对于任意的非零实系数向量 x，都有$xᵀAx > 0$。
+
+正定矩阵的特征值都是正实数；对于任意的实矩阵 B，BᵀB 是正定的。
+
+半正定矩阵是正定矩阵的推广。实对称矩阵 A 称为半正定的，如果二次型 xᵀAx 半正定，即对于任意不为 0 的实列向量 x，都有$xᵀAx \ge 0$.

@@ -50,6 +50,16 @@ cos\frac{α}{2} = \pm \sqrt{\frac{1+cosα}{2}}
 \end{gathered}
 $$
 
+#### 三倍角公式
+
+$$
+sin3x = 3sinx - 4sin^3x
+$$
+
+$$
+cos3x = 4cos^3x - 3cosx
+$$
+
 #### 余弦定理
 
 $$
@@ -83,3 +93,17 @@ $$
 
 结合海伦公式:
 $$ ρ = \sqrt{\frac{(s-a)(s-b)(s-c)}{s}} $$
+
+### 反三角函数
+
+$ sin(arccos(x)) = \sqrt{1-x^2} $
+
+$ cos(arcsin(x)) = \sqrt{1-x^2} $
+
+$ tan(arcsin(x)) = \dfrac{x}{\sqrt{1-x^2}} $
+
+$ tan(arccos(x)) = \dfrac{\sqrt{1-x^2}}{x} $
+
+$ sin(arctan(x)) = \dfrac{x}{\sqrt{1+x^2}} $
+
+$ cos(arctan(x)) = \dfrac{1}{\sqrt{1+x^2}} $

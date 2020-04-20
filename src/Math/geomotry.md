@@ -426,6 +426,16 @@ These are the two lines that the hyperbola approaches as x and y tend to infinit
 
 Mirror property of hyperbola: Rays emitted by one focus are reflected as if they are coming from the other focus.
 
+### 极点与极线 Pole and Polar
+
+如果极点 P 在圆锥曲线上，对应的极线与圆锥曲线相切与 P 点。
+If the point P0 lies outside the conic, then the polar of P0 is the line through the two points of contact of the tangents to the conic from P0.
+
+If the point P0 lies inside the conic, then the polar of P0 is the set of all points whose polar passes through P0.
+
+If a point P1 lies on the polar of P0, then the point P0 lies on the polar of P1.
+圆锥曲线中极线共点于 P，则这些极线相应的极点共线于点 P 相应的极线.反之亦然.称为极点与相应极线对偶性.
+
 ### 共焦二次曲线 confocal conics
 
 An ellipse and a hyperbola with the same foci are two confocal conics.
