@@ -5,3 +5,9 @@
 数值解(numerical solution)：是采用某种计算方法,如有限元的方法, 数值逼近,插值的方法, 得到的解。
 
 当输入数据有测量误差时，即使有解析解，算出来的结果也是不精确的；仍需要通过数值计算的方法进行优化和逼近。
+
+## 非线性方程组
+
+There are no good, general methods for solving systems of more than one nonlinear equation. You will almost always have to use additional information, specific to your particular problem, to answer such basic questions as, “Do I expect a unique solution?” and “Approximately where?”
+
+If you have a sufficiently good initial guess, there is method to converge to a root iteratively.

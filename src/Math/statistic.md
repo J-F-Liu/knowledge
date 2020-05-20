@@ -5,6 +5,14 @@
 协方差（Covariance）衡量两个变量的总体误差。
 $$cov(X,Y)=\frac{\sum_{i=1}^n{(X_i-\bar X)(Y_i-\bar Y)}}{n-1}$$
 
+准确度表示测量结果的正确性，精密度表示测量结果的重复性和重现性，精密度是准确度的前提条件。
+
+加工精度是加工后零件表面的实际尺寸、形状、位置三种几何参数与图纸要求的理想几何参数的符合程度。理想的几何参数，对尺寸而言，就是平均尺寸；对表面几何形状而言，就是绝对的圆、圆柱、平面、锥面和直线等；对表面之间的相互位置而言，就是绝对的平行、垂直、同轴、对称等。零件实际几何参数与理想几何参数的偏离数值称为加工误差。
+
+加工精度用公差等级衡量，等级值越小，其精度越高；公差等级从 IT01，IT0，IT1，IT2，IT3 至 IT18 一共有 20 个，其中 IT01 表示的话该零件加工精度最高的，IT18 表示的话该零件加工精度是最低的 ，一般上 IT7、IT8 是加工精度中等级别。
+
+任何加工方法所得到的实际参数都不会绝对准确，从零件的功能看，只要加工误差在零件图要求的公差范围内，就认为保证了加工精度。
+
 Statistics begins by assuming there is no effect.
 Prior to collecting data, rules are chosen to decide whether whether the data are consistent with the assumption of no effect.
 If the data are found to be inconsistent with the assumption, the assumption must be false and there is, in fact, an effect!

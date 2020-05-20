@@ -205,6 +205,8 @@ The three side midpoints and three altitude foots of a triangle lie on the same 
 直角三角形斜边上的中线等于斜边的一半。逆命题也成立，如果一个三角形一条边的中线等于这条边的一半，那么这个三角形是直角三角形。
 以直角三角形的斜边为直径作圆，顶点在圆上，因为直径上的圆周角是直角，斜边上的中线则是圆的一条半径。
 
+任意三角形的边延伸到每个顶点之外，并且其距离等于对边的长度，所得的六个点将在一个圆上，这个圆称为"康威圆"。
+
 ### Ceva’s theorem
 
 In a triangle the lines AD, BE and CF are concurrent if and only if

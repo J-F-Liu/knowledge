@@ -91,7 +91,7 @@ $$
 \end{bmatrix}h=0
 $$
 
-When we are given n points, we have n above equations, which can be written in matrix equation as $Lx = 0$, where L is a 2n×9 matrix. As h is defined up to a scale factor, the solution is well known to be the right singular vector of L associated with the smallest singular value (or equivalently, the eigenvector of $L^TL$ associated with the smallest eigenvalue).
+When we are given n points, we have n above equations, which can be written in matrix equation as $Lh = 0$, where L is a 2n×9 matrix. As h is defined up to a scale factor, the solution is well known to be the right singular vector of L associated with the smallest singular value (or equivalently, the eigenvector of $L^TL$ associated with the smallest eigenvalue).
 
 Using the knowledge that $r_1$ and $r_2$ are orthonormal, we have
 
@@ -168,6 +168,7 @@ r_1 = λA^{-1}h_1 \\
 r_2 = λA^{-1}h_2 \\
 r_3 = r_1 \times r_2 \\
 t = λA^{-1}h_3 \\
+λ = \frac{1}{|A^{-1}h_1|} = \frac{1}{|A^{-1}h_2|}
 \end{gathered}
 $$
 
@@ -288,7 +289,9 @@ The fundamental matrix F is a matrix determined from point correspondences betwe
 
 To recover the epipolar geometry between two images from point matches, least-squares techniques are exploited to obtain more robust estimate.
 
-$\tilde m_2^TF\tilde m_1=0$ for fixed $\tilde m_1$ defines a line in the other imageplane, called the epipolar line of point (x, y), vice versa. This implies that one point of a corresponding pair is on the epipolar line of the other point, therefore point correspondence detection reduces to search on the epipolar line.
+$$\tilde m_2^TF\tilde m_1=0$$
+
+For fixed $\tilde m_1$, $F\tilde m_1$ defines a line in the other imageplane, called the epipolar line of point $\tilde m_1$, vice versa. This implies that one point of a corresponding pair is on the epipolar line of the other point, therefore point correspondence detection reduces to search on the epipolar line.
 
 The fundamental matrix cannot be uniquely determined if the corresponding points are exactly coplanar in the scene or exactly have a special symmetry, for example, at the vertices of a cube, This does not occur for real data with noise.
 

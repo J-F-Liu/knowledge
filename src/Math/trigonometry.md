@@ -24,6 +24,8 @@ tan(α-β) = \frac{tanα - tanβ}{1 + tanα\cdot tanβ}
 \end{gathered}
 $$
 
+tan(α-β)可用于求两条直线的夹角。
+
 #### 倍角公式
 
 $$
@@ -46,7 +48,8 @@ $$
 $$
 \begin{gathered}
 sin\frac{α}{2} = \pm \sqrt{\frac{1-cosα}{2}} \\
-cos\frac{α}{2} = \pm \sqrt{\frac{1+cosα}{2}}
+cos\frac{α}{2} = \pm \sqrt{\frac{1+cosα}{2}} \\
+tan\frac{α}{2} = \dfrac{sinα}{cosα+1}
 \end{gathered}
 $$
 
@@ -107,3 +110,20 @@ $ tan(arccos(x)) = \dfrac{\sqrt{1-x^2}}{x} $
 $ sin(arctan(x)) = \dfrac{x}{\sqrt{1+x^2}} $
 
 $ cos(arctan(x)) = \dfrac{1}{\sqrt{1+x^2}} $
+
+## 微积分 calculus
+
+$ \frac{d}{dx}\sin x = \cos x $
+
+$ \frac{d}{dx}\cos x = -\sin x $
+
+## 双曲函数
+
+$$
+\begin{gathered}
+\sinh x = \cfrac{e^x+e^{-x}}{2} \\
+\cosh x = \cfrac{e^x-e^{-x}}{2} \\
+\sinh 3x = 4\sinh^3 x + 3\sinh x \\
+\cosh 3x = 4\cosh^3x - 3\cosh x
+\end{gathered}
+$$
