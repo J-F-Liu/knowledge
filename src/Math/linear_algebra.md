@@ -162,7 +162,7 @@ A=\begin{bmatrix}
 \end{bmatrix}
 $$
 
-The _product_ of A with a vector $x$ in $R^n$ is the linear combination
+The _product_ of A with a vector $x$ in $R^n$ is the linear combination of the columns of A:
 
 $$
 Ax=x_1v_1+x_2v_2+···+x_nv_n.
@@ -172,6 +172,21 @@ This is a vector in $R^m$.
 
 - $A(u+v)=Au+Av$
 - $A(cu)=cAu$
+
+### 列空间和行空间
+
+The _column space_ of A is all the vectors $Ax$, wrriten as Col(A).
+The columns form a basis of column space.
+Similarly, the rows are a basis of row space.
+
+$A=CR$
+
+C is the linear independent columns of A.
+R is the reduced row echelon form of A.
+C is column basis and R is row basis => Column rank = Row rank.
+If A is full rank, C = A and R = I.
+
+There are $n-r$ independent solutions to $Ax=0$.
 
 ### 矩阵方程 The Matrix Equation $Ax=b$.
 
@@ -195,6 +210,10 @@ A system of linear equations of the form $Ax=b$ for $b\ne0$ is called _inhomogen
 A homogeneous system always has the solution $x=0$. This is called the _trivial solution_. Any nonzero solution is called _nontrivial_.
 
 The equation $Ax=0$ has a nontrivial solution $\iff$ there is a free variable $\iff$ A has a column without a pivot position.
+
+$Ax=0$ means x is orthogonal to every row of A, because its inner product is zero.
+Every x in the null space of A is orthogonal to the row space of A.
+Every y in the null space of Aᵀ is orthogonal to the column space of A.
 
 The set of solutions to a homogeneous equation $Ax=0$ is a span. The number of free variables is called the _dimension_ of the solution set.
 
@@ -831,9 +850,13 @@ _Diagonalizable_ matrices are similar if and only if they have the same characte
 
 ### Orthogonal Matrix
 
-A matrix $A$ is orthogonal if and only if $A^⊤A = I$, which states that the columns (and rows as well) of A are mutually orthogonal unit vectors.
+A matrix $Q$ is orthogonal if and only if $Q^⊤Q = I$, which states that the columns (and rows as well) of Q are mutually orthogonal unit vectors.
 
 Every orthogonal matrix is either a rotation matrix or the product of a rotation matrix and a reflection matrix.
+
+Length is preserved: $ ||Qx||^2 = xᵀQᵀQx = xᵀx = ||x||^2 $
+
+Eigenvalues: $ ||Qx||^2 = |λ|^2||x||^2 \implies |λ|^2=1 $
 
 ### Permutation Matrix
 
@@ -909,7 +932,7 @@ The _row space_ of a matrix A is the span of the rows of A, and is denoted Row(A
 
 Let A be a matrix. Then the row rank of A is equal to the column rank of A.
 
-##### Theorem
+### Least Squares
 
 Let $A$ be an m×n matrix and let $b$ be a vector in $R^m$. The least-squares solutions of $Ax=b$ are the solutions of the matrix equation $A^TAx=A^Tb$.
 
@@ -934,28 +957,47 @@ A^{†}A = I
 \end{gathered}
 $$
 
-### Singular Value Decomposition (SVD)
-
-Any real mxn matrix A can be decomposed uniquely as $A=UDV^T$.
-
-U is mxn and column orthogonal (its columns are eigenvectors of $AA^T$).
-V is nxn and orthogonal (its columns are eigenvectors of $A^TA$).
-D is nxn diagonal (non-negative real values called singular values).
-The rank of a matrix is equal to the number of non-zero singular values.
-
-If A is a nxn nonsingular matrix, then its inverse is given by $A=UDV^T \implies A^{−1}=VD^{−1}U^T$.
-
 ### Eigenvalue Decomposition (EVD)
 
 Let A be a square n × n matrix with n linearly independent eigenvectors $q_i$ (where i = 1, ..., n). Then A can be factorized as
 
 $$
-\mathbf{A}=\mathbf{Q}\mathbf{\Lambda}\mathbf{Q}^{-1}
+\mathbf{A}=\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1}
 $$
 
-where Q is the square n × n matrix whose ith column is the eigenvector $q_i$ of A, and Λ is the diagonal matrix whose diagonal elements are the corresponding eigenvalues, $Λ_{ii} = λ_i$. Note that only diagonalizable matrices can be factorized in this way.
+where X is the square n × n matrix whose ith column is the eigenvector $x_i$ of A, and Λ is the diagonal matrix whose diagonal elements are the corresponding eigenvalues, $Λ_{ii} = λ_i$. Note that only diagonalizable matrices can be factorized in this way.
 
 Diagonalizing a matrix is the same process as finding its eigenvalues and eigenvectors.
+
+$$
+A^n=XΛ^nX^{-1}
+$$
+
+### Singular Value Decomposition (SVD)
+
+Any real mxn matrix A can be decomposed uniquely as $A=UΣV^T$.
+
+U is mxn and column orthogonal (its columns are eigenvectors of $AA^T$).
+V is nxn and orthogonal (its columns are eigenvectors of $A^TA$).
+Σ is nxn diagonal (non-negative real values called singular values).
+The rank of a matrix is equal to the number of non-zero singular values.
+
+If A is a nxn nonsingular matrix, then its inverse is given by $A=UΣV^T \implies A^{−1}=VΣ^{−1}U^T$.
+
+$Ax=UΣV^Tx$, applies rotation, stretch and rotation to a vector.
+
+$AᵀA=VΣ^2Vᵀ$
+$AAᵀ=UΣ^2Uᵀ$
+
+$AV=UΣ \implies u_i=\frac{Av_i}{σ_i}$
+
+$rank(A)=r, [u_{r+1}... u_m]$ is null space of Aᵀ, $[v_{r+r}...v_n]$ is null space of A.
+
+$Av_i=σ_iu_i$, 如果 detA≠0, 取最小的$σ_i$对应的$v_i$可作为$Ax=0$的近似解。$v_i$也是 AᵀA 的最小本征值对应的本征向量。
+
+$Ax=b$的近似解$x=A^{−1}b≈VΣ_0^{−1}U^Tb$，
+其中$Σ_0^{−1}=\begin{cases}1/σ_i&\text{if }σ_i>t \\ 0&\text{otherwise}\end{cases}$，
+计算精度高于$(A^TA)^{−1}A^Tb$。
 
 ### Difference between SVD and eigendecomposition
 
@@ -1011,6 +1053,16 @@ Define $Cond(A)=\|A\|\|A^{-1}\|$, the relative error in a solution vector norm i
 ## 实对称矩阵
 
 实对称矩阵 A 的特征值都是实数，特征向量都是实向量。实对称矩阵 A 的不同特征值对应的特征向量是正交的。
+
+$$
+Sᵀ=S, Sx = λx, Sy = αy, λ≠α \\
+λxᵀy = xᵀSᵀy = xᵀSy = αxᵀy \\
+xᵀy = 0
+$$
+
+$$
+SQ = QΛ \implies S=QΛQᵀ=\sum_{i}{λ_iq_iq_i^T}
+$$
 
 ### 正定矩阵 (positive definite matrix)
 

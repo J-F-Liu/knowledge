@@ -71,3 +71,13 @@ Tcl 语言的最初设计是，unset() 方法用来删除已经存在的变量�
 阶段 1：科学怪人的怪兽（Frankenstein’s Monster）
 阶段 2：深度清理
 阶段 3：管道（pipeline）重构
+
+### Single Writer Principle
+
+For any item of data, or resource, that item of data should be owned by a single execution context for all mutations.
+
+### Event Driven Services
+
+Centralize an immutable stream of facts. Decentralize the freedom to act, adapt and change.
+
+Events trigger processing. Events provide far less opportunity for services to couple themselves to one another, and flipping flow-control to the receiver makes for better separated concerns and better pluggability.

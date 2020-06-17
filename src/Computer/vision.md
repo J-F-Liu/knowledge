@@ -352,3 +352,47 @@ unscented Kalman filter (UKF) 无迹卡尔曼滤波器
 ## Visual Odometry
 
 In most of the industrial cases, one needs to obtain measurements from a vision system that are expressed in real-world coordinates. This requires transforming pixel measures into metric values.
+
+When you want to find the solution to a problem, the first step is to express this problem in mathematical terms, and you can then use existing mathematical tools to find a solution to your equations. However, interesting problems can usually be expressed in many different mathematical ways, each of which may lead to a slightly different solution. It then takes work to analyze the different methods to understand which one provides the most stable/accurate/efficient/etc solution.
+
+## References
+
+2016 An Open-Source Structured-Light Scanning System for Rapid Geometry Acquisition
+
+结构光扫描仪的系统结构和工作原理、格雷码的编码原理和程序代码、点云转成网格面、3DUNDERWORLD-SLS 开源程序
+源代码：https://github.com/theICTlab/3DUNDERWORLD-SLS-GPU_CPU
+演示视频：https://vimeo.com/91703073
+
+转盘只有一个转轴，只能扫侧面，可用机械臂多向转动。
+投影仪要求物体表面较好的反光性，可以通过喷粉弥补。
+点云分辨率与投影仪的分辨率相关，扫描精度与相机分辨率相关。
+
+2010 Design, implementation and evaluation of an active vision-based 3-d scanner
+
+横向和纵向的格雷码用蓝绿两种颜色叠加起来同时投影，缩短了编码长度。
+格雷码与相位移结合使用，高位的 7 比特用格雷码，低位的 3 比特用相位移。
+用 MeshLab 软件做点云的拼接。
+
+2019 Camera Calibration Using Gray Code
+用液晶显示器播放格雷码标定相机，每个像素都能在像片上找到对应点，对应点数量多但是没有亚像素精度。
+启发：用格雷码的条纹来标定镜头的畸变参数，其他几何参数仍使用棋盘格或圆点阵列。
+
+2005 Robust Euclidean alignment of 3D point sets: the trimmed iterative closest point algorithm
+介绍点云拼接的 Iterative Closest Point (ICP)算法及各种改进
+比较 least median of squares 和 least trimmed squares 算法
+提出 Trimmed ICP (TrICP)拼接算法
+
+2014 Robust registration of point sets using iteratively reweighted least squares
+改进 ICP 算法
+
+2016 Go-ICP: A Globally Optimal Solution to 3D ICP Point-Set Registration
+在整个 SE(3)空间内全局地搜索旋转和平移参数，解决 ICP 只能局部最优的问题
+
+2016 Global Registration of 3D Point Sets via LRS decomposition
+多个点云全局对齐，两两组合计算相对位移，组成一个大的稀疏矩阵用 LRS 分解求均值
+
+2016 Joint Registration of Multiple Point Sets
+假定一个最终的点云，同时求解每个点云的刚性变换，用贝叶斯概率生成最终的模型
+
+2020 TEASER: Fast and Certifiable Point Cloud Registration
+颠覆了 ICP 算法，分步计算缩放、旋转和平移，能够排除外点，计算速度快，讲解细致
