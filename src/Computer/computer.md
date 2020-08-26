@@ -18,6 +18,14 @@
 
 In a computer, the processor can read and write information from and to random access memory (RAM). RAM gives the processor much more space to organise the intermediate results of computations. Temporary placeholders for information are called variables and are stored in memory. In a computer, it is a trivial operation to form a variable that holds a numerical value. And it is also simple to make data structures – variables in memory that contain links that can be followed to get to other variables. One of the simplest data structures is a list – a sequence of variables that can be read item by item. For example, one could store a list of players’ names on a sports team and then read each name one by one. A more complicated data structure is a tree. In a family tree for instance, links from children to parents can be followed to read out a line of ancestry. One of the most complex and general data structures is a graph, like the London Underground network.
 
+## SIMD Instruction Sets on x86 CPUs
+
+1997 Pentium MMX
+2000 SSE2
+2011 AVX, 256 bits registers
+2016 AVX2, new instructions
+AVX512, 512 bits registers
+
 ## 文件系统
 
 A file system is a clearly-defined method that the computer's operating system uses to store, catalog, and retrieve files. Files are central to everything we use a computer for: all applications, images, movies, and documents are files, and they all need to be stored somewhere.

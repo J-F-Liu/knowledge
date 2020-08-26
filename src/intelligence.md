@@ -178,3 +178,23 @@ Transformer 舍弃了 RNN 的循环式网络结构，完全基于注意力机制
 概率分布的密度函数，本身就是一个函数，既然是函数，就可以被数学上表示和拟合，而拟合方法，就可以通过深度神经网络的无数个神经元组成的组合表达出来。
 
 创造⼒的来源是天真。返璞归真，才能看清问题的本质。
+
+## Three “milestones” in AI research
+
+1997 IBM’s chess-playing computer Deep Blue defeated the world champion of chess, Garri Kasparov.
+2011 IBM’s super-computer Watson communicates using natural language, beat the two best participants in Jeopardy!, Ken Jennings and Brad Rutter.
+2016 Alphabet’s AlphaGo defeated the world champion Le Sedol.
+
+When many neurons are connected in a network, a large enough network can in theory carry out any computation.
+
+Human expertise is partly tacit, and cannot be articulated. AlphaGo showed that computers can handle tacit knowledge.
+
+General artificial intelligence can not be realized, because computers do not have a model of reality. The real problem is that computers are not in the world, because they are not embodied.
+
+We have to be satisfied with the observation of regularities. Causal relationships are a prerequisite for the acquisition of knowledge. It is necessary that every effect has a cause.
+
+The distinguishing mark of a causal relationship is a 100% correlation between cause and effect. But most correlations are not causal.
+
+Correlation is a symmetrical mathematical relationship: If A is correlated with B, B is correlated with A. The cause produces, or at least brings about, the effect. Therefore, we may remove the assumed cause, and see if the effect disappears.
+
+Big Data is about what, not why. We don’t always need to know the cause of a phenomenon; rather, we can let data speak for itself.

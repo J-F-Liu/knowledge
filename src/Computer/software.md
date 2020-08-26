@@ -81,3 +81,15 @@ For any item of data, or resource, that item of data should be owned by a single
 Centralize an immutable stream of facts. Decentralize the freedom to act, adapt and change.
 
 Events trigger processing. Events provide far less opportunity for services to couple themselves to one another, and flipping flow-control to the receiver makes for better separated concerns and better pluggability.
+
+### Project Management
+
+- People first: people are more valuable than schedules; keeping people healthy, happy, and productive is the most important aspect of managing a project.
+- Open communication: we should be as open as possible as early as possible with communication about projects, even when the nature of the project means we can't be open with all development.
+- Get feedback early and set expectations about the kind of feedback which is useful. We have ongoing problems in the Rust community where (mostly) well-intentioned feedback from the community becomes overwhelming to the point of harassment; we do not have a solution to this.
+- Be prepared to manage feedback, in particular by having enough people available to respond.
+  Recognize the complexity of projects and ensure appropriate project management.
+- Projects should have clear ownership.
+- Large projects should not be scheduled to finish at the same time.
+- Work iteratively, rather than going for 'big bang' releases.
+- Consider ongoing maintenance: how much is there to do? Who will do it? Failing to consider this means there is more pressure on the initial release.

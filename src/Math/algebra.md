@@ -14,6 +14,11 @@
 
 Algebra is all about making unknowns known.
 
+In applying mathematics, many problems have two parts:
+
+1. Modeling part - Express the problem by a set of equations.
+2. Computational part - Solve these equations by a fast and accurate algorithm.
+
 整数 Integers - The whole numbers, including all of the negative numbers, zero, and positive numbers.
 
 小数 decimal

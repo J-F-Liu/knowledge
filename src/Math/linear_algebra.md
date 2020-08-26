@@ -201,6 +201,12 @@ We now have four equivalent ways of writing (and thinking about) a system of lin
 
 The matrix equation $Ax=b$ has a solution if and only if $b$ is in the span of the columns of $A$.
 
+#### $Ax=b$的几何图景
+
+行空间：$A_i \cdot x = b_i$，n 个垂直于行向量$A_i$的子空间的交集为 x，子空间上的垂足到原点的距离为$\frac{b_i}{||A_i||}$。
+
+列空间：$\sum_{i}{a_ix_i}=b$，n 个列向量$a_i$的线性组合为 b。
+
 ### 齐次方程组 Homogeneous Systems
 
 A system of linear equations of the form $Ax=0$ is called _homogeneous_.
@@ -239,6 +245,13 @@ i.e. any solution $x$ of $Ax=b$ can be expressed as the sum of the particular so
 By setting exactly one free variable to 1 and the rest to 0, we can find the basis vector according to this free variable.
 We can set all free variables to zero, the remaining pivot variables forming an inhomogeneous equation system with a unique solution.
 Then create the particular solution by extend the unique solution with zero components of the free variables.
+
+### 矩阵乘法
+
+1. $(AB)_{ij}=A_i\cdot b_j$
+2. $AB = [Ab_1\ ...\ Ab_n]$
+3. $AB = \begin{bmatrix}A_1B\\...\\A_nB\end{bmatrix}$
+4. $AB = \sum{a_iB_j}$
 
 #### 线性无关 Linear Independence
 

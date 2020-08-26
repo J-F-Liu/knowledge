@@ -357,6 +357,28 @@ When you want to find the solution to a problem, the first step is to express th
 
 ## References
 
+2000 A Flexible New Technique for Camera Calibration
+张正友标定算法，方法简便、结果可靠，被广泛采用，对畸变系数的标定仍需改进
+
+2009 Accurate camera calibration using iterative refinement of control points
+标定出参数后，在校正畸变和还原为正视图后的图片上检测控制点的位置再次标定，迭代进行。
+比较了方形、圆形、环形控制点定位精度，取环形控制点内外两个圆的圆心的中点作为圆环的中心。
+引申思考：利用圆环的同心圆可以消除投影的偏心误差，从而减少迭代次数。
+
+2012 Self-consistency and universality of camera lens distortion models
+比较了五种经典的畸变/校正模型，概念准确、方法合理，必读。
+
+2014 Camera matrix calibration using circular control points and separate correction of the geometric distortion field
+先用竖琴标定畸变系数，再用圆点板标定几何参数；用待优化的参数把圆点投影成椭圆取圆心，与测量到的椭圆圆心作比对，避免了圆点圆心的投影偏差。
+引申思考：既可以用竖线标定畸变系数，也可以用竖线代替点标定相机的内外参数。
+
+2016 Distortion Correction Modeling Method for Zoom Lens Cameras with Bundle Adjustment
+给出了一种拟合直线的方法，是否优于最小二乘法不确定。
+先用拟合直线计算畸变参数，优化标定的重投影误差时固定其他参数不变，只改变畸变参数进行二次优化。
+
+2017 A Precision Analysis of Camera Distortion Models
+重申了 2012 年论文的观点，增加了 R+T 模型，扩充了一些数学推导和实验结果。
+
 2016 An Open-Source Structured-Light Scanning System for Rapid Geometry Acquisition
 
 结构光扫描仪的系统结构和工作原理、格雷码的编码原理和程序代码、点云转成网格面、3DUNDERWORLD-SLS 开源程序
@@ -396,3 +418,6 @@ When you want to find the solution to a problem, the first step is to express th
 
 2020 TEASER: Fast and Certifiable Point Cloud Registration
 颠覆了 ICP 算法，分步计算缩放、旋转和平移，能够排除外点，计算速度快，讲解细致
+
+2016 Maximum consensus with mixed integer linear programming
+很好的描述了有噪点的参数模型优化问题，汇总了已有的各种解法，但不看好论文本身给出的方法。

@@ -88,3 +88,10 @@ REPL: read-eval-print loop
 9、我将永远不会停止学习和改进我的手艺。
 
 优秀的程序员会在项目开始前，主动帮助产品把需求明确细化，这样可以避免开发阶段的无效的加班和工作。
+
+Starting a new project is exciting. You get to try the new database, the new framework, the new architecture, the new everything.
+But every new tool introduces a risk. And those risks compound. That’s why I believe that you should choose boring technology for most of your stack and only allow a meagre novelty budget.
+
+There are many stories of applications that are now impossible to maintain because someone decided that the latest NoSQL database, framework, or language would be perfect for the new project. That person has now left and no one knows how to keep the application alive. Luckily, Rust is a programming language for the next 40 years.
+
+The database / business logic split, which is arguably the most successful example of process separation. In this model, the database is responsible for performance and integrity, and the business logic is in a separate process, so it can safely do things like crash and hang.
