@@ -1,4 +1,115 @@
-# 3D Model
+# 3D Model File Formats
+
+## 1. 3D File Formats: Encoding Geometry of the 3D Model
+
+Every 3D model has a unique geometry and the capability of encoding this geometry can be considered to be the most basic feature of a 3D file format.
+
+There are three distinct ways of encoding surface geometry, each with their corresponding strengths and weaknesses. They are called approximate mesh, precise mesh and constructive solid geometry (CSG).
+
+#### approximate mesh
+
+The process of covering a surface with non-overlapping geometric shapes is also known as “tessellation”. Triangles are most commonly used shape.
+
+The triangles approximate the smooth geometry of the surface. The approximation gets better as the triangles get smaller. However, the smaller the triangles, the larger the number of triangles you need to tile the surface. Thus better approximations come at the cost of increasing file size.
+
+#### precise mesh
+
+Precise mesh use Non-Uniform Rational B-Spline patches (or NURBS) instead of polygons.
+
+These parametric surfaces are made up of a small number of weighted control points and a set of parameters called knots. From knots, a surface can be computed mathematically by smoothly interpolating over the control points.
+
+These surfaces look smooth in any scale and can replicate the surface geometry of a small part of a 3D model in exact detail. While the precise mesh is exact at any resolution, they render slower and should be avoided in applications where speedy rendering is important.
+
+#### constructive solid geometry
+
+In this format, 3D shapes are built by performing boolean operations (addition or subtraction) of primitive shapes like cubes, spheres etc.
+
+Constructive solid geometry is great for designing 3D models and is very user-friendly. Another big advantage is that each individual editing step (addition, subtraction, transformations of primitive shapes) is stored in this 3D file format. Therefore, one can undo and redo any step at any time.
+
+Clearly, if you convert this format to a mesh-based format,  you will lose the information about the individual editing steps.
+
+## 2. 3D File Formats: Appearance
+
+The second important feature of 3D file formats is the ability to store appearance related information. In simple terms, appearance describes surface properties such as material type, texture, color etc. This decides how the model looks like when it is rendered.
+
+Information about appearance can be encoded in two different ways.
+
+#### texture mapping
+
+Every point in the 3D model’s surface (or the polygonal mesh)  is mapped to a 2-dimensional image. The coordinates of the 2D image have attributes like color and texture.
+
+When rendering the 3D model, the vertices of the mesh are mapped first. The other points are then assigned coordinates by interpolating between the coordinates of the vertices.
+
+#### face attributes
+
+Assign each face of the mesh a set of attributes. Common attributes include color, texture and material type.
+
+In addition, a surface can have a specular component indicating the color and intensity of true mirror reflections of light sources and other nearby surfaces. Surfaces can be transparent or semi transparent. This is encoded by a transmissive component describing the color and intensity of light that passes through the surface. Transparent surfaces usually distort light passing through them. This distortion is represented by an index of refraction property, associated with the model’s material type.
+
+## 3.3D File Formats: Scene information
+
+The scene describes the layout of the 3D model in terms of cameras, light sources, and other nearby 3D models.
+
+## 4. 3D File Formats: Animation
+
+The most popular way of animating a 3D model is called “skeletal animation”. In skeletal animation, each model is associated with an underlying skeleton. The skeleton is made out of a hierarchy of virtual “bones”. The movement of bones higher in the hierarchy (parent bones) affect the bones lower in the hierarchy (child bones). 
+
+There are many different techniques of storing animations of skeletal structures. The most important techniques are forward kinematics, inverse kinematics, and keyframes.
+
+Every 3D modeling software allows exporting into many different 3D file formats. However, which one you choose for your application depends a lot on which features you need for your work and the software you are going to use.
+
+### STL (Stereo Lithographic)
+
+3DSystem 公司的stereolithography CAD软件的3D 模型文件格式。
+采用三角形离散地近似表示三维模型，通过增加三角形的数量来提高精度。
+由一系列的三角形无序排列组合在一起的，没有反映三角形之间的拓扑关系，很难二次编辑。
+不含色彩和贴图信息，适用于3D打印。
+STL 文件格式有二进制和 ASCII 两种格式。
+
+### OBJ (Wavefront)
+
+由 Alias|Wavefront 公司开发的一种开放格式，适合用于 3D 软件模型之间的互导。
+OBJ 文件是一种 ASCII 文件，另外有一种与此相关的二进制文件格式 MOD，其作为专利未公开。
+
+OBJ 文件的每一行，都有极其相似的格式：
+
+前缀  参数1  参数2  参数3  ……
+
+其中，前缀标识了这一行所存储的信息类型，参数则是具体的数据。常用的前缀有：
+```
+# Comment
+v Vertex
+l Line
+f Face
+vt Texture Coordinate
+vn Normal
+o Object
+g Group
+```
+The obj file format supports: geometry in form of vertices/edges/faces and parametric surfaces, vertex normals, textures, material properties, and groups.
+
+### ply (polygon file format)
+
+- flexible and portable 3D file format
+- both an ASCII and a binary version
+
+The ply file format supports: geometry in the form of vertices/edges/faces, vertex colors, textures and materials.
+
+ply format also supports user defined types, which is only understandable by specific software. 
+
+### IGS/IGES (Initial 2D/3D Graphics Exchange Specification)
+
+IGS 是美国信息管理委员会规定的一种文件格式, 主要用于不同三维软件系统的文件转换。
+
+- published by the National Bureau of Standards in 1980 (NBSIR 80-1978)
+- designed to store both 2D and 3D data
+
+The igs format supports: vertices, lines, polylines, arcs, curves, parametric surfaces, CSG and B-Rep Objects. 
+
+### stp, step (Standard for the Exchange for Product Data)
+
+- developed as a successor to the iges format
+- plain text format for named objects rather than just raw geometric information
 
 ### glTF (Graphics Library Transmission Format or GL Transmission Format)
 
@@ -56,7 +167,7 @@ mesh primitive "mode":
     - 1: "LINES"
     - 2: "LINE_LOOP"
     - 3: "LINE_STRIP"
-    - 4: "TRIANGLES"
+    - 4: "TRIANGLES" // default value
     - 5: "TRIANGLE_STRIP"
     - 6: "TRIANGLE_FAN"
 
