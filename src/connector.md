@@ -18,6 +18,16 @@ However, this naming pattern is not always followed. Because personal computers 
 
 ![Pin Number](images/D-sub-connector.jpg)
 ![Pin Number](images/D-sub-connector.png)
+![D-sub picture](images/D-sub_pc.png)
+1 个 DE-15 VGA 插槽，2 个 DE-9 串行端口和 1 个 DB-25 并行端口以及 2 个 PS/2 连接器。
+串行 PS/2 端口是6针接口，连接键盘和鼠标。DB-25 并行端口连接打印机和扫描仪。
+
+## USB - Universal Serial Bus
+
+USB 2.0 连接器包含 4 个引脚：一个用于 5 伏电源，两个用于数据，另一个则用于接地。
+![USB pins](images/usb.jpg)
+
+USB Type-C，支持正反插。
 
 ## Registered jack
 

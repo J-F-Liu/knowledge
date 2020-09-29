@@ -108,10 +108,44 @@ IGS 是美国信息管理委员会规定的一种文件格式, 主要用于不�
 
 The igs format supports: vertices, lines, polylines, arcs, curves, parametric surfaces, CSG and B-Rep Objects.
 
-### stp, step (Standard for the Exchange for Product Data)
+### STP/STEP (Standard for the Exchange of Product Model Data)
 
+- official title is: Automation systems and integration — Product data representation and exchange
+- an international product data standard (ISO 10303)
 - developed as a successor to the iges format
 - plain text format for named objects rather than just raw geometric information
+
+STEP is a standard for describing product data and is formally defined in the International Organization for Standardization (ISOI) standard 10303. The description includes not only the physical aspects but also the functional aspects of the product throughout the lifecycle of a product including engineering, manufacturing and support data.
+
+All of the major CAD vendors offer the capability to import and export STEP data files.
+
+STEP consists of several hundred parts and every year new parts are added or new revisions of older parts are released. This makes STEP the biggest standard within ISO.
+
+![](images/STEP.png)
+
+The numbering of the parts of this International Standard reflects its structure:
+Parts 11 to 13 specify the Description methods,
+Parts 21 to 26 specify the Implementation methods,
+Parts 31 to 35 specify the Conformance testing methodology and framework,
+Parts 41 to 49 specify the Integrated generic resources,
+Parts 101 to 106 specify the Integrated application resources,
+Parts 201 to 233 specify the Application protocols(APs),
+Parts 301 to 332 specify the Abstract test suites, and
+Parts 501 to 518 specify the Application interpreted constructs(AICs).
+
+Modules are built on each other, resulting in an (almost) directed graph with the AP and conformance class modules at the very top. The modular APs are:
+
+AP 209, Composite and metallic structural analysis and related design
+AP 210, Electronic assembly, interconnect and packaging design
+AP 221, Functional data and schematic representation of process plants
+AP 236, Furniture product data and project data
+AP 239, Product life cycle support
+AP 242, Managed model based 3d engineering
+
+ISO 10303 specifies a language by which aspects of product data can be defined. The language is called EXPRESS. EXPRESS is a data specification language as defined in ISO 10303-1. EXPRESS is not a programming language.
+
+
+[STEP Module and Resource Library (SMRL)](https://www.iso.org/publication/PUB100443/toc.html)
 
 ### FBX (FilmBox)
 

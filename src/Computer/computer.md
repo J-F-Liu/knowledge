@@ -127,7 +127,8 @@ UVC 全称为 USB Video Class，即：USB 视频类，是一种为 USB 视频捕
 V4L2 是 Video for linux2 的简称,为 linux 中关于视频设备的内核驱动。
 在 Linux 中，视频设备是设备文件，可以像访问普通文件一样对其进行读写，摄像头在/dev/video0 下。
 
-CNC machine - 数控机床 Computer Numerical Control
+## CNC machine - 数控机床 Computer Numerical Control
+
 UART - 通用异步收发器 Universal Asynchronous Reciever / Transmitter
 一种通用串行数据总线，用于异步通信。该总线双向通信，可以实现全双工传输和接收。在嵌入式设计中，UART 用来与 PC 的 USB 2.0 接口进行通信，包括与监控调试器和其它器件，数据传输速率可达 12 Mbps。
 
