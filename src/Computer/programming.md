@@ -95,3 +95,13 @@ But every new tool introduces a risk. And those risks compound. That’s why I b
 There are many stories of applications that are now impossible to maintain because someone decided that the latest NoSQL database, framework, or language would be perfect for the new project. That person has now left and no one knows how to keep the application alive. Luckily, Rust is a programming language for the next 40 years.
 
 The database / business logic split, which is arguably the most successful example of process separation. In this model, the database is responsible for performance and integrity, and the business logic is in a separate process, so it can safely do things like crash and hang.
+
+## Language wars
+
+As an aside, thinking of languages as platforms also explains language flame wars.
+
+Your productivity in any language is directly proportional to your time and effort investment in it. It’s in your best interests to pick the language that’s likely to thrive and spend time learning it’s ins and outs. On the flip side, betting on a horse that doesn’t win could mean the loss of months or years of effort. This is why people evangelize the platforms they’re invested in - convincing other people to join improves the health of the platform, increasing their return on investment.
+
+This evangelizing can sometimes become contentious if others perceive it as an attack on their platform. People defend their language mostly because they don’t want to see it lose popularity. If it did, their language’s viability is threatened and their investment is in jeopardy. It’s also partly because they’ve spent so long on it that it’s become a part of their identity.
+
+That’s something for us to keep in mind as we advocate for a language we like.
