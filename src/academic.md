@@ -1,3 +1,7 @@
+"If you have an apple and I have an apple, and we exchange apples, we both still only have one apple. But if you have an idea and I have an idea, and we exchange ideas, we each now have two ideas. "
+
+如果你有一个苹果，我有一个苹果，我们彼此交换，每人还是一个苹果；但如果你有一个想法，我有一个想法，我们彼此交换，那么每人都会有两个想法。
+
 Ph.D.是博士学位的一种。哲学博士（Ph.D./Doctor of Philosophy）泛指学术研究型博士学位，几乎可以授予任何专业的博士，不仅仅指哲学系。一般来说大家口中的 Ph.D.中文翻译即为博士。
 
 硕士学位论文：超短超强激光产生等离子体电荷分离的研究
