@@ -55,3 +55,7 @@ CHIP-8 是一个很简单的芯片，有 16 个 8 位寄存器和 35 个指令�
 AVR is the microcontroller designed by Atmel, now owned by Microchip. It is very popular with both hobbyists and professionals but has seen a massive uptake in education due to the Arduino products and ecosystem.
 AVRs are available with 8-pins to 100-pins, although anything 64-pin or over is surface mount only.
 采用了 RISC 精简指令集，内嵌高质量的 Flash 程序存储器，擦写方便，支持 ISP 和 IAP，便于产品的调试、开发、生产、更新。
+
+Type 1 Hypervisors (Paravirtualization): Hypervisor sits on bare metal hardware and each OS sits on the hypervisor. e.g. VMware ESXi, Oracle VM Server, Microsoft Hyper-V.
+
+Type 2 Hypervisors (Emulation): Hypervisor sits on top of the host OS. e.g. Oracle VirtualBox, Parallels, VMware Workstation.

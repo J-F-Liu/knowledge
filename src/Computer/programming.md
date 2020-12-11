@@ -1,3 +1,13 @@
+Programming is a tool to solve problems that you have in the domain of computers.
+
+The purpose of a program is, and ought to be, something that transforms data into other forms of data.
+
+A Value is a datum with an associated type.
+
+A (Data) Type is an attribute of a value which encodes information about how the data value can be operated upon.
+
+An Object is a value with associated behaviour, and thus implies it has agency.
+
 ### Composition is the Essence of Programming
 
 What is programming?
@@ -105,3 +115,14 @@ Your productivity in any language is directly proportional to your time and effo
 This evangelizing can sometimes become contentious if others perceive it as an attack on their platform. People defend their language mostly because they don’t want to see it lose popularity. If it did, their language’s viability is threatened and their investment is in jeopardy. It’s also partly because they’ve spent so long on it that it’s become a part of their identity.
 
 That’s something for us to keep in mind as we advocate for a language we like.
+
+## 标准库
+
+数据结构
+文本处理
+时间日期
+进程线程（环境变量、命令参数）
+终端界面
+图形界面
+文件目录
+网络连接

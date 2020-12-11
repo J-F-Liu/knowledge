@@ -1,3 +1,4 @@
+
 Linux 内核是一个典型的宏内核，Linux 内核太出名了，以至于几乎所有人都认为作为一个操作系统内核就应该长得和 Linux 内核那样。Minix 是 Andrew S. Tanenbaum 所著《操作系统：设计与实现》教材的示例代码。Linus 的 Linux 内核参考了 Minix，Minix 是微内核架构的操作系统。
 
 宏内核通过函数调用访问特定的逻辑和数据。
