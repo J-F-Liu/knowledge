@@ -1068,9 +1068,11 @@ Define $Cond(A)=\|A\|\|A^{-1}\|$, the relative error in a solution vector norm i
 实对称矩阵 A 的特征值都是实数，特征向量都是实向量。实对称矩阵 A 的不同特征值对应的特征向量是正交的。
 
 $$
+\begin{gathered}
 Sᵀ=S, Sx = λx, Sy = αy, λ≠α \\
 λxᵀy = xᵀSᵀy = xᵀSy = αxᵀy \\
 xᵀy = 0
+\end{gathered}
 $$
 
 $$

@@ -13,6 +13,7 @@ LFS allows you to create very compact Linux systems. When installing regular dis
 Education is by far the most powerful of reasons. As you continue in your LFS experience, you will discover the power that information and knowledge truly bring.
 
 ### Pre-reading List
+
 - http://www.tldp.org/HOWTO/Software-Building-HOWTO.html
 - http://moi.vonos.net/linux/beginners-installing-from-source/
 
@@ -23,3 +24,9 @@ digraph packages {
   Readline -> Bash
 }
 ```
+
+### kernel mode-setting (KMS)
+
+Set video display mode (screen resolution, color depth, and refresh rate) by the kernel.
+
+This makes fancy graphics during bootup, virtual console and X fast switching possible, among other things.

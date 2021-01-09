@@ -8,6 +8,7 @@
 根据目录层次，每个文件和目录都有一个由名称和路径分隔符组成的唯一的路径。
 
 查看目录的三个基本命令：
+
 ```
 pwd 显示当前工作目录
 ls  列出当前目录中的文件和子目录
@@ -16,6 +17,7 @@ cd PATH 改变当前工作目录，PATH参数可以是绝对路径或相对路�
 
 文件名一般由两个部分组成，以“.”分隔，“.”之后的叫做文件的扩展名，用来表示文件的类型。
 常见的文件扩展名有：
+
 ```
 txt 文本文件
 html 网页文件
@@ -139,13 +141,26 @@ NVMe 是一种建立在 M.2 接口上的传输协议规范，采用是 PCI-E 传
 
 ## USB - Universal Serial Bus
 
-1995 USB 1.0 was released, transfer rate is 1.5Mbps
-2000 USB 2.0 480 mbps
-2010 USB 3.0 5.0 Gbps (500 MB/s), two-way data transfer mode
-2013 USB 3.1 10 Gbps
+1996 USB 1.0 was released, transfer rate is 1.5Mbps
+1998 USB 1.1 12Mbps, Full Speed (全速)
+2000 USB 2.0 480 mbps, High Speed (高速)
+2010 USB 3.0 5.0 Gbps (500 MB/s), Super Speed (超速), two-way data transfer mode
+2013 USB 3.1 Gen1 5Gbps, Gen2 10 Gbps
 2014 USB Type-C connector
-2017 USB 3.2 20 Gbps
+2017 USB 3.2 Gen1 5Gbps, Gen2 10 Gbps，Gen2x2 20 Gbps
 2020 USB 4.0 40Gbs, Power supply will reach 100W, only operate over the Type-C connector, support PCIE devices — such as external graphics cards, external displays
+
+## WiFi
+
+1999 802.11b 2.4GHz 11Mbps
+1999 802.11a 5GHz 54Mbps
+2003 802.11g 2.4GHz 54Mbps
+2009 WiFi 4 (802.11n) 2.4GHz 288Mbps，5GHz 600Mbps，双频双天线，MIMO
+2014 WiFi 5 (802.11ac) 5GHz 433 to 6933 Mbps，20MHz 频道，阵列天线
+2019 WiFi 6 (802.11ax)，2.4/5 GHz，160MHz 频道, 600 to 9608 Mbps
+2019 WiFi 6E (802.11ax), 6GHz, 600 to 9608 Mbps
+
+工作频率越高，传输的能量就越大，所以在同一时间传送的数据也越多，上网速度越快。但同时，工作频率越高，穿透性越差，通讯距离短，抗干扰能力更好。
 
 ## 摄像头接口协议
 

@@ -14,7 +14,7 @@ A multiple view problem is inherently a vision problem involving more than one v
 
 Many of the visual problems are generally ill-posed, that is, solutions are not unique.
 
-## Camera Model
+## Camera Pinhole Model
 
 Vision system starts its work by acquiring an image or a set of images from cameras or data storage devices.
 
@@ -22,16 +22,57 @@ The pinhole perspective (also called central perspective) projection model, firs
 
 A thin lens produces the same projection as the pinhole. A camera is modeled as a pinhole, which performs a perspective projection. The perspective projection is a nonlinear mapping.
 
-A 2D point is denoted by $m = [x,y]^T$ in pixel image coordinates. A 3D point is denoted by $M = [X,Y,Z]^T$ in world coordinates. We use $\tilde x$ to denote the augmented vector by adding 1 as the last element: $\tilde m = [x,y,1]^T$ and $\tilde M= [X,Y,Z,1]^T$.
+A 3D point is denoted by $M = [X,Y,Z]^T$ in world coordinates and $M' = [X',Y',Z']^T$ in camera coordinates.
+
+$$ M' = RM + t $$
+
+$(R, t)$, called the extrinsic parameters, is the rotation and translation which relates the world coordinate system to the camera coordinate system.
+
+The projected 2D point on imaging plane is denoted by $m = [u,v]^T$ in pixel image coordinates and $m' = [x',y']^T$ in physical image coordinates.
 
 ![](images/pinhole_camera_model.png)
 
-### Camera matrix 相机内参矩阵，相机外参矩阵
+Based on similar triangle theory, we obtain:
 
-The relationship between a 3D point M and its image projection m is given by
-$$ s\tilde m = K [R\ t] \tilde M $$
+$$ \frac{f}{Z'} = \frac{x'}{X'} = \frac{y'}{Y'} $$
 
-where $s$ is an arbitrary scale factor, $(R, t)$, called the extrinsic parameters, is the rotation and translation which relates the world coordinate system to the camera coordinate system, and A is the camera intrinsic matrix, is given by
+Image pixel and physical coordinate is related by:
+
+$$
+\begin{cases}
+   u = αx'+c_x \\
+   v = βy'+c_y
+\end{cases}
+$$
+
+$(c_x,c_y)$ the pixel coordinates of the principal point. So
+
+$$
+\begin{cases}
+u = αf\dfrac{X'}{Z'}+c_x = f_x\dfrac{X'}{Z'}+c_x \\\\
+v = βf\dfrac{Y'}{Z'}+c_y = f_y\dfrac{Y'}{Z'}+c_y
+\end{cases}
+$$
+
+$(f_x,f_y)$ is the focal lengths in image x and y axes expressed in pixel units. The above equation can be written in matrix form:
+
+$$
+\begin{bmatrix}
+   u \\
+   v \\
+   1
+\end{bmatrix} = \dfrac{1}{Z'}\begin{bmatrix}
+   f_x & 0 & c_x \\
+   0 & f_y & c_y\\
+   0 & 0 & 1
+\end{bmatrix}\begin{bmatrix}
+   X' \\
+   Y' \\
+   Z'
+\end{bmatrix} = \dfrac{1}{Z'}KM' = \dfrac{1}{Z'}K(RM + t)
+$$
+
+K is called camera intrinsic matrix:
 
 $$
 K=\begin{bmatrix}
@@ -41,14 +82,25 @@ K=\begin{bmatrix}
 \end{bmatrix}
 $$
 
-with $(c_x,c_y)$ the coordinates of the principal point that is usually at the image center, $(f_x,f_y)$ the focal lengths in image x and y axes expressed in pixel units.
+We use $\tilde x$ to denote the augmented vector by adding 1 as the last element: $\tilde m = [u,v,1]^T$ and $\tilde M= [X,Y,Z,1]^T$.
 
-It is difficult to manufacture a perfect lens. In practice, several simple lenses are carefully assembled to make a compound lens with better properties. The two planes of front and back lens, called the principal planes, are perpendicular to the optical axis, and are separated by a distance t, called the thickness of the lens. The principal planes intersect the optical axis at two points, called the nodal points.
+The relationship between a 3D point M and its image projection m is given by
+$$ s\tilde m = K [R\ t] \tilde M = P \tilde M $$
 
-The thick lens produces the same perspective projection as the ideal thin lens, except for an additional offset equal to the lens thickness t along the optical axis.
+where s is the z component of (RM + t), P is called projection matrix.
+
+### Reprojection
+
+Given P and M, compute $[x,y,w]ᵀ=P\tilde M$, then u=x/w, v=y/w.
+
+### Reconstruction
+
+Given projection matrice of two cameras $P_1, P_2$ and two image points $m_1, m_2$.
+
+### Camera matrix 相机内参矩阵，相机外参矩阵
 
 影像坐标系是以二维影像为基本建立的坐标系，描述像素点在影像上的位置，分为以像素为单位的 uv 坐标系以及以物理尺寸为单位的 xy 坐标系。uv 坐标系以图像左上角为原点，u 轴和 v 轴分别平行于图像平面的两条垂直边（u 轴朝右，v 轴朝下）；xy 坐标系以相机主光轴与像平面的交点（主点）为原点，x 轴和 y 轴分别与 u 轴和 v 轴平行且方向一致。
-相机坐标系从相机的视角来描述物体在三维空间中的坐标。以相机中心为原点，X 轴与 Y 轴分别与影像坐标系的 x 轴与 y 轴平行，且方向一致，根据右手坐标系规则得到 Z 方向。相机坐标系是物理尺寸单位。
+相机坐标系从相机的视角来描述物体在三维空间中的坐标。以相机光学中心为原点，X 轴与 Y 轴分别与影像坐标系的 x 轴与 y 轴平行，且方向一致，根据右手坐标系规则得到 Z 方向。相机坐标系是物理尺寸单位。
 
 ## Camera Calibration
 
@@ -175,6 +227,10 @@ $$
 Because of noise in data, the so-computed matrix $R = [r_1\ r_2\ r_3]$ does not in general satisfy the properties of a rotation matrix. We need to estimate the best rotation matrix from a general 3×3 matrix.
 
 ## Lens distortion model
+
+It is difficult to manufacture a perfect lens. In practice, several simple lenses are carefully assembled to make a compound lens with better properties. The two planes of front and back lens, called the principal planes, are perpendicular to the optical axis, and are separated by a distance t, called the thickness of the lens. The principal planes intersect the optical axis at two points, called the nodal points.
+
+The thick lens produces the same perspective projection as the ideal thin lens, except for an additional offset equal to the lens thickness t along the optical axis.
 
 The centre-of-distortion may be displaced from the centre of the image or the principal point of the camera.
 
@@ -338,6 +394,10 @@ The rectified images can be thought of as acquired by a new stereo rig, obtained
 
 Dense stereo matching is greatly simplified if images are rectified.
 
+## Bundle Adjustment
+
+Bundle adjustment tries to minimize the sum of errors between 2D observations and the predicted 2D points, where the predicted points are re-projected from 3D structures by camera parameters.
+
 ### Three‐dimensional Reconstruction from Image Sequences with the Kalman Filter
 
 ![](images/stereo_vision_uncertainty.png)
@@ -362,39 +422,45 @@ When you want to find the solution to a problem, the first step is to express th
 面阵相机是以 “面” 为单位来进行图像采集的成像工具，可以在短时间内曝光、一次性获取完整的目标图像。线阵相机的传感器只有一行感光像素，所以线阵相机一般具有非常高的扫描频率和分辨率。
 
 相机软件接口
+
 - Generic Interface for Cameras standard
-GenICam 提供了一种普遍适用的软件界面。它为包括 GigE Vision、USB 3.0 Vision、Camera Link ® 和 IEEE 1394 在内的各种标准接口（涵盖所有相机类型和图像格式）提供了一个端到端配置接口。这种方法方便连接符合 GenICam 标准的相机，无需对相机进行特定配置。
+  GenICam 提供了一种普遍适用的软件界面。它为包括 GigE Vision、USB 3.0 Vision、Camera Link ® 和 IEEE 1394 在内的各种标准接口（涵盖所有相机类型和图像格式）提供了一个端到端配置接口。这种方法方便连接符合 GenICam 标准的相机，无需对相机进行特定配置。
 - USB3 Vision
-符合GenICam协议，连接线增加了螺丝固定。
+  符合 GenICam 协议，连接线增加了螺丝固定。
 - USB video class or UVC
-UVC v1.5 supports transmission of compressed video streams, including MPEG-2 TS, H.264, MPEG-4 SL SMPTE VC1 and MJPEG.
+  UVC v1.5 supports transmission of compressed video streams, including MPEG-2 TS, H.264, MPEG-4 SL SMPTE VC1 and MJPEG.
 
 相机数据接口
+
 - Camera Link
-Camera Link (CL)提供从 100 MB/s 到约 800 MB/s 的数据传输速率。
-Camera Link HS (CLHS)数据传输速率提高到了1,200 to 80,000 MB/s，线材长度可达几百米。
+  Camera Link (CL)提供从 100 MB/s 到约 800 MB/s 的数据传输速率。
+  Camera Link HS (CLHS)数据传输速率提高到了 1,200 to 80,000 MB/s，线材长度可达几百米。
 
 - CoaXPress | CXP
-CoaXPress 1.0/1.1 标准的接口所支持的数据率最高可达 6.25 Gbps，
-CoaXPress 2.0 标准的传输速度比它快两倍，最高可达 12.5 Gbps。
-将信号触发和供电模式 (power over CXP) 相结合之后，只需一根 CoaXPress 电缆，即可实现 40 m 的最大电缆长度。
+  CoaXPress 1.0/1.1 标准的接口所支持的数据率最高可达 6.25 Gbps，
+  CoaXPress 2.0 标准的传输速度比它快两倍，最高可达 12.5 Gbps。
+  将信号触发和供电模式 (power over CXP) 相结合之后，只需一根 CoaXPress 电缆，即可实现 40 m 的最大电缆长度。
 
 - USB 3.0
-USB 3.1 Gen 1传输带宽高达 350 MB/s。
-USB 3.1 Gen 2 也被称为 USB Superspeed+，这款产品提供的最大带宽值甚至高于上一代的技术。
+  USB 3.1 Gen 1 传输带宽高达 350 MB/s。
+  USB 3.1 Gen 2 也被称为 USB Superspeed+，这款产品提供的最大带宽值甚至高于上一代的技术。
 
 - 千兆网（GigE）
-传输速率高达 100MB / 秒、线材长度可达 100 米。
-千兆网（GigE） 相机可以使用以太网实现供电 (PoE)，即 通过数据线获取电力。而系统装置为了这一工作需要合适的千兆网线材方可实现。
+  传输速率高达 100MB / 秒、线材长度可达 100 米。
+  千兆网（GigE） 相机可以使用以太网实现供电 (PoE)，即 通过数据线获取电力。而系统装置为了这一工作需要合适的千兆网线材方可实现。
 
 相机镜头接口
-- C口：螺纹的公称直径为 24.5 mm（1 英寸），每英寸 32 牙。镜头接口的法兰与图像平面的距离是 17.526 mm（0.69 英寸）。
-- CS口：类似于 C 口，区别是法兰与图像平面的距离较短，为 12.526 mm（0.493 英寸）。通过使用 5 mm 垫圈（C-CS 适配器），C 口镜头也可以用于 CS 口相机。
+
+- C 口：螺纹的公称直径为 24.5 mm（1 英寸），每英寸 32 牙。镜头接口的法兰与图像平面的距离是 17.526 mm（0.69 英寸）。
+- CS 口：类似于 C 口，区别是法兰与图像平面的距离较短，为 12.526 mm（0.493 英寸）。通过使用 5 mm 垫圈（C-CS 适配器），C 口镜头也可以用于 CS 口相机。
 
 相机感光芯片
 芯片尺寸单位为英寸，但此数据对应芯片对角线长度，1 英寸为 16mm，而不是 25.4mm。这是因历史原因形成的。
 
 ## References
+
+2019 Bundle Adjustment Revisited
+对小孔相机模型的推导很到位
 
 2000 A Flexible New Technique for Camera Calibration
 张正友标定算法，方法简便、结果可靠，被广泛采用，对畸变系数的标定仍需改进

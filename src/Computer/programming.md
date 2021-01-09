@@ -126,3 +126,10 @@ That’s something for us to keep in mind as we advocate for a language we like.
 图形界面
 文件目录
 网络连接
+
+Change is constant.
+Your product is an asset, but code is a liability.
+Duplication is less costly than premature abstraction.
+The only true authority stems from knowledge, not from position.
+Writing throwaway code to explore a problem space is underrated.
+A good design is one in which you can change your mind without changing too much code.

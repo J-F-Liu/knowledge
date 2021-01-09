@@ -165,6 +165,15 @@ Neural computers learn how to use memory and how to produce answers completely f
 
 Neural computer is a learning machine that, without prior programming, can organise information into connected facts and use those facts to solve problems.
 
+6 Essential Types of Neural Networks:
+
+- 感受器 Perceptron
+- 多层感受器 Multi-layer Perceptron
+- 卷积网络 Convolutional Neural Networks (CNN)
+- 重入性网络 Recurrent Neural Networks (RNN)
+- 长短期记忆网络 Long Short Term Memory Networks (LSTM)
+- 生成对抗网络 Generative Adversarial Networks (GAN)
+
 ## 自然语言处理
 
 BERT - Bidirectional Encoder Representations from Transformers 来自 Transformer 的双向编码器表征
