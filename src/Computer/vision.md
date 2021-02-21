@@ -89,6 +89,8 @@ $$ s\tilde m = K [R\ t] \tilde M = P \tilde M $$
 
 where s is the z component of (RM + t), P is called projection matrix.
 
+成像公式的本质上是把投影中心放到坐标原点，$f_x,f_y,c_x,c_y$决定了像点的三维坐标，$R,t$决定了物点的三维坐标，原点、像点、物点三点共线，根据这样的一组共线方程，可以解出相机的参数值。
+
 ### Reprojection
 
 Given P and M, compute $[x,y,w]ᵀ=P\tilde M$, then u=x/w, v=y/w.
@@ -225,6 +227,12 @@ t = λA^{-1}h_3 \\
 $$
 
 Because of noise in data, the so-computed matrix $R = [r_1\ r_2\ r_3]$ does not in general satisfy the properties of a rotation matrix. We need to estimate the best rotation matrix from a general 3×3 matrix.
+
+LM 优化的本质是参数拟合，增加畸变参数很容易过拟合。
+以最小化投影误差来拟合畸变参数，还要约束直线上的点在消畸变后仍在直线上。
+两个相机分别拟合旋转平移参数后，还要约束两个相机的相对方位是固定的，以及同名点对应的光线能相交。
+用直线法拟合畸变参数，由于不能确定畸变前直线的位置，准确性受限。
+椭圆在畸变后，拟合的椭圆方程就不准了，进而影响对偏心误差的计算。
 
 ## Lens distortion model
 
@@ -470,8 +478,24 @@ When you want to find the solution to a problem, the first step is to express th
 比较了方形、圆形、环形控制点定位精度，取环形控制点内外两个圆的圆心的中点作为圆环的中心。
 引申思考：利用圆环的同心圆可以消除投影的偏心误差，从而减少迭代次数。
 
+2012 A novel optimization method of camera parameters used for vision measurement
+提出测量是在 3D 空间进行的，而传统的标定是在 2D 图像上进行优化，所以把标定的优化目标改成最小化 3D 坐标的测量误差。
+反思：2D 图像上最小化重投影误差是假定 3D 的标定物是精确的，最小化 3D 坐标的测量误差则是假定像点坐标是精确的，所以两者优化出来的相机参数是不一样。对于标定场景，由于存在镜头畸变和像点检测误差，显然标定物的 3D 坐标更精确一些。
+
+2016 Multistep Explicit Stereo Camera Calibration Approach to Improve Euclidean Accuracy of Large-Scale 3D Reconstruction
+测量误差跟工作距离的平方成正比，跟双目基线长度成反比。
+距离越远，像点位移变化越不敏感，很难用重投影偏差来优化。
+标定板到相机的距离要保持较小的变化范围，每次位移不能是单纯的平移。
+在不同的距离标定双目相机，重建三维坐标时使用对应距离的相机参数值。
+
+2008 A new calibration model of camera lens distortion
+将径向、偏心、薄棱镜三种畸变合并到一个最高为 5 次方的多项式中，解释了各个多项式系数的几何含义。
+引入两个旋转角来代替一部分的畸变系数，减少了系数的个数，有大量的实验数据。
+实验发现镜头焦距越短，畸变越大。
+
 2012 Self-consistency and universality of camera lens distortion models
 比较了五种经典的畸变/校正模型，概念准确、方法合理，必读。
+给出了多项式畸变系数的计算方法。
 
 2014 Camera matrix calibration using circular control points and separate correction of the geometric distortion field
 先用竖琴标定畸变系数，再用圆点板标定几何参数；用待优化的参数把圆点投影成椭圆取圆心，与测量到的椭圆圆心作比对，避免了圆点圆心的投影偏差。

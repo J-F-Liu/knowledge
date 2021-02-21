@@ -1007,6 +1007,7 @@ $AV=UΣ \implies u_i=\frac{Av_i}{σ_i}$
 $rank(A)=r, [u_{r+1}... u_m]$ is null space of Aᵀ, $[v_{r+r}...v_n]$ is null space of A.
 
 $Av_i=σ_iu_i$, 如果 detA≠0, 取最小的$σ_i$对应的$v_i$可作为$Ax=0$的近似解。$v_i$也是 AᵀA 的最小本征值对应的本征向量。
+对 AᵀA 做 EVD 的计算精度略高于对 A 的 SVD.
 
 $Ax=b$的近似解$x=A^{−1}b≈VΣ_0^{−1}U^Tb$，
 其中$Σ_0^{−1}=\begin{cases}1/σ_i&\text{if }σ_i>t \\ 0&\text{otherwise}\end{cases}$，
@@ -1086,3 +1087,25 @@ $$
 正定矩阵的特征值都是正实数；对于任意的实矩阵 B，BᵀB 是正定的。
 
 半正定矩阵是正定矩阵的推广。实对称矩阵 A 称为半正定的，如果二次型 xᵀAx 半正定，即对于任意不为 0 的实列向量 x，都有$xᵀAx \ge 0$.
+
+### 二元一次方程组
+
+$$
+\begin{cases}
+   ax+by=e \\
+   cx+dy=f
+\end{cases}
+$$
+
+当$ad-bc≠0$时,
+
+$$
+\begin{cases}
+x = \dfrac{de-bf}{ad-bc} \\\\
+y = \dfrac{af-ce}{ad-bc}
+\end{cases}
+$$
+
+## 矢量叉乘
+
+$A×B=(a,b,e)×(c,d,f)=(bf-de,ce-af,ad-bc)$

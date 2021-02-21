@@ -148,7 +148,7 @@ NVMe 是一种建立在 M.2 接口上的传输协议规范，采用是 PCI-E 传
 2013 USB 3.1 Gen1 5Gbps, Gen2 10 Gbps
 2014 USB Type-C connector
 2017 USB 3.2 Gen1 5Gbps, Gen2 10 Gbps，Gen2x2 20 Gbps
-2020 USB 4.0 40Gbs, Power supply will reach 100W, only operate over the Type-C connector, support PCIE devices — such as external graphics cards, external displays
+2020 USB 4.0 40Gbs, Power supply will reach 100W, only operate over the Type-C connector, allows tunneling of DisplayPort and PCI Express, support PCIE devices — such as external graphics cards, external displays
 
 ## WiFi
 
@@ -161,6 +161,11 @@ NVMe 是一种建立在 M.2 接口上的传输协议规范，采用是 PCI-E 传
 2019 WiFi 6E (802.11ax), 6GHz, 600 to 9608 Mbps
 
 工作频率越高，传输的能量就越大，所以在同一时间传送的数据也越多，上网速度越快。但同时，工作频率越高，穿透性越差，通讯距离短，抗干扰能力更好。
+
+2G 基站覆盖半径约为 5-10 公里
+3G 基站覆盖半径约为 2-5 公里
+4G 基站覆盖半径约为 1-3 公里
+5G 基站覆盖半径约为 100-300 米
 
 ## 摄像头接口协议
 

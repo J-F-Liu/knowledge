@@ -1,3 +1,6 @@
+> 要么是用户控制程序，要么是程序控制用户。
+> -- 理查德・斯托曼
+
 Programming is a tool to solve problems that you have in the domain of computers.
 
 The purpose of a program is, and ought to be, something that transforms data into other forms of data.
@@ -133,3 +136,5 @@ Duplication is less costly than premature abstraction.
 The only true authority stems from knowledge, not from position.
 Writing throwaway code to explore a problem space is underrated.
 A good design is one in which you can change your mind without changing too much code.
+
+Software architecture probably matters more than anything else. A shitty implementation of a good abstraction causes no net harm to the code base. A bad abstraction or missing layer causes everything to rot.
