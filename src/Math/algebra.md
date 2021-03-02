@@ -161,7 +161,6 @@ x^ay^a = (xy)^a \\
 x^{-a} = \cfrac{1}{x^a} \\
 x^0 = 1 \\
 x^1 = x
-\end{array}
 $$
 
 Negative exponents mean you can get rid of fractions.

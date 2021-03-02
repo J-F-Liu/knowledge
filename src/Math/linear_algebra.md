@@ -1,9 +1,5 @@
 # 线性代数 Linear Algebra
 
-Understanding which tools should be applied in a given context and understanding what computation to ask the computer to do for you—it is far less important to know how to perform computations that a computer can do better than you anyway.
-
-A system of equations is called inconsistent if it has no solutions. It is called consistent otherwise.
-
 An n-tuple of real numbers is called a **point** of $R^n$.
 
 When $n=1,R^1=R$. Geometrically, this is the number line.
@@ -26,9 +22,11 @@ We can perform three valid operations on system of equations:
 - Replacement: we can add a multiple of one equation to another, replacing the second equation with the result.
 - Swap: we can swap two equations.
 
+A system of equations is called inconsistent if it has no solutions. It is called consistent otherwise.
+
 **增广矩阵** augmented matrix
 
-The word “augmented” refers to the vertical line, which we draw to remind ourselves where the equals sign belongs.
+To solve Ax=b, add b as an extra column the matrix A to produce the augmented matrix [A b].
 
 Two matrices are called row equivalent if one can be obtained from the other by doing some number of row operations. So the linear equations of row-equivalent matrices have the same solution set.
 
@@ -945,12 +943,6 @@ The _row space_ of a matrix A is the span of the rows of A, and is denoted Row(A
 
 Let A be a matrix. Then the row rank of A is equal to the column rank of A.
 
-### Least Squares
-
-Let $A$ be an m×n matrix and let $b$ be a vector in $R^m$. The least-squares solutions of $Ax=b$ are the solutions of the matrix equation $A^TAx=A^Tb$.
-
-If $A^TA$ is invertible, the least-squares solution is $\hat{x}=(A^TA)^{−1}A^Tb$.
-
 ### LU Decomposition
 
 To solve Ax=b, find two matrices, L and U, where L is lower-triangular and U is upper-triangular, and A=LU. Then x is calculated in two steps: Ly=b and Ux=y.
@@ -958,6 +950,10 @@ To solve Ax=b, find two matrices, L and U, where L is lower-triangular and U is 
 ### QR Decomposition
 
 Decomposition of a matrix A into a product A = QR of an orthogonal matrix Q and an upper triangular matrix R.
+
+Q can be abtained by applying the Gram-Schmidt process with normalization to these column vectors of A.
+
+Every invertible matrix has an QR decomposition.
 
 $QRx=b \implies x=R^{-1}Q^Tb$
 
@@ -975,25 +971,26 @@ $$
 Let A be a square n × n matrix with n linearly independent eigenvectors $q_i$ (where i = 1, ..., n). Then A can be factorized as
 
 $$
-\mathbf{A}=\mathbf{X}\mathbf{\Lambda}\mathbf{X}^{-1}
+\mathbf{A}=\mathbf{Q}\mathbf{\Lambda}\mathbf{Q}^{-1}
 $$
 
-where X is the square n × n matrix whose ith column is the eigenvector $x_i$ of A, and Λ is the diagonal matrix whose diagonal elements are the corresponding eigenvalues, $Λ_{ii} = λ_i$. Note that only diagonalizable matrices can be factorized in this way.
+where Q is the square n × n matrix whose ith column is the eigenvector $x_i$ of A, and Λ is the diagonal matrix whose diagonal elements are the corresponding eigenvalues, $Λ_{ii} = λ_i$. Note that only diagonalizable matrices can be factorized in this way.
 
 Diagonalizing a matrix is the same process as finding its eigenvalues and eigenvectors.
 
 $$
-A^n=XΛ^nX^{-1}
+A^n=QΛ^nQ^{-1}
 $$
 
 ### Singular Value Decomposition (SVD)
 
 Any real mxn matrix A can be decomposed uniquely as $A=UΣV^T$.
 
-U is mxn and column orthogonal (its columns are eigenvectors of $AA^T$).
+U is mxn and orthogonal (its columns are eigenvectors of $AA^T$).
 V is nxn and orthogonal (its columns are eigenvectors of $A^TA$).
 Σ is nxn diagonal (non-negative real values called singular values).
-The rank of a matrix is equal to the number of non-zero singular values.
+The number of non-zero singular values equals to the rank of matrix.
+Order singular values as σ₁≥σ₂≥⋯≥σᵣ>0.
 
 If A is a nxn nonsingular matrix, then its inverse is given by $A=UΣV^T \implies A^{−1}=VΣ^{−1}U^T$.
 
@@ -1012,6 +1009,56 @@ $Av_i=σ_iu_i$, 如果 detA≠0, 取最小的$σ_i$对应的$v_i$可作为$Ax=0$
 $Ax=b$的近似解$x=A^{−1}b≈VΣ_0^{−1}U^Tb$，
 其中$Σ_0^{−1}=\begin{cases}1/σ_i&\text{if }σ_i>t \\ 0&\text{otherwise}\end{cases}$，
 计算精度高于$(A^TA)^{−1}A^Tb$。
+
+If r < m or r < n, define pseudoinverse A⁺=VΣ⁺Uᵀ.
+
+$$
+‖Ax‖=‖UΣV^Tx‖=‖ΣV^Tx‖≤σ₁‖V^Tx‖=σ₁‖x‖
+$$
+
+The maximum value of $\dfrac{‖Ax‖}{‖x‖}$ equals σ₁.
+The ratio $\dfrac{σ_{max}}{σ_{min}}$ governs the roundoff error in solving Ax=b.
+Matlab warns you if the "condition number" is large, then x is unreliable.
+
+### Least Squares
+
+Let $A$ be an m×n matrix and let $b$ be a vector in $R^m$.
+Solve $Ax=b$ by find a vector $\hat{x}$ that minimizes the least squares error ‖b-Ax‖.
+Choose $A\hat{x}$ to be the projection of b in column space of A.
+Then $b-A\hat{x}$ is in the null space of Aᵀ.
+So $ A^T(b-A\hat{x})=0 \implies A^TA\hat{x}=A^Tb$.
+
+There may be more than one least squares solutions, but each has the same error $b-A\hat{x}$.
+
+If $A^TA$ is invertible, the least-squares solution is $\hat{x}=(A^TA)^{−1}A^Tb$, and is a unique solution.
+
+$A^TA$ is invertible, if and only if A has independent columns.
+
+To compute the least-squares solution numerically, use QR decomposition instead.
+
+$
+\hat{x}=(A^TA)^{−1}A^Tb=((QR)^T(QR))^{−1}(QR)^Tb=(R^TR)^{−1}(QR)^Tb=R^{−1}Q^Tb
+$
+
+Fit points by least squares solution of yᵢ=axᵢ+b, fits a best line by minimizing the vertical distances.
+
+#### Perpendicular Least Squares
+
+Least squares estimator may fail when the number of explanatory variable is relatively large in comparison to the sample or if the variables are almost collinear.
+
+Principal component analysis(PCA): the largest eigen value is the principal component.
+PCA minimizes the error orthogonal (perpendicular) to the model line.
+
+Covariance matrix $S=\dfrac{AᵀA}{m-1}$, m is the number of samples.
+
+Total variance = σ₁²+⋯+σₙ² = λ₁+⋯+λₙ.
+
+### Polar Decomposition
+
+$A=UΣVᵀ=(UVᵀ)(VΣVᵀ)=QS$
+Q is orthogonal and S is symmetric positive define.
+$Q=UVᵀ$ is the nearest orthogonal matrix to A.
+$S²=VΣ²Vᵀ=VΣUᵀUΣVᵀ=AᵀA$
 
 ### Difference between SVD and eigendecomposition
 
@@ -1080,6 +1127,14 @@ $$
 SQ = QΛ \implies S=QΛQᵀ=\sum_{i}{λ_iq_iq_i^T}
 $$
 
+$$
+Ax=b \implies QΛQ^Tx=b \implies Q^Tx=Λ^{-1}Q^Tb
+$$
+
+$$
+q_i^Tx=λ_i^{-1}q_i^Tb \implies x=\sum_{i}{(λ_i^{-1}q_i^Tb)q_i}
+$$
+
 ### 正定矩阵 (positive definite matrix)
 
 一个 n 阶的实对称矩阵 A 是正定的，当且仅当对于任意的非零实系数向量 x，都有$xᵀAx > 0$。
@@ -1097,6 +1152,18 @@ $$
 \end{cases}
 $$
 
+$$
+\begin{bmatrix}
+   a & b \\
+   c & d \\
+\end{bmatrix}
+\begin{bmatrix}
+   x \\ y
+\end{bmatrix}=\begin{bmatrix}
+   e \\ f
+\end{bmatrix}
+$$
+
 当$ad-bc≠0$时,
 
 $$
@@ -1106,6 +1173,33 @@ y = \dfrac{af-ce}{ad-bc}
 \end{cases}
 $$
 
+$
+A=\begin{bmatrix}
+   a & b \\
+   c & d \\
+\end{bmatrix}\\
+det(A)= ad-bc\\
+tr(A)=a+d \\
+λ^2-tr(A)λ+det(A)=0 \\
+λ_1 = \cfrac{1}{2} ( a + d + \sqrt{(a-d)^2 + 4 b c}) \\
+λ_2 = \cfrac{1}{2} ( a + d - \sqrt{(a-d)^2 + 4 b c}) \\
+v_1 = (-\cfrac{-a + d - \sqrt{(a-d)^2 + 4 b c}}{2 c}, 1) = (a-λ_2, c) \\
+v_2 = (-\cfrac{-a + d + \sqrt{(a-d)^2 + 4 b c}}{2 c}, 1) = (a-λ_1, c) \\
+$
+
 ## 矢量叉乘
 
 $A×B=(a,b,e)×(c,d,f)=(bf-de,ce-af,ad-bc)$
+
+## 复数矩阵
+
+Inner product: $zᴴz = \bar{z}ᵀz = ‖z‖²$
+Conjugate transpose: Aᴴ = Āᵀ
+Hermitian matrix: S=Sᴴ
+Unitary matrix: Uᴴ=U⁻¹, UᴴU=I
+
+## 数值计算
+
+求 Ax=0 用 EVD，如果 A 不是方阵，改为 AᵀAx=0。
+
+求 Ax=b 用 SVD，如果 A 低阶可逆，可用 x=A⁻¹b。
