@@ -1,5 +1,12 @@
 # 线性代数 Linear Algebra
 
+The beauty of linear algebra is that many scientific and engineering problems can be modeled using numerical operations on vectors and matrices. Such as:
+
+- quantum mechanics
+- machine learning
+- computer graphics
+- computer vision
+
 An n-tuple of real numbers is called a **point** of $R^n$.
 
 When $n=1,R^1=R$. Geometrically, this is the number line.
@@ -1004,7 +1011,6 @@ $AV=UΣ \implies u_i=\frac{Av_i}{σ_i}$
 $rank(A)=r, [u_{r+1}... u_m]$ is null space of Aᵀ, $[v_{r+r}...v_n]$ is null space of A.
 
 $Av_i=σ_iu_i$, 如果 detA≠0, 取最小的$σ_i$对应的$v_i$可作为$Ax=0$的近似解。$v_i$也是 AᵀA 的最小本征值对应的本征向量。
-对 AᵀA 做 EVD 的计算精度略高于对 A 的 SVD.
 
 $Ax=b$的近似解$x=A^{−1}b≈VΣ_0^{−1}U^Tb$，
 其中$Σ_0^{−1}=\begin{cases}1/σ_i&\text{if }σ_i>t \\ 0&\text{otherwise}\end{cases}$，
@@ -1113,7 +1119,7 @@ Define $Cond(A)=\|A\|\|A^{-1}\|$, the relative error in a solution vector norm i
 
 ## 实对称矩阵
 
-实对称矩阵 A 的特征值都是实数，特征向量都是实向量。实对称矩阵 A 的不同特征值对应的特征向量是正交的。
+实对称矩阵 A 的特征值都是实数，特征向量都是实向量。实对称矩阵 A 的不同特征值对应的特征向量是正交的，取 Q 为特征向量的单位向量组成的正交矩阵。
 
 $$
 \begin{gathered}
@@ -1200,6 +1206,6 @@ Unitary matrix: Uᴴ=U⁻¹, UᴴU=I
 
 ## 数值计算
 
-求 Ax=0 用 EVD，如果 A 不是方阵，改为 AᵀAx=0。
+求 Ax=0 用 EVD，如果 A 不是方阵或不是对称矩阵，改为 AᵀAx=0。
 
 求 Ax=b 用 SVD，如果 A 低阶可逆，可用 x=A⁻¹b。

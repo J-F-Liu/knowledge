@@ -1,3 +1,5 @@
+ICT: Information and Communication Technology
+
 ## HTTP - Hypertext Transfer Protocol
 
 HTTP is an RPC(remote procedure call) protocol. RPC is a request–response protocol.

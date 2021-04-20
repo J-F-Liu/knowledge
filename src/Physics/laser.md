@@ -71,3 +71,14 @@ SPI 自 2004 年首次发布光纤激光器以来其光纤激光器产品发展�
 光通讯市场几乎占据了激光产业的半壁江山，主要是半导体和光纤激光。
 
 高功率密度的，主要用于切割打标等。
+
+## 激光调制信号
+
+- 模拟调制
+  Analog modulation: the brightness of laser can be adjusted.
+  Analog modulators attempt to follow the shape of the 0 to 1 Volt input signal with 0 to 100% laser output, limited only by how fast the modulator can respond and drive the laser.
+
+- 数字调制
+  TTL = Transistor-transistor-logic.
+  TTL modulation is based on TTL signals. A TTL signal is a series of square wave pulses created by cycling the voltage between either 0 (low) or 5V (high).
+  A laser with TTL modulation uses these signals as triggers to turn the laser on and off.

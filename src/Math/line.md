@@ -64,6 +64,8 @@ $$ tan(α-β) = \frac{tanα - tanβ}{1 + tanα\cdot tanβ} = \frac{A_2B_1-A_1B_2
 
 ### 4.直线的交点
 
+#### 4.1 两条直线的交点
+
 将两个直线方程联立，得到一个方程组：
 
 $$
@@ -75,6 +77,26 @@ $$
 
 可以解出交点坐标为：$x=\frac{B_1C_2-B_2C_1}{A_1B_2-A_2B_1}$, $y=\frac{A_2C_1-A_1C_2}{A_1B_2-A_2B_1}$.
 当$A_1B_2-A_2B_1=0$时，两条直线平行，或者说交点在无穷远处。
+
+#### 4.2 多条直线的交点
+
+当多条直线不严格地交于一点时，找一个点使得点到这些直线的距离平方和最小。
+
+设直线方程为$a_ix+b_iy=c_i$，并且$a_i^2+b_i^2=1$. 点(x,y)到直线的距离为$|a_ix+b_iy-c_i|$，最小化$\sum{(a_ix+b_iy-c_i)^2}$正好是方程组$a_ix+b_iy=c_i$的最小二乘解，由$A^TAx=A^Tb$可得：
+
+$$
+\begin{bmatrix}
+   \sum{a_i^2} & \sum{a_ib_i} \\
+   \sum{a_ib_i} & \sum{b_i^2} \\
+\end{bmatrix}
+\begin{bmatrix}
+   x \\ y
+\end{bmatrix}=\begin{bmatrix}
+   \sum{a_ic_i} \\ \sum{b_ic_i}
+\end{bmatrix}
+$$
+
+若直线方程为$a_ix+b_iy+c_i=0$，上述方程组则相当于求直线$\sum{a_i^2}x+\sum{a_ib_i}y+\sum{a_ic_i}=0$和$\sum{a_ib_i}x+\sum{b_i^2}y+\sum{b_ic_i}=0$的交点。
 
 ### 5.点到直线的垂足
 
@@ -151,7 +173,7 @@ $$
 
 记为 $Av=u$.
 
-用最小二乘法可得$v=(A^TA)^{-1}A^Tu$.
+用最小二乘法可得$v≈(A^TA)^{-1}A^Tu$.
 
 还有一种推导是用偏微分求极值：
 

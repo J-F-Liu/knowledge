@@ -93,3 +93,19 @@ Events trigger processing. Events provide far less opportunity for services to c
 - Large projects should not be scheduled to finish at the same time.
 - Work iteratively, rather than going for 'big bang' releases.
 - Consider ongoing maintenance: how much is there to do? Who will do it? Failing to consider this means there is more pressure on the initial release.
+
+### 代码审查（Code Review）
+
+> Given enough eyeballs, all bugs are shallow. -- Linus
+
+代码审查是一个过程，即代码只有经过非作者本人评审后才能进入代码仓库。
+代码审查的目的是保证代码质量，代码质量是软件系统的内在质量。
+《代码大全》第二十章中中给出了代码质量的特性：
+
+• 可维护性（Mantinability）
+• 灵活性（Flexibility）
+• 可移植性（Portability）
+• 可重用性（Reusability）
+• 可读性（Readability）
+• 可测试性（Testability）
+• 可理解性（Understandability）

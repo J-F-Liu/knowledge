@@ -70,6 +70,14 @@ Syntax highlighting means that the editor displays the text, more specifically, 
 
 Debugging is the process of finding and removing bugs from a program.
 
+## Data Structures are key to a good program
+
+> Data dominates. If you’ve chosen the right data structures and organized things well, the algorithms will almost always be self-evident. Data structures, not algorithms, are central to programming. -- Rob Pike 1989
+
+> I’m a huge proponent of designing your code around the data, rather than the other way around, and I think it’s one of the reasons git has been fairly successful… I will, in fact, claim that the difference between a bad programmer and a good one is whether he considers his code or his data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships. -- Linus Torvalds 2006
+
+Good data structures makes coding easy to design and maintain, whereas the best code in the world cannot make up for poor data structures.
+
 计算机科学中的一切都循序渐进的. 知识点是循序渐进的，略过前面的知识点无异于搭建空中楼阁.
 
 如果当前你正在学习的知识点对你而言很无厘头, 请停留在当前位置, 暂不要进行下一个知识点。
@@ -138,3 +146,5 @@ Writing throwaway code to explore a problem space is underrated.
 A good design is one in which you can change your mind without changing too much code.
 
 Software architecture probably matters more than anything else. A shitty implementation of a good abstraction causes no net harm to the code base. A bad abstraction or missing layer causes everything to rot.
+
+One aspect of software development is that software developers are expected to constantly be learning new things.

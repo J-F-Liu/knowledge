@@ -188,7 +188,7 @@ The three altitudes of a triangle are concurrent in a point H, called the orthoc
 The feet of the altitudes of a given triangle form a new triangle which is called the orthic triangle.
 
 三角形的重心，外心，垂心，内心和旁心称之为三角形的五心。
-三角形的三条边的中线交于一点，该点叫做三角形的重心。重心和三角形任意两个顶点组成的 3 个三角形面积相等。
+三角形的三条边的中线交于一点，该点叫做三角形的重心。重心和三角形任意两个顶点组成的 3 个三角形面积相等。重心是到三个顶点的距离平方和最小的点。
 三角形的三条高线交于一点，该点叫做三角形的垂心。
 三角形内切圆的圆心，叫做三角形的内心。三条内角平分线交于内心。内心到三条边的距离相等。
 三角形外接圆的圆心，叫做三角形的外心。三条边的垂直平分线交于外心。外心到三个顶点的距离相等。

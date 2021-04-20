@@ -233,6 +233,7 @@ LM 优化的本质是参数拟合，增加畸变参数很容易过拟合。
 两个相机分别拟合旋转平移参数后，还要约束两个相机的相对方位是固定的，以及同名点对应的光线能相交。
 用直线法拟合畸变参数，由于不能确定畸变前直线的位置，准确性受限。
 椭圆在畸变后，拟合的椭圆方程就不准了，进而影响对偏心误差的计算。
+可以尝试用一组同心圆成像，根据理想的椭圆轮廓与实际轮廓的差异来标定畸变参数。
 
 ## Lens distortion model
 
@@ -467,6 +468,16 @@ When you want to find the solution to a problem, the first step is to express th
 
 ## References
 
+1986 A Computational Approach to Edge Detection
+2002 On optimal linear filtering for edge detection
+已成为经典的 Canny 边缘检测算法
+There is a trade-off between noise suppression and localization.
+The type of linear operator that provides the best compromise between noise immunity and localization,
+while retaining the advantages of Gaussian filtering, is the first derivative of a Gaussian.
+
+2019 Efficient conic fitting with an analytical Polar-N-Direction geometric distance
+将点到椭圆的几何距离的计算做到了极致，通过巧妙的数学推导得出简便的计算方法，并可作为优化目标用于拟合椭圆。
+
 2019 Bundle Adjustment Revisited
 对小孔相机模型的推导很到位
 
@@ -501,7 +512,7 @@ When you want to find the solution to a problem, the first step is to express th
 先用竖琴标定畸变系数，再用圆点板标定几何参数；用待优化的参数把圆点投影成椭圆取圆心，与测量到的椭圆圆心作比对，避免了圆点圆心的投影偏差。
 引申思考：既可以用竖线标定畸变系数，也可以用竖线代替点标定相机的内外参数。
 
-2016 Distortion Correction Modeling Method for Zoom Lens Cameras with Bundle Adjustment
+2016 Robust Domain-Filling Plumb-Line Lens Distortion Correction
 给出了一种拟合直线的方法，是否优于最小二乘法不确定。
 先用拟合直线计算畸变参数，优化标定的重投影误差时固定其他参数不变，只改变畸变参数进行二次优化。
 

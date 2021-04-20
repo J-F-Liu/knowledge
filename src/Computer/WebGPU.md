@@ -1,3 +1,7 @@
+# GPU
+
+The market for video games dwarfs scientific computing and led to astonishing acceleration in GPU chips.
+
 ## Vulkan
 
 Vulkan is a low level API with an abstraction closer to the behavior of the actual hardware.
