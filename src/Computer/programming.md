@@ -1,6 +1,13 @@
 > 要么是用户控制程序，要么是程序控制用户。
 > -- 理查德・斯托曼
 
+> Programming is about solving technical problems, but how you solve them, and how you think about them is important too, and it's one of those things you start to recognize over time: certain people have that "good taste" thing and pick the "right" solution.
+> I don't want to claim that programming is an art, because it really is mostly just about 'good engineering'. I'm a big believer in Thomas Edison's 'one percent inspiration and ninety-nine percent perspiration' mantra: it's almost all about the little details and the everyday grunt-work. But there is that occasional 'inspiration' part, that 'good taste' thing that is about more than just solving some problem - solving it cleanly and nicely and yes, even beautifully.
+> I think one of the big successes of Linux is having literally hundreds of maintainers around, all with that hard-to-define "good taste", and all people who maintain parts of the kernel.
+> -- Linus
+
+I find that the best way to describe a solution is often to just write the snippet of code - maybe not the whole thing - and just make it very concrete that way.
+
 Programming is a tool to solve problems that you have in the domain of computers.
 
 The purpose of a program is, and ought to be, something that transforms data into other forms of data.

@@ -98,7 +98,13 @@ WebGPU platform consists of the following layers:
 2. Operating system with low-level native API drivers for this device.
 3. Actual CPU and GPU hardware.
 
-Entry point to WebGPU.
+Type definitions:
+
+```rust
+type BufferAddress = u64;
+type BufferSize = NonZeroU64;
+type Label<'a> = Option<&'a str>;
+```
 
 ```rust
 Instance {

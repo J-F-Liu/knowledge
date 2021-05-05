@@ -139,6 +139,8 @@ NVMe 是一种建立在 M.2 接口上的传输协议规范，采用是 PCI-E 传
 2160p: 3840 x 2160, 称为 4K
 4320p: 7680 x 4320, 称为 8K
 
+OSD 菜单：OSD 是 on-screen display 的简称，即屏幕菜单式调节方式。
+
 ## USB - Universal Serial Bus
 
 1996 USB 1.0 was released, transfer rate is 1.5Mbps

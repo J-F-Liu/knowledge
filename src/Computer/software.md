@@ -72,6 +72,10 @@ Tcl 语言的最初设计是，unset() 方法用来删除已经存在的变量�
 阶段 2：深度清理
 阶段 3：管道（pipeline）重构
 
+When people are actually using it, and interested in it, it started to have a life of its own. People started sending patches, and the system begin growing.
+
+GPLv2 is pretty much the perfect balance of "everybody works under the same rules", and still requires that people give back to the community ("tit-for-tat").
+
 ### Single Writer Principle
 
 For any item of data, or resource, that item of data should be owned by a single execution context for all mutations.

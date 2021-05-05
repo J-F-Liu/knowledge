@@ -256,7 +256,7 @@ Generally, the target should fill most of your camera's FOV (Field Of View) at t
 Changing the focus distance slightly affects focal length, which would throw any previous calibration off. Even aperture changes usually have a negative effect on calibration validity, which is why they should be avoided.
 
 For accurate calibration, the camera model is best constrained if the camera sees the calibration target filling most of the image. Popularity speaking, if a small calibration plate is used, many combinations of camera parameters could explain the observed images.
-As a rule of thumb, the calibration plate should have an area of at least half the available pixel area when observed frontally.
+As a rule of thumb, **the calibration plate should have an area of at least half the available pixel area when observed frontally**.
 Capturing calibration information from the periphery of images is especially important for the determination of lens distortion parameters.
 
 #### Calibration Best Practices

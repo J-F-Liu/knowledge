@@ -63,3 +63,5 @@ HTTP tunneling is using a protocol of higher level (HTTP) to transport a lower l
 A VPN client on your computer establishes a secure tunnel with the VPN server, replacing your local ISP routing. VPN connections encrypt and secure all of your network traffic, not just the HTTP or SOCKS calls from your browser like a proxy server.
 
 VPNs are great when you need to use the WIFI at a local coffee shop: using a VPN instead of the potentially completely unencrypted local WIFI adds another layer of privacy.
+
+localhost and 127.0.0.1 are indeed different things.
