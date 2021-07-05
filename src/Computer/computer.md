@@ -151,6 +151,7 @@ OSD 菜单：OSD 是 on-screen display 的简称，即屏幕菜单式调节方�
 2014 USB Type-C connector
 2017 USB 3.2 Gen1 5Gbps, Gen2 10 Gbps，Gen2x2 20 Gbps
 2020 USB 4.0 40Gbs, Power supply will reach 100W, only operate over the Type-C connector, allows tunneling of DisplayPort and PCI Express, support PCIE devices — such as external graphics cards, external displays
+2021 USB-C 2.1 support 240W of power
 
 ## WiFi
 

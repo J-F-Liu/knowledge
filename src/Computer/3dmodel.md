@@ -80,15 +80,39 @@ OBJ 文件的每一行，都有极其相似的格式：
 ```
 # Comment
 v Vertex
+vn Normal
+vt Texture Coordinate
 l Line
 f Face
-vt Texture Coordinate
-vn Normal
 o Object
 g Group
+cstype  Curve or surface type
+curv    Curve
+curv2   2D curve
+surf    Surface
+    parm     Parameter values
+    trim     Outer trimming loop
+    hole     Inner trimming loop
+    scrv     Special curve
+    sp     Special point
+    end     End statement
 ```
 
 The obj file format supports: geometry in form of vertices/edges/faces and parametric surfaces, vertex normals, textures, material properties, and groups.
+It can encode surface geometry of a 3D model and can also store color and texture information. This format does not store any scene information (such as light position) or animations.
+
+The OBJ file format is open source and neutral. It is heavily used for sharing 3D models in graphics applications because it enjoys good import and export support from almost all CAD software. In recent years, it is also becoming popular as the de facto file format for multi-color 3D printing because the otherwise standard 3D printing format STL does not support color and texture information.
+
+In its simplest form, the OBJ file format allows the user to tessellate (tile) the surface of the 3D model with simple geometric shapes like triangles, quadrilaterals or more complex polygons. The vertices of the polygons and the normal to each polygon are then stored in a file to encode the surface geometry of the model.
+
+Tessellations with polygonal faces have advantages and disadvantages. Polygons are simple geometric shapes and this method is actually the simplest way to describe surface geometry. However, approximating a curved surface with polygons introduces coarseness to the model.
+
+Of course, by making the triangles smaller, the approximation can be made better, however the number of triangles needed to cover the surface also increases.
+It is therefore very important to find the right balance between file size and quality.
+
+The OBJ file format also allows for specifying the surface geometry of a model using freeform curves. The basic idea is that the user defines a collection of free form curves (Cardinal Splines, Bezier curves etc.) that run along the surface of the model. Since freeform curves can describe curved lines exactly using a few mathematical parameters, they require far fewer data to describe the same surface when compared to an approximate method like polygonal tessellations. Therefore, we can create a high-quality encoding of any 3D model using free-form curves without blowing up the file size.
+
+OBJ file format supports the most common freeform surface called NURBS (Non-Uniform Rational B Spline). The advantages of using freeform surfaces are somewhat similar to the advantages of using free-form curves – they are more precise and they lead to smaller file sizes at higher precision compared to other methods. In fact, one could argue that freeform surfaces are more precise than freeform curves since they encode the surface exactly as opposed to approximating the surface using curves.
 
 ### ply (polygon file format)
 
@@ -135,15 +159,16 @@ Parts 501 to 518 specify the Application interpreted constructs(AICs).
 
 Modules are built on each other, resulting in an (almost) directed graph with the AP and conformance class modules at the very top. The modular APs are:
 
-AP 209, Composite and metallic structural analysis and related design
-AP 210, Electronic assembly, interconnect and packaging design
-AP 221, Functional data and schematic representation of process plants
-AP 236, Furniture product data and project data
-AP 239, Product life cycle support
-AP 242, Managed model based 3d engineering
+**AP 203**: Configuration controlled 3D design of mechanical parts and assemblies
+AP 209: Composite and metallic structural analysis and related design
+AP 210: Electronic assembly, interconnect and packaging design
+**AP 214**: Core data for automotive mechanical design processes
+AP 221: Functional data and schematic representation of process plants
+AP 236: Furniture product data and project data
+AP 239: Product life cycle support
+AP 242: Managed model based 3d engineering
 
 ISO 10303 specifies a language by which aspects of product data can be defined. The language is called EXPRESS. EXPRESS is a data specification language as defined in ISO 10303-1. EXPRESS is not a programming language.
-
 
 [STEP Module and Resource Library (SMRL)](https://www.iso.org/publication/PUB100443/toc.html)
 

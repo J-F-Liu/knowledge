@@ -128,6 +128,10 @@ Self-calibration estimates the camera’s parameters by using multi-view images 
 
 The object-based camera calibration is performed by employing an object, such as 3D object, 2D pattern or 1D pattern with known coordinates, which is commonly used in off-line calibration for highperformance applications.
 
+### Camera Model
+
+Whenever adding a new term to our model, that term must describe an effect that is observable (compared to the precision of our measurements in practice). It doesn't make sense to add a term if it doesn't have an observable effect, as doing so would be a form of over-fitting.
+
 ### Homography matrix 单应矩阵
 
 We assume the plane of a calibration board is on $Z = 0$ of the world coordinate system. We have
@@ -465,6 +469,14 @@ When you want to find the solution to a problem, the first step is to express th
 
 相机感光芯片
 芯片尺寸单位为英寸，但此数据对应芯片对角线长度，1 英寸为 16mm，而不是 25.4mm。这是因历史原因形成的。
+
+- [Rotate, Scale, Translate: Coordinate frames for multi-sensor systems](https://www.tangramvision.com/blog/coordinate-systems-and-how-to-relate-multiple-coordinate-frames-together-part-1)
+- [Rotate, Scale, Translate: Coordinate frames for multi-sensor systems (Part 2)](https://www.tangramvision.com/blog/rotate-scale-translate-coordinate-frames-for-multi-sensor-systems-part-2)
+- [Sensors 101: 3D Sensing](https://www.tangramvision.com/blog/sensors-101-3d-sensing)
+- [Calibration From Scratch Using Rust: Part 1 of 3](https://www.tangramvision.com/blog/calibration-from-scratch-using-rust-part-1-of-3)
+- [Calibration From Scratch Using Rust: Part 2 of 3](https://www.tangramvision.com/blog/calibration-from-scratch-using-rust-part-2-of-3)
+- [Calibration From Scratch Using Rust: Part 3 of 3](https://www.tangramvision.com/blog/calibration-from-scratch-using-rust-part-3-of-3)
+- [Camera Modeling: Focal Length & Collinearity](https://www.tangramvision.com/blog/camera-modeling-focal-length-collinearity)
 
 ## References
 

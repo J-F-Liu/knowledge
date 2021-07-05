@@ -48,6 +48,8 @@ In the real world, choices can be complex, and wrong decisions can cost you mone
 
 所谓会做事的人，其实就是工具箱丰富的人。
 
+The best way to have a good idea is to have a lot of ideas.
+
 ## 商业模式
 
 硬件 + 软件 + 服务三位一体

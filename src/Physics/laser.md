@@ -82,3 +82,11 @@ SPI 自 2004 年首次发布光纤激光器以来其光纤激光器产品发展�
   TTL = Transistor-transistor-logic.
   TTL modulation is based on TTL signals. A TTL signal is a series of square wave pulses created by cycling the voltage between either 0 (low) or 5V (high).
   A laser with TTL modulation uses these signals as triggers to turn the laser on and off.
+
+光 学 衍 射 器 件 (Diffractive Optical Element, DOE)
+激光束经过准直成平行光，随后经过 DOE 在特定的距离形成所需的光学图案。
+具备光束复制功能的 DOE：DOE 衍射出与入射光完全相同的，照射角度分散的若干个子光线，最终实现散斑点数量的增加。
+
+晶元级镜头 (Wafer Level Optics, WLO)
+用半导体工艺批量复制加工镜头，多个镜头晶圆压合在一起，然后切割成单颗镜头。
+具有尺寸小、高度低、一致性好等特点，光学透镜间的位置精度达到 nm 级。

@@ -1,7 +1,15 @@
 # 三角学 trigonometry
 
+[正弦和余弦的函数图像](https://www.desmos.com/calculator/ogvpbi5v7j)
+
+#### 余角和补角
+
 $$
-sin(-α) = -sinα, \quad cos(-α) = cosα
+\begin{gathered}
+sin(-α) = -sinα, \quad cos(-α) = cosα \\
+sin(\frac{\pi}{2}-θ) = cosθ, \quad cos(\frac{\pi}{2}-θ) = sinθ \\
+sin(\pi-θ) = sinθ, \quad cos(\pi-θ) = -cosθ
+\end{gathered}
 $$
 
 #### 和角公式
