@@ -1,6 +1,10 @@
 建模思路：点连成线，线连成圈，圈界定面，面连成壳，壳连成体，体组成模型。
 快捷方法：挤出/扫射、镜像、修饰（比如边缘圆角）、增加厚度
 
+A subset S of the plane is called convex if and only if for any pair of points p,q ∈ S the line segment pq is completely contained in S.
+The convex hull of a set S is the smallest convex set that contains S. It is the intersection of all convex sets that contain S.
+It is the unique convex polygon whose vertices are points from P and that contains all points of P.
+
 ### Polygon
 
 We say a polygon is in standard form if all its vertices are distinct and no three consecutive vertices are collinear.
@@ -41,6 +45,13 @@ Delaunay refinement algorithms construct a Delaunay triangulation and refine it 
 Triangulated Irregular Network
 TINs can have a higher resolution in areas where a surface is highly variable or where more detail is desired and a lower resolution in areas that are less variable.
 TIN models are less widely available than raster surface models and are more time consuming to construct and process.
+
+### Mesh
+
+Mesh geometry is basically a collection of points in 3D space, also called vertices, and a number of faces connecting those points together.
+
+Using quads is often preferred during modeling since they can be more easily enhanced and smoothed than triangles.
+For rendering and game engines though, working with triangles is often easier since every shape can be rendered very efficiently using triangles.
 
 ### Triangle Mesh
 

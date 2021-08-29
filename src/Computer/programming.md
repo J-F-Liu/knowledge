@@ -1,10 +1,14 @@
 > 要么是用户控制程序，要么是程序控制用户。
 > -- 理查德・斯托曼
 
+> 最好的程序员不是善于编写复杂代码，而是有能力为复杂的问题提出简单的解决方案。只有糟糕的程序员，才会对简单的问题提出复杂的解决方案。
+
 > Programming is about solving technical problems, but how you solve them, and how you think about them is important too, and it's one of those things you start to recognize over time: certain people have that "good taste" thing and pick the "right" solution.
 > I don't want to claim that programming is an art, because it really is mostly just about 'good engineering'. I'm a big believer in Thomas Edison's 'one percent inspiration and ninety-nine percent perspiration' mantra: it's almost all about the little details and the everyday grunt-work. But there is that occasional 'inspiration' part, that 'good taste' thing that is about more than just solving some problem - solving it cleanly and nicely and yes, even beautifully.
 > I think one of the big successes of Linux is having literally hundreds of maintainers around, all with that hard-to-define "good taste", and all people who maintain parts of the kernel.
 > -- Linus
+
+> "Recursion! The cause of, and solution to, all of life's problems!"
 
 I find that the best way to describe a solution is often to just write the snippet of code - maybe not the whole thing - and just make it very concrete that way.
 
@@ -155,3 +159,50 @@ A good design is one in which you can change your mind without changing too much
 Software architecture probably matters more than anything else. A shitty implementation of a good abstraction causes no net harm to the code base. A bad abstraction or missing layer causes everything to rot.
 
 One aspect of software development is that software developers are expected to constantly be learning new things.
+
+### Debugging: The 9 Indispensable Rules
+
+1. Understand the system
+
+It’s important to have knowledge of what the software is supposed to do, how it’s designed, and in some instances, why it was designed that way.
+Know how to work with the debugging tools, they are your eyes and ears into the system, take your time to learn them, it will pay off greatly.
+
+2. Make It Fail
+
+Reproducing the bug allows us to see the failure, knowing under precisely what conditions the failure occurs can give us a better understanding of the possible causes, and also is important to know how to make it fail in order to ensure that you’ve fixed the bug after having implemented the solution.
+
+3. Quit Thinking and Look
+
+Don’t guess how something is failing and then try to implement the fix to your guess, it takes time, money and may break something else in the system, instead, look and find the cause of the bug.
+
+Read the error message, thoroughly read it and try to understand what exactly is going wrong, perhaps google and see what the error message is about, that can give you another clue to what could be causing the bug to occur. 🔍
+
+4. Divide and Conquer
+
+We divide the code in half, then identify in which half the problem is, and do the same thing to the half where the problem was. We continue doing this till we’ve narrowed down exactly where the bug gets caused.
+
+5. Change One Thing at a Time
+
+If a change doesn’t seem to have an effect, undo it right away, don’t let it stay there while you continue looking for the cause of the bug.
+
+6. Keep an Audit Trail
+
+When trying to find the cause of the bug, write down what you did, what order you did it in, and what happened as a result. It’s important to keep track of each step, in order to determine where to focus on during debugging. ✍️
+
+7. Check the Plug 🔌
+
+Checking the plug is about checking that things actually work as they should, things we expected to work in a way. It seems like a silly thing but happens a lot. It can even be in the tools you are using, the framework, library, compiler, debugging tools, linter, etc.
+
+8. Get a Fresh View
+
+Sometimes something that would’ve taken us hours to solve can take us minutes to solve when asking a teammate for help. Someone who comes at the problem from a different angle can give us great insights and new approaches to try. 👀
+
+9. If You Didn’t Fix It, It Ain’t Fixed
+
+When you think you’ve fixed an engineering design, take the fix out. Make sure it’s broken again. Put the fix back in. Make sure it’s fixed again.
+
+## Experimentation and Iteration
+
+We didn't just build things once and assume that was the best we could do.
+
+The spirit of open source is the contribution rather than request. When everyone is using and benefiting from open source codes, you should respect these codes and the communities behind them in a way, you should be in awe of the spirit of open source.

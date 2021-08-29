@@ -43,3 +43,28 @@ Every virtual environment has to be populated with virtual objects that represen
 You can create 3D assets from scratch using a 3D modeling software such as Maya, Blender or 3ds Max, or you can purchase the assets via the Assets Store.
 
 Both Unity and Unreal Engine have assets markets that allow you to purchase pre-made 3D models, objects, environments and so on.
+
+### Chess
+
+♔ White Chess King
+♕ White Chess Queen
+♖ White Chess Rook
+♗ White Chess Bishop
+♘ White Chess Knight
+♙ White Chess Pawn
+
+♚ Black Chess King
+♛ Black Chess Queen
+♜ Black Chess Rook
+♝ Black Chess Bishop
+♞ Black Chess Knight
+♟ Black Chess Pawn
+
+红方 黑方 字母 相当于国际象棋中的棋子 数字 英文
+帅 将 K King(王) 1 General
+仕 士 A Advisor(没有可比较的棋子) 2 Advisor
+相 象 B Bishop(象) 3 Elephant
+马 马 N Knight(马) 4 Horse
+车 车 R Rook(车) 5 Chariot
+炮 炮 C Cannon(没有可比较的棋子) 6 Cannon
+兵 卒 P Pawn(兵) 7 Soldier

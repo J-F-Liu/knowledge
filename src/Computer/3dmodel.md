@@ -172,6 +172,23 @@ ISO 10303 specifies a language by which aspects of product data can be defined. 
 
 [STEP Module and Resource Library (SMRL)](https://www.iso.org/publication/PUB100443/toc.html)
 
+The whole scope of AP214 covers :
+
+- Products as mechanical parts, assemblies, tools used by manufacturing (in principle applied to description of cars),
+- Information for process plan, configuration control, applied to design phase,
+- Data related to the documentation of design change process, approval, security, classification,
+- Geometrical data as: wireframe, surfacic models, faceted models, manifold surfaces and solids (BREP), constructive solid geometry, hybrid models
+- References to product data represented in an other format than STEP
+- Kinematic structures,
+- Tolerance data, Surface conditions.
+
+The standard STEP AP 242 (ISO 10303-242) “Managed model based 3D engineering" is the merging of 2 ISO standards:
+
+- Aerospace's STEP AP203 "Configuration controlled 3D design",
+- and Automotive's STEP AP214 "Core data for automotive mechanical design processes.
+
+In the step file, PRODUCT defines each component, and NEXT_ASSEMBLY_USAGE_OCCURRENCE defines the parent-child relationship between products.
+
 ### FBX (FilmBox)
 
 The Autodesk FBX file format is a popular 3D data interchange format utilized between 3D editors and game engines. It was originally created as the native file format for Kaydara’s Filmbox motion capture tool.
