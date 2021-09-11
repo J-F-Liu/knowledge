@@ -50,6 +50,19 @@ CHIP-8 是一个很简单的芯片，有 16 个 8 位寄存器和 35 个指令�
 [Chip-8/SuperChip/MegaChip emulator and docs](https://github.com/gcsmith/gchip)
 [A Chip8 assembler and IDE](https://github.com/JohnEarnest/Octo)
 
+## Little Computer 3 (LC-3)
+
+The LC-3 was developed by Yale N. Patt at the University of Texas at Austin and Sanjay J. Patel at the University of Illinois at Urbana–Champaign, specified in their textbook Introduction to Computing Systems: From Bits and Gates to C and Beyond, 2/e.
+
+- eight 16-bit registers
+- 16-bit addressable memory
+- fifteen 16-bit instructions with 4-bit opcodes
+- I/O devices operate on ASCII characters
+- no native PUSH and POP instructions
+- no native support for floating-point numbers
+
+http://www.rodrigoaraujo.me/posts/lets-build-an-lc-3-virtual-machine/
+
 ## AVR 单片机
 
 AVR is the microcontroller designed by Atmel, now owned by Microchip. It is very popular with both hobbyists and professionals but has seen a massive uptake in education due to the Arduino products and ecosystem.

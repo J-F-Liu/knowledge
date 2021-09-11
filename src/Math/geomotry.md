@@ -1,5 +1,7 @@
 # 几何 Geometry
 
+Geometry 的本义是测地学，丈量大地而产生的学问。
+
 “I learned from the masters and not from the pupils.” —— Niels Henrik Abel
 
 泰勒 Thales

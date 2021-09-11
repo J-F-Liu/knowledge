@@ -4,6 +4,8 @@
 > “真正的知识来源于对某个主题及其内部工作原理的深刻理解”
 > --- 阿尔伯特 · 爱因斯坦
 
+> Whenever I need to understand something complex enough that reading by itself won’t give me a deep understanding, I must build it. That which I cannot build, I cannot deeply understand.
+
 # 学习
 
 学习应该少而精，而非多而浅。

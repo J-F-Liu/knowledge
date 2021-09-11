@@ -1,3 +1,5 @@
+## Image Convolution
+
 Image convolution can be used for many tasks.
 
 Filters with weights distributed according to Gaussian distribution are called Gaussian filters. It can even be proved that Gaussian filter is the only filter that doesn't add any additional information to the image. And they're probably the most used filters in image processing and image recognition.
@@ -9,3 +11,29 @@ Applying Gaussian filter can reduce noise in image, but it also blurs the image.
 To reduce image blur and make edges more pronounced we can apply blurring and subtract blurred image from original image. We can combine all operations into single convolution and approximate it with negative Laplacian of Gaussian.
 
 Sharpening produce visually pleasing results usually. So it's oftenly used in consumer cameras to improve the quality of images. And you can only turn it off if you tried to capture the raw images with no post-processing.
+
+## Image Segmentation
+
+In image segmentation, the level set method (LSM) re-formulates the parametric active contour into a non-parametric energy minimization problem.
+The active contour is embedded as the zero level set of a higher dimensional function, which moves according to the active contour evolution equation and drives its zero level set to the edges of the desired objects.
+
+Level set method pros:
+
+- flexible to adapt to different problems in computer vision and fluid dynamics
+- deal with changes of topology (contour breaking and merging) without any extra functions
+- guarantee of the existence of solutions in the class of viscosity partial differential equations (PDEs)
+- include suitable edge-, region- and shape-based terms in LSF to adapt to different tasks
+
+Signed distance functions (SDFs) or binary functions can be used as the level set function (LSF).
+
+The use of distance function is necessary to estimate accurately geometric features s.a. the curvature or the contour normal, which can be essential for some applications s.a. the surface reconstruction problem from scattered points.
+
+Binary function cannot provide the distance information, but allows fast and convex optimization techniques with graph cut methods or convex relaxation methods.
+
+Important papers:
+
+- 2001 Active contours without edges
+- 2007 Fast Global Minimization of the Active Contour/Snake Model
+- 2011 An Efficient Algorithm for Level Set Method Preserving Distance Function
+- 2018 Adaptive Eigenspace Segmentation
+- 2020 A survey of level set method for image segmentation with intensity inhomogeneity
