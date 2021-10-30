@@ -39,3 +39,5 @@ deriving abundant gratification from your signature strengths, and using these s
 
 It requires you deeply committed to lifelong goals and ambitions. It can be a lot to juggle. It’s tricky to stay consistent. You have to find a balance that works for you.
 But as the happiest people in the world know: it’s worth it.
+
+幸福的秘诀就是永远抱有低期望值。（The secret to happiness is low expectations.）

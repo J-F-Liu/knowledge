@@ -339,8 +339,8 @@ Piecewise functions allow you to express that different things are happening at 
 保险费 insurance
 贬值 depreciate
 
-利息 = 本金ㄨ年利率ㄨ年数
-月付 = （本金＋利息 ➗ 月数
+利息 = 本金 × 年利率 × 年数
+月付 = (本金 + 利息) ÷ 月数
 
 Write all your steps out, that’s a good way to keep from making mistakes.
 
