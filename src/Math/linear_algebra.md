@@ -112,6 +112,14 @@ To minimize the numeric precision losses, choosing a pivot for accuracy generall
 ⑤ 某行(列)为两项相加减时，行列式可拆成两个行列式相加减。
 行列式等于其转置行列式。
 
+$$
+det([A_1,kA_2])=k \cdot det([A_1, A_2]) \\
+det(kA) = k^ndet(A) \\
+det(AB) = det(A) det(B) \\
+det([A_1+B_1, A_2])=det([A_1, A_2])+det([B_1, A_2]) \\
+det([A_1+B_1, A_2+B_2])=det([A_1, A_2])+det([A_1, B_2])+det([B_1, A_2])+det([B_1, B_2])
+$$
+
 ### 向量 Vector
 
 A _vector_ is a point in $R^n$, drawn as an arrow. We will usually write it vertically, like a matrix with one column.

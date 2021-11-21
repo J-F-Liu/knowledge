@@ -264,6 +264,7 @@ Pi is really nothing more than a placeholder for the ratio between a circle’s 
 
 ## 四边形 quadrilateral
 
+四角形 quadrangle
 正方形 square
 长方形 rectangle
 平行四边形 parallelogram
@@ -666,11 +667,115 @@ For a skew-symmetric matrix A, the matrices $I±A$ are always invertible.
 
 **Theorem (Cayley, 1846)**. If a matrix A is skew-symmetric, then
 $$ Q = (I + A)(I − A)^{−1} = (I − A)^{−1}(I + A) $$
-is orthogonal. Conversely, if Q is orthogonal and det(Q + I) $\ne$ 0, then Q can be written as
+is orthogonal. Conversely, if Q is orthogonal and det(Q + I) $\ne$ 0, then A can be written as
 $$ A = (Q − I)(Q + I)^{−1} = (Q + I)^{−1}(Q − I) ,$$
 where A is skew-symmetric.
 
 ## 投影几何 Projective geometry
+
+Mathematics is fundamentally the study of structure.
+
+Although arithmetic is ostensibly about numbers and geometry about points and lines, the real objects of study in these branches of mathematics are the relations which exist between numbers and between geometrical entities.
+
+As mathematics develops, so it becomes more abstract, until at last it is seen to be concerned with networks of formal relations only, and not with any particular sets of entities between which the relations hold.
+
+One of the most important instances is the widespread occurrence of the group structure, which is found not only in additive and multiplicative groups of numbers, but also in groups of transformations and groups of matrices. Since this type of structure pervades much of mathematics, we may say that it is especially significant.
+
+The totality of all displacements in space is a group of transformations; two bodies are congruent if and only if one can be made to take the place of the other by an operation of the group; and the shape of a body is determined by those of its spatial characteristics which are invariant with respect to the whole group. This, then, is the nature of euclidean geometry—it is the invariant-theory of the group of displacements.
+
+Early in the nineteenth century, since the discovery of the non-euclidean geometries, systems consistent within themselves but incompatible with Euclid's system, it has become a commonplace that the mathematician is free to study the consequences of any axioms that interest him, whether or not they have any application in experience, provided only that they are not mutually contradictory.
+
+Although, from the point of view of pure mathematics, each structure is regarded as self-contained, the mathematical scheme usually has one or more concrete realizations, that is to say, the structure is usually to be found (possibly only to a certain degree of approximation) in a more concrete system.
+
+Abstract euclidean geometry of three dimensions, for instance, has as one of its realizations the structure of ordinary space. Indeed this is what led to its discovery, as well as what makes it so much more interesting than other systems which are logically of equal status with it.
+
+### Projective geometry
+
+Although the formal system of projective geometry is logically self-contained and independent of geometrical intuition, the full significance of the formal steps is only to be grasped by bearing in mind all the time the concrete realization of the abstract model.
+
+It so happens, however, that euclidean geometry is complicated; and we can appreciate it better when we relate it to projective geometry, where the structure is very much simpler. Projective geometry is more symmetrical than euclidean, by virtue both of the existence of a principle of duality and also of the fact that it may be handled by means of homogeneous coordinates.
+
+In a synthetic treatment we argue directly about geometrical entities (points, lines, etc.) and geometrical relations between them, whereas in an analytical treatment we first represent the geometrical entities by coordinates or equations, in order to be able to use the technique of algebraic manipulation.
+
+For Euclid, a segment was simply a portion of a line intercepted between two ofits points and, as such, it had no essential characteristic apart from its length.
+
+Nowadays we know the value of taking into account the sense of the segment as well as the length, i.e. we give the directed segment $\overrightarrow{PQ}$ precedence over the undirected segment $PQ$. The advantage of doing this is that we are enabled to formulate more comprehensive statements than would otherwise be possible. Thus, for instance, if P, Q, R are any three collinear points then
+
+$$
+\overrightarrow{PR} = \overrightarrow{PQ} + \overrightarrow{QR}
+$$
+
+irrespective of the order of the points in their line; whereas with
+undirected segments we should have to distinguish a number of different cases.
+
+A straight line may either cut a circle in two distinct points, or it may touch it, or it may lie wholly outside it. Trying to find the coordinates of the points of intersection leads us to a quadratic equation, and in the three cases the roots are respectively real and distinct, real and coincident, and conjugate complex. We are accordingly led to say that a secant cuts a circle in two distinct real points, a tangent cuts it in two coincident real points, and a line that lies entirely outside it cuts it in two conjugate complex points.
+
+There are two new notions involved here——coincident points and complex points——and both of them are of considerable service in making it possible to state theorems in a more comprehensive form. We can say quite simply, for instance, that every line cuts every circle in two points; and the distinction between the possible cases is converted into a more manageable distinction between different kinds of point-pair.
+
+Complex points are example of ideal elements in geometry; for such points, having no 'real' existence, can only be thought of as artificial entities which we find convenient to adjoin to the actual plane.
+We are justified in treating them as if they were actual points by the fact that they can be represented by complex coordinates——and complex numbers behave algebraically in the same way as real numbers.
+
+This choice is particularly convenient in view of the fact that the complex field is algebraically closed, every equation with complex coefficients having just as many roots as its degree indicates.
+
+When we wish to confine our attention to real projective geometry we must take as ground field the field of all real numbers; and since the real field is a subfield ofthe complex field we can do this by picking out the real points in complex space and considering them alone.
+
+## Point at infinity
+
+Suppose that, being given two lines l and m which meet in P, we choose another point A of l and then rotate l about this point. As we do so, P moves farther and farther away along m until, when l is parallel to m, it disappears altogether. If we go on turning beyond this position, the point of intersection reappears and moves along m from the other end. Using a natural metaphor, therefore, we may say that the two lines have a point of intersection even when they are parallel, but that this point is then at infinity.
+
+Every line possesses a single point at infinity, which may be approached by travelling along the line in either direction, and all lines parallel to the given line meet it in this same point.
+
+Consider the following three properties of straight lines:
+(i) there is a unique line which passes through two given points;
+(ii) there is a unique line which passes through one given point and has a given absolute direction;
+(iii) two lines, which do not coincide, either have a unique common point or have the same absolute direction.
+
+If we agree to replace the phrase 'absolute direction' by 'point at infinity', and if we class together all the points at infinity as a single line at infinity, the three properties can be replaced by one, namely:
+There is a unique line through any two distinct points, and any two distinct lines have a unique point in common.
+
+The points at infinity are also ideal points. They can be handled algebraically by making the coordinates homogeneous.
+
+Besides affording a simple algebraic representation of points at infinity,
+the equation of every algebraic locus is also homogeneous——e.g.
+for the straight line we have $ax+by+cz=0$ in place of $aX+bY+c=0$
+and the greater symmetry of equations of this kind makes the algebra very much easier to work with.
+
+Each line is represented by an equation of the form
+$ux+vy+wz=0$
+and this equation is uniquely determined by the ratios between its coefficients.
+
+We may therefore take the three numbers u, v, w as homogeneous cartesian coordinates of the line; and a line is then determined by its coordinates (u, v, w) just as a point is determined by its coordinates (x, y, z).
+
+If u, v, w are fixed, the equation means that the variable point (x,y,z) lies on a fixed line, but if x, y, z are fixed, the same equation means that the variable line (u,v,w) passes through a fixed point. Thus a point is regarded as the common point of the system of all lines through it. There is thus complete duality between the representation of points and lines.
+
+### The principle of duality.
+
+To each theorem in projective geometry, there corresponds a “dual theorem” in which each expression in one column:
+
+- line ↔ point
+- pass through ↔ lie on
+- intersection point of two lines ↔ line connecting two points
+- concurrent ↔ collinear
+- polar ↔ pole
+
+is replaced by the corresponding expression in the other column.
+
+### Projective invariant
+
+Any two figures that can be transformed into each other by a series of projections are to be regarded as projectively equivalent, so that from the projective point of view they are two instances of the same figure (as congruent figures are 'equal in all respects' in Euclid).
+
+Straight lines project into straight lines, and this means that collinearity of points is a projective property.
+Similarly, concurrence of lines is also projective.
+The length of a segment is not invariant over projection.
+
+The cross ratio of four collinear points is a projective invariant and which enables us to discriminate projectively between different collinear tetrads.
+This invariant plays as fundamental a part in projective geometry as does length in euclidean geometry.
+
+Besides the properties that are peculiar to the different types of conic, there are many properties that are common to all conies the polar properties, for example. These are, in fact, the projective properties, and they may be established by the homogeneous equation.
+
+Since every conic is projectively equivalent to a circle, we only have to write down the projective properties of the circle and restate them in terms of the general conic.
+
+### Central projection
 
 Since the projection lines all meet at the projection centre, this type of projection is also called a central projection.
 
@@ -683,19 +788,4 @@ $$
 w = λ(x − \tilde{x}) \\
 ⟨w − a|a⟩ = 0 \implies λ = \frac{⟨a|a⟩}{⟨x − a|a⟩}
 \end{gathered}
-$$
-
-###### The principle of duality.
-
-To each theorem in projective geometry, there corresponds a “dual theorem” in which each expression in one column:
-
-- line ↔ point
-- pass through ↔ lie on
-- intersection point of two lines ↔ line connecting two points
-- concurrent ↔ collinear
-- polar ↔ pole
-
-is replaced by the corresponding expression in the other column.
-
-$$
 $$
