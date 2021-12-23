@@ -428,6 +428,15 @@ In most of the industrial cases, one needs to obtain measurements from a vision 
 
 When you want to find the solution to a problem, the first step is to express this problem in mathematical terms, and you can then use existing mathematical tools to find a solution to your equations. However, interesting problems can usually be expressed in many different mathematical ways, each of which may lead to a slightly different solution. It then takes work to analyze the different methods to understand which one provides the most stable/accurate/efficient/etc solution.
 
+![reprojection error](images/reprojection_error.png)
+It's important to note that reprojection error calculated on the input data alone doesn't tell the whole story.
+
+In order to actually get accuracy numbers for a calibration model, one should calculate the reprojection error again using data from outside of your training set. This is why some calibration processes put aside every other reading or so; it can use those readings to validate the model at the end of optimization.
+
+A common rule of thumb is if the reprojection root mean squared error (RMSE) is under 1 pixel, the camera is "calibrated".
+
+ArUco (also stylized ARUCO or Aruco) abbreviated from Augmented Reality, University of Cordoba
+
 滚动快门不能保证开始与结束记录光线的时间完全相同。在这种情况下，快速移动的物体就会出现倾斜或者剪断的效果，当相机移动很快时，就会出现果冻效应，尤其是当相机处于横摇状态、物体快速通过、高快门速度、跑或者枪之类的镜头时会非常明显。闪光灯也很有可能只会照亮画面中的一部分区域。
 
 全局快门需让所有的光线同时进入到感光元件上。在任何指定的时间点，这些元件要么同时开启，要么同时关闭。全局快门是被公认为最适合拍摄动态物体的快门。它可以有效地避免滚动快门的问题。

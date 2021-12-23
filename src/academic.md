@@ -1,3 +1,29 @@
+# 学术研究
+
+常用缩写：
+
+**s.a.** such as
+**s.t.** subject to
+**w.r.t.** with respect to
+**d.o.f** dgree of freedom
+**i.i.d** Independent Identically Distributed
+**cf.** cited from
+**iff.** if and only if
+**afaik** as far as I know
+**pcs** pieces
+
+QED 证毕，证讫（源自拉丁文 quod erat demonstrandum）
+RIP rest in peace
+
+:= "is defined as" 定义为
+-> "implies" 意味着
+<-> "if and only if" 当且仅当
+
+low-level programming：~~低级编程~~ 底层编程。
+ergonomics：~~人体工程学~~ 人机工程学。
+opinionated：~~自以为是，固执的~~ 开箱即用的。
+critical adoption：~~批判性采用~~ 技术选型临界点。
+
 "If you have an apple and I have an apple, and we exchange apples, we both still only have one apple. But if you have an idea and I have an idea, and we exchange ideas, we each now have two ideas. "
 
 如果你有一个苹果，我有一个苹果，我们彼此交换，每人还是一个苹果；但如果你有一个想法，我有一个想法，我们彼此交换，那么每人都会有两个想法。

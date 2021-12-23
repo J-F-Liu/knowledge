@@ -279,6 +279,16 @@ IF Δ > 0, then there are 2 real solutions.
 IF Δ = 0, then there is only one unique solution.
 IF Δ < 0, then there are no real solutions.
 
+quadratic 二次的
+cubic 三次的
+quartic 四次的
+
+conic 圆锥曲线
+quadratic curve 二次曲线
+quadrics 二次型，二次曲面
+
+到平面内一定点的距离 r 与到定直线的距离 d 之比是常数 e=r/d 的点的轨迹叫做圆锥曲线。其中当 e>1 时为双曲线，当 e=1 时为抛物线，当 0<e<1 时为椭圆。
+
 ### 抛物线 parabola
 
 A parabola is the shape of a quadratic equation.

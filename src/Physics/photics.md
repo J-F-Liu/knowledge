@@ -1,3 +1,5 @@
+# 光学
+
 Kepler 开普勒 首次正确地解释了人眼的工作原理，解释了近视和远视，指出视网膜上形成图像是倒置的。
 Galileo 伽利略 建造了望远镜，观察了木星以及木星的四颗主要卫星。
 Willebrord Snell 威理博·斯涅尔 在 1621 年发现了光的正弦折射定律。
@@ -16,17 +18,41 @@ Kirchhoff 基尔霍夫 通过燃烧的物质观察到光源光谱中的暗线。
 Lagrange(1736–1813) 拉格朗日 创立二次型论，拉格朗日中值定理，拉格朗日力学等。
 Hamilton(1805–1865) 哈密顿 重新表述了牛顿力学，创立被称为哈密顿力学的力学表述，因为发现四元数而闻名。
 
-f 焦距
-do 物距
-di 像距
+With the invention of the telescope and microscope there was a great deal of experimentation with lens shapes in the 17th and early 18th centuries by those trying to correct chromatic errors seen in lenses.
+
+Optical theory on refraction and experimentation was showing no single-element lens could bring all colours to a focus. This led to the invention of the compound achromatic lens by Chester Moore Hall in England in 1733.
+
+## Spherical lenses: two surfaces are parts of the surfaces of spheres.
+
+The focal length of a lens in air can be calculated from the lensmaker's equation:
+
+$$\frac{1}{f}=(n-1)[\frac{1}{R_1}-\frac{1}{R_2}+\frac{(n-1)d}{nR_1R_2}]$$
+
+Spherical aberration occurs because spherical surfaces are not the ideal shape for a lens, but are by far the simplest shape to which glass can be ground and polished, and so are often used.
+
+Coma, or comatic aberration, occurs when an object off the optical axis of the lens is imaged. In general, a bundle of parallel rays passing through the lens at a fixed distance from the centre of the lens are focused to a ring-shaped image in the focal plane, known as a comatic circle.
+
+Chromatic aberration is caused by the dispersion of the lens material—the variation of its refractive index, n, with the wavelength of light. Since, from the formulae above, f is dependent upon n, it follows that light of different wavelengths is focused to different positions. Chromatic aberration of a lens is seen as fringes of colour around the image.
+
+Other kinds of aberration include field curvature, barrel and pincushion distortion, and astigmatism.
+
+An aplanatic lens is a lens that is free of both spherical and coma aberrations. Aplanatic lenses can be made by combining two or three lens elements.
+
+A single-element aplanatic lens is an aspheric lens whose surfaces are surfaces of revolution of a cartesian oval.
 
 ### 小孔成像公式
 
-$ \frac{f}{do} = \frac{hi}{ho} $ $ hi = f \frac{ho}{do} $
+$ \frac{f}{do} = \frac{hi}{ho} $
+
+$ hi = f \frac{ho}{do} $
 
 ### 薄透镜成像公式
 
 $ \frac{1}{f} = \frac{1}{do} + \frac{1}{di} $
+
+f 焦距
+do 物距
+di 像距
 
 #### 透镜成像规律
 

@@ -689,6 +689,19 @@ $$
 vol(T(S))=|det(A)|·vol(S).
 $$
 
+## 伴随矩阵 Cofactor Matrix
+
+余子式$M_{ij}$是矩阵 A 去掉第 i 行第 j 列后余下的矩阵的行列式。
+
+伴随矩阵的第 i 行第 j 列为$C_{ij} = (-1)^{i+j} M_{ij}$
+
+$\det(A)=\displaystyle\sum_{i=1}^{n}{a_{ij}M_{ij}}=\displaystyle\sum_{j=1}^{n}{a_{ij}M_{ij}}$
+
+$A^{-1}=\cfrac{cof(A)^T}{\det(A)}，AC^T=\det(A)I$
+
+对于 3 阶矩阵$A=[A_1, A_2, A_3]，cof(A)=[A_2 \times A_3, -A_1 \times A_3, A_1 \times A_2]$。
+对于正交矩阵$Q^⊤Q = I, cof(Q)=Q$。
+
 ## 本征值和本征向量 Eigenvalues and Eigenvectors
 
 Linear equations Ax=b come from steady state problems.
@@ -1212,46 +1225,17 @@ Conjugate transpose: Aᴴ = Āᵀ
 Hermitian matrix: S=Sᴴ
 Unitary matrix: Uᴴ=U⁻¹, UᴴU=I
 
+## 旋转矩阵
+
+$$
+R=\begin{bmatrix}
+   cosθ & -sinθ \\
+   sinθ & cosθ \\
+\end{bmatrix}
+$$
+
 ## 数值计算
 
 求 Ax=0 用 EVD，如果 A 不是方阵或不是对称矩阵，改为 AᵀAx=0。
 
 求 Ax=b 用 SVD，如果 A 低阶可逆，可用 x=A⁻¹b。
-
-```rust
-/// rotate vector by perpendicular axis
-fn rotate_vector(axis: &Vec3, vector: &Vec3, angle: f64) -> Vec3 {
-    let (sin, cos) = angle.sin_cos();
-    vector * cos + axis.cross(&vector) * sin
-}
-
-fn rotation_angle(a: Vec3, b: Vec3, n: Vec3) -> f64 {
-    let ba = b - a;
-    let na = n.cross(&a);
-    let nna = n.cross(&na);
-    (na.dot(&ba)).atan2(na.norm_squared() - nna.dot(&ba))
-}
-
-fn included_angle(a: Vec3, b: Vec3, n: Vec3) -> f64 {
-    let pa = a - n * a.dot(&n);
-    let pb = b - n * b.dot(&n);
-    pa.angle(&pb)
-}
-
-fn point_on_normal_bisector(a: Point2, b: Point2, ratio: f64) -> Point2 {
-    let center = (a + b) / 2.0;
-    let perp_dir = (b - a).perp(); // returns (-y, x)
-    center + perp_dir * ratio
-}
-
-fn skew_symmetric(v: Vector3<f64>) -> Matrix3<f64> {
-    let mut ss = Matrix3::zeros();
-    ss[(0, 1)] = -v[2];
-    ss[(0, 2)] = v[1];
-    ss[(1, 0)] = v[2];
-    ss[(1, 2)] = -v[0];
-    ss[(2, 0)] = -v[1];
-    ss[(2, 1)] = v[0];
-    ss
-}
-```

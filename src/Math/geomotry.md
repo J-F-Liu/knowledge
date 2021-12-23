@@ -8,6 +8,7 @@ Geometry 的本义是测地学，丈量大地而产生的学问。
 毕达哥拉斯 Pythagoras 勾股定理
 希波克拉底 Hippocrates
 阿波罗尼斯 Apollonius of Perga 研究和著述圆锥曲线
+芝诺 Zeno
 阿基米德 Archimedes
 欧几里得 Euclid 《几何原本（Elements）》
 托勒密 Ptolemy 《天文学大成（Almagest）》
@@ -789,3 +790,50 @@ w = λ(x − \tilde{x}) \\
 ⟨w − a|a⟩ = 0 \implies λ = \frac{⟨a|a⟩}{⟨x − a|a⟩}
 \end{gathered}
 $$
+
+## 3D Vector
+
+```rust
+/// rotate vector around perpendicular axis
+fn rotate_perp_vector(axis: &Vec3, vector: &Vec3, angle: f64) -> Vec3 {
+    let (sin, cos) = angle.sin_cos();
+    vector * cos + axis.cross(vector) * sin
+}
+
+/// rotate vector around oblique axis
+fn rotate_oblique_vector(axis: &Vec3, vector: &Vec3, angle: f64) -> Vec3 {
+    let projection = axis * axis.dot(vector);
+    let rejection = vector - projection;
+    projection + rotate_perp_vector(axis, &rejection, angle)
+}
+
+/// compute the angle to rotate from `a` to `b` around `n`
+fn rotation_angle(a: Vec3, b: Vec3, n: Vec3) -> f64 {
+    n.cross(&a).dot(&b).atan2(a.dot(&b)-n.dot(&a)*n.dot(&b))
+}
+
+// another method
+/// compute the angle to rotate from `a` to `b` around `n`
+fn rotation_angle(a: Vec3, b: Vec3, n: Vec3) -> f64 {
+    let ra = a - n * a.dot(&n);
+    let rb = b - n * b.dot(&n);
+    n.cross(&ra).dot(&rb).atan2(ra.dot(&rb))
+}
+
+fn point_on_normal_bisector(a: Point2, b: Point2, ratio: f64) -> Point2 {
+    let center = (a + b) / 2.0;
+    let perp_dir = (b - a).perp(); // returns (-y, x)
+    center + perp_dir * ratio
+}
+
+fn skew_symmetric(v: Vector3<f64>) -> Matrix3<f64> {
+    let mut ss = Matrix3::zeros();
+    ss[(0, 1)] = -v[2];
+    ss[(0, 2)] = v[1];
+    ss[(1, 0)] = v[2];
+    ss[(1, 2)] = -v[0];
+    ss[(2, 0)] = -v[1];
+    ss[(2, 1)] = v[0];
+    ss
+}
+```

@@ -1,14 +1,37 @@
 # 统计学
 
-正态分布中，平均值、中位数、众数(出现次数最多的)都是同一个值。
-长尾分布中，分布曲线是不对称的。平均值远小于最大值，并且容易受杂点的影响，使用中位数更能反应实际情况。
+### 基础公式
 
-方差 MSE(Mean Square Error) 各随机变量与平均值差值的平方和的平均数（先求差，再平方，再平均）.
+平均值(Mean)
+$$\bar X=\frac{\sum_{i=1}^n{X_i}}{n}$$
+
+方差(Variance), 也称 MSE(Mean Square Error) 各随机变量与平均值差值的平方和的平均数，先求差，再平方，再平均。
+$$var(X)=\frac{\sum_{i=1}^n{(X_i-\bar X)^2}}{n-1}$$
+
 标准差(Standard Deviation) 也称 均方差 RMSE(root mean square error) 是方差的算术平方根。
 均方根 RMS(root mean square) 将所有值平方求和，求其均值，再开平方，就得到均方根值。
+$$s=\sqrt{\frac{\sum_{i=1}^n{(X_i-\bar X)^2}}{n-1}}$$
 
 协方差（Covariance）衡量两个变量的总体误差。
 $$cov(X,Y)=\frac{\sum_{i=1}^n{(X_i-\bar X)(Y_i-\bar Y)}}{n-1}$$
+
+The covariance Matrix for an n-dimensional data:
+
+$$C_{n \times n}=[c_{ij}=cov(Dim_i,Dim_j)]$$
+
+$$S=\frac{1}{n-1}\sum_{i=1}^n{(X_i-\bar X)(X_i-\bar X)^T}$$
+
+正态分布中，平均值、中位数、众数(出现次数最多的)都是同一个值。
+长尾分布中，分布曲线是不对称的。平均值远小于最大值，并且容易受杂点的影响，使用中位数更能反应实际情况。
+
+Accuracy 精密度
+Precision 准确度
+
+The accuracy of derived model is a comparison of predicted and actual outputs.
+
+Every datapoint has an uncertainty, or variance, associated with it. This is a representation of the precision of the input space.
+We can translate the input variance into variance of our learned model parameters, our parameter variances will change as we fit our model to the input data. This becomes a good measure of model precision.
+Now we know that our model can be trusted much more with certain inputs than with others. If we're trying to predict in a region outside of our input data range, we have a good idea of how much we can trust (or be skeptical of) the data.
 
 准确度表示测量结果的正确性，精密度表示测量结果的重复性和重现性，精密度是准确度的前提条件。
 
