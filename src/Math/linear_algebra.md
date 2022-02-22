@@ -117,7 +117,8 @@ det([A_1,kA_2])=k \cdot det([A_1, A_2]) \\
 det(kA) = k^ndet(A) \\
 det(AB) = det(A) det(B) \\
 det([A_1+B_1, A_2])=det([A_1, A_2])+det([B_1, A_2]) \\
-det([A_1+B_1, A_2+B_2])=det([A_1, A_2])+det([A_1, B_2])+det([B_1, A_2])+det([B_1, B_2])
+det([A_1+B_1, A_2+B_2])=det([A_1, A_2])+det([A_1, B_2])+det([B_1, A_2])+det([B_1, B_2]) \\
+det([a\ b\ c]) = a \cdot (b \times c) = (a \times b ) \cdot c
 $$
 
 ### 向量 Vector

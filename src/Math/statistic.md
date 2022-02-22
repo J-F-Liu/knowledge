@@ -27,6 +27,11 @@ $$S=\frac{1}{n-1}\sum_{i=1}^n{(X_i-\bar X)(X_i-\bar X)^T}$$
 Accuracy 精密度
 Precision 准确度
 
+‘precision’ means numerical error / number of working digits
+‘accuracy’ means statistical error / number of significant digits
+reliability: the system must also be reliable in the face of outliers, small modelling errors, and so forth
+quality = accuracy + reliability
+
 The accuracy of derived model is a comparison of predicted and actual outputs.
 
 Every datapoint has an uncertainty, or variance, associated with it. This is a representation of the precision of the input space.
@@ -40,6 +45,9 @@ Now we know that our model can be trusted much more with certain inputs than wit
 加工精度用公差等级衡量，等级值越小，其精度越高；公差等级从 IT01，IT0，IT1，IT2，IT3 至 IT18 一共有 20 个，其中 IT01 表示的话该零件加工精度最高的，IT18 表示的话该零件加工精度是最低的 ，一般上 IT7、IT8 是加工精度中等级别。
 
 任何加工方法所得到的实际参数都不会绝对准确，从零件的功能看，只要加工误差在零件图要求的公差范围内，就认为保证了加工精度。
+
+校准是对于已经标定过的设备进行一个再次的确认。
+校正是对于已经测量出来的数据进行修正。
 
 Statistics begins by assuming there is no effect.
 Prior to collecting data, rules are chosen to decide whether whether the data are consistent with the assumption of no effect.

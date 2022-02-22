@@ -4,7 +4,12 @@ Cartan-Dieudonne’s theorem: In n-D space all orthogonal transformations can be
 
 ### Website
 
-- [](https://bivector.net/)
+- https://bivector.net/
+- https://geometricalgebra.org/
+
+### Articles
+
+- [Grassmann Algebra](https://www.reedbeta.com/blog/normals-inverse-transpose-part-1/)
 
 ### Slides
 

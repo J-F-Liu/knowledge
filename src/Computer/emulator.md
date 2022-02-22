@@ -63,6 +63,19 @@ The LC-3 was developed by Yale N. Patt at the University of Texas at Austin and 
 
 http://www.rodrigoaraujo.me/posts/lets-build-an-lc-3-virtual-machine/
 
+## Motorola 68000
+
+- 32-bit processor, 8 MHz
+- 16-bit data bus
+- 16-bit arithmetic logic unit
+- 8 32-bit general purpose data registers
+- 7 32-bit general purpose address registers plus two stack registers
+- A 16-bit status register for condition codes and privileged flags like the Supervisor mode enable flag and the interrupt priority level
+- big endian byte order
+
+It is used on many early computers including the early Macintosh series, the early Sun Microsystems workstations, the Amiga, the Atari ST, and the Sega Genesis/Mega Drive.
+68000 is still a supported architecture in the latest version of gcc.
+
 ## AVR 单片机
 
 AVR is the microcontroller designed by Atmel, now owned by Microchip. It is very popular with both hobbyists and professionals but has seen a massive uptake in education due to the Arduino products and ecosystem.

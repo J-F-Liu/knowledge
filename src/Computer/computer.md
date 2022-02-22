@@ -59,6 +59,17 @@ In a computer, the processor can read and write information from and to random a
 2016 AVX2, new instructions
 AVX512, 512 bits registers
 
+## 显示器
+
+- VSync (vertical synchronization)
+  GPU only changes the image data it’s sending in the so-called vertical blanking interval (vblank), which is the time between the bottom right and top left pixel.
+  Applications synchronize their rendering to the display where possible - they only render one frame for every time the display updates.
+
+- Variable Refresh Rate (VRR) or Adaptive Sync
+  its two implementations are FreeSync (from AMD) and GSync (from NVidia).
+  With VSync it’s always the GPU which has to adjust to the display, but with Adaptive Sync the roles are partly reversed: the GPU can tell the display to make vblank longer.
+  Whenever an application is slower than the displays maximum refresh rate the display will wait for the next frame before it updates the pixels and thus you don’t see any stutter, without introducing tearing. Additionally it has very low latency in that state because every frame is displayed right when the game is finished rendering it.
+
 ## 文件系统
 
 A file system is a clearly-defined method that the computer's operating system uses to store, catalog, and retrieve files. Files are central to everything we use a computer for: all applications, images, movies, and documents are files, and they all need to be stored somewhere.
@@ -210,3 +221,14 @@ FIFO - First-In, First-Out
   读性能：(N-1) × 单块磁盘的读性能，接近 RAID0 的读性能。
   写性能：比单块磁盘的写性能稍慢，多了一个奇偶校验信息。
   冗余：一个磁盘发生损坏后，不会影响数据的完整性，从而保证了数据安全。当损坏的磁盘被替换后，RAID 还会自动利用剩下奇偶校验信息去重建此磁盘上的数据，来保持 RAID5 的高可靠性。
+
+## 网络
+
+56K Modem： 56Kbps
+ISDN 上网：带宽到了 144K
+ADSL：带宽达到了 512K，最高做到了下载速率 8Mbps。
+2010 年以后，光纤上网出现了，取代了 ADSL。
+
+光纤的速率可以做得很高，最早是 10Mbps，后来是 100M（百兆）、1000M（千兆）、直到现在的 10000M（万兆）。
+
+万兆网络的更大意义，或许在于跟 USB 3.0 接入的本地设备相比，它接入的网络设备的通信速率，两者是一样的。这意味着，互联网与本地设备，在万兆网络下，可以视为位于相同的 "数据总线" 上。

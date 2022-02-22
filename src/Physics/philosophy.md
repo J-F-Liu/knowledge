@@ -43,3 +43,25 @@
 CPT 守恒：电荷(Charge)+宇称(Parity)+时间(Time) 守恒
 
 洛伦兹对称性 → 光速守恒
+
+规范对称性(gauge symmetry)在现代物理理论中非常重要。虽然我们把它叫做"对称性"，但比较现代的观点是把它看成一种"冗余"，它告诉我们描述不同物理的是一族数学上的等价类。
+规范对称性的守恒荷等于 0，如果规范对称性带有可观测的荷，那么规范对称性就不再是一种冗余，而是代表了实际物理。
+
+Gauge Freedom 规范自由度
+The coordinate frame is specified and held fixed with respect to the chosen reference elements.
+The freedom in the choice of coordinate fixing rules is called gauge freedom.
+
+Coordinates are a very convenient device for reducing geometry to algebra, but they come at the price of some arbitrariness.
+The coordinate system can be changed at any time, without affecting the underlying geometry.
+This is very familiar, but it leaves us with two problems:
+(i) algorithmically, we need some concrete way of deciding which particular
+coordinate system to use at each moment, and hence breaking the arbitrariness;
+(ii) we need to allow for the fact that the results may look quite different under different choices,
+even though they represent the same underlying geometry.
+
+Different gauges represent different but geometrically equivalent coordinatization rules.
+Coordinate system independent quantities are called gauge invariants.
+It is only for gauge invariants that we can find meaningful values and covariances.
+
+Given the wide range of gauges and the significant impact that they have on the appearance of the state updates and covariance matrix,
+it is useful to ask which gauges give the “smallest” or “best behaved” updates and covariances.

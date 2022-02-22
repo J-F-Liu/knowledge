@@ -540,6 +540,10 @@ while retaining the advantages of Gaussian filtering, is the first derivative of
 2017 A Precision Analysis of Camera Distortion Models
 重申了 2012 年论文的观点，增加了 R+T 模型，扩充了一些数学推导和实验结果。
 
+2016 Influence of camera calibration conditions on the accuracy of 3D reconstruction
+在归一化的像平面上对像点坐标进行畸变变换。
+The normalized pinhole image coordinates are transformed into the normalized distorted image coordinates through distortion coefficients.
+
 2016 An Open-Source Structured-Light Scanning System for Rapid Geometry Acquisition
 
 结构光扫描仪的系统结构和工作原理、格雷码的编码原理和程序代码、点云转成网格面、3DUNDERWORLD-SLS 开源程序
