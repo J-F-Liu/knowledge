@@ -15,6 +15,13 @@
 QED 证毕，证讫（源自拉丁文 quod erat demonstrandum）
 RIP rest in peace
 
+PDE：partial differential equation
+CFL condition：Courant Friedrichs Lew CFL condition
+
+FOV: Field Of View
+DOF: Depth Of View
+TOF: Time Of Flight
+
 := "is defined as" 定义为
 -> "implies" 意味着
 <-> "if and only if" 当且仅当

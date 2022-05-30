@@ -45,8 +45,11 @@ There’s sometimes more than one way to solve a problem, pick the way that seem
 A line goes on forever in both directions. A line segment is just a bit of a line with a start and an end.
 
 直角 right angle
-平角 half turn
-周角 whole turn
+平角 half turn, straight angle
+周角 whole turn, revolution
+圆心角 central angle
+
+rpm: revolutions per minute
 
 Angles can be made up of other, smaller angles.
 Angles on a straight line add up to 180°.
@@ -156,6 +159,9 @@ Tow congruent shapes are similar and also the same size.
 中点 midpoint
 底边 base
 斜边 hypotenuse
+直边 leg
+对边 oppsite
+邻边 adjacent
 顶角 apex angle
 内角 internal angle
 
@@ -262,6 +268,9 @@ Pi is really nothing more than a placeholder for the ratio between a circle’s 
 
 三角形的面积是 ½ 底 × 高，圆可以看作是无数个小三角形组成的，高是半径，总的底是圆的周长，所以圆面积=½ 圆的周长 × 半径=½τr²。
 τ = 2π = 6.28318530717958647692…
+
+> Arc Length: $s = rθ$
+> Sector Area: $A = \frac{1}{2}r^2θ$
 
 ## 四边形 quadrilateral
 

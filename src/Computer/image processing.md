@@ -1,3 +1,8 @@
+## Binarization
+
+大津法阈值法是由日本学者大津于 1979 年提出的，是一种自适应的阈值确定的方法，又叫大津法, 简称 OTSU。
+Otsu 利用最大类间方差法原理计算阈值将原图像分成前景，背景两个部分。
+
 ## Image Convolution
 
 Image convolution can be used for many tasks.
@@ -14,8 +19,16 @@ Sharpening produce visually pleasing results usually. So it's oftenly used in co
 
 ## Image Segmentation
 
+### Level Set Method 弹性水平线法
+
 In image segmentation, the level set method (LSM) re-formulates the parametric active contour into a non-parametric energy minimization problem.
 The active contour is embedded as the zero level set of a higher dimensional function, which moves according to the active contour evolution equation and drives its zero level set to the edges of the desired objects.
+
+Signed distance functions (SDFs) or binary functions can be used as the level set function (LSF).
+
+The use of distance function is necessary to estimate accurately geometric features s.a. the curvature or the contour normal, which can be essential for some applications s.a. the surface reconstruction problem from scattered points.
+
+Binary function cannot provide the distance information, but allows fast and convex optimization techniques with graph cut methods or convex relaxation methods.
 
 Level set method pros:
 
@@ -24,16 +37,11 @@ Level set method pros:
 - guarantee of the existence of solutions in the class of viscosity partial differential equations (PDEs)
 - include suitable edge-, region- and shape-based terms in LSF to adapt to different tasks
 
-Signed distance functions (SDFs) or binary functions can be used as the level set function (LSF).
-
-The use of distance function is necessary to estimate accurately geometric features s.a. the curvature or the contour normal, which can be essential for some applications s.a. the surface reconstruction problem from scattered points.
-
-Binary function cannot provide the distance information, but allows fast and convex optimization techniques with graph cut methods or convex relaxation methods.
-
 Important papers:
 
-- 2001 Active contours without edges
-- 2007 Fast Global Minimization of the Active Contour/Snake Model
 - 2011 An Efficient Algorithm for Level Set Method Preserving Distance Function
 - 2018 Adaptive Eigenspace Segmentation
 - 2020 A survey of level set method for image segmentation with intensity inhomogeneity
+
+- 2001 Active contours without edges
+- 2007 Fast Global Minimization of the Active Contour/Snake Model

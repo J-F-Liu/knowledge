@@ -12,6 +12,18 @@
 
 > "Recursion! The cause of, and solution to, all of life's problems!"
 
+> There's a big difference between solving a problem and making a problem go away.
+
+> If you want everything to be familiar, you'll never learn anything new. - Rich Hickey
+
+> There's no such thing as a perfectly intuitive programming language because algorithmic thinking isn't something that comes to us intuitively. That's why the first language is always the hardest.
+
+> Relying on the programmer to always read, comprehend, and remember the documentation – and then do everything right, every time – is how we get bugs.
+
+> “Indeed, the ratio of time spent reading versus writing is well over 10 to 1. We are constantly reading old code as part of the effort to write new code. …[Therefore,] making it easy to read makes it easier to write.”
+>
+> Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship
+
 I find that the best way to describe a solution is often to just write the snippet of code - maybe not the whole thing - and just make it very concrete that way.
 
 Programming is a tool to solve problems that you have in the domain of computers.
@@ -23,6 +35,8 @@ A Value is a datum with an associated type.
 A (Data) Type is an attribute of a value which encodes information about how the data value can be operated upon.
 
 An Object is a value with associated behaviour, and thus implies it has agency.
+
+Most programming languages are partly a way of expressing things in terms of other things and partly a basic set of given things.
 
 ### Composition is the Essence of Programming
 

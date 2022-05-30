@@ -279,9 +279,17 @@ IF Δ > 0, then there are 2 real solutions.
 IF Δ = 0, then there is only one unique solution.
 IF Δ < 0, then there are no real solutions.
 
+alternate form: $ax^2+2bx+c=0, x=\cfrac{-b \pm \sqrt{b^2 - ac}}{a}$
+
 quadratic 二次的
 cubic 三次的
 quartic 四次的
+
+A quadratic equation is called a second-degree equation.
+
+If an appropriate substitution u=g(x) transforms an equation f(x)=0 into one of the form
+au² + bu + c = 0, a ≠ 0
+the original equation is called an equation of the quadratic type or an equation quadratic in form.
 
 conic 圆锥曲线
 quadratic curve 二次曲线
@@ -302,6 +310,7 @@ The axis of symmetry is the vertical line that goes through the vertex of the pa
 
 定义域 domain
 值域 range
+拐点 turning point
 
 In the real world, limits exist all the time. The input limits are the domain of the function. By limiting the numbers that can go into a function, we’re limiting the numbers that can come out of a function.
 
@@ -310,6 +319,91 @@ All functions have a domain, which is the set of valid inputs for the function. 
 A function is a relation where one input results in a single output. It can be represented as an equation or as a set of ordered pairs, and has both a domain and a range.
 
 The process of determining a function’s outputs is called evaluating the function. So every time you plug in x, and solve for f(x), you’re evaluating the function for a certain input value.
+
+Quadratic Function:
+$$f(x) = ax^2+bx+c = a(x-h)^2+k$$
+
+Axis of symmetry: $x=h=-\frac{b}{2a}$
+Vertex: $x=h,y=f(h)=k=\frac{4ac-b^2}{4a}$
+
+Polynomial Function: $$f(x) =a_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0$$
+
+The x-intercepts divide the x-axis into open intervals, the graph of the polynomial will be either above or below the x-axis over the entire interval. Between zeros the graph is either above or below the x-axis.
+
+If $(x-r)^m$ is a factor of f(x), and $(x-r)^{m+1}$ is not a factor of f(x), r is called a zero of multiplicity m of f.
+
+If r is a Zero of Even Multiplicity, the sign of f(x) does not change from one side to the other side of the r. Graphically the graph of f(x) touches x-axis at r.
+
+If r is a Zero of Odd Multiplicity, the sign of f(x) changes from one side to the other side of the r. Graphically the graph of f(x) crosses x-axis at r.
+
+The points at which a graph changes direction are called turning points. Each turning point yields a local maximum or local minimum.
+
+If f is a polynomial function of degree n, then the graph of f has at most n - 1 turning points.
+If the graph of a polynomial function f has n - 1 turning points, then the degree of f is at least n.
+
+For large values of x, either positive or negative, the graph of the polynomial function resembles the graph of the power function $f(x) =a_nx^n$.
+
+If f(x) and g(x) are polynomial functions, and degree of g is greater than zero, then there are unique polynomial functions q(x) and r(x) such that
+$$ f(x) = q(x)g(x) + r(x) $$
+where r(x) is either the zero polynomial or a polynomial of degree less than that of g(x).
+
+Let f be a polynomial function. If f(x) is devided by x - c, then the remainder is f(c), x - c is a factor of f(x) only if f(c)=0.
+
+#### Fundamental Theorem of Algebra
+
+> Every complex polynomial function f(x) of degree n⩾1 has at least one complex zero.
+
+> Theorem: Every complex polynomial function f(x) of degree n⩾1 has exactly n complex zeros, some of which may repeat.
+
+For polynomial functions whose coefficients are real numbers, the complex zeros appear in conjugate pairs.
+
+> Collary: A polynomial function of odd degree with real coefficients has at least one real zero.
+
+Every polynomial function with real coefficients can be uniquely factored over the real numbers into a product of linear factors and/or irreducible quadratic factors.
+
+Ratios of polynomial functions are called rational functions.
+
+The vertical asymptotes of a rational function $R(x)=\dfrac{p(x)}{q(x)}$, in lowest terms, are located at the real zeros of the denominator q(x).
+
+Rational functions can have no vertical asymptotes, one vertical asymptote, or more than one vertical asymptote.
+
+The line y = 0 is a horizontal asymptote for all rational functions that are proper, that is, the degree of the numerator is less than the degree of the denominator.
+
+If a rational function is improper, that is, if the degree of the numerator is greater than or equal to the degree of the denominator, there could be a horizontal asymptote, an oblique asymptote, or neither.
+
+> Vertical-Line Test
+> A set of points in the xy-plane is the graph of a function if and only if every vertical line intersects the graph in at most one point.
+
+> Horizontal-line Test
+> If every horizontal line intersects the graph of a function f in at most one point, then f is one-to-one.
+
+If a function is one-to-one, then it has an inverse function.
+If a function is not one-to-one, it has no inverse function. Sometimes, though, an appropriate restriction on the domain of such a function will yield a new function that is one-to-one. Then the function defined on the restricted domain has an inverse function.
+
+The equation $x = f(y)$ defines $f^{-1}$ implicitly. Solving this equation for $y$ yields the explicit form of $f^{-1}$, that is, $y = f^{-1}(x)$.
+
+$$f^{-1}(f(x)) = x, f(f^{-1}(x)) = x$$
+
+The graph of a one-to-one function $f$ and the graph of its inverse $f^{-1}$ are symmetric with respect to the line $y = x$.
+
+If the average rate of change is constant, then the function is linear.
+$$ \frac{Δy}{Δx}=k ⟹ y = kx + b$$
+
+If the ratio of consecutive outputs is constant, then the function is exponential.
+$$ \frac{f(x+1)}{f(x)}=a ⟹ f(x) = Ca^x$$
+The base a is the growth factor, and C is the initial value.
+$$ a^x = e^{x\ln a} = e^{kx}$$
+
+Logarithms can be used to transform products into sums, quotients into differences, and powers into factors.
+
+$$
+\log_aMN = \log_aM + \log_aN \\
+\log_a\frac{M}{N} = \log_aM - \log_aN \\
+\log_aM^r = r\log_aM
+$$
+
+> Change-of-Base Formula
+> $$ \log_aM = \frac{\log_bM}{\log_ba} = \frac{\ln M}{\ln a} $$
 
 ### 关系 relation
 

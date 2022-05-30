@@ -288,7 +288,7 @@ The line connecting the lens centers of the two cameras, called baseline.
 
 All the epipolar lines in one image plane pass through a common point ($e_l$ and $e_r$ respectively) called the epipole, which is the projection of the optical center of the other camera.
 
-The epipolar plane is defined by the observed point P and the two centers of projection, $O_l$ and $O_r$; the epipoles are located at the point of intersection of the line joining the centers of projection and the two projective planes.
+The epipolar plane is defined by the observed point P and the two centers of projection, $O_l$ and $O_r$; the epipoles are located at the point of intersection of the line joining the centers of projection and the two projective planes. Epipolar lines are the intersection of epipolar plane with image planes.
 
 ![](./images/epipolar_plane.png)
 
@@ -329,18 +329,12 @@ $$
 The essential matrix E is determined by the rotation $R$ and translation $T=[t_1,t_2,t_3]^T$ between the two cameras.
 
 $$
-E=T \times R=\begin{bmatrix}
+E=[T]_\times R=\begin{bmatrix}
    0 & -t_3 & t_2  \\
    t_3 & 0 & -t_1  \\
    -t_2 & t_1 & 0
 \end{bmatrix}R
 $$
-
-Alternatively, $(R^T M_2)^T\cdot(T\times M_1)=0 \implies E = R \begin{bmatrix}
-   0 & -t_3 & t_2  \\
-   t_3 & 0 & -t_1  \\
-   -t_2 & t_1 & 0
-\end{bmatrix}.$
 
 Then in image coordinates,
 
@@ -358,9 +352,14 @@ The fundamental matrix F is a matrix determined from point correspondences betwe
 
 To recover the epipolar geometry between two images from point matches, least-squares techniques are exploited to obtain more robust estimate.
 
-$$\tilde m_2^TF\tilde m_1=0$$
+$$
+\begin{split}
+\tilde m_2^TF\tilde m_1=0 \\
+\tilde m_1^TF^T\tilde m_2=0
+\end{split}
+$$
 
-For fixed $\tilde m_1$, $F\tilde m_1$ defines a line in the other imageplane, called the epipolar line of point $\tilde m_1$, vice versa. This implies that one point of a corresponding pair is on the epipolar line of the other point, therefore point correspondence detection reduces to search on the epipolar line.
+For each $\tilde m_1$, $F\tilde m_1$ defines a line in the other image plane, called the **epipolar line** of point $\tilde m_1$, vice versa. This implies that one point of a corresponding pair is on the epipolar line of the other point, therefore point correspondence detection reduces to search on the epipolar line.
 
 The fundamental matrix cannot be uniquely determined if the corresponding points are exactly coplanar in the scene or exactly have a special symmetry, for example, at the vertices of a cube, This does not occur for real data with noise.
 
