@@ -24,6 +24,20 @@
 >
 > Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship
 
+编程是思考，而不是打字。多年编程后，我时常觉得自己打字太多，思考太少。
+
+Coding is to programming what typing is to writing.
+Writing is something that involves mental effort you're thinking about what you're going to say.
+In the same way, programs are built on ideas, they have to do something and what they're supposed to do is liking what writing is supposed to convey.
+
+If people are trying to learn programming by being taught to code, well they are being taught writing by being taught how to type and that dosn't make much sense.
+
+When you write an algorithm you need to have a proof that it's correct, if you are proving things that means mathematics.
+
+> Leslie Lamport
+
+Thinking what program is supposed to do mathematically, write down the ideas that go into the program before you do any coding.
+
 I find that the best way to describe a solution is often to just write the snippet of code - maybe not the whole thing - and just make it very concrete that way.
 
 Programming is a tool to solve problems that you have in the domain of computers.
@@ -222,3 +236,27 @@ When you think you’ve fixed an engineering design, take the fix out. Make sure
 We didn't just build things once and assume that was the best we could do.
 
 The spirit of open source is the contribution rather than request. When everyone is using and benefiting from open source codes, you should respect these codes and the communities behind them in a way, you should be in awe of the spirit of open source.
+
+## Interface
+
+The most important boundary for a software project is its external interface, that which the users directly interact with and which you give backwards compatibility guarantees for. For a web-service, this would be the URL scheme and the shape of JSON request and responses. For a command line application — the set and the meaning of command-line flags. For an OS kernel — the set of syscalls (Linux) or the blessed user-space libraries (Mac). And, for a programming language, this would be the definition of the language itself, its syntax and semantics.
+
+Sometimes, however, it is beneficial to install somewhat artificial, internal boundaries, a sort-of macro level layers pattern. Boundaries have a high cost. They prevent changes. But a skillfully placed internal (or even an artificial external) boundary can also help.
+
+It cuts the system in two, and, if the cut is relatively narrow in comparison to the overall size of the system (hourglass shape), this boundary becomes a great way to understand the system. Understanding just the boundary allows you to imagine how the subsystem beneath it could be implemented. Most of the time, your imaginary version would be pretty close to what actually happens, and this mental map would help you a great deal to peel off the layers of glue code and get a gut feeling for where the core logic is.
+
+Even if an internal boundary starts out in the right place, it, unlike an external one, is ever in danger of being violated. “Internal boundary” is a very non-physical thing, most of the time it’s just informal rules like “module A shall not import module B”. It’s very hard to notice that something is not being done! That’s why, I think, larger companies can benefit from microservices architecture: in theory, if we just solve human coordination problem, a monolith can be architectured just as cleanly, while offering much better performance. In practice, at sufficient scale, maintaining good architecture across teams is hard, and becomes much easier if the intended internal boundaries are reified as processes.
+
+It’s hard enough to protect from accidental breaching of internal boundaries. But there’s a bigger problem: often, internal boundaries stand in the way of user-visible system features, and it takes a lot of authority to protect internal system’s boundary at the cost of not shipping something.
+
+A system boundary is a publicly exposed interface that third-party developers are going to use. A system boundary usually takes the form of a versioned artifact in some fashion. We know it’s inevitable that we’ll have to break things, so we try to only do that with new major versions. With a boundary, we have a responsibility to external users, and versioning puts the onus on us. We can decide if the benefits of a breaking change are large enough to merit having to also maintain another older version.
+
+The primary reason we like boundaries is that they’re the only approach we have to truly re-using code. This is part of the reason we often simulate boundaries even internally to a program.
+
+But while introducing boundaries has its re-use benefits, it also introduces costs. Changes cannot be easily made anymore. Multiple versions may need maintaining. Different dependencies may themselves depend on different versions of the same library, and this imposes costs on anyone who uses a library.
+
+A big part of software design is the design of the abstractions themselves. It’s not just that dependencies have costs, it’s also a major design element. The single most important thing about any module is what modules it does not depend upon. The fewer dependencies it has, the more it can be understood on its own, independently of the rest of the system. It’s sometimes nice to write code in a way that deliberately cuts itself off from the rest of the system, just so it’s clear it’s independent.
+
+## iterative improvement
+
+The best approach we have for doing software development is iterative improvement. We have to start with something and then we can figure out how to make it better.

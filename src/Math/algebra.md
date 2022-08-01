@@ -349,6 +349,36 @@ where r(x) is either the zero polynomial or a polynomial of degree less than tha
 
 Let f be a polynomial function. If f(x) is devided by x - c, then the remainder is f(c), x - c is a factor of f(x) only if f(c)=0.
 
+A rational expression $\frac{P}{Q}$ is called proper if the degree of the polynomial in the numerator is less than the degree of the polynomial in the denominator.
+
+If $Q(x)$ has the form:
+$$Q(x) =(x-a_1)(x-a_2)...(x-a_n)$$
+the partial fraction decomposition of $\frac{P}{Q}$ has the form
+
+$$
+\frac{P(x)}{Q(x)}=\frac{A_1}{x-a_1}+\frac{A_2}{x-a_2}+...+\frac{A_n}{x-a_n}
+$$
+
+where the numbers $A_1,A_2,...,A_n$ are to be determined.
+
+If $Q(x)$ has a repeated linear factor $(x-a)^n, n≥2$, then the partial fraction decomposition of $\frac{P}{Q}$ has the terms
+
+$$
+\frac{P(x)}{Q(x)}=\frac{A_1}{x-a}+\frac{A_2}{(x-a)^2}+...+\frac{A_n}{(x-a)^n}
+$$
+
+If $Q(x)$ contains a nonrepeated irreducible factor $ax^2+bx+c$, then the partial fraction decomposition of $\frac{P}{Q}$ has the term
+
+$$
+\frac{Ax+B}{ax^2+bx+c}
+$$
+
+If $Q(x)$ has a repeated irreducible factor $(ax^2+bx+c)^n, n≥2$, then the partial fraction decomposition of $\frac{P}{Q}$ has the terms
+
+$$
+\frac{P(x)}{Q(x)}=\frac{A_1x+B_1}{ax^2+bx+c}+\frac{A_2x+B_2}{(ax^2+bx+c)^2}+...+\frac{A_nx+B_n}{(ax^2+bx+c)^n}
+$$
+
 #### Fundamental Theorem of Algebra
 
 > Every complex polynomial function f(x) of degree n⩾1 has at least one complex zero.
