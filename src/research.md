@@ -54,3 +54,5 @@
 接着，找到以上几篇论文中相同的引用文献、在引用文献中重复的作者名，继续访问那些重要科研人员的网页，看下那些论文是在什么会议集结出版的。
 
 然后，访问那些顶级会议的网站，查看一下他们最近的活动。
+
+Research papers are about incrementally advancing the state of the art, so just because there are more things to do (including things we hopefully didn’t know about beforehand) doesn’t mean the paper’s contributions aren’t valuable on their own.

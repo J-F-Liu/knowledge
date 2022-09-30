@@ -125,6 +125,8 @@ Good data structures makes coding easy to design and maintain, whereas the best 
 如果您使用的辅导资料(或书籍)没有充分诠释该知识点, 那么务必去寻找其他适合您的资源。
 请避免过多负面的自省，不要被各种问题打击到怀疑人生, 坚持下去。
 
+SPOT（Single Point Of Truth，单点事实）。代码需要修改时，你只需要在一个地方修改，而不必改动多个地方。
+
 REPL: read-eval-print loop
 
 [程序员的誓言](https://blog.cleancoder.com/uncle-bob/2015/11/18/TheProgrammersOath.html)
@@ -167,6 +169,15 @@ Your productivity in any language is directly proportional to your time and effo
 This evangelizing can sometimes become contentious if others perceive it as an attack on their platform. People defend their language mostly because they don’t want to see it lose popularity. If it did, their language’s viability is threatened and their investment is in jeopardy. It’s also partly because they’ve spent so long on it that it’s become a part of their identity.
 
 That’s something for us to keep in mind as we advocate for a language we like.
+
+#### C语言
+Language theorists can occasionally refer to C as a “big macro assembler”, the only thing abstracted away is really the raw instruction set.
+
+C provided freedom, where high-level languages were considered as straight-jackets enforcing unwanted discipline. It was an invitation to use tricks which had been necessary to achieve efficiency in the early days of computers.
+
+We can see why an efficiency-oriented operating system kernel such as Linux will tend toward C.
+
+
 
 ## 标准库
 
