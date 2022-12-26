@@ -31,6 +31,8 @@ zip,rar,7z 压缩文件
 exe,dll 可执行文件
 ```
 
+"Not having to think about it" is certainly a measure of success for a given technology.
+
 # 计算机架构
 
 计算机由软件和硬件两部分构成，由于编写软硬件所用的语言有本质上的不同，它们之间的交互必须依赖于指令集架构（ISA），例如大家熟知的 x86 和 ARM。简单来说，指令集规定了软硬件之间的沟通规范（语言），依照相同指令集编写的软件，可以在任何支持该指令集的硬件上工作。这大大提升了计算机软硬件之间的兼容性，降低了整体成本。
@@ -172,7 +174,8 @@ OSD 菜单：OSD 是 on-screen display 的简称，即屏幕菜单式调节方�
 2009 WiFi 4 (802.11n) 2.4GHz 288Mbps，5GHz 600Mbps，双频双天线，MIMO
 2014 WiFi 5 (802.11ac) 5GHz 433 to 6933 Mbps，20MHz 频道，阵列天线
 2019 WiFi 6 (802.11ax)，2.4/5 GHz，160MHz 频道, 600 to 9608 Mbps
-2019 WiFi 6E (802.11ax), 6GHz, 600 to 9608 Mbps
+2020 WiFi 6E (802.11ax), 6GHz, 600 to 9608 Mbps，1024-QAM 信号调制，MU-MIMO
+2022 Wi-Fi 7 (802.11be)，2.4GHz、5GHz 和 6GHz，30Gbps，4096-QAM 信号调制，CMU-MIMO
 
 工作频率越高，传输的能量就越大，所以在同一时间传送的数据也越多，上网速度越快。但同时，工作频率越高，穿透性越差，通讯距离短，抗干扰能力更好。
 
@@ -180,6 +183,34 @@ OSD 菜单：OSD 是 on-screen display 的简称，即屏幕菜单式调节方�
 3G 基站覆盖半径约为 2-5 公里
 4G 基站覆盖半径约为 1-3 公里
 5G 基站覆盖半径约为 100-300 米
+
+## 视频编码
+
+HEVC (High-Efficiency Video Codec)，也就是 H.265，支持 8K，支持 HDR，支持广色域，支持最高 16bit 的色彩深度，最高 YUV444 的色彩抽样。
+
+2015 年，苹果的 iPhone6s 在 A9 芯片内首次实现了 HEVC 硬解能力，同年，Intel 在第六代 Skylake 的 HD500 系列核显上，NVIDIA 在 GTX900 系列独显上，也先后支持了 HEVC 硬解。
+
+在 2017 年发布的 iOS11, macOS 10.13 上，苹果继续完成了其 VideoToolbox 编解码框架对 HEVC 编解码能力的支持，微软也发布了 HEVC Video Extension 作为 Windows PC 环境 HEVC 解码的能力对标。从此 HEVC 成为苹果，安卓默认视频格式，成为绝大多数单反 / 无人机 / 摄像设备的主推格式。
+
+2022 年，字节跳动工程师和 Intel 工程师合作，为 Chrome 浏览器加上 HEVC 支持，调用系统的硬解能力，发布在 Chrome 107。
+
+H.265 being 50% more efficient than the prevailing H.264.
+
+AV1 (AOMedia Video 1)，2018 年发布，
+
+AV1 beats HEVC by a significant 28% in terms of encoding and decoding efficiency.
+AV1 can save up to 30% file size than HEVC for the same image quality.
+AV1 can sustain high-quality output from low to high data rates when it comes to UHD 4K formats, both codecs are equally as good.
+
+AV1 is royalty-free while HEVC is royalty bearing.
+
+Compared to HEVC, AV1 is still relatively new hence it suffers limited hardware support.
+HEVC is supported by GPU/CPU from AMD, Nvidia, Intel, Apple, Qualcomm, etc. The support for AV1 decoding is already here but the AV1 encoding is by far supported by Nvidia and Intel only.
+
+AV1 requires more powerful hardware to decode, and it takes much longer time to decode than HEVC.
+A hardware accelerated encoder can run HEVC 5x faster than AV1.
+
+AV1 codec is mainly used by Mozilla Firefox and Google Chrome browsers.
 
 ## 摄像头接口协议
 

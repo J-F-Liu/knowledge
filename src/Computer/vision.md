@@ -528,6 +528,9 @@ while retaining the advantages of Gaussian filtering, is the first derivative of
 比较了五种经典的畸变/校正模型，概念准确、方法合理，必读。
 给出了多项式畸变系数的计算方法。
 
+Fitting data with a polynomial too closely without a mathematical reason is known as overfitting.
+Sometimes a simpler model is actually more revealing about the real movement of the data.
+
 2014 Camera matrix calibration using circular control points and separate correction of the geometric distortion field
 先用竖琴标定畸变系数，再用圆点板标定几何参数；用待优化的参数把圆点投影成椭圆取圆心，与测量到的椭圆圆心作比对，避免了圆点圆心的投影偏差。
 引申思考：既可以用竖线标定畸变系数，也可以用竖线代替点标定相机的内外参数。

@@ -127,6 +127,14 @@ Good data structures makes coding easy to design and maintain, whereas the best 
 
 SPOT（Single Point Of Truth，单点事实）。代码需要修改时，你只需要在一个地方修改，而不必改动多个地方。
 
+RECOMMENDATIONS
+R1. Never use global variables
+R2. Declare single-purpose variables
+R3. Declare variables close to their use
+R4. Keep code blocks small
+R5. Use variables close to their declaration
+R6. Use no more than two nesting levels
+
 REPL: read-eval-print loop
 
 [程序员的誓言](https://blog.cleancoder.com/uncle-bob/2015/11/18/TheProgrammersOath.html)
@@ -153,6 +161,16 @@ REPL: read-eval-print loop
 
 优秀的程序员会在项目开始前，主动帮助产品把需求明确细化，这样可以避免开发阶段的无效的加班和工作。
 
+提交代码后，谷歌内部有两次代码审查。第一次审查是功能审查，确保代码按照预期工作；第二次审查是可读性审查，确保代码是可读的，并且易于理解和维护。
+
+The following are the characteristics of clean code:
+
+- It must be readable.
+- This must be elegant.
+- They must be easy to understand and follow the Single Responsibility Principle (SRP).
+- Clean Code must be easy to understand, easy to modify, and easy to maintain.
+- Clean must run tests as per the test strategy.
+
 Starting a new project is exciting. You get to try the new database, the new framework, the new architecture, the new everything.
 But every new tool introduces a risk. And those risks compound. That’s why I believe that you should choose boring technology for most of your stack and only allow a meagre novelty budget.
 
@@ -170,14 +188,13 @@ This evangelizing can sometimes become contentious if others perceive it as an a
 
 That’s something for us to keep in mind as we advocate for a language we like.
 
-#### C语言
+#### C 语言
+
 Language theorists can occasionally refer to C as a “big macro assembler”, the only thing abstracted away is really the raw instruction set.
 
 C provided freedom, where high-level languages were considered as straight-jackets enforcing unwanted discipline. It was an invitation to use tricks which had been necessary to achieve efficiency in the early days of computers.
 
 We can see why an efficiency-oriented operating system kernel such as Linux will tend toward C.
-
-
 
 ## 标准库
 
@@ -271,3 +288,15 @@ A big part of software design is the design of the abstractions themselves. It�
 ## iterative improvement
 
 The best approach we have for doing software development is iterative improvement. We have to start with something and then we can figure out how to make it better.
+
+You can implement concurrency using either threads or processes, where the main difference between the two is that threads share memory and processes don’t. The choice of threads vs. processes comes with various trade-offs and performance implications.
+
+When benchmarking short programs, you often encounter two big problems that mess up your final results: (1) hardware and operating systems are full of side-effects that are neither transparent nor directly manipulable and (2) compilers can optimize in unpredictable ways, requiring IR/Assembly inspection and knowledge of compiler intrinsics.
+
+## Tools
+
+We use a lot of tools for software development. Compilers, linkers, package managers, code linters, and, of course, IDEs are essential parts of our work and life.
+
+Most of the time, an IDE deals with incorrect code. Although we expect IDEs to report errors, their primary goal is not to complain about the inability to do this and that! IDEs drive users to the correct code by staying alive in the presence of errors and suggesting fixes.
+
+Macros take code as an argument and are able to add new code, replace a given code with anything else, or modify this code in any way imaginable. Macros are expanded when our code is compiled. More interestingly, they should also be expanded when we write our code in an IDE. Why? Because an IDE should be aware of expanded code in order to provide us with reasonable navigation and code completion. If a macro fails to expand properly, an IDE is in trouble and its ability to deliver helpful information to a user is severely limited.

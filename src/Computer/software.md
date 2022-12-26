@@ -174,3 +174,15 @@ Events trigger processing. Events provide far less opportunity for services to c
 - 软件架构师的关注点，不应该是团队使用的工具和技术，而是各种服务与整个系统运行状况之间的协议和通信，保证代码和团队可以正确解耦。
 - 理想情况下，代码解耦与团队解耦保持一致，形成一对一的关系，一个子团队负责一个独立的模块。实际运作中，一个子团队负责几个模块也可以，但是一个模块不能由多个子团队来参与。
 - 通信（模块之间的、子团队之间的）尽量规范化，争取做到过程简单、文档充分，最好有规范的 API，这样无需任何人员交流，就能建立通信。
+
+## Device Driver
+
+Think of an API as a specification that describes what to do, while a driver is an implementation that describes how to do it.
+
+Different hardware uses different sets of low-level commands to do various graphics related stuff. A graphics API is in some sense a 'universal language' that programs can use to talk to the graphics card without having to deal with hardware specific low-level commands for every GPU they'd like to support. The driver's job is then to accept commands in a given API and translate them into low-level commands that the particular GPU installed in the system can understand.
+
+## UI
+
+Icons created their own symbolic language in modern technology.
+
+Icons can make any user interface more intuitive by their simple and symbolic visual presentation. Some of us have become so familiar with some icons that we can easily recognize their meaning without any words.

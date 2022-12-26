@@ -1,3 +1,27 @@
+CAD 内核
+
+- [Parasolid by Siemens](https://www.plm.automation.siemens.com/global/en/products/plm-components/parasolid.html) 60 天试用
+  - Geomagic Design X
+  - SolidWorks by Dassault Systèmes
+  - Siemens NX
+  - ADINA
+- [3D ACIS Modeler by Spatial, part of Dassault Systemes](http://www.spatial.com/) since 1989, C++
+  - BricsCAD
+  - TurboCAD
+  - GstarCAD
+  - ZW3D，中望软件
+  - 爱深智 EINSENSE，杭州宏深
+  - Faro BuildIT
+  - Extend3D Werklicht3D
+- Convergence Geometric Modeler
+  - [CATIA](https://www.3ds.com/products-services/catia/) by Dassault Systèmes since 1981
+- ShapeManager by Autodesk, originally forked from ACIS 7.0 in November 2001
+  - AutoCAD by Autodesk .dwg, .dwt, .dws, or .dxf
+- [OpenCascade](https://www.opencascade.com/)
+  - FreeCAD
+  - Gmsh
+  - CAD Assistant
+
 建模思路：点连成线，线连成圈，圈界定面，面连成壳，壳连成体，体组成模型。
 快捷方法：挤出/扫射、镜像、修饰（比如边缘圆角）、增加厚度
 
