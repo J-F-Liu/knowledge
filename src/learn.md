@@ -141,3 +141,18 @@ Neural networks and memory systems can be combined to make learning machines tha
 阅读各种资料、书籍、文章，只是让你懂得更多，并不会让你提高技能。只有通过练习（practice）才能提高技能。如果你想变得更好，那就去动手做。
 
 学习任何知识都是分层的，学到自己感兴趣的层级即可，对下一层有一个定性的认识，需要的时候可以再去细究。
+
+### Mixing guided and unguided learning
+
+- Guided: Reading a tutorial, taking a course, watching a YouTube video. Anything where you're following a guide.
+- Unguided: Creating your own projects from scratch, extending a tutorial, looking things up in the docs. Anything where you aren't following a guide.
+
+### Making intentional mistakes
+
+Instead of copy/pasting the tutorial code verbatim, try experimenting with it: what happens if you omit one of the lines? Or if you change some of the values?
+
+If I have a hypothesis about how this code is supposed to work, I test that hypothesis by changing the code, and seeing if it breaks in the way I expect.
+
+### Cultivating a growth mindset
+
+We learn so much more from struggling and failing than we do from effortless success. With a growth mindset, the struggle might not be fun exactly, but it feels productive, like a good workout.
