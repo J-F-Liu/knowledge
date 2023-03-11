@@ -8,11 +8,20 @@ Fast-forward to 2020, browsers are the doorstep to so much more than just animat
 
 A huge number of libraries and frameworks in JavaScript land have tried to make programming more accessible and simple. Their combined power is really what defined modern life in JavaScript land.
 
+The stacking order of a block renderer in Webkit is:
+
+1. background color
+2. background image
+3. border
+4. children
+5. outline
+
 ### Event Loop
 
 The land of JavaScript is ruled by a thing called the event loop, which schedules different tasks (threads) to run orderly. It defines several rules that all code living in the browser has to obey. For simple JavaScript programming, it is usually okay not to worry about them. But then there are also quite basic cases in which it matters a lot.
 
 Rule number one of the event loop.
+
 > Once a thread is running, it runs to completion without interruptions of other threads.
 
 When the result of some code depends on the order in which the threads access the same data, we call that a race condition. Sometimes, this is intended and perfectly fine. But in other cases, the programmer does not even know that there is a race condition, hence not all possible outcomes will be accounted for. In that case, race conditions are bad.
@@ -28,5 +37,5 @@ The founders of Rust are very smart people and they discovered a different appro
 Immutable data can be shared, no problem. Mutable data can also be passed from one point to the other. But mutable data sharing from two different locations at the same time is strictly prohibited and will be prosecuted with hefty compiler errors.
 
 This can be formulated as the number one rule of Rust.
-> Each variable can have either multiple readers or a single writer. (MRSW)
 
+> Each variable can have either multiple readers or a single writer. (MRSW)

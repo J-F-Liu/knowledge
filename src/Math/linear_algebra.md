@@ -972,6 +972,16 @@ The _row space_ of a matrix A is the span of the rows of A, and is denoted Row(A
 
 Let A be a matrix. Then the row rank of A is equal to the column rank of A.
 
+## 矩阵分解
+
+对于任意方阵 A，有
+
+$$
+Sym(A) = \dfrac{1}{2}(A+A^T) \\
+Skew(A) = \cfrac{1}{2}(A-A^T) \\
+A = Sym(A) + Skew(A)
+$$
+
 ### LU Decomposition
 
 To solve Ax=b, find two matrices, L and U, where L is lower-triangular and U is upper-triangular, and A=LU. Then x is calculated in two steps: Ly=b and Ux=y.

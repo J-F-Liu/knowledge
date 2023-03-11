@@ -496,7 +496,7 @@ The type of linear operator that provides the best compromise between noise immu
 while retaining the advantages of Gaussian filtering, is the first derivative of a Gaussian.
 
 2019 Efficient conic fitting with an analytical Polar-N-Direction geometric distance
-解释了点到椭圆的Sampson距离的几何意义，通过巧妙的数学推导得出简便的计算方法，并可作为优化目标用于拟合椭圆。
+解释了点到椭圆的 Sampson 距离的几何意义，通过巧妙的数学推导得出简便的计算方法，并可作为优化目标用于拟合椭圆。
 
 2019 Bundle Adjustment Revisited
 对小孔相机模型的推导很到位
@@ -591,7 +591,7 @@ The normalized pinhole image coordinates are transformed into the normalized dis
 
 #### 编码点 coded target
 
-Determination of the target centre is invariant to rotation and, over a wide range, also invariant to scale. 
+Determination of the target centre is invariant to rotation and, over a wide range, also invariant to scale.
 
 The circle centre C is imaged as C' whilst the ellipse centre E' is displaced by the eccentricity e'. Only in the case where circle and image planes are parallel, both points are identical.
 
@@ -603,7 +603,7 @@ For digital processing systems, it is generally accepted that target images shou
 
 1991, C.-T. Schneider, 3-D Vermessung von Oberflächen und Bauteilen durch Photogrammetrie und Bildverarbeitung 通过摄影测量和图像处理对表面和组件进行三维测量
 1992, Schneider C.-T. and Sinnreich, K., Optical 3-D measurement systems for quality control in industry
-Schneider最早给出环形编码点设计
+Schneider 最早给出环形编码点设计
 
 2002 An Inexpensive, Automatic and Accurate Camera Calibration Method
 no start-, stop-, or parity-bits; the binary code is read anticlockwise, for a k-bit code find the lowest of k binary numbers
@@ -613,10 +613,12 @@ intensity weighted centroid, 9–16-bit codes were used, 圆弧分割法，确�
 顺时针方向组合编码位
 
 2013 环状编码标记点的检测与识别
-12位编码，顺时针读取，ALPC(Affine LOG Polar Corrdinate)变换 将同心椭圆转化为平行直线
+12 位编码，顺时针读取，ALPC(Affine LOG Polar Corrdinate)变换 将同心椭圆转化为平行直线
 
 2014 A new technique of recognition for coded targets in optical 3D measurement
-10位编码，local application of Otsu threshold
+10 位编码，local application of Otsu threshold
+
+2015 基于单相机的三维坐标测量及其在结构大变形测量中的应用. 东南大学, 胡邹恒.
 
 2016 An accurate and reliable circular coded target detection algorithm for vision measurement
 15-bit code, the binary code is read anticlockwise
@@ -624,11 +626,11 @@ intensity weighted centroid, 9–16-bit codes were used, 圆弧分割法，确�
 2021 Circular coded target system for industrial applications
 
 - 圆点编码点 circular coded target
-  
-1998 Circular Coded Target and Its Application to Optical 3D-Measurement Techniques
-2006 三维数据拼接中编码标志点的设计与检测_马扬飚
 
-#### Spherical targets 
+1998 Circular Coded Target and Its Application to Optical 3D-Measurement Techniques
+2006 三维数据拼接中编码标志点的设计与检测\_马扬飚
+
+#### Spherical targets
 
 Spherical targets are always imaged as an ellipse with an eccentricity that is radial about the optical axis. Note that the base of the projective conic is smaller than the sphere diameter.
 
@@ -636,3 +638,9 @@ The most important advantage of spherical targets is the fact that they can be v
 almost any direction. Whereas flat, retro-reflective targets can only be viewed over an angle
 of ±45°, retro-reflecting spheres can be viewed over a range of 240°.
 
+### 疑问
+
+标定相机，内参中的 skew 是否设为为 0，fx 和 fy 是否设为相等？
+双目相机，坐标系放在右相机上，会让左相机的重投影误差偏大，怎样让双目的测量精度更优？
+标定板的加工精度和检测精度，哪个更高，用什么方法？
+大视场的相机，对于边缘区域虚化的问题有无合适的软硬件方案？

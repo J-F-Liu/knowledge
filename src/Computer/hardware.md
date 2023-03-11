@@ -32,3 +32,22 @@ cfm (cubic foot per minute) 是常用英制流量单位，立方英尺每分钟�
 一个由供电设备、线缆和充电设备组成的充电系统，从初始充电状态开始，至充电 30 分钟，通过提高供电设备的输出电压或输出电流，实现进入电池的平均电流大于等于 3A 或总充电量大于等于电池额定容量的 60% 的充电方式。
 
 根据 UFCS 快充规范内容显示，该标准采用连续调节模式，输出电压分为 5V、10V、20V、30V 四个可编程的档位（类似 USB PD3.0 PPS 调压），其中 5V 档位的可编程电压范围是 3.4V-5.5V、10V 档位的可编程电压范围是 5.5V-12V、20V 档位的可编程电压范围是 12V-21V、30V 电压的可编程电压范围是 21V-36V。
+
+# 单片机
+
+I2C - Inter-Integrated Circuit
+
+- low speed two wire serial protocol
+- master slave relationship
+- sending data to and from the SDA connection, with the speed controlled via the SCL pin
+- discoverable by `i2cdetect` command
+- LCD / OLED screens, temperature sensors and analog to digital converters
+
+SPI - Serial Peripheral Interface
+
+- master slave relationship
+- shift registers, sensors and even an SD card
+
+UART - Universal Asynchronous Receiver / Transmitter
+
+- provide a console / terminal login for headless setup

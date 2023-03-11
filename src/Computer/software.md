@@ -186,3 +186,32 @@ Different hardware uses different sets of low-level commands to do various graph
 Icons created their own symbolic language in modern technology.
 
 Icons can make any user interface more intuitive by their simple and symbolic visual presentation. Some of us have become so familiar with some icons that we can easily recognize their meaning without any words.
+
+## 通讯
+
+HTTPS
+WebSocket
+WebRTC
+RPC: Volo, tonic, tarpc, ttrpc, Arpy
+
+数据格式：Protocol-Buffers, Thrift, msgpack, bincode, bincode2, flatbuffers, Cap'n Proto
+
+## 云计算
+
+> “There is no cloud. It’s just someone else’s computer”
+
+There’s nothing magical about the cloud. We just allowed ourselves to **narrow our focus** a little closer to what’s differentiating about our applications by stopping repeating ourselves with whats not.
+
+> “There is no serverless, it’s just someone else’s container”
+
+Yes, in serverless, servers are involved. They just aren’t your concern anymore.
+
+Your users could care less about what you have running on your servers, but they do care that it works and works reliably. This is where Rust shines and it does so without sacrificing performance or programmer productivity.
+
+监控，是运维的眼睛，是稳定性建设中最重要的一环。
+
+一般来讲，基础监控系统的主要功能就是发现问题。
+
+故障发生前，通过监控的看图巡检，发现隐患；故障发生时，通过实时的告警，快速发现问题，定位问题所在；故障发生后，使用过去的历史数据图表，进行事后复盘，避免下次发生。
+
+Docker 容器，提供应用级的主机抽象；Kubernetes 服务，提供应用级的集群抽象。
