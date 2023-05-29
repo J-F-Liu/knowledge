@@ -11,6 +11,8 @@
 **iff.** if and only if
 **afaik** as far as I know
 **pcs** pieces
+**SOTA** state-of-the-art
+**YOLO** You Only Live Once
 
 QED 证毕，证讫（源自拉丁文 quod erat demonstrandum）
 RIP rest in peace

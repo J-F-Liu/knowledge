@@ -44,3 +44,7 @@ A Taxonomy and Evaluation of Dense two-Frame Stereo Correspondence Algorithms by
 Multiple View Geometry in Computer Vision, Cambridge University Press, 2004, R. Hartley and A. Zisserman, is the most complete reference on projective geometry in computer vision
 
 Stereo processing by semiglobal matching and mutual information by H. Hirschmuller in IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 30, no 2, pp. 328-341, 2008 describes the approach used for computing the disparity in OpenCV
+
+人眼睛的瞳距一般是 55-75cm, 标准的瞳距, 男性应该在 60.9mm 左右，女性应该在 58.3mm 左右。
+看书时眼睛离书最好是 30-40cm。人裸眼的最大分辨率:0.1mm，2169✖1213。
+人眼的明视距离为 25cm，视网膜至瞳孔的距离为 22mm 时，因此人眼可分辨明视距处的最小线距离为 0.1mm。

@@ -17,3 +17,99 @@
 ## 生物演化
 
 原核生物(35 亿年前) → 真核生物(20 亿年前) → 多细胞生物(15 亿年前) → 海洋动物和植物(10 亿年前) → 脊椎动物 → 哺乳动物(2 亿年前) → 开花植物(1 亿年前) → 人类
+
+氨基酸在 DNA 中的遗传密码表：
+
+| 三联密码子 | 氨基酸 |
+| ---------- | ------ |
+| UUU        | Phe    |
+| UUC        | Phe    |
+| UUA        | Leu    |
+| UUG        | Leu    |
+| CUU        | Leu    |
+| CUC        | Leu    |
+| CUA        | Leu    |
+| CUG        | Leu    |
+| AUU        | Ile    |
+| AUC        | Ile    |
+| AUA        | Ile    |
+| AUG        | Met    |
+| GUU        | Val    |
+| GUC        | Val    |
+| GUA        | Val    |
+| GUG        | Val    |
+| UCU        | Ser    |
+| UCC        | Ser    |
+| UCA        | Ser    |
+| UCG        | Ser    |
+| CCU        | Pro    |
+| CCC        | Pro    |
+| CCA        | Pro    |
+| CCG        | Pro    |
+| ACU        | Thr    |
+| ACC        | Thr    |
+| ACA        | Thr    |
+| ACG        | Thr    |
+| GCU        | Ala    |
+| GCC        | Ala    |
+| GCA        | Ala    |
+| GCG        | Ala    |
+| UAU        | Tyr    |
+| UAC        | Tyr    |
+| UAA        | Stop   |
+| UAG        | Stop   |
+| CAU        | His    |
+| CAC        | His    |
+| CAA        | Gln    |
+| CAG        | Gln    |
+| AAU        | Asn    |
+| AAC        | Asn    |
+| AAA        | Lys    |
+| AAG        | Lys    |
+| GAU        | Asp    |
+| GAC        | Asp    |
+| GAA        | Glu    |
+| GAG        | Glu    |
+| UGU        | Cys    |
+| UGC        | Cys    |
+| UGA        | Stop   |
+| UGG        | Trp    |
+| CGU        | Arg    |
+| CGC        | Arg    |
+| CGA        | Arg    |
+| CGG        | Arg    |
+| AGU        | Ser    |
+| AGC        | Ser    |
+| AGA        | Arg    |
+| AGG        | Arg    |
+| GGU        | Gly    |
+| GGC        | Gly    |
+| GGA        | Gly    |
+| GGG        | Gly    |
+
+其中，U、C、A、G 分别代表的核苷酸是：尿嘧啶、胞嘧啶、腺嘌呤、鸟嘌呤。
+
+转换成以氨基酸为第一列且不重复，其他列为该氨基酸对应的密码子
+| 氨基酸 | 中文名 | 三联密码子 |
+| ---- | ---- | ---- |
+| Ala | 丙氨酸 | GCU, GCC, GCA, GCG |
+| Arg | 精氨酸 | CGU, CGC, CGA, CGG, AGA, AGG |
+| Asn | 天冬酰胺 | AAU, AAC |
+| Asp | 天冬氨酸 | GAU, GAC |
+| Cys | 半胱氨酸 | UGU, UGC |
+| Glu | 谷氨酸 | GAA, GAG |
+| Gln | 谷氨酰胺 | CAA, CAG |
+| Gly | 甘氨酸 | GGU, GGC, GGA, GGG |
+| His | 组氨酸 | CAU, CAC |
+| Ile | 异亮氨酸 | AUU, AUC, AUA |
+| Leu | 亮氨酸 | UUA, UUG, CUU, CUC, CUA, CUG |
+| Lys | 赖氨酸 | AAA, AAG |
+| Met | 蛋氨酸 | AUG |
+| Phe | 苯丙氨酸 | UUU, UUC |
+| Pro | 脯氨酸 | CCU, CCC, CCA, CCG |
+| Ser | 丝氨酸 | UCU, UCC, UCA, UCG, AGU, AGC |
+| Thr | 苏氨酸 | ACU, ACC, ACA, ACG |
+| Trp | 色氨酸 | UGG |
+| Tyr | 酪氨酸 | UAU, UAC |
+| Val | 缬氨酸 | GUU, GUC, GUA, GUG |
+| Stop | 终止密码子 | UAA, UAG, UGA |

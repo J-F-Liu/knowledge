@@ -15,7 +15,7 @@
 具有自旋的带电粒子具有磁偶极矩，就如同经典电动力学中转动的带电物体。
 自旋为 0 的粒子从各个方向看都一样，就像一个点。自旋为 1 的粒子在旋转 360 度後看起来一样。自旋为 2 的粒子旋转 180 度，自旋为 1/2 的粒子必须旋转 2 圈才会一样。
 自旋 1/2 粒子，只能处于两种自旋态：上旋或下旋。
-具有半奇数（1/2、3/2）自旋的粒子遵循费米 - 狄拉克统计，称为费米子，费米子又分为两类，分别是夸克（12 类）与轻子（12 类）。
+具有半奇数（1/2、3/2）自旋的粒子遵循费米 - 狄拉克统计，称为费米子，费米子又分为两类，分别是夸克与轻子。
 
 夸克：上夸克 、下夸克 、奇夸克 、粲夸克 、底夸克 、顶夸克 ，以及它们对应的 6 种反夸克。
 
@@ -110,13 +110,67 @@ SU(3),SU(2)和 U(1)分别对应着强、弱和电磁相互作用，它们作用�
 
 光子的场就是电磁场，电子也有自己的场。电磁场是四维时空中的向量，电子场的类型是旋量，有四个复数的分量。电子场的激发，包括电子和电子的反粒子——带正电的电子。
 
-自旋1/2的费米子，用旋量场表示。自旋为1的玻色子，用向量场表示，用杨米尔斯场论描述。在这两类之外，还有一个希格斯粒子，它自旋为0，它的场是四维时空中的标量。
+自旋 1/2 的费米子，用旋量场表示。自旋为 1 的玻色子，用向量场表示，用杨米尔斯场论描述。在这两类之外，还有一个希格斯粒子，它自旋为 0，它的场是四维时空中的标量。
 
 天文观测证实了宇宙在加速膨胀，这意味着真空有一个很小的正能量密度。
 真空的能量密度超过了宇宙所有物质（可见物质加暗物质）的平均总密度，足以克服它们的吸引力让宇宙膨胀。膨胀以后，物质的密度更小了，暗能量的密度还是一样的，所以膨胀会越来越快。
 
 真空的能量密度，就是爱因斯坦广义相对论中的宇宙常数，它对宇宙空间的弯曲和演化，有决定性影响。
-量子场论无法计算真空的能量密度，但合理的推测，它不应该是0。量子场论虽然算不清真空的能量是多少，但能准确计算内外的能量差，以及能差造成的吸引力，
+量子场论无法计算真空的能量密度，但合理的推测，它不应该是 0。量子场论虽然算不清真空的能量是多少，但能准确计算内外的能量差，以及能差造成的吸引力，
 
 有一个很有趣的现象，展示了真空的能量，叫卡西米尔（Casimir）效应。两块金属板靠得非常近（纳米级）时会有显著的吸引力。
 因为电场不能进入金属，两个金属板之间，电磁波的振动模式受到了限制，只有一系列驻波可以存在。这些驻波上，即使没有任何光子，两块金属板的存在，也影响了夹着中间的一部分真空的零点能。
+
+#### What is the essense of mass? Where is mass come from?
+
+Mass is a fundamental property of matter and is defined as the amount of matter in an object. In other words, mass is the measure of the amount of substance in an object, or the resistance of an object to acceleration.
+
+According to the current understanding of physics, mass is believed to come from the Higgs field, which is a theoretical field that permeates all of space. The Higgs field is responsible for giving particles their mass through interactions with the Higgs boson, which is a subatomic particle that was discovered in 2012.
+
+In summary, the essence of mass is the amount of matter in an object, and mass is believed to come from the Higgs field through interactions with the Higgs boson.
+
+#### Does Higgs field has energy? Is this energy equal to the mass it gives to basic particles?
+
+Yes, the Higgs field has energy and this energy is related to the mass it gives to particles. According to the Higgs mechanism, the Higgs field interacts with particles and gives them mass. This interaction involves the exchange of Higgs bosons, which are subatomic particles that carry energy and momentum. The energy of the Higgs field is proportional to the strength of this interaction, and therefore to the mass of the particle that is being affected.
+
+In other words, the Higgs field energy is responsible for the mass of particles, and the more strongly a particle interacts with the Higgs field, the more mass it has. This is why particles such as the top quark, which interact strongly with the Higgs field, have a much higher mass than particles such as electrons, which interact weakly with the Higgs field.
+
+#### How does particles interact with the Higgs field? Is there an equation to compute the strength of this interaction?
+
+Particles interact with the Higgs field through a process called the Higgs mechanism. The Higgs mechanism involves the exchange of Higgs bosons, which are subatomic particles that carry energy and momentum. When a particle interacts with the Higgs field, it gains energy and momentum from the Higgs boson, which in turn gives the particle mass.
+
+The strength of the interaction between a particle and the Higgs field is determined by the particle's coupling constant, which is a fundamental constant of nature. The coupling constant determines how strongly a particle interacts with the Higgs field and therefore how much mass it gains from the interaction.
+
+The strength of the interaction between a particle and the Higgs field can be calculated using the Higgs boson's coupling constant and the particle's mass. This is done using the Higgs potential, which is a mathematical function that describes the energy of the Higgs field. The strength of the interaction is proportional to the square root of the Higgs potential.
+
+The Higgs potential is a complex mathematical function, and calculating the strength of the interaction between a particle and the Higgs field can be difficult. However, experimental measurements of particle masses and Higgs boson properties have allowed physicists to determine the coupling constants and the strength of the interaction between particles and the Higgs field.
+
+#### Can you explain the details of exchange of Higgs bosons?
+
+The Higgs boson is a subatomic particle that is associated with the Higgs field, which is a field that permeates all of space. When a particle interacts with the Higgs field, it gains energy and momentum from the Higgs boson, which in turn gives the particle mass.
+
+The exchange of Higgs bosons occurs through a process called the Higgs mechanism. In this process, a particle interacts with the Higgs field, which causes the field to become excited and create a Higgs boson. The Higgs boson is then exchanged between the interacting particles, transferring energy and momentum from the Higgs field to the particles.
+
+The exchange of Higgs bosons is similar to the exchange of other subatomic particles, such as photons or gluons. However, the Higgs boson is unique in that it interacts primarily with particles that have mass, whereas photons and gluons interact primarily with particles that have electric charge or color charge, respectively.
+
+The exchange of Higgs bosons plays a crucial role in the Standard Model of particle physics, which is the most widely accepted theory of subatomic particles and their interactions. The Higgs boson was predicted by the Standard Model and was discovered in 2012 by the Large Hadron Collider (LHC) at CERN.
+
+#### It seems before interacting with Higgs field a particle has no mass, why the Higgs boson interacts with particles that have mass and the mass is given by the Higgs boson?
+
+Yes, that's correct! Before interacting with the Higgs field, some particles have no mass. The Higgs field interacts with these particles, giving them mass and creating the effect we observe as mass.
+
+In the Standard Model of particle physics, particles are divided into two categories: those that interact with the Higgs field (and therefore have mass) and those that do not (and therefore have no mass). The Higgs boson is the particle associated with the Higgs field, and it interacts with other particles to give them mass.
+
+The reason why the Higgs boson interacts primarily with particles that have mass is due to the nature of the Higgs field itself. The Higgs field is a scalar field, which means that it has a value at every point in space. Particles that have mass interact with the Higgs field because they are affected by the field's value at their location in space.
+
+On the other hand, particles that do not have mass do not interact with the Higgs field because they are not affected by the field's value at their location in space. This is why they remain massless.
+
+To summarize, the Higgs boson interacts with particles that have mass because it is associated with the Higgs field, which gives particles mass. The Higgs field is a scalar field that affects particles differently depending on their mass, which is why some particles interact with the field and others do not.
+
+#### When a femi particle is born, it absorbs a Higgs boson and gains mass, then further interaction between the particle and Higgs field will no longer increase the particle mass, but creates inertial force, am I right?
+
+When a particle interacts with the Higgs field, it acquires a mass. This interaction between the particle and the Higgs field is a one-time event, and once the particle has acquired its mass, further interactions with the Higgs field do not increase its mass.
+
+However, the Higgs field does continue to affect the particle in a different way, by creating an inertial force. This is because the Higgs field permeates all of space, and as a particle moves through space, it interacts with the Higgs field in a way that creates a resistance to its motion. This resistance is what we experience as inertia.
+
+So, in summary, when a particle absorbs a Higgs boson, it gains mass, and further interactions with the Higgs field do not increase its mass, but rather create an inertial force that resists the particle's motion.

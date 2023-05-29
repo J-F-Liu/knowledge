@@ -426,6 +426,8 @@ The line with equation $y = px + q$ is tangent to the ellipse if and only if $a^
 
 The shadow that a circle throws onto an oblique plane is an ellipse if the light rays are perpendicular to the plane of the circle.
 
+椭圆边缘的任意两条互相垂直的切线，其交点在以椭圆中心为圆心、$\sqrt{a^2+b^2}$为半径的圆上，此圆称为椭圆的准圆。椭圆的外切矩形的 4 个顶点位于准圆上。
+
 ### 双曲线 hyperbola
 
 The difference of the distances from two fixed points to any point on the curve is constant. The curve is called a hyperbola, and the two fixed points are called its foci.

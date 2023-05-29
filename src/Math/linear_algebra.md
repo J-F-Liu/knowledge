@@ -1219,10 +1219,16 @@ A=\begin{bmatrix}
 det(A)= ad-bc\\
 tr(A)=a+d \\
 λ^2-tr(A)λ+det(A)=0 \\
+when\ c \ne 0:\\
 λ_1 = \cfrac{1}{2} ( a + d + \sqrt{(a-d)^2 + 4 b c}) \\
 λ_2 = \cfrac{1}{2} ( a + d - \sqrt{(a-d)^2 + 4 b c}) \\
 v_1 = (-\cfrac{-a + d - \sqrt{(a-d)^2 + 4 b c}}{2 c}, 1) = (a-λ_2, c) \\
 v_2 = (-\cfrac{-a + d + \sqrt{(a-d)^2 + 4 b c}}{2 c}, 1) = (a-λ_1, c) \\
+when\ c = 0:\\
+λ_1 = a \\
+λ_2 = d \\
+v_1 = (1, 0) \\
+v_2 = (\cfrac{b}{d-a}, 1)\\
 $
 
 ## 矢量叉乘

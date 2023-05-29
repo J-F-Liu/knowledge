@@ -97,6 +97,19 @@ In denotational semantics every programming construct is given its mathematical 
 With that, if you want to prove a property of a program, you just prove a mathematical theorem.
 Thus it’s possible to perform formal proofs of correctness of software.
 
+### The principle
+
+The concept of co-location can be boiled down to this fundamental principle:
+
+> Place code as close to where it's relevant as possible
+
+You might also say: "Things that change together should be located as close as reasonable."
+
+### API
+
+Programming involves using and creating APIs. When we're creating a new API, we typically think in terms of defining functions to allow users to work with our library.
+A different perspective is to think of these APIs as little languages, or domain-specific languages.
+
 ### Learning
 
 Personally, I cannot learn a new language from simply watching youtube videos, but rather through seeking out solutions for myself, making mistakes, and feeling humbled by the process.

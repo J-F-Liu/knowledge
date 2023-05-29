@@ -1,0 +1,3 @@
+## Interview Process
+
+We don't believe in handing someone a problem and watching them flounder with zero autocomplete and zero docs. Engineers who apply to join our team are allowed to use their own environments, access documentation, and treat the interviewer as a resource. If a candidate can solve a problem with some gentle assistance from the interviewer or by asking a few questions, then they're much closer to the real development experience. Senior engineers on our teams frequently act as resources for other developers, and if a candidate can get to a solution by treating the interviewer like a colleague then they're halfway home.
