@@ -51,3 +51,6 @@ SPI - Serial Peripheral Interface
 UART - Universal Asynchronous Receiver / Transmitter
 
 - provide a console / terminal login for headless setup
+
+工业机器人
+库卡 KUKA，AABB 精度和重复性好

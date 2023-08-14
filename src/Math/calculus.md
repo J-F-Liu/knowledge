@@ -36,3 +36,18 @@ Sinusoidal Function: $$f(x) = A\sin(ωx-φ)+B$$
 
 Definitaion of natural constant (Euler number):
 $$ e = \underset{n→∞}\lim{(1+\frac{1}{n})^n}$$
+
+#### Convex Set.
+
+A set $C ∈ R^n$ is convex if the line segment jointing any two points in $C$ is still contained in $C$.
+That is, if $x, y ∈ C$ then $λx+(1-λ)y∈ C$ for all $λ$ with $0≤λ≤1$.
+
+#### Convex Function.
+
+A function $f: C→R$ is convex if $C$ is a convex set, and for all $x, y ∈ C, 0≤λ≤1$:
+
+$$
+f(λx + (1-λ)y) ≤ λf(x) + (1-λ)f(y)
+$$
+
+The geometric interpretation is that the line segment between the points $(x, f(x))$ and $(y, f(y))$ should lie above the graph of $f$. $f$ is convex if and only if its Hessian matrix is positive semi-definite.

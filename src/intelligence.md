@@ -207,3 +207,17 @@ The distinguishing mark of a causal relationship is a 100% correlation between c
 Correlation is a symmetrical mathematical relationship: If A is correlated with B, B is correlated with A. The cause produces, or at least brings about, the effect. Therefore, we may remove the assumed cause, and see if the effect disappears.
 
 Big Data is about what, not why. We don’t always need to know the cause of a phenomenon; rather, we can let data speak for itself.
+
+### Generative Pretrained Transformer（GPT）预训练转换器
+
+A transformer model is a neural network that learns context and thus meaning by tracking relationships in sequential data like the words in this sentence.
+
+复杂语义
+
+_She poured water from the pitcher to the cup until it was full._
+
+We know “it” refers to the cup, while in the sentence:
+
+_She poured water from the pitcher to the cup until it was empty._
+
+We know “it” refers to the pitcher.

@@ -1,7 +1,21 @@
 # 编程
 
+> 代码是工人，开发者就是工头，指挥源代码工作。而这，正是数字经济的核心。 ————《未来地图》
+
+> 要么是用户控制程序，要么是程序控制用户。
+> -- 理查德・斯托曼
+
+> 像奴隶一样工作，像国王一样命令，像神一样创造。
+> -- 康斯坦丁·布朗库西，1876 年－1957 年，现代主义雕塑先驱
+
 > 最好的工程师不是写代码最多的工程师，而是做出未来可以少写代码的决策的工程师。
 > -- Dan Goldin
+
+> 最好的程序员不是善于编写复杂代码，而是有能力为复杂的问题提出简单的解决方案。只有糟糕的程序员，才会对简单的问题提出复杂的解决方案。
+
+> "减少人类的苦难"，对我来说就是软件价值的核心。我过去和现在所做的工作都以此为目标。
+
+> 程序员对渐进式翻新不感兴趣：修修补补、改进、在花坛种上绿植...... 他们不想做这些事，他们总是想扔掉旧代码并重新开始，原因并非是认为旧代码一团糟，而是编程的一个基本法则：阅读代码比编写代码更难。
 
 先思考再编程，想好了再动手，避免写到后面发现需要推倒重来。
 
@@ -11,9 +25,7 @@
 
 休息的时候，我阅读，大量阅读任何我有兴趣的内容，这样我才可能产生新想法。
 
-Programming is not merely about language syntax and semantics, but more fundamentally about the iterative process of refining mental representations of computational problems and solutions and expressing those representations as code.
-
-> “Everyone in this country should learn to program a computer, because it teaches you to think.” — Steve Jobs
+每当你有一种 "应该有人在这里做某事" 的感觉，那个应该做这件事的人很可能就是你。
 
 > “If you can’t explain something in simple terms, you don’t understand it.”  如果你不能用简单的语言来解释某件事，你就无法理解它 — Richard Feynman
 
@@ -25,110 +37,70 @@ Programming is not merely about language syntax and semantics, but more fundamen
 
 “像程序员一样思考”, 是一种更有效的解决问题的方法。找到正确的框架，练习它。
 
-"Mechanical Sympathy" comes from the great racing driver Jackie Stewart, who was a 3 times world Formula 1 champion. He believed the best drivers had enough understanding of how a machine worked so they could work in harmony with it.
+编程是思考，而不是打字。多年编程后，我时常觉得自己打字太多，思考太少。
 
-Why does the software we use today not feel any faster than the DOS based applications we used 20 years ago??? It does not have to be this way. As a software developer I want to try and produce software which does justice to the wonderful achievements of our hardware friends.
+一种更强大的编程哲学，你应该忽略代码，那只是计算机要遵循的一大堆指令。相反地，你要专注于数据，弄清楚它如何流动。
 
-## PL paradigms throughout history
+计算机科学中的一切都循序渐进的. 知识点是循序渐进的，略过前面的知识点无异于搭建空中楼阁.
 
-• 1975: rise of systems languages
--- Efficiency first: we don’t have enough resources, carefully build a system
+如果当前你正在学习的知识点对你而言很无厘头, 请停留在当前位置, 暂不要进行下一个知识点。
+如果您使用的辅导资料(或书籍)没有充分诠释该知识点, 那么务必去寻找其他适合您的资源。
+请避免过多负面的自省，不要被各种问题打击到怀疑人生, 坚持下去。
 
-• 1995: rise of scripting languages
--- Productivity first: systems languages are too hard (and we have the resources), so quickly glue together a system
+[程序员的誓言](https://blog.cleancoder.com/uncle-bob/2015/11/18/TheProgrammersOath.html)
 
-• 2015: rise of functional languages
--- Correctness first: scripting languages are too buggy, we need to know if our system works
+为了捍卫和维护计算机程序员的职业荣誉，我承诺，尽我所能和判断力：
 
-## Simple, correct, fast: in that order
+1、我不会产生有害的代码。
 
-The single most important quality in a piece of software is simplicity. The reason is straightforward: if your solution is not simple, it will not be correct or fast.
+2、我制作的代码永远是我最好的作品。我不会故意允许在行为或结构上有缺陷的代码。
 
-Given enough time, you’ll find that all software which solves sufficiently complex problems is going to (1) have bugs and (2) have performance problems.
+3、每次发布时，我都会生成一个快速、可靠、可重复的证据，证明代码的每个元素都应该正常工作。
 
-Software is a living thing! The complex problem comes later, and it’ll be better served by the composition of simple solutions than with the application of a complex solution.
+4、我将经常发布小版本，这样我就不会妨碍其他人的进展。
 
-理解、计划、拆分、探索、实践。
+5、我会抓住每一个机会，无畏地，不懈地改进我的代码。我永远不会损害它们。
 
-### 分而治之 (Divide and conquer)
+6、我将尽我所能保持自己和他人的生产力。我不会做任何降低生产力的事情。
 
-### Naming things
+7、我将继续确保支持其他人的工作，并且他们也可以支持我的工作。
 
-> “There are only two hard things in Computer Science: cache invalidation and naming things.”
->
-> – Popularly attributed to Phil Karlton
+8、我将对幅度和精度做出诚实的估计。我不会作出做不到的诺言。
 
-每一个变量、函数、文件名 – 就如同给你的孩子取名字一样认真去给他们取名字。也许你今天通过把它命名为 x 节省了 0.3 秒的时间，但是在接下来的一个月你将会花 2 天的时间来搞清楚 x 到底指代什么，然后再花 4 天做重构。好好想想，不要担心命名太长。
+9、我将永远不会停止学习和改进我的手艺。
 
-- Boolean variables, or functions that return a boolean value, should start with “is,” “has” or “should.”
+优秀的程序员会在项目开始前，主动帮助产品把需求明确细化，这样可以避免开发阶段的无效的加班和工作。
 
-```js
-// Dirty
-const done = current >= goal;
-```
+提交代码后，谷歌内部有两次代码审查。第一次审查是功能审查，确保代码按照预期工作；第二次审查是可读性审查，确保代码是可读的，并且易于理解和维护。
 
-```js
-// Clean
-const isComplete = current >= goal;
-```
-
-- Functions should be named for what they do, not how they do it. In other words, don’t expose details of the implementation in the name. Why? Because how you do it may change some day, and you shouldn’t need to refactor your consuming code because of it. For example, you may load your config from a REST API today, but you may decide to bake it into the JavaScript tomorrow.
-
-```js
-// Dirty
-const loadConfigFromServer = () => {
-  ...
-};
-```
-
-```js
-// Clean
-const loadConfig = () => {
-  ...
-};
-```
-
-### Closure
-
-当一个函数能够记住并访问到其所在的词法作用域及作用域链，并能够在其定义的作用域外进行访问，此时该函数和其上层执行上下文共同构成闭包。
-
-### DRY
-
-DRY is an acronym that stands for “Don’t Repeat Yourself.” If you are doing the same thing in multiple places, consolidate the duplicate code. If you see patterns in your code, that is an indication it is prime for DRYing.
-
-Clean code is a consistent style of programming that makes your code easier to write, read, and maintain.
-
-You aren’t done just because your code “works”. Clean it up by removing dead code (zombie code), refactoring, and removing any commented-out code! Strive for maintainability. Ask yourself, “Will someone else be able to understand this code six months from now?”
-
-A good developer, when faced with a situation where they have to do something more than once, will generally find an automated (or better) solution to complete the task at hand. Because you’re lazy, subscribing to clean-code techniques will decrease the frequency of changes from pull-request code reviews and the need to come back to the same piece of code over and over.
+SPOT（Single Point Of Truth，单点事实）。代码需要修改时，你只需要在一个地方修改，而不必改动多个地方。
 
 复用的本质是通过消除重复的方式。得到一系列可以复用的组件，从而在未来的开发工作中，更快速的响应需求变化。但如果为了复用，代码的可读性下降了，更难维护了，也就违背了复用的本质。
 
 函数是最重要的实现代码复用的手段。
 
-## SOLID 原则
+## 标准库
 
-S – Single Responsibility Principle 单一职责原则
+数据结构
+文本处理
+时间日期
+进程线程（环境变量、命令参数）
+终端界面
+图形界面
+文件目录
+网络连接
 
-O – Open/Closed Principle 开放 / 封闭原则
+### 分而治之 (Divide and conquer)
 
-L – Liskov Substitution Principle 里氏替换原则
+理解、计划、拆分、探索、实践。
 
-I – Interface Segregation Principle 接口隔离原则
+### 命名
 
-D – Dependency Inversion Principle 依赖倒转原则
+每一个变量、函数、文件名 – 就如同给你的孩子取名字一样认真去给他们取名字。也许你今天通过把它命名为 x 节省了 0.3 秒的时间，但是在接下来的一个月你将会花 2 天的时间来搞清楚 x 到底指代什么，然后再花 4 天做重构。好好想想，不要担心命名太长。
 
-### Single Responsibility Principle
+### Closure
 
-Use small functions, each with a single responsibility. Ensure that each function does one job and does it well. This could mean breaking up complex components into many smaller ones. This also will lead to better testability.
-
-If you break your code into small modules, each with a single responsibility, it’s likely that you’ll never have to touch most modules again. There is time saved in “write it and forget it.”
-
-Be on the lookout for leaky abstractions. In other words, don’t impose your internal requirements on consumers of your code.
-
-### Clean Code
-
-Clean code doesn’t (necessarily) take longer to write. Initially you may need to slow down before you can speed up, but eventually your pace will increase as you are writing fewer lines of code.
+当一个函数能够记住并访问到其所在的词法作用域及作用域链，并能够在其定义的作用域外进行访问，此时该函数和其上层执行上下文共同构成闭包。
 
 ### Design
 
@@ -212,33 +184,6 @@ Ask yourself if it sparks joy.
 
 Konmari 法则中最重要的一点就是：只留下让你怦然心动的物品。
 
-## memory model
-
-- Global Allocation:
-
-const is a fixed value; the compiler is allowed to copy it wherever useful.
-static is a fixed reference; the compiler will guarantee it is unique.
-
-const values are loaded into memory as part of your program binary. Getting the address of a const value is possible, but not guaranteed to be unique (because the compiler can choose to copy values).
-
-static variables are globally unique locations in memory.
-
-- Heap Allocation:
-
-The heap is used in two situations; when the compiler is unable to predict either the total size of memory needed, or how long the memory is needed for, it allocates space in the heap.
-
-When a smart pointer is created, the data it is given is placed in heap memory and the location of that data is recorded in the smart pointer. Once the smart pointer has determined it’s safe to deallocate that memory (when a Box has gone out of scope or a reference count goes to zero), the heap space is reclaimed.
-
-Collection types use heap memory because their contents have dynamic size; they will request more memory when needed, and can release memory when it’s no longer necessary. Collections are smart pointers for many objects at a time.
-
-- Stack Allocation:
-
-Stack allocation will be used for everything that doesn’t involve “smart pointers” and collections.
-
-stack memory can be managed far faster in both the short- and long-term than heap memory.
-
-When writing performance-sensitive code, there’s no alternative to measuring your code. If you didn’t write a benchmark, you don’t care about it’s performance You should never rely on your instincts when a microsecond is an eternity.
-
 ## 逻辑编程（logic programming）
 
 在像 Prolog 这样的逻辑式语言里面，“未知数” 是可以被作为一个正常的值来进行计算的。它们可以被传递到其它函数里，可以被放进数据结构，可以进行复杂的逻辑组合操作。
@@ -266,3 +211,178 @@ When writing performance-sensitive code, there’s no alternative to measuring y
 这就是为什么我不使用框架的原因。一旦用了一个框架，就无法再用另一个框架了，移植的成本太高了。使用库就没有这个问题。
 
 团队每次使用框架时，都会冒风险。风险在于，框架可能在你的软件之前"消失"，从而给开发人员带来沉重的负担。
+
+# A/B 测试
+
+当没有足够多的信息，在我们不确定什么决策是正确的时候，通常会依赖于直觉做决定。但是直觉并不总是对的，最好的决策需要把直觉、经验和事实综合起来考虑，通过 A/B 测试的流程来知道我们的直觉是否是对的。
+
+A/B 测试是在保持其他变量相同的情况下，比较一两个关键变量引发的结果。A/B 测试过去主要用在市场营销和广告中，现在也是一些精益创业公司快速寻找价值增长的方法。
+
+## A/B 测试的 4 个步骤
+
+1. 获得稳定的数据流：自动采集数据并且提供易用的数据分析工具。
+2. 找到对比组：各组拥有近乎相同的特征。
+3. 设定测试目标：改变什么变量，然后测量什么指标。
+4. 同时进行两种不同的选择，实时地观察相应的结果。
+
+## 软件开发
+
+让自己成为自己开发的产品的第一批用户的实践, 我们称为 dogfooding.
+
+### 需求确认
+
+需求确认的方法：分析、仿真、演示，目的是对需求规格说明中描述的需求的正确性、一致性、完整性、可行性、必要性、可测试性进行确认。
+
+- 分析
+
+通过对需求规格说明的分析来确认软件需求的方式，通常就是审查或评审。虽然全凭想像，但是有客户和开发人员一起分析，应该可以实现确认的目的。
+
+- 仿真
+
+通过使用一种低保真的模型模拟软件的方式来确认需求。由于有了可感知的东西，需求的确认更加可信。
+
+- 演示
+
+当具备了初步的软件原型的时候，就可以通过软件原型的演示对需求进行确认。这这种需求确认的方式可信度最高，因为他和将来软件的使用场景非常接近。
+
+需求确认的内容一般包括以下特征/内容：
+
+1. 正确性
+
+需求描述必须是正确的。否则，实现的软件就是错误的。而需求的正确性只能由客户来确定。但是客户的思维方式和开发人员完全不同，所以，要让客户做好需求正确性的确认，应当尽可能地使用客户的语言描述或解释需求，最好让客户感知到软件的使用场景。
+
+2. 一致性
+
+需求描述的一致性有几个层次。首先是需求规格说明上下文的一致性。比如，对同一术语，上下文要保持一致。其次是与其他软件需求或高层需求一致性。比如，与用户需求的一致性；与非功能需求的一致性。
+
+3. 完整性
+
+完整性也有两个方面的含义。一是需求描述元素的完整性，包括状态，状态变化，转入，产品和约束等。二是需求与客户的期望相比是否有遗漏。这个层次的完整性在确认客户需求的时候就应由客户来做确认，在对需求规格说明进行确认时，也可以再次确认需求的完整性。
+
+4. 可行性
+
+需求必须是可实现的。要综合考虑技术水平、资源保障等多方面的因素。
+
+5. 必要性
+
+客户提出的需求不一定都是必要的。软件开发人员应当从软件帮助客户解决的问题的终极目标出发，考虑技术和环境的限制，分析软件的需求，确定哪些需求是必要的，哪些需求是冗余的。
+
+6. 可测试性
+
+软件的需求一定是可测试的，否则就无法进行验证和确认。需求的可测试性要求需求应当尽量采用量化的描述方式。
+
+## 公司为什么需要建立一套统一的开发框架
+
+1. 避免重复性技术研究——节约人力成本
+   让项目组把精力更多的投入到业务中。在项目组之下构建一个基础的开发架构平台，把技术的共性问题提炼出来，交给这样一个团队负责处理。避免每个项目都独自去解决遇到的各种各样的技术难题，有效的把精力释放出来。
+
+2. 标准化技术规范——提升产品项目质量
+   采用统一的开发框架（平台）后，在技术栈，技术组件，技术实现方案，甚至在代码规范上就能形成标准化的技术输出模式，标准化带来的最大效果不仅仅开发效率的快速提升，还有产品质量的大幅提升。
+
+3. 进行技术沉淀——提升公司整体技术能力，避免陷入一个人的能力决定一个项目
+   技术的进步来源于不断的技术积累和沉淀。每个工程师都是站在别人肩膀上完成工作的。以项目为导向的技术团队，一般都会以实现业务需求为最重要的目标，技术只不过是完成业务的一种工具而已。基于此，业务开发团队就不可能把技术积累作为一项重要的工作。  
+   当存在核心同事离职时，平台的研发同事可以对新进入项目的同事进行相关培训，不会导致青黄不接的事情发生。而且，专注于平台的同事为了更好的满足项目组的技术需求，对平台进行不断的改进，从而达到技术积累和沉淀的目标。
+
+4. 可衡量的研发投入——对研发团队的有效管理和考核
+   当基于同一开发框架的标准化技术规范建立起来后，对业务功能的代码实现就可以进行相对有效的评估和考量，可以避免因为技术实现差异而出现的种种问题。这对 KPI 的制定和考核是一个巨大的帮助。
+
+### 需求分析
+
+拿到产品需求就开始吭哧吭哧的做方案设计，这是新人通常容易犯的错。有时候产品经理所做的需求方案设计并没有考虑充分。 我接触到的有些产品是直接拿着竞品的特性对着抄的，而且大多数时候是只考虑了正常情况，异常情况并没有考虑进去。又或者本身就不太适合做到现有系统里。导致做完实现后产品可能又说这个需求不做了。网上有很多段子说程序员与产品的有些矛盾就是这么来的。但本身这个事情开发这边也有错。拿到需求后，我们可以遵循如下方法先走一轮：
+
+what【这个需求是什么，在什么场景下使用，谁来用】
+why 【为什么要做这个需求？能给用户带来什么价值?】
+how 【怎么做，是否可以不做，是否可以换其他方式来达到同样的目的？异常情况有哪些，针对异常情况如何处理？有哪些潜在的体验问题或者性能问题？】
+when 【这个需求完成时间结点是什么时候？跟哪个版本？什么时候转测？是否是重点特性？】
+跟产品经理谈 what 和 why 以及 how。可以帮助他理清楚需求的细节，把异常情况都考虑进去。 在这个阶段可以把不靠谱的需求 pk 掉或者修改掉。但是这种方式不太适用于老板的需求。如果对方以这是 boss 的需求为由，除非很不靠谱，要不就只能埋头做了。 谈 when 可以帮助你理清楚需求的优先级和重要程度，进而重新调整自己工作任务的优先级。
+
+### 方案设计
+
+- 借助图示剖析系统。人脑能够记住的东西有限，拿到系统之后。把脉络梳理出来。可以借助 processon 在线作图工具，把系统的状态流转图，以及 流程图 画出来。在这些流程过程中需要传递什么数据，需要缓存和持久化什么数据自然就出来了。然后再设计内存数据模型以及持久化数据模型。
+
+- 方案设计先走常规流程，再覆盖异常情况。
+  跟人讲设计方案的时候，只讲正常处理流程。这样子方便讲清楚梗概。 然后再讲异常情况，边界情况处理。 作为方案的后续补充。
+- 做方案设计永远要准备 B 方案。陈述利弊，调研清楚类似产品的方案实现有缺点。要有推导过程。 没有推导过程的方案难以服众。
+
+- 编程要提炼抽象和重构能力。
+  抽象是使得接口简洁，隐藏实现细节，构造可维护可复用代码的一个好的方式。适时的抽象可以减少很多重复无用的工作。
+
+### 统一开发框架的定位和目标
+
+统一开发框架定位于技术层面，其主要目的是为统一公司内相关产品研发和项目实施使用的技术架构和开发工具，有效提高统一技术支持力度，形成持续的技术积累手段，提升技术人员的利用率并降低对人员的依赖性，最终提升软件的规模化、流水线式的生产能力。
+
+### 代码审查
+
+[8 Tips for Great Code Reviews](https://kellysutton.com/2018/10/08/8-tips-for-great-code-reviews.html)
+
+### 敏捷三角：价值，质量和约束。
+
+![](https://insights.thoughtworks.cn/wp-content/uploads/2019/03/AgileTriangle-SWDebt1.png)
+
+传统的项目管理铁三角(范围、时间、和成本)被局部化成一个维度，称为约束。而引入了新的维度，价值和质量。其中价值代表的是利润等正向的因素，而质量代表的是变化的成本。质量越好，意味着变化的成本越低。据此，我们打破铁三角的第一个手段是，关注真正的用户价值，降低变化成本，并为此而调整计划。
+
+持续学习，提升每个个体的效率。我们通常说程序员之间的效率差异会达到数量级的差别。通过自动化减少手工工作，通过预防错误避免返工，改进 DevOps 流程等。
+
+## 测试
+
+大型项目很难通过肉眼检查验证正确性。代码太多，你的大脑很难一次记住。
+
+当测试失败时，仅从测试失败的信息中找到原因也是一个挑战。
+
+从心理学角度来看，在面对一个长年累月的项目时，设置简短的中间态里程碑是很重要的。不断的完成这些里程碑让我干劲十足。
+
+一直让代码保持可编译、可运行和可通过测试的状态也很好。当最终要面对那些日积月累的缺陷时，你将很难下手解决。
+
+## 技术选型
+
+写代码容易，写好很难，每一个部分给出合理设计与实现，并考虑扩展性、易维护、高性能可以说是相当高要求的一件事。
+
+软件设计与实现是需要我们持续投入热情、投入精力的一件事。
+
+对未来以及技术演进方向的把握，可以说是一件非常困难的事情。
+
+每年都会有层出不穷的新技术产生，也会有一些技术走下坡路甚至走向消亡。对于技术发展路径前景需要对当下有深刻认知，以及对未来演进理解才能有一定程度上正确认知，有正确的认知是投资那种技术前提，花费多少时间去学习，能给研发效率带来提升，带来效果提升，以及团队技术水平的提升。新技术能带来一个公司甚至行业巨大发展，判断准确是在技术浪潮之中取得成绩的前提。
+
+新出现的技术如果判断失误，一个小的团队来说就是花费错误的时间与精力去研究没有什么实际价值的技术，花费大量时间成本，对于一个公司判断错误可能就是生死。
+
+减少研发重复性工作投入提升研发效率。以及提升我们实现业务逻辑抽象能力，以及技术研发水平，由研发业务慢慢转移到研发框架。
+
+## 项目规模
+
+一个亿级用户的项目比一个千万级用户的项目的复杂度，不是只高一倍的，项目的复杂度是成指数增长的。你在一个千万级用户项目中遇到的一个小问题，在亿级用户的项目中，却有可能是最难解决的问题。
+
+除了功能需求，还需要考虑安全需求，性能需求，可靠性，稳定性等。这些才是系统设计的难点和关键点。架构师要从产品需求，业务需求里面提出安全，性能，可靠性，稳定性等系统层面的需求。
+
+一个故障发生后，肯定是先处理，然后安抚用户，待一切处理完毕，我们通常会由系统的负责人，出一份故障报告。这份故障报告会详细的记录故障的处理过程，比如 xxx 时 xx 分，xxx 做了什么操作，然后还会详细描述故障产生的原因和后续的改进措施。
+
+这份故障报告写完后，会以邮件的形式发给整个团队，大家会一起来 review 故障的处理过程和故障产生的原因。
+
+我们会定期举行故障复盘会议，大家会在一起讨论问题的根本原因和改进的措施，更进一步的，会由点及面的延展开来，全局看待问题。
+
+有意识地去分享和打造自身的影响力是特别重要的。对外分享，可以是写篇文章，可以是写个 ppt，给组里，给整个项目团队，或者给一些外部会议做分享，都可以慢慢地积累起这种影响力。
+
+### 基本功
+
+什么是基本功？不是那些高大上、新潮的技术、框架，而是程序员每天做的基础工作。比如，快捷键是否熟悉，测试习惯好不好，代码干不干净，打字速度有多快等等。程序员的基本功才是真正影响开发效率，甚至影响整个项目成败的核心。
+
+能做和能做好是两回事。在我看来能做就是程序员懂得这个招式是干什么的，知道做什么，需要用什么招式。而能做好则指的是能够熟练使用招式，运用自如的同时可以举一反三。而能做和能做好之间差的就是基本功。
+
+程序员 80% 的工作，尤其软件开发方面，都是在用基本功，而不是内功。
+
+因为软件开发这个工作，确实大部分的时间，都是在搬运代码和改 bug ，而这些工作恰巧都是需要基本功的。
+
+比如快捷键用得好，就是能够节省时间，提高效率；
+
+比如养成单元测试的习惯，就会减少很多 bug 的出现，既节省了测试的时间，又能节省你改 bug 的时间，单元测试的时间，可能都不及你改 bug 时间的十分之一；
+
+比如养成良好的编码习惯，可以大大提高你代码的阅读效率，在产品更新迭代的过程中，你可以非常快速的完成代码的修改；
+
+比如你打字速度很高，绝对提高了你代码编写的速度；
+
+虽然基本功都是非常常识性的，非常简单的东西，但是就是这些往往看似简单的东西，大家都不重视。这就是典型的还没学会走，就想跑的思想。其实在这个浮躁的社会中，这样的现象太多了，就像练习武术一样，很多武侠人士之所以走火入魔就是不重视练习基本功，感觉这个太简单了，我不想练习，我想直接练大招，学习降龙十八掌。
+
+这样的现象确实很普遍，我所认识的大部分程序员，真的自己写完代码，别说单元测试了，其实自己连简单测试都懒得做。我所经历的公司大部分公司都是不写单元测试的；编码习惯更是各种各样。
+
+所有的事情都是一样的道理：越是简单的东西，大家往往越不重视，而往往越是这些基础的东西才是真正决定能否成功的关键。
+
+基本功就得这样练才行，习惯养成之后，基本功就扎实了，扎实之后，你想不用都难，大脑和肌肉自然而然的就会使出这些基本功。

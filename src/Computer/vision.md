@@ -247,6 +247,8 @@ The thick lens produces the same perspective projection as the ideal thin lens, 
 
 The centre-of-distortion may be displaced from the centre of the image or the principal point of the camera.
 
+![](images/distortion%20and%20correction.png)
+
 ## Calibration Target
 
 In principle, any appropriately characterized object could be used as a calibration object.

@@ -118,7 +118,8 @@ det(kA) = k^ndet(A) \\
 det(AB) = det(A) det(B) \\
 det([A_1+B_1, A_2])=det([A_1, A_2])+det([B_1, A_2]) \\
 det([A_1+B_1, A_2+B_2])=det([A_1, A_2])+det([A_1, B_2])+det([B_1, A_2])+det([B_1, B_2]) \\
-det([a\ b\ c]) = a \cdot (b \times c) = (a \times b ) \cdot c
+det([a\ b\ c]) = a \cdot (b \times c) = (a \times b ) \cdot c \\
+det([a\ b\ c]) = 0 \iff a,b,c共面
 $$
 
 ### 向量 Vector
@@ -690,13 +691,109 @@ $$
 vol(T(S))=|det(A)|·vol(S).
 $$
 
+#### 分块矩阵行列式公式
+
+1.若Ａ和Ｄ是方阵：
+
+$$
+\begin{vmatrix}
+A &B \\
+0 & D
+\end{vmatrix}  = \left| A \right|  \left| D \right|
+$$
+
+２.若Ａ可逆：
+
+$$
+\begin{vmatrix}
+A & B \\
+C &  D
+\end{vmatrix}  =   \left| A \right| \left| D -CA^{-1}B \right |
+$$
+
+若Ｄ可逆：
+
+$$
+\begin{vmatrix}
+A & B \\
+C &  D
+\end{vmatrix}  =   \left| D \right| \left| A -BD^{-1}C \right|
+$$
+
+note: $$
+\begin{vmatrix}
+A & B \\
+C & D
+\end{vmatrix} = \begin{vmatrix}
+I & 0 \\
+CA^{-1} & I
+\end{vmatrix}
+\begin{vmatrix}
+A & B \\
+0 & D-CA^{-1}B
+\end{vmatrix}$$
+
+3.若Ａ,Ｂ,Ｃ,Ｄ是ｎ x ｎ矩阵。若 ABCD 其中之一是零矩阵，则
+
+$$
+\begin{vmatrix}
+A & B \\
+C & D
+\end{vmatrix} = \left| AD -BC \right|
+$$
+
+4 若Ａ,Ｂ,Ｃ,Ｄ是ｎ x ｎ矩阵，若 AC=CA,则
+
+$$
+\begin{vmatrix}
+A & B \\
+C & D
+\end{vmatrix} = \left| AD -CB \right|
+$$
+
+若 CD=DC，则
+
+$$
+\begin{vmatrix}
+A & B \\
+C & D
+\end{vmatrix} = \left| AD -BC\right|
+$$
+
+若 BD=DB,则
+
+$$
+\begin{vmatrix}
+A & B \\
+C & D
+\end{vmatrix} = \left| DA -BC\right|
+$$
+
+若 AB=BA，则
+
+$$
+\begin{vmatrix}
+A & B \\
+C & D
+\end{vmatrix} = \left| DA -BC\right|
+$$
+
+5.若Ａ,Ｂ是ｎ x ｎ矩阵,则：
+
+$$
+\begin{vmatrix}
+A & B \\
+B & A
+\end{vmatrix} = \left| A+B\right|\left| A-B\right|
+$$
+
 ## 伴随矩阵 Cofactor Matrix
 
 余子式$M_{ij}$是矩阵 A 去掉第 i 行第 j 列后余下的矩阵的行列式。
 
-伴随矩阵的第 i 行第 j 列为$C_{ij} = (-1)^{i+j} M_{ij}$
-
 $\det(A)=\displaystyle\sum_{i=1}^{n}{a_{ij}M_{ij}}=\displaystyle\sum_{j=1}^{n}{a_{ij}M_{ij}}$
+
+伴随矩阵的第 i 行第 j 列为$C_{ij} = (-1)^{i+j} M_{ij}$
 
 $A^{-1}=\cfrac{cof(A)^T}{\det(A)}，AC^T=\det(A)I$
 
@@ -924,8 +1021,8 @@ A _rotation-scaling matrix_ is a 2×2 matrix of the form
 
 $$
 A=\begin{bmatrix}
-   a & -b  \\
-   b & a
+a & -b \\
+b & a
 \end{bmatrix},
 $$
 
@@ -937,12 +1034,12 @@ Let A be a 2×2 real matrix with a complex (non-real) eigenvalue λ, and let v b
 
 $$
 C=\begin{bmatrix}
-   | & |  \\
-   Re(v) & Im(v) \\
-   | & |
+| & | \\
+Re(v) & Im(v) \\
+| & |
 \end{bmatrix},\ and\ B=\begin{bmatrix}
-   Re(λ) & Im(λ)  \\
-   −Im(λ) & Re(λ)
+Re(λ) & Im(λ) \\
+−Im(λ) & Re(λ)
 \end{bmatrix}.
 $$
 
@@ -954,13 +1051,13 @@ Let $v_1$ be a (complex) eigenvector with eigenvalue $λ_1$, and let $v_2$ be a 
 
 $$
 C=\begin{bmatrix}
-   | & | & | \\
-   Re(v) & Im(v) & v_2 \\
-   | & | & |
+| & | & | \\
+Re(v) & Im(v) & v_2 \\
+| & | & |
 \end{bmatrix},\ and\ B=\begin{bmatrix}
-   Re(λ) & Im(λ) & 0 \\
-   −Im(λ) & Re(λ) & 0 \\
-   0 & 0 & λ_2
+Re(λ) & Im(λ) & 0 \\
+−Im(λ) & Re(λ) & 0 \\
+0 & 0 & λ_2
 \end{bmatrix}.
 $$
 
@@ -1185,29 +1282,38 @@ $$
 
 $$
 \begin{cases}
-   ax+by=e \\
-   cx+dy=f
+ax+by=e \\
+cx+dy=f
 \end{cases}
-$$
-
-$$
+\iff
 \begin{bmatrix}
-   a & b \\
-   c & d \\
+a & b \\
+c & d \\
 \end{bmatrix}
 \begin{bmatrix}
-   x \\ y
+x \\ y
 \end{bmatrix}=\begin{bmatrix}
-   e \\ f
+e \\ f
 \end{bmatrix}
+\iff
+x\begin{bmatrix}
+a \\ c
+\end{bmatrix}+
+y\begin{bmatrix}
+b \\ d
+\end{bmatrix}=\begin{bmatrix}
+e \\ f
+\end{bmatrix}
+\iff
+x𝘂+y𝘃=𝘄
 $$
 
 当$ad-bc≠0$时,
 
 $$
 \begin{cases}
-x = \dfrac{de-bf}{ad-bc} \\\\
-y = \dfrac{af-ce}{ad-bc}
+x = \dfrac{𝘄×𝘃}{𝘂×𝘃} = \dfrac{de-bf}{ad-bc} \\\\
+y = \dfrac{𝘂×𝘄}{𝘂×𝘃} = \dfrac{af-ce}{ad-bc}
 \end{cases}
 $$
 
@@ -1246,8 +1352,8 @@ Unitary matrix: Uᴴ=U⁻¹, UᴴU=I
 
 $$
 R=\begin{bmatrix}
-   cosθ & -sinθ \\
-   sinθ & cosθ \\
+cosθ & -sinθ \\
+sinθ & cosθ \\
 \end{bmatrix}
 $$
 

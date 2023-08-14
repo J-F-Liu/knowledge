@@ -6,22 +6,23 @@ Students will be able to replace pen and paper by keyboard and screen while keep
 
 ### Install
 
-> pacman -S sagemath sagemath-doc python-pip
-> python -m pip install jupyter
+> pacman -S sagemath sagemath-doc jupyter-notebook
 
 ### Run
 
 Starts a Sage session in console
+
 > sage
 
 To quit the session enter `quit` and then press ⟨Enter⟩.
 
 To start a Jupyter Notebook instead of a Sage console, run the command
+
 > sage -n jupyter --allow-root
 
-vscode 里安装python 扩展，已集成了jupyternotebook，不需要额外安装 jupyter 扩展。
+vscode 里安装 python 扩展，已集成了 jupyternotebook，不需要额外安装 jupyter 扩展。
 新建一个.ipynb 文件，打开它就是 jupyternotebook 的界面了
-配置Jupyter Server为SageMath的本地服务器
+配置 Jupyter Server 为 SageMath 的本地服务器
 
 ## Usage
 
@@ -77,11 +78,13 @@ Rewriting trigonometric expressions
 > Linearisation reduce_trig
 > Anti-linearisation expand_trig
 
-Show approximate value 
+Show approximate value
+
 > numerical_approx(1/e^2)
 > numerical_approx(pi, digits=60)
 
 Vector operations
+
 > v = vector([1,2,3]); w = vector([0,5,-9])
 > v.cross_product(w)
 > v.dot_product(w)
