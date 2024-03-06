@@ -43,35 +43,3 @@ Every virtual environment has to be populated with virtual objects that represen
 You can create 3D assets from scratch using a 3D modeling software such as Maya, Blender or 3ds Max, or you can purchase the assets via the Assets Store.
 
 Both Unity and Unreal Engine have assets markets that allow you to purchase pre-made 3D models, objects, environments and so on.
-
-### Chess
-
-♔ White Chess King
-♕ White Chess Queen
-♖ White Chess Rook
-♗ White Chess Bishop
-♘ White Chess Knight
-♙ White Chess Pawn
-
-♚ Black Chess King
-♛ Black Chess Queen
-♜ Black Chess Rook
-♝ Black Chess Bishop
-♞ Black Chess Knight
-♟ Black Chess Pawn
-
-红方 黑方 字母 相当于国际象棋中的棋子 数字 英文
-帅 将 K King(王) 1 General
-仕 士 A Advisor(没有可比较的棋子) 2 Advisor
-相 象 B Bishop(象) 3 Elephant
-马 马 N Knight(马) 4 Horse
-车 车 R Rook(车) 5 Chariot
-炮 炮 C Cannon(没有可比较的棋子) 6 Cannon
-兵 卒 P Pawn(兵) 7 Soldier
-
-亚洲规则与中国规则的区别主要在于循环招法出现时的判罚不一样。对于“长打”的定义，中国规则和亚洲规则不完全一样，以下几种“长打”在国内规则中是禁止着法，而在亚洲规则中却是允许着法：A. 长要杀；B.长要抽吃；C. 多子长捉一真根子；D. 一将一捉；E. 分捉多子。
-比如一将一捉在中国规则是不允许的，在亚洲规则允许。按照中国规则，二打对二闲，黑方变着，不变作负。若按照亚洲规则，一照（将）一杀，双方不变作和。
-
-中国规则的原则性比亚洲规则强，更为严格，只要打的过程中存在得利的行为，例如要杀、要抽吃、多子捉一真根子，长打就算禁止着法。但是，亚洲规则的判断方法比中国规则简单，在没有裁判的网络对局中，计算机可以判断将、捉等直接攻击的着法，而对于要杀、要抽吃等间接攻击，计算机很难作出判断，因此在可行性上讲，亚洲规则比中国规则更合理，所以软件通用的是亚洲规则。
-
-2017 年 11 月在菲律宾举行的象棋世锦赛期间，为了顺应象棋发展的时代潮流和最新需求，世象联第七届执委会第一次会议形成决议，在亚洲《象棋比赛规例》第四次修订本的基础上制定、编辑、出版统一的《世界象棋规则》。在亚洲象棋联合会的支持下，世界象棋联合会与中国象棋协会审定后，以第四次修订的“亚洲象棋比赛规例”为基础的“世界象棋规则”正式对外公布，第一次以中、英双语发行的“世界象棋规则”，原则没动，只对结构进行了一些修订、调整。

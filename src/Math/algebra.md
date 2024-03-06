@@ -142,6 +142,26 @@ a (b \cdot c) = (a \cdot b) c \\
 a (b + c) = ab + ac
 $$
 
+$$
+ ((a×b)×(c×d))⋅(e×f) = \\
+a_z*b_y*c_z*d_x*e_y*f_x - a_y*b_z*c_z*d_x*e_y*f_x - a_z*b_x*c_z*d_y*e_y*f_x + \\
+a_x*b_z*c_z*d_y*e_y*f_x - a_z*b_y*c_x*d_z*e_y*f_x + a_y*b_z*c_x*d_z*e_y*f_x + \\
+a_z*b_x*c_y*d_z*e_y*f_x - a_x*b_z*c_y*d_z*e_y*f_x - a_z*b_y*c_y*d_x*e_z*f_x + \\
+a_y*b_z*c_y*d_x*e_z*f_x + a_z*b_y*c_x*d_y*e_z*f_x - a_y*b_z*c_x*d_y*e_z*f_x + \\
+a_y*b_x*c_z*d_y*e_z*f_x - a_x*b_y*c_z*d_y*e_z*f_x - a_y*b_x*c_y*d_z*e_z*f_x + \\
+a_x*b_y*c_y*d_z*e_z*f_x - a_z*b_y*c_z*d_x*e_x*f_y + a_y*b_z*c_z*d_x*e_x*f_y + \\
+a_z*b_x*c_z*d_y*e_x*f_y - a_x*b_z*c_z*d_y*e_x*f_y + a_z*b_y*c_x*d_z*e_x*f_y - \\
+a_y*b_z*c_x*d_z*e_x*f_y - a_z*b_x*c_y*d_z*e_x*f_y + a_x*b_z*c_y*d_z*e_x*f_y + \\
+a_z*b_x*c_y*d_x*e_z*f_y - a_x*b_z*c_y*d_x*e_z*f_y - a_y*b_x*c_z*d_x*e_z*f_y + \\
+a_x*b_y*c_z*d_x*e_z*f_y - a_z*b_x*c_x*d_y*e_z*f_y + a_x*b_z*c_x*d_y*e_z*f_y + \\
+a_y*b_x*c_x*d_z*e_z*f_y - a_x*b_y*c_x*d_z*e_z*f_y + a_z*b_y*c_y*d_x*e_x*f_z - \\
+a_y*b_z*c_y*d_x*e_x*f_z - a_z*b_y*c_x*d_y*e_x*f_z + a_y*b_z*c_x*d_y*e_x*f_z - \\
+a_y*b_x*c_z*d_y*e_x*f_z + a_x*b_y*c_z*d_y*e_x*f_z + a_y*b_x*c_y*d_z*e_x*f_z - \\
+a_x*b_y*c_y*d_z*e_x*f_z - a_z*b_x*c_y*d_x*e_y*f_z + a_x*b_z*c_y*d_x*e_y*f_z + \\
+a_y*b_x*c_z*d_x*e_y*f_z - a_x*b_y*c_z*d_x*e_y*f_z + a_z*b_x*c_x*d_y*e_y*f_z - \\
+a_x*b_z*c_x*d_y*e_y*f_z - a_y*b_x*c_x*d_z*e_y*f_z + a_x*b_y*c_x*d_z*e_y*f_z
+$$
+
 分子 numerator
 分母 denominator
 指数 exponent

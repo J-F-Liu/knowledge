@@ -24,6 +24,8 @@ FOV: Field Of View
 DOF: Depth Of View
 TOF: Time Of Flight
 
+UAV: Unmanned aerial vehicles 无人机；无人驾驶飞行器
+
 := "is defined as" 定义为
 -> "implies" 意味着
 <-> "if and only if" 当且仅当

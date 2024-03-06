@@ -598,6 +598,14 @@ The most important advantage of spherical targets is the fact that they can be v
 almost any direction. Whereas flat, retro-reflective targets can only be viewed over an angle
 of ±45°, retro-reflecting spheres can be viewed over a range of 240°.
 
+### 经验
+
+黑白相机的检测精度，对比度和锐度高于彩色相机。除了需要检测颜色的情况，一般都采用黑白相机。
+智能相机集成了图像传感器、处理器、通信模块等，可以独立完成图像处理和分析任务。
+如果物体处于运动状态，则采用全局快门。如果出物体处于静止状态，可采用卷连快门。
+机器视觉中常用定焦镜头。一般来说，定焦镜头的光学品质更好。专业级的变焦镜头几乎能做到和定焦镜头相媲美。
+用灰度直方图可以检查图像是否过曝或者是否对比度太低。
+
 ### 疑问
 
 标定相机，内参中的 skew 是否设为为 0，fx 和 fy 是否设为相等？
@@ -607,3 +615,12 @@ of ±45°, retro-reflecting spheres can be viewed over a range of 240°.
 椭圆畸变后圆心不准的影响有多大？
 是否需要按不同工作距离分别标定？
 大视场的相机，对于边缘区域虚化的问题有无合适的软硬件方案？
+
+## Object Detection
+1999 SIFT
+2005 HOG
+2012 AlexNet
+2015 RCNN
+2016 YOLO v1
+2018 Detectron
+2020 End-to-End Object Detection with Transformers

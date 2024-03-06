@@ -69,6 +69,9 @@ Given enough time, you’ll find that all software which solves sufficiently com
 
 Software is a living thing! The complex problem comes later, and it’ll be better served by the composition of simple solutions than with the application of a complex solution.
 
+When we look at all the stuff we’ve built, it’s easy to forget how we got there: incrementally and painfully.
+Sometimes “thinking big” means getting nowhere, fallen into the trap of thinking too big, doing too much, everything seems impossible.
+
 ### Composition is the Essence of Programming
 
 What is programming?
@@ -117,6 +120,8 @@ The concept of co-location can be boiled down to this fundamental principle:
 > Place code as close to where it's relevant as possible
 
 You might also say: "Things that change together should be located as close as reasonable."
+
+N✕M is bigger than N+M, and so we design for composability and orthogonality.
 
 ### DRY
 
@@ -388,3 +393,7 @@ Stack allocation will be used for everything that doesn’t involve “smart poi
 stack memory can be managed far faster in both the short- and long-term than heap memory.
 
 When writing performance-sensitive code, there’s no alternative to measuring your code. If you didn’t write a benchmark, you don’t care about it’s performance You should never rely on your instincts when a microsecond is an eternity.
+
+### Articles
+
+- [The Art of Separating Actions and Calculations](https://rusty-ferris.pages.dev/blog/fp-actions-vs-calculations/)

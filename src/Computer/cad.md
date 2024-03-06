@@ -1,4 +1,10 @@
-CAD 内核
+## CAD 内核
+
+OpenCascade, Parasolid, and ACIS are all what is known as a boundary-representation kernel, most people refer to them as B-rep kernels. A B-rep model is composed of geometry and topology information. The topology information tends to differ depending on the program used. B-rep file formats include STEP, IGES, NX’s prt, Solid Edge’s par and asm, Creo’s prt and asm, Solidworks’ sldprt and sldasm, Inventor’s ipt and iam, and AutoCad’s dwg.
+
+Visual-representation, or vis-rep, models tend to be much smaller in data size than b-rep models. This is because they do not contain as much structural or product management information. Vis-rep models are approximations of geometry and are composed of a mass of flat polygons. Vis-rep file formats include obj, STL, 3D XML, 3D PDF, COLLADA, and PLY.
+
+CAD programs tend to use b-rep models while animations, game development, augmented reality, and virtual reality tend to use vis-rep models. However, the two are interchanged frequently.
 
 - [Parasolid by Siemens](https://www.plm.automation.siemens.com/global/en/products/plm-components/parasolid.html) 60 天试用
   - Geomagic Design X
@@ -17,7 +23,7 @@ CAD 内核
   - [CATIA](https://www.3ds.com/products-services/catia/) by Dassault Systèmes since 1981
 - ShapeManager by Autodesk, originally forked from ACIS 7.0 in November 2001
   - AutoCAD by Autodesk .dwg, .dwt, .dws, or .dxf
-- [OpenCascade](https://www.opencascade.com/)
+- [OpenCascade](https://www.opencascade.com/) open source
   - FreeCAD
   - Gmsh
   - CAD Assistant

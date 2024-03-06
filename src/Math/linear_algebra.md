@@ -119,7 +119,9 @@ det(AB) = det(A) det(B) \\
 det([A_1+B_1, A_2])=det([A_1, A_2])+det([B_1, A_2]) \\
 det([A_1+B_1, A_2+B_2])=det([A_1, A_2])+det([A_1, B_2])+det([B_1, A_2])+det([B_1, B_2]) \\
 det([a\ b\ c]) = a \cdot (b \times c) = (a \times b ) \cdot c \\
-det([a\ b\ c]) = 0 \iff a,b,c共面
+det([a\ b\ c]) = 0 \iff a,b,c共面 \\
+det (I + uv^T) = 1 + v^Tu \\
+det (A + uv^T) = (1 + v^TA^{-1}u) det (A)
 $$
 
 ### 向量 Vector

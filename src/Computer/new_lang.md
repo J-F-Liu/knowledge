@@ -114,6 +114,43 @@ pub fn main() void {
 }
 ```
 
+Rust has patterns, traits, dyn, modules, declarative macros, procedural macros, derive, associated types, annotations, cfg, cargo features, turbofish, autoderefencing, deref coercion etc.
+Zig manages to provide many of the same features with a single mechanism - compile-time execution of regular zig code.
+
+When writing a generic function, rust will prove that the function is type-safe for every possible value of the generic parameters. Zig will prove that the function is type-safe only for each parameter that you actually call the function with.
+This allows zig to make use of arbitrary compile-time logic where rust has to restrict itself to structured systems (traits etc) about which it can form general proofs. This in turn allows zig a great deal of expressive power and also massively simplifies the language.
+On the other hand, we can't type-check zig libraries which contain generics. We can only type-check specific uses of those libraries. This means zig also doesn't get the automatic, machine-checked documentation of type constraints that rust benefits from and may face more challenges providing IDE support.
+
+```zig
+// This function is typesafe if there exist no odd perfect numbers
+// https://en.wikipedia.org/wiki/Perfect_number#Odd_perfect_numbers
+fn foo(comptime n: comptime_int, i: usize) usize {
+  const j = if (comptime is_odd_perfect_number(n)) "surprise!" else 1;
+  return i + j;
+}
+```
+
+In rust, you can use `#[derive(Ord)]` to create a default implementation of the Ord trait for a type. If you don't do this, users of your library cannot do it themselves because of the orphan impl rules. If you do do this, users of your library pay for the extra compile time even if they never use it.
+
+The equivalent in zig looks like this:
+
+```zig
+pub fn compare(a: anytype, b: @TypeOf(a)) Ordering {
+    const T = @TypeOf(a);
+    if (std.meta.trait.hasFn("compare")(T)) {
+        // if T has a custom implementation of compare, use that
+        return T.compare(a, b);
+    } else {
+        // otherwise, use reflection to derive a default implementation
+        switch (@typeInfo(T)) {
+           ...
+        }
+    }
+}
+```
+
+This function works on any type, even those from other packages, can be overridden on a type-by-type basis and will only be compiled for functions on which it is actually used. With a little extra work it can also be made extensible by third-party libraries which didn't create the original type.
+
 C++ ABI is not stable across compilers, you must use the same C++ compiler to compile all your objects and static libraries.
 
 ## Memeroy Access
@@ -365,3 +402,9 @@ Basically, preprocess any work that doesn’t rely on state that’s only availa
 
 An instance stores state, the class stores behavior.
 Field names shadow method names, a subtle but important semantic point.
+
+A type is itself a value.
+Some types can be called like functions (those that have a constructor), e.g. int and str.
+Type checks are of the form type(10) == int.
+Methods are now syntax sugar for calling a function scoped to a type, meaning that "hello".len() is equivalent to str.len("hello").
+Support for `import` renaming with `as`.
