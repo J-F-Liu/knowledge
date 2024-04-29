@@ -34,6 +34,22 @@ C 类地址 | IP 地址以 110 开头 | 192-y.x.x.x | 从 192.0.0.0 到 223.255.
 
 两台计算机要通讯，首先要判断是否处于同一个广播域内，即网络地址是否相同。如果网络地址相同，表示接受方在本网络上，那么可以把数据包直接发送到目标主机，否则就需要路由网关将数据包转发送到目的地。只有设置好网关的 IP 地址，TCP/IP 协议才能实现不同网络之间的相互通信。
 
+## 统一资源标识符 (URL)
+
+Uniform Resource Locator (URL) is a string of characters that specifies the location of a resource on the internet. It is used to identify a resource on the internet and is composed of several parts:
+
+- Scheme: the protocol used to access the resource (e.g. http, https, ftp, etc.)
+- Host: the domain name or IP address of the server where the resource is located
+- Port: the port number on the server where the resource is located
+- Path: the path to the resource on the server
+- Query string: a set of parameters that can be passed to the server
+- Fragment identifier: a portion of the document that is identified by the URL
+
+```
+URI = scheme ":" ["//" authority] path ["?" query] ["#" fragment]
+authority = [userinfo "@"] host [":" port]
+userinfo = username [":" password]
+```
 ## NAT - Network Address Translation
 
 A NAT works a bit like the post room in an office building - it receives all incoming mail directed to the building address and routes it to the individual recipients on their desks.
