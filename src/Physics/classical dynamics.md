@@ -9,3 +9,5 @@
 1953年 实验证实中微子的存在
 
 Nature acts in the simplest and most direct manner.
+
+路程等于速度乘以时间，角程等于角速度乘以时间。

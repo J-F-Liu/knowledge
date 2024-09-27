@@ -90,3 +90,20 @@
 存贷差是银行吸收的存款和放出去的贷款，中间的利率差额，这是银行最重要的利润来源。吸收存款能力越强的银行，赚钱越多。
 
 互联网银行与传统银行相比，吸收存款的能力比较弱，优势是能够覆盖一些风险比较大的小微企业和个人客户，然后从中获得更高的利润。
+
+ISO 4217 标准定义了国家货币的三位字母代码和三位数字代码。以下是一些常见的货币编码：
+
+美元 (US Dollar): USD 
+欧元 (Euro): EUR 
+日元 (Japanese Yen): JPY 
+英镑 (Pound Sterling): GBP 
+中国人民币 (Chinese Yuan Renminbi): CNY 
+港元 (Hong Kong Dollar): HKD 
+印度卢比 (Indian Rupee): INR 
+澳大利亚元 (Australian Dollar): AUD 
+加拿大元 (Canadian Dollar): CAD 
+瑞士法郎 (Swiss Franc): CHF 
+瑞典克朗 (Swedish Krona): SEK 
+新西兰元 (New Zealand Dollar): NZD 
+南非兰特 (South African Rand): ZAR 
+巴西雷亚尔 (Brazilian Real): BRL 

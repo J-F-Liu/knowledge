@@ -265,6 +265,10 @@ For accurate calibration, the camera model is best constrained if the camera see
 As a rule of thumb, **the calibration plate should have an area of at least half the available pixel area when observed frontally**.
 Capturing calibration information from the periphery of images is especially important for the determination of lens distortion parameters.
 
+方格图案确保了在投影变换和畸变中的精确（无偏）估计，但其检测精度仅限于像素级别。
+圆形图案在实现亚像素级别检测精度方面表现出色，但需要补偿中心投影引起的偏心误差。
+另外，由于镜头非线性畸变，会降低圆锥的几何特性，使得难以估计投影圆的中心。可引入三维球形目标来规避这一限制。
+
 #### Calibration Best Practices
 
 - Proper mounting of calibration target and camera.
@@ -624,3 +628,20 @@ of ±45°, retro-reflecting spheres can be viewed over a range of 240°.
 2016 YOLO v1
 2018 Detectron
 2020 End-to-End Object Detection with Transformers
+
+## 特征匹配
+跨图像识别和匹配稀疏的二维特征点，长期以来一直是计算机视觉领域中的一个核心问题。
+开创性的SIFT算法是过去三十多年特征检测流程的基准，
+近年来，人们的注意力已转向学习方法，SuperPoint在各种应用中脱颖而出，成为新的黄金标准。
+然而，独立评估表明，这些学习模型尚未达到其经典前身的关键点定位精度，这一差异很大程度上是由于缺乏确保亚像素精度的机制。
+
+标题：Learning to Make Keypoints Sub-Pixel Accurate
+通过给检测到的特征附加一个偏移向量，从而能够在不开发全新特征检测器的情况下实现亚像素精度。
+
+从事这一行业的人现在也就可以简单而清楚地分成三种人：
+1、从事底层开发工作的人
+2、从事二次开工作的人
+3、最终使用机器视觉系统工作的人
+第一类人一定要专业，对机器视觉的某一领域非常非常了解;第二类人虽比不上第一类人那么专业，但更加全面;第三类人更熟悉各个应用系统开发公司(第二类人)的优缺点。
+先确定自己的身份，从最基本的学起。
+多实践，不要纸上谈兵。

@@ -54,3 +54,6 @@ Columnar data warehouse: stores each data field in separate columns.
 - update performance in a columnar database is abysmal
 
 The net result of all these properties is that columnar databases give you OLAP cube-like performance without the pain of explicitly designing and building cubes.
+
+## Articles
+- [An exploration of vector search](https://blog.shalvah.me/posts/an-exploration-of-vector-search)

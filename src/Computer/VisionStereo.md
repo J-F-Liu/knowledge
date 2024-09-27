@@ -1,5 +1,7 @@
 # 立体视觉
 
+CMM: coordinate-measuring machine 三坐标测量机
+
 目前 3D 视觉成像技术主要分 3 种：
 1、双目立体成像(Stereo Vision)
 2、时间光 TOF（Time of flight）

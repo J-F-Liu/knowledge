@@ -61,6 +61,8 @@ Most programming languages are partly a way of expressing things in terms of oth
 • 2015: rise of functional languages
 -- Correctness first: scripting languages are too buggy, we need to know if our system works
 
+When you’re a beginner, it feels important to invest your time into the “correct” language–lest it all be wasted. To avoid sitting with that discomfort, new programmers often tell themselves that their language or tool is perfect and infallible and lash out at anyone who criticizes it.
+
 ## Simple, correct, fast: in that order
 
 The single most important quality in a piece of software is simplicity. The reason is straightforward: if your solution is not simple, it will not be correct or fast.
@@ -393,6 +395,25 @@ Stack allocation will be used for everything that doesn’t involve “smart poi
 stack memory can be managed far faster in both the short- and long-term than heap memory.
 
 When writing performance-sensitive code, there’s no alternative to measuring your code. If you didn’t write a benchmark, you don’t care about it’s performance You should never rely on your instincts when a microsecond is an eternity.
+
+## Error Handling
+Things are always going wrong, as I’m sure you’ve noticed, and that applies to our programs too.
+An Option type indicates that there may or may not be an answer. 
+A Result can be one of two possible variants. It can be either Ok(x), meaning “the answer is x”, or it can be Err(e), meaning “couldn’t get the answer because error e happened”.
+
+## Testing
+
+It’s worse to have bad mocks than no mocks, because they give you a wrong feeling of confidence in your tests—especially when mocks increase test coverage.
+Mocking adds complexity, is hard to maintain, introduces its own bugs, doesn't test what should be tested and creates a false sense of security.
+Especially when mocking services from other teams. Just had the case and bugs just showed up in e2e test by a qa team.
+
+There are several things you can do instead of mocking:
+
+- More unit testing
+- Easier to Test IO
+- Just do IO
+- Separation of logic and services / IO
+- E2E integration tests
 
 ### Articles
 

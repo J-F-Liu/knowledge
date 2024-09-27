@@ -1,4 +1,20 @@
+
+Anyone trying to make a new mainstream language is completely insane, unless they're backed by a large corporation.
+There are only two exceptions in the last 25 years that come close: Scala and Kotlin. They did this by seamlessly building on an existing ecosystem, specifically Java's.
+
+Anyone who has tried to make Java call C, or Python call Javascript, or C call Rust, can tell you that it's really difficult to call functions from other languages.
+Heroes throughout the ages have created tools like SWIG, CXX, etc. which at least make it possible for a user to reach across the Foreign Function Interface (FFI) boundary, if they can figure out the correct incantations.
+But even with these tools, it's so difficult that we often just give up and call a microservice instead.
+
+And unfortunately, seamlessly building on Rust's ecosystem is impossible...
+Calling into Rust is even harder; you can't just slap an extern onto your function, because Rust doesn't have a stable ABI; rustc-compiled functions don't have a predictable signature that the linker can recognize.
+MIR is rustc's "Mid-level Intermediate Representation". rustc turns Rust source code into HIR, then MIR, then eventually, LLVM IR, which later gets turned into assembly code.
+
 ## 数据类型
+
+Imperative programming involves code operating over a world of objects, these objects have types, which enumerate the set of possible values the object could have, and these objects exist at places; as a result they also have a notion of identity, in that while two different objects at different places may have the same value, they do not have the same identity.
+In Rust places are mutable or immutable. They can also be moved, so that they are no longer valid for any operation. 
+An object at a pinned place cannot be moved from and cannot be borrowed with the &mut operator. However, it can be assigned to (if it is also mutable) and it can be borrowed with the & operator. 
 
 Data types:
 
