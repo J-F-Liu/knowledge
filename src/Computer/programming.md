@@ -1,6 +1,8 @@
 # Programming
 
-> “Everyone in this country should learn to program a computer, because it teaches you to think.” — Steve Jobs
+> Everyone in this country should learn to program a computer, because it teaches you to think. — Steve Jobs
+
+> Software is a great combination between artistry and engineering. — Bill Gates
 
 Programming is not merely about language syntax and semantics, but more fundamentally about the iterative process of refining mental representations of computational problems and solutions and expressing those representations as code.
 
@@ -163,6 +165,8 @@ Clean code doesn’t (necessarily) take longer to write. Initially you may need 
 
 Programming involves using and creating APIs. When we're creating a new API, we typically think in terms of defining functions to allow users to work with our library.
 A different perspective is to think of these APIs as little languages, or domain-specific languages.
+
+Make your APIs exactly match the structure of the problem.
 
 ### Learning
 

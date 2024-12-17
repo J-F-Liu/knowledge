@@ -52,7 +52,36 @@ cfm (cubic foot per minute) 是常用英制流量单位，立方英尺每分钟�
 
 根据 UFCS 快充规范内容显示，该标准采用连续调节模式，输出电压分为 5V、10V、20V、30V 四个可编程的档位（类似 USB PD3.0 PPS 调压），其中 5V 档位的可编程电压范围是 3.4V-5.5V、10V 档位的可编程电压范围是 5.5V-12V、20V 档位的可编程电压范围是 12V-21V、30V 电压的可编程电压范围是 21V-36V。
 
+## PLC（可编程逻辑控制器）
+
+PLC 是一种嵌入式系统，它由一组可编程的逻辑电路组成，能够对输入数据进行处理、分析、控制和输出控制信号。PLC 具有很高的灵活性、可靠性和可编程性，可以实现各种复杂的控制功能。
+
+FPC 是 Flexible Printed Circuit 的简称，即柔性印刷电路板，也被称为软性电路板或挠性电路板。
+FPC 可以在窄小和有限的空间中弯曲、折叠，从而嵌入大量精密元件，形成可弯曲的挠性电路。
+FPC 广泛应用于手机、笔记本电脑、PDA、数码相机、LCM 等产品中，因其配线密度高、重量轻、厚度薄等特性而备受青睐。
+
 # 单片机
+
+Serial is an umbrella word for all that is "Time Division Multiplexed", to use an expensive term. It means that the data is sent spread over time, most often one single bit after another. All the protocols you're naming are serial protocols.
+
+UART - Universal Asynchronous Receiver / Transmitter
+
+- provide a console / terminal login for headless setup
+
+UART is one of the most used serial protocols, and is very simple. Most controllers have a hardware UART on board. It uses a single data line for transmitting and one for receiving data. Most often 8-bit data is transferred, as follows: 1 start bit (low level), 8 data bits and 1 stop bit (high level). The low level start bit and high level stop bit mean that there's always a high to low transition to start the communication. That's what describes UART. No voltage level, so you can have it at 3.3 V or 5 V, whichever your microcontroller uses. Note that the microcontrollers which want to communicate via UART have to agree on the transmission speed, the bit-rate, as they only have the start bits falling edge to synchronize. That's called asynchronous communication.
+
+For long distance communication (That doesn't have to be hundreds of meters) the 5 V UART is not very reliable, that's why it's converted to a higher voltage, typically +12 V for a "0" and -12 V for a "1". The data format remains the same. Then you have RS-232 (which you actually should call EIA-232, but nobody does.)
+
+The timing dependency is one of the big drawbacks of UART, and the solution is USART, for Universal Synchronous/Asynchronous Receiver Transmitter. This can do UART, but also a synchronous protocol. In synchronous there's not only data, but also a clock transmitted. With each bit a clock pulse tells the receiver it should latch that bit. Synchronous protocols either need a higher bandwidth, like in the case of Manchester encoding, or an extra wire for the clock, like SPI and I2C.
+
+SPI - Serial Peripheral Interface
+
+- master slave relationship
+- shift registers, sensors and even an SD card
+
+SPI (Serial Peripheral Interface) is another very simple serial protocol. A master sends a clock signal, and upon each clock pulse it shifts one bit out to the slave, and one bit in, coming from the slave. Signal names are therefore SCK for clock, MOSI for Master Out Slave In, and MISO for Master In Slave Out. By using SS (Slave Select) signals the master can control more than one slave on the bus. There are two ways to connect multiple slave devices to one master, one is mentioned above i.e. using slave select, and other is daisy chaining, it uses fewer hardware pins (select lines), but software gets complicated.
+
+To improve better performance, CAN protocol has been designed. In this Arbitration concept is used in which two devices are ready to communicate, then depending on their priority the transmission or reception takes place. CAN is widely used in many industries.
 
 I2C - Inter-Integrated Circuit
 
@@ -62,14 +91,11 @@ I2C - Inter-Integrated Circuit
 - discoverable by `i2cdetect` command
 - LCD / OLED screens, temperature sensors and analog to digital converters
 
-SPI - Serial Peripheral Interface
+I2C (Inter-Integrated Circuit, pronounced "I squared C") is also a synchronous protocol, and it's the first we see which has some "intelligence" in it; the other ones dumbly shifted bits in and out, and that was that. I2C uses only 2 wires, one for the clock (SCL) and one for the data (SDA). That means that master and slave send data over the same wire, again controlled by the master who creates the clock signal. I2C doesn't use separate Slave Selects to select a particular device, but has addressing. The first byte sent by the master holds a 7 bit address (so that you can use 127 devices on the bus) and a read/write bit, indicating whether the next byte(s) will also come from the master or should come from the slave. After each byte, the receiver must send a "0" to acknowledge the reception of the byte, which the master latches with a 9th clock pulse. If the master wants to write a byte, the same process repeats: the master puts bit after bit on the bus and each time gives a clock pulse to signal that the data is ready to be read. If the master wants to receive data it only generates the clock pulses. The slave has to take care that the next bit is ready when the clock pulse is given. This protocol is patented by NXP (formerly Phillips), to save licensing cost, Atmel using the word TWI (2-wire interface) which exactly same as I2C, so any AVR device will not have I2C but it will have TWI.
 
-- master slave relationship
-- shift registers, sensors and even an SD card
+Two or more signals on the same wire may cause conflicts, and you would have a problem if one device sends a "1" while the other sends a "0". Therefore the bus is wired-OR'd: two resistors pull the bus to a high level, and the devices only send low levels. If they want to send a high level they simply release the bus.
 
-UART - Universal Asynchronous Receiver / Transmitter
-
-- provide a console / terminal login for headless setup
+TTL (Transistor Transistor Logic) is not a protocol. It's an older technology for digital logic, but the name is often used to refer to the 5 V supply voltage, often incorrectly referring to what should be called UART.
 
 工业机器人
 库卡 KUKA，AABB 精度和重复性好
@@ -107,3 +133,69 @@ UART 芯片16C550 等，传输速率达到115.2Kbps。
  USB 是一种多点、高速的连接方式，采用集线器能实现更多的连接。USB 接口的基本部分是串行接口引擎 SIE，SIE 从 USB 收发器中接收数据位，转化为有效字节传送给 SIE 接口；反之，SIE 接口也可以接收字节转化为串行位送到总线。
  USB 采用差分传输方式，且具有检错和纠错功能，保证了数据的正确传输。USB 支持三种总线速度，低速 1.5Mbps、全速 12Mbps 和高速 480Mbps。
  USB 电缆具有传送电源的功能，支持节约能源模式，耗电低。USB 总线可以提供电压 + 5v、最大电流 2A 的电源，供低功耗的设备作电源使用，不需要额外的电源。
+
+ ## 连接线
+
+ ribbon cable 带状线缆
+ flat ribbon cable 扁平带状线缆
+
+ ## 树莓派相机参数表
+
+|                                    | **年份** | **像素** | **芯片型号**          | **芯片尺寸**                       | **分辨率**       | **像素尺寸**          | **镜头**    | **水平视场角** |
+|------------------------------------|-----------|-----------|-------------------|-------------------------------------|------------------------|-------------------|------------|-----------|
+| Raspberry Pi Camera Module         | 2013     | 5MP        | Omnivision OV5647 | 3.76 × 2.74 mm                      | 2592×1944              | 1.4 µm × 1.4 µm   | 定焦        | 53.5      |
+| Raspberry Pi Camera Module 2       | 2018     | 8MP        | Sony IMX219       | 3.68 × 2.76 mm (4.6 mm diagonal)    | 3280×2464              | 1.12 µm × 1.12 µm | 定焦        | 62.2      |
+| Raspberry Pi High Quality Camera   | 2020     | 12.3MP     | Sony IMX477       | 6.287mm × 4.712 mm (7.9mm diagonal) | 4032×3040              | 1.55 μm × 1.55 μm | C口，CS，M12 |           |
+| Raspberry Pi Camera Module 3       | 2023     | 11.9MP     | Sony IMX708       | 6.45 × 3.63mm (7.4mm diagonal)      | 4608×2592              | 1.4μm × 1.4μm     | 自动变焦      | 66       |
+| Raspberry Pi Global Shutter Camera | 2023     | 1.58MP     | Sony IMX296       | 6.3mm diagonal                      | 1456×1088              | 3.45μm × 3.45μm   | C口，CS     |           |
+| Raspberry Pi AI Camera             | 2024     | 12.3 MP    | Sony IMX500       | 1/2.3” (7.857mm) 6.287mm × 4.712 mm | 4056×3040 10-bit 10fps | 1.55 μm × 1.55 μm | 定焦        | 66        |
+
+
+## 开发板配置
+芯片
+    MCU
+    时钟源
+存储
+    RAM
+    ROM
+    Flash
+    SD卡
+接口
+    GPIO
+    UART
+    I2C
+    SPI
+    PWM
+    USB
+    CAN
+调试接口
+    JTAG
+    SWD
+网络
+    Eithernet
+    WiFi
+    BLE
+    Zigbee
+模块
+    ADC
+    DAC
+显示
+    LED
+    LCD
+声音
+    蜂鸣器
+    扬声器
+    麦克风
+传感器
+    温度
+    湿度
+    加速度计
+    陀螺仪
+    光照传感器
+    震动传感器
+    压力传感器
+    红外传感器
+    超声波传感器
+电源
+电池
+显示屏

@@ -5,6 +5,7 @@
 ![circle function](images/circle-function.png)
 
 [正弦和余弦的函数图像](https://www.desmos.com/calculator/ogvpbi5v7j)
+[正切的函数图像](https://www.desmos.com/calculator/7fnrtxo1xw)
 
 For $x^2+y^2=r^2$
 正弦 sine function: $\sin θ = \frac{y}{r}$

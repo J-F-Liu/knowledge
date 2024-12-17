@@ -208,3 +208,16 @@ A VPN client on your computer establishes a secure tunnel with the VPN server, r
 VPNs are great when you need to use the WIFI at a local coffee shop: using a VPN instead of the potentially completely unencrypted local WIFI adds another layer of privacy.
 
 localhost and 127.0.0.1 are indeed different things.
+
+## Remote Access
+
+There are three main ways to access your Raspberry Pi remotely over the internet:
+
+SSH - Secure Shell, a cryptographic network protocol for secure remote access to devices over an unsecured network such as the internet.
+
+VNC - Virtual Network Computing, a protocol for safely accessing the Raspberry Pi GUI or desktop.
+
+RDP - Remote Desktop Protocol, a proprietary protocol developed by Microsoft that provides a user with a graphical interface to connect to another computer over a network connection.
+
+All of these methods usually require port forwarding.
+[Pinggy](https://Pinggy.io) is a tunneling tool that gives a public address to access your localhost, even while sitting behind a NAT or a firewall.

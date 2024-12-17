@@ -1339,9 +1339,11 @@ v_1 = (1, 0) \\
 v_2 = (\cfrac{b}{d-a}, 1)\\
 $
 
-## 矢量叉乘
+## 矢量叉乘，矢量特指三维向量
 
 $A×B=(a,b,e)×(c,d,f)=(bf-de,ce-af,ad-bc)$
+$A×B=|A||B|sin\theta$
+$A×B×C = (A\cdot B)C - (B\cdot C)A$
 
 ## 复数矩阵
 

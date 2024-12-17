@@ -14,6 +14,25 @@ A multiple view problem is inherently a vision problem involving more than one v
 
 Many of the visual problems are generally ill-posed, that is, solutions are not unique.
 
+## Image Formation
+像素值是没有单位的，它取决于曝光时间、增益和硬件本身，因此我们实际上关注的是图像上的相对值，而非绝对值。
+传感器本身的噪声会随着温度的变化而改变，使用高斯模糊来减小噪声的影响。
+黑光减法（Black light subtraction）是通过黑屏设置一系列无光的像素，得到光学黑的信号，再从整体中减去，消减底噪。
+缺陷像素遮蔽（Defective pixel mask）是为了处理CMOS传感器中的坏点，周围点的插值代替。
+平场矫正（Flat-field correction）是由于均匀落在传感器上的光在图像中可能并不均匀，这可能是由镜头、传感器在相机中位置误差等原因引起的，提前记录这一变化并予以矫正，从而得到一个“平”的图像。
+
+集成信号处理器（Integrated signal processor, ISP）指的是专门用来处理感光件信号并生成最终图像的硬件，通常会作为一个模块集成到片上系统。
+对于工业/机器视觉相机，其ISP往往提供的是最小程度的处理，如有的只会进行白平衡，再在raw RGB空间上进行伽马变换，因此很多时候输出的图像仍然在设备的色彩空间内。
+
+A camera is essentially a device that converts rays of light into pixel coordinates, “projecting” out the distance information in the process.
+
+A geometrically correct projection model should map object points to world rays, world rays to camera rays and camera rays to pixels.
+With this model, it is possible to mapping pixels back to real-world rays.
+We describe the scene as a set of 3D points, and a set of 3D circles.
+
+A camera ray is a directed line that pass through the normalized image plane where Z=1, and we don’t regard points “behind the camera” as being on this line.
+This is the traditional computer vision way of modeling rays, and it gives rise to the pinhole projection model.
+
 ## Camera Pinhole Model
 
 Vision system starts its work by acquiring an image or a set of images from cameras or data storage devices.
