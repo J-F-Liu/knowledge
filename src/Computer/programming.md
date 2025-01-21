@@ -422,3 +422,7 @@ There are several things you can do instead of mocking:
 ### Articles
 
 - [The Art of Separating Actions and Calculations](https://rusty-ferris.pages.dev/blog/fp-actions-vs-calculations/)
+
+### People
+
+SQLite’s author D. Richard Hipp (DRH) did not find existing version control systems suitable. So he wrote his own called Fossil. Fossil is powered by SQLite, of course. This reminds me of how Linus wrote Git. DRH also wrote his own parser generator called Lemon.

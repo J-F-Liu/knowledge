@@ -144,6 +144,10 @@ M.2 接口本质为 PCIe 插槽，支持 NVMe 协议，走 PCIe 通道的 M.2 �
 
 NVMe 是一种建立在 M.2 接口上的传输协议规范，采用是 PCI-E 传输通道，是专门针对闪存存储产品针对的传输协议，它并不是传输接口。
 
+PCIe3.0 满速盘，读写一般在3000~3600MB/s；
+PCIe4.0 基本上在5100~7200MB/s之间
+PCIe5.0 顺序读取速度高达13545MB/s，顺序写入速度8305.14MB/s；4K随机读取速度76.54MB/s，写入速度123.91MB/s
+
 ## 显示器分辨率
 
 720p: 1280 x 720, 称为 HD（中文译为"高清"）
@@ -164,6 +168,7 @@ OSD 菜单：OSD 是 on-screen display 的简称，即屏幕菜单式调节方�
 2014 USB Type-C connector
 2017 USB 3.2 Gen1 5Gbps, Gen2 10 Gbps，Gen2x2 20 Gbps
 2020 USB 4.0 40Gbs, Power supply will reach 100W, only operate over the Type-C connector, allows tunneling of DisplayPort and PCI Express, support PCIE devices — such as external graphics cards, external displays
+USB4 v2.0 80Gbps
 2021 USB-C 2.1 support 240W of power
 
 ## WiFi
