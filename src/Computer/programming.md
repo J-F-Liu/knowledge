@@ -161,6 +161,35 @@ Be on the lookout for leaky abstractions. In other words, don’t impose your in
 
 Clean code doesn’t (necessarily) take longer to write. Initially you may need to slow down before you can speed up, but eventually your pace will increase as you are writing fewer lines of code.
 
+### Ideas from "A Philosophy of Software Design"
+
+#### Idea 1: Zero-tolerance towards complexity
+
+what is complexity and what are its symptoms:
+- Change amplification: a simple change requires changes in many different places.
+- Cognitive load: the developer needs to learn a lot to complete a task.
+- Unknown unknowns: it is not obvious which pieces of code need to change to complete a task.
+
+Complexity is not caused by a single error, it accumulates.
+In order to slow the growth of complexity, you must adopt a zero-tolerance philosophy.
+
+#### Idea 2: Smaller components are not necessarily better for modularity
+
+Given two pieces of functionality, should they be implemented together, or should their implementations be separated?
+Smaller components are not necessarily better for modularity, you shouldn’t break up a method unless it makes the overall system simpler.
+
+#### Idea 3: Exception handling accounts for a lot of complexity
+
+The best way to reduce the complexity damage caused by exception handling is to reduce the number of places where exceptions have to be handled.
+
+A few techniques on how to reduce the number of exception handlers:
+
+- Define errors out of existence - “The best way to eliminate exception handling complexity is to define your APIs so that there are no exceptions to handle.” As an example, we can look at how file deletion is done on Windows compared to Linux. If you want to delete a file and it is open in another process, you will get an exception; you can’t perform the operation. In Linux, we can delete an open file - since we mark it for deletion at first.
+
+- Mask exceptions - “An exceptional condition is detected and handled at a low level in the system so that higher levels of software need not be aware of the condition.” For example, TCP masks packet loss by resending packets. So, higher-level software doesn’t need to know about the lost packets. It is guaranteed to have all packets.
+
+- Exception aggregation - “The idea behind exception aggregation is to handle many exceptions with a single piece of code; rather than writing distinct handlers for many individual exceptions, handle them all in one place with a single handler.”
+
 ### API
 
 Programming involves using and creating APIs. When we're creating a new API, we typically think in terms of defining functions to allow users to work with our library.
