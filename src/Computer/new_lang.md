@@ -10,6 +10,13 @@ And unfortunately, seamlessly building on Rust's ecosystem is impossible...
 Calling into Rust is even harder; you can't just slap an extern onto your function, because Rust doesn't have a stable ABI; rustc-compiled functions don't have a predictable signature that the linker can recognize.
 MIR is rustc's "Mid-level Intermediate Representation". rustc turns Rust source code into HIR, then MIR, then eventually, LLVM IR, which later gets turned into assembly code.
 
+If you’re designing a language from scratch, trying to create syntax for your language without first knowing its semantics is a trap.
+The goal of writing a parser is to produce an AST. But we don’t have to parse our AST out of text during prototyping, we can design an AST and then construct it ad hoc where we need it.
+
+### Starting with types
+Types are the central organizing principle of the theory of programming languages. Language features are the manifestations of type structure. 
+The syntax of a language is governed by the constructs that define its types, and its semantics is determined by the interactions among those constructs.
+
 ## 数据类型
 
 Imperative programming involves code operating over a world of objects, these objects have types, which enumerate the set of possible values the object could have, and these objects exist at places; as a result they also have a notion of identity, in that while two different objects at different places may have the same value, they do not have the same identity.
