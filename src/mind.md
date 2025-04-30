@@ -84,3 +84,5 @@ graph LR
   知识应用-->元认知系统;
   元认知系统-->自我系统;
 ```
+
+Probably a terrible idea, but I enjoy throwing ideas at the wall, and seeing how sharp their broken fragments are.

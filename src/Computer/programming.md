@@ -326,6 +326,9 @@ When you think you’ve fixed an engineering design, take the fix out. Make sure
 
 ## Experimentation and Iteration
 
+There is an art to designing just enough to get feedback, and then using that feedback to improve the design enough to get the next round of feedback.
+—Kent Beck, “Extreme Programming Explained”
+
 We didn't just build things once and assume that was the best we could do.
 
 The spirit of open source is the contribution rather than request. When everyone is using and benefiting from open source codes, you should respect these codes and the communities behind them in a way, you should be in awe of the spirit of open source.
