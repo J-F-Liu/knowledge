@@ -35,6 +35,14 @@ A subset S of the plane is called convex if and only if for any pair of points p
 The convex hull of a set S is the smallest convex set that contains S. It is the intersection of all convex sets that contain S.
 It is the unique convex polygon whose vertices are points from P and that contains all points of P.
 
+### 文件格式
+
+.catpart 文件是 CATIA 的 零件（Part） 文件格式，包含单个 3D 零件的完整设计信息。
+.catproduct 文件是 CATIA 的 产品（Product）/装配（Assembly） 文件格式，通常不包含实际的几何数据，用于组织和管理多个零部件（.catpart 文件）以及可能的子装配体（其他的 .catproduct 文件）。
+这两种文件格式都是 专有的（Proprietary） 格式，由达索系统公司拥有和控制。没有公开的、详细的官方格式规范文档。其内部结构复杂，并且会随着 CATIA 版本的更新而变化。逆向工程这些格式非常困难且可能涉及法律风险。
+许多专业的 CAD 软件（通常需要额外购买或激活特定的数据转换模块/许可证）可以导入 CATIA 文件。
+最常用和推荐的跨软件数据交换方式是将 CATIA 文件导出为中性格式，如：STEP (.stp, .step) 、IGES (.igs, .iges)
+
 ### Polygon
 
 We say a polygon is in standard form if all its vertices are distinct and no three consecutive vertices are collinear.

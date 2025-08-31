@@ -1,8 +1,10 @@
 # Programming
 
+> Software is a great combination between artistry and engineering. — Bill Gates
+
 > Everyone in this country should learn to program a computer, because it teaches you to think. — Steve Jobs
 
-> Software is a great combination between artistry and engineering. — Bill Gates
+Programming is a super power, giving incredible leverage to those who master the art by letting machines work for them.
 
 Programming is not merely about language syntax and semantics, but more fundamentally about the iterative process of refining mental representations of computational problems and solutions and expressing those representations as code.
 
@@ -51,6 +53,11 @@ A (Data) Type is an attribute of a value which encodes information about how the
 An Object is a value with associated behaviour, and thus implies it has agency.
 
 Most programming languages are partly a way of expressing things in terms of other things and partly a basic set of given things.
+
+I think there is a strong correlation between writing skills and programming. 
+A person’s writing style says so much about the way they think. If it’s confusing and lacks structure, their coding style will be too. If it’s concise, educational, well-structured, and witty at times, their code will be too.
+
+Excellent programmers find joy in playing with words.
 
 ## PL paradigms throughout history
 

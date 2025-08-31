@@ -818,6 +818,9 @@ If $Av=λv$ for $v\ne0$, we say that $λ$ is the _eigenvalue for_ $v$, and that 
 
 The German prefix “eigen” roughly translates to “self” or “own”. On the other hand, “eigen” is often translated as “characteristic”; we may think of an eigenvector as describing an intrinsic, or characteristic, property of A.
 
+🎯 特征向量：保持线条方向不变的方向
+📏 特征值：长度改变的倍数
+
 ##### Note
 
 Eigenvalues and eigenvectors are only for square matrices. Eigenvectors are _by definition nonzero_. Eigenvalues may be equal to zero.

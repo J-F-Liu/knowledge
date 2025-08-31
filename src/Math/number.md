@@ -86,6 +86,8 @@ def factors(n):
 
 完美的圆仅存在于理念的世界中。
 
+若 $a≥0,b≥0$，则：$\sqrt{ab}=\sqrt{a}\sqrt{b}$
+
 ## 复数
 
 For a given complex number $z = x+iy$, the real numbers x and y are called the real and imaginary part of z, respectively.

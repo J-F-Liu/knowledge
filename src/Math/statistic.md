@@ -5,8 +5,14 @@
 平均值(Mean)
 $$\bar X=\frac{\sum_{i=1}^n{X_i}}{n}$$
 
-方差(Variance), 也称 MSE(Mean Square Error) 各随机变量与平均值差值的平方和的平均数，先求差，再平方，再平均。
-$$var(X)=\frac{\sum_{i=1}^n{(X_i-\bar X)^2}}{n-1}$$
+总体标准差（Population Standard Deviation）
+$$s=\sqrt{\frac{1}{n}\sum_{i=1}^n{(X_i-\bar X)^2}}$$
+
+样本标准差（Sample Standard Deviation）
+$$s=\sqrt{\frac{1}{n-1}\sum_{i=1}^n{(X_i-\bar X)^2}}$$
+
+方差(Variance), 也称 MSE(Mean Square Error) 各随机变量与平均值差值的平方和的平均数，先求差，再平方，再平均（以样本为例）。
+$$var(X)=\frac{1}{n-1}\sum_{i=1}^n{(X_i-\bar X)^2}$$
 
 标准差(Standard Deviation) 也称 均方差 RMSE(root mean square error) 是方差的算术平方根。
 均方根 RMS(root mean square) 将所有值平方求和，求其均值，再开平方，就得到均方根值。

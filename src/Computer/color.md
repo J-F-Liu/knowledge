@@ -83,8 +83,21 @@ LCH provides access to about 50% more colors over sRGB. sRGB is limited to 16.7 
 LCH lightness describes the relative brightness of a color compared to a similarly illuminated white.
 LCH chroma has a range from 0 to approximately 131, although not all colors can reach this maximum value due to the limitations of our screens.
 
+明度(Lightness)范围从0（黑）到100（白）。目标是感知均匀。
+色度(Chroma)数值从0（浅色）到132（深色）。颜色的鲜艳程度或纯度，与明度无关。
+色相角(Hue Angle)范围是0°到360°。 0°（或360°）是红，90°是黄，180°是绿，270°是蓝。
+
 LCH are slightly shifted compared to those in HSL. the hue value of 0 in HSL is pure red, while in LCH it is a pinkish red.
 In LCH, the same numerical change in coordinates produces the same perceptual color difference. This property of a color space is called “perceptual uniformity”.
 RGB or HSL are not perceptually uniform.
 
 LCH is currently the best color space for creating UI color palettes.
+
+孟塞尔颜色系统（Munsell Color System）是由美国艺术家阿尔伯特·孟塞尔（Albert H. Munsell）在20世纪初创立的一种基于人类视觉感知的颜色秩序系统。它的核心目标是将颜色按照感知上的均匀性进行科学排列，使其在视觉上等距变化。这与依赖于物理设备（如显示器、打印机）的RGB或CMYK系统有本质区别。
+
+孟塞尔颜色系统的基本单位是色相（Hue）、明度（Value）和色度（Chroma）。
+
+LCH的设计目标之一就是模拟孟塞尔系统的感知特性。
+
+色度 (Chroma) 更侧重于颜色的绝对鲜艳强度，独立于亮度（尤其在孟塞尔系统中）。
+饱和度 (Saturation) 更侧重于颜色在其当前亮度水平下的纯度，依赖于亮度（在HSL/HSV等模型中）。
