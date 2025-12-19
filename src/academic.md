@@ -21,7 +21,7 @@ PDE：partial differential equation
 CFL condition：Courant Friedrichs Lew CFL condition
 
 FOV: Field Of View
-DOF: Depth Of View
+DOF: Depth Of Field
 TOF: Time Of Flight
 
 UAV: Unmanned aerial vehicles 无人机；无人驾驶飞行器

@@ -410,15 +410,32 @@ u = f \cdot \frac{X}{d} + c_x, \quad v = f \cdot \frac{Y}{d} + c_y
 缩小光圈使用最简单有效，但会牺牲进光量；
 采用高级相机模型替代或扩展小孔模型；
 
-#### 射线基模型（Ray-Based Model）
+#### 通用相机模型（General Camera Model）, 也叫射线基模型（Ray-Based Model）
 
-该模型不假设相机有一个单一的投影中心（optical center），而是将每个图像像素（或子像素）与一个独立的 3D 射线（ray）关联。它通过参数化射线方向来捕捉畸变和像差，而非依赖特定的投影函数。这使得它更灵活，但计算复杂度更高，适合非标准或高度畸变的系统（如多介质环境或任意镜头），强调通用性和射线追踪（ray tracing）。它与小孔模型有二元性（duality），但不强制单一视点。 
+该模型不假设相机有一个单一的投影中心（optical center），而是将每个图像像素（或子像素）与一个独立的 3D 射线（ray）关联。它通过参数化射线方向来捕捉畸变和像差，而非依赖特定的投影函数。这使得它更灵活，但计算复杂度更高，适合非标准或高度畸变的系统（如多介质环境或任意镜头），强调通用性和射线追踪（ray tracing）。
 
 适用于短焦距宽角镜头或大深度测量，通过球杆（ball-bar）和平面测量标定，迭代优化系统误差。
 
 主点偏移（principal point）：cx, cy。
 焦距相关参数：f（或等效尺度因子），但不强制透视。
 射线方向系数：多项式系数（如 a0, a1, a2, ... for x-direction；b0, b1, ... for y-direction），用于参数化每个像素的射线向量（e.g., ray = (dx, dy, dz)）。
+
+- 2001 A general imaging model and a method for finding its parameters
+- 2005 The Raxel Imaging Model and Ray-Based Calibration
+提出Raxel概念，用显示器标定，图案为黑白条纹(binary pattern)
+
+- 2010 Vision ray calibration for the quantitative geometric description of general imaging and projection optics in metrology
+使用双平面4个参数表示1条射线，指出正弦条纹(sinusoidal pattern)对离焦更稳定
+
+- 2012 Generic Camera Calibration and Modeling Using Spline Surfaces
+- 2016 The concept and implementation of smooth generic camera calibration
+用两个B样条曲面（B-spline surface）参数化射线起点和射线方向
+显示器图案为phase-shifted cosine pattern
+
+- 2020 A Calibration Method for the Generalized Imaging Model with Uncertain Calibration Target Coordinates
+显示器图案为multi frequency phase shift coding
+- 2020 Why Having 10,000 Parameters in Your Camera Model is Better Than Twelve
+显示器图案为star-based patterns，16 segments in each star，有开源代码
 
 #### 统一球面模型（Unified Spherical Models）
 
@@ -552,12 +569,25 @@ $$
 
 Because of noise in data, the so-computed matrix $R = [r_1\ r_2\ r_3]$ does not in general satisfy the properties of a rotation matrix. We need to estimate the best rotation matrix from a general 3×3 matrix.
 
-LM 优化的本质是参数拟合，增加畸变参数很容易过拟合。
+LM(Levenberg–Marquardt) 优化的本质是参数拟合，增加畸变参数很容易过拟合。容易陷入局部极小值（尤其外参初值差时）。
 以最小化投影误差来拟合畸变参数，还要约束直线上的点在消畸变后仍在直线上。
 两个相机分别拟合旋转平移参数后，还要约束两个相机的相对方位是固定的，以及同名点对应的光线能相交。
 用直线法拟合畸变参数，由于不能确定畸变前直线的位置，准确性受限。
 椭圆在畸变后，拟合的椭圆方程就不准了，进而影响对偏心误差的计算。
 可以尝试用一组同心圆成像，根据理想的椭圆轮廓与实际轮廓的差异来标定畸变参数。
+
+LM 算法虽然利用二阶近似能快速下降，但只能局部收敛；
+自动微分框架虽然能端到端优化，但优化器（Adam、SGD）同样是一阶局部方法，仍然会陷入局部极小值或鞍点。
+自动微分框架并不能 “自动避免” 局部最优，但它提供了灵活的训练手段，可以通过设计损失、正则化、随机性来「逃离」局部极小值。
+
+推荐实践方案（在 Burn 框架中）
+
+使用 Adam + 噪声注入优化器；
+多次随机初始化参数；
+先训练内外参 → 再解冻畸变系数；
+损失用 Charbonnier 或平滑 L1；
+添加正交与畸变正则约束；
+周期性重启 + 保存最佳结果。
 
 ## Lens distortion model
 

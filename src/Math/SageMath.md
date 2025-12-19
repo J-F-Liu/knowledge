@@ -18,7 +18,7 @@ To quit the session enter `quit` and then press ⟨Enter⟩.
 
 To start a Jupyter Notebook instead of a Sage console, run the command
 
-> sage -n jupyter --allow-root
+> jupyter notebook --allow-root
 
 vscode 里安装 python 扩展，已集成了 jupyternotebook，不需要额外安装 jupyter 扩展。
 新建一个.ipynb 文件，打开它就是 jupyternotebook 的界面了
@@ -338,3 +338,49 @@ sage: sorted(colors)
  'yellow',
  'yellowgreen']
 ```
+var("x,y,z,u,v,w,r,s,t,r_1,r_2,r_3,r_4,r_5,r_6,r_7,r_8,r_9")
+def skew_sym(v):
+    return matrix([[0,-v[0,2],v[0,1]],[v[0,2],0,-v[0,0]],[-v[0,1],v[0,0],0]])
+r1 = matrix([r_1,r_2,r_3])
+r2 = matrix([r_4,r_5,r_6])
+r3 = matrix([r_7,r_8,r_9])
+R = matrix([r1[0],r2[0],r3[0]]).transpose()
+f=matrix([x,y,z])
+g=matrix([u,v,w])
+show(R)
+show(skew_sym(f)*skew_sym(f).transpose())
+
+R1=skew_sym(r1)
+R2=skew_sym(r2)
+R3=skew_sym(r3)
+
+n = skew_sym(f)*R*g.transpose()
+N = n*n.transpose()
+show(N)
+
+F=f.transpose()*f
+G=g.transpose()*g
+FF=matrix([[x,y,z,0,0,0,0,0,0],[0,0,0,x,y,z,0,0,0],[0,0,0,0,0,0,x,y,z]])
+H=FF.transpose()*G*FF
+J=G.tensor_product(F)
+show(F)
+show(G)
+show(H)
+show(J)
+show(H==J)
+RR=block_matrix(1, 3, [R1, R2, R3])
+show(RR)
+M = RR * H * RR.transpose()
+show(expand(M))
+show(N==M)
+
+show(R1*G*R2.transpose() == R2*G*R1.transpose())
+
+var("f,s,c_x,c_y")
+K=matrix([[f,s,c_x],[0,f,c_y],[0,0,1]])
+show(K.inverse())
+
+var("x,y,z,u,v,w")
+f=matrix([x,y,1])
+g=matrix([u,v,1])
+show(f.transpose()*g)

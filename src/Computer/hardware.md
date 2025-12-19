@@ -150,6 +150,11 @@ UART 芯片16C550 等，传输速率达到115.2Kbps。
 | Raspberry Pi Global Shutter Camera | 2023     | 1.58MP     | Sony IMX296       | 6.3mm diagonal                      | 1456×1088              | 3.45μm × 3.45μm   | C口，CS     |           |
 | Raspberry Pi AI Camera             | 2024     | 12.3 MP    | Sony IMX500       | 1/2.3” (7.857mm) 6.287mm × 4.712 mm | 4056×3040 10-bit 10fps | 1.55 μm × 1.55 μm | 定焦        | 66        |
 
+Raspberry Pi 4 and Raspberry Pi 5 support network booting once the bootloader EEPROM is updated. 
+You’ll need a wired Ethernet connection, a DHCP server, and a TFTP or NFS server to provide the boot files.
+Boot options moved to /boot/firmware as of Raspberry Pi OS 12 (Bookworm)
+
+Booting over Ethernet, read and write performance is far better than with SD cards, and no longer worry about random corruption or card wear. Performance and reliability both improved.
 
 ## 开发板配置
 芯片

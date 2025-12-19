@@ -211,6 +211,7 @@ $$
 \sinh x = \cfrac{e^x-e^{-x}}{2} \\
 \cosh x = \cfrac{e^x+e^{-x}}{2} \\
 \tanh x = \cfrac{\sinh x}{\cosh x} = \cfrac{e^x-e^{-x}}{e^x+e^{-x}} \\
+\text{arctanh}(x) = \cfrac{1}{2}\ln(\frac{1+x}{1-x})
 \end{gathered}
 $$
 

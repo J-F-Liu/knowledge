@@ -4,6 +4,8 @@
 
 > Everyone in this country should learn to program a computer, because it teaches you to think. — Steve Jobs
 
+> Controlling Complexity is the Essence of Computer Programming.  — Brian Kernighan
+
 Programming is a super power, giving incredible leverage to those who master the art by letting machines work for them.
 
 Programming is not merely about language syntax and semantics, but more fundamentally about the iterative process of refining mental representations of computational problems and solutions and expressing those representations as code.
@@ -54,7 +56,7 @@ An Object is a value with associated behaviour, and thus implies it has agency.
 
 Most programming languages are partly a way of expressing things in terms of other things and partly a basic set of given things.
 
-I think there is a strong correlation between writing skills and programming. 
+I think there is a strong correlation between writing skills and programming.
 A person’s writing style says so much about the way they think. If it’s confusing and lacks structure, their coding style will be too. If it’s concise, educational, well-structured, and witty at times, their code will be too.
 
 Excellent programmers find joy in playing with words.
@@ -167,6 +169,16 @@ Be on the lookout for leaky abstractions. In other words, don’t impose your in
 ### Clean Code
 
 Clean code doesn’t (necessarily) take longer to write. Initially you may need to slow down before you can speed up, but eventually your pace will increase as you are writing fewer lines of code.
+
+ Writing code is easy. Reading it isn’t.
+ Simplicity is prerequisite for reliability.
+
+ But if simplicity is so obviously “better,” why isn’t it the norm? Because achieving simplicity is hard! It doesn’t come naturally. Simplicity is typically not the first attempt but the last revision.
+
+Simplicity and elegance are unpopular because they require hard work and discipline to achieve.
+Simple Code Is Often Fast Code
+Often, simple code can be optimized by the compiler more easily and runs faster on CPUs. That’s because CPUs are optimized for basic data structures and predictable access patterns.
+
 
 ### Ideas from "A Philosophy of Software Design"
 
@@ -441,7 +453,7 @@ When writing performance-sensitive code, there’s no alternative to measuring y
 
 ## Error Handling
 Things are always going wrong, as I’m sure you’ve noticed, and that applies to our programs too.
-An Option type indicates that there may or may not be an answer. 
+An Option type indicates that there may or may not be an answer.
 A Result can be one of two possible variants. It can be either Ok(x), meaning “the answer is x”, or it can be Err(e), meaning “couldn’t get the answer because error e happened”.
 
 ## Testing
