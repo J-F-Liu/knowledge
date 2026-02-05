@@ -802,7 +802,7 @@ $A^{-1}=\cfrac{cof(A)^T}{\det(A)}，AC^T=\det(A)I$
 对于 3 阶矩阵$A=[A_1, A_2, A_3]，cof(A)=[A_2 \times A_3, -A_1 \times A_3, A_1 \times A_2]$。
 对于正交矩阵$Q^⊤Q = I, cof(Q)=Q$。
 
-## 本征值和本征向量 Eigenvalues and Eigenvectors
+## 特征值和特征向量 Eigenvalues and Eigenvectors
 
 Linear equations Ax=b come from steady state problems.
 Eigenvalues have their greatest importance in dynamic problems.
@@ -863,22 +863,6 @@ Let A be an n×n matrix.
 1. The number 0 is an eigenvalue of A if and only if A is not invertible.
 2. In this case, the 0-eigenspace of A is Nul(A).
 
-##### Invertible Matrix Theorem
-
-Let A be an n×n matrix, and let $T:R^n→R^n$ be the matrix transformation $T(x)=Ax$. The following statements are equivalent:
-
-1. A is invertible.
-2. A has n pivots.
-3. Nul(A)={0}.
-4. The columns of A are linearly independent.
-5. The columns of A span $R^n$.
-6. Ax=b has a unique solution for each b in $R^n$.
-7. T is invertible.
-8. T is one-to-one.
-9. T is onto.
-10. $det(A)\ne0$.
-11. 0 is not an eigenvalue of A.
-
 ##### Definition
 
 Let A be an n×n matrix. The _characteristic polynomial_ of A is the function f(λ) given by $f(λ)=det(A−λI_n)$.
@@ -912,6 +896,50 @@ It is known that there is [no algebraic formula](https://en.wikipedia.org/wiki/A
 The sum of the eigenvalues of a matrix equals its trace.
 The product of the eigenvalues equals its determinant.
 For repeated eigenvalues, one must add or multiply them according to their multiplicity.
+
+设 3 阶矩阵 $A$ 的特征值为 $\lambda_1, \lambda_2, \lambda_3$
+- $\text{tr}(A) = \lambda_1 + \lambda_2 + \lambda_3$
+- $\text{tr}(A^2) = \lambda_1^2 + \lambda_2^2 + \lambda_3^2$
+- $\frac{1}{2} [(\text{tr}(A))^2 - \text{tr}(A^2)] = \lambda_1\lambda_2 + \lambda_2\lambda_3 + \lambda_3\lambda_1$
+
+#### 复数域上的特征值
+
+方阵的任何特征值既有代数重数，也有几何重数，前者来自特征多项式的因式分解，显示出特征值的代数特色，后者来自特征子空间的尺寸，量化了特征向量群体的几何维度。
+
+特征值的代数重数大于或等于它的几何重数。
+
+当矩阵的特征值具有相等的代数重数和几何重数时，我们称这个特征值是半单的，特别地，如果代数重数等于1（此时几何重数也必定等于1），则说此特征值是单的。
+
+一个方阵可对角化当且仅当它的所有相异特征值都是半单的。
+
+### 矩阵的平移变换
+矩阵 $B = \mu I - A$ 是矩阵 A 的平移变换，其中 $\mu$ 是一个标量，$I$ 是单位矩阵，$A$ 是一个 n×n 矩阵。
+设 $\mathbf{x}$ 是矩阵 $A$ 对应于特征值 $\lambda$ 的特征向量，根据定义有：
+$$
+A\mathbf{x} = \lambda\mathbf{x} \\
+B\mathbf{x} = (\mu I - A)\mathbf{x} = (\mu - \lambda)\mathbf{x}
+$$
+可以得出两个关键结论：
+1. 特征向量不变：$\mathbf{x}$ 同样也是矩阵 $B$ 的特征向量。
+2. 特征值发生平移：如果 $A$ 的特征值是 $\lambda$，那么 $B$ 对应的特征值就是 $\mu - \lambda$。
+
+由于这两个变换（$\mu I$ 和 $A$）在 $\mathbf{x}$ 这个方向上都是做简单的 “缩放” 操作，那么它们的组合也必然在这个方向上做 “缩放”。
+$A + \mu I$ 是仅平移，$\mu I - A$ 是翻转 + 平移。$-A$ 将所有特征值关于原点做了镜像翻转。
+
+##### Invertible Matrix Theorem
+
+Let A be an n×n matrix, and let $T:R^n→R^n$ be the matrix transformation $T(x)=Ax$. The following statements are equivalent:
+
+1. A is invertible.
+2. A has n pivots.
+3. Nul(A)={0}.
+4. The columns of A are linearly independent.
+5. The columns of A span $R^n$.
+6. Ax=b has a unique solution for each b in $R^n$.
+7. T is invertible.
+8. T is one-to-one.
+9. T is onto.10. $det(A)\ne0$.
+11. 0 is not an eigenvalue of A.
 
 ### 相似矩阵 Similar Matrices
 
@@ -1327,8 +1355,13 @@ A=\begin{bmatrix}
    a & b \\
    c & d \\
 \end{bmatrix}\\
-det(A)= ad-bc\\
 tr(A)=a+d \\
+det(A)= ad-bc\\
+inv(A)=\dfrac{1}{det(A)}\begin{bmatrix}
+   d & -b \\
+   -c & a \\
+\end{bmatrix} \\
+\space\newline
 λ^2-tr(A)λ+det(A)=0 \\
 when\ c \ne 0:\\
 λ_1 = \cfrac{1}{2} ( a + d + \sqrt{(a-d)^2 + 4 b c}) \\
